@@ -1,0 +1,12 @@
+{
+  "name": "social-media",
+  "version": "1.0.0",
+  "description": "Squad completo de Social Media — do branding ao crescimento, baseado em metodologias de Paulo Cuenca (O Superpoder) e Dea Burity (Arquétipos de Marca). Cobre branding, planejamento editorial, criação de conteúdo, métricas, storytelling e crescimento.",
+  "author": {
+    "name": "Adriana Luiza",
+    "email": "alusulina@gmail.com"
+  },
+  "repository": "https://github.com/AdrianaLuiza/SkillsClaude",
+  "license": "MIT",
+  "keywords": ["social-media", "instagram", "branding", "conteudo", "metricas", "storytelling", "marketing-digital"]
+}
