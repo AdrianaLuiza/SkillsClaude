@@ -7,179 +7,198 @@ description: >
   (3) quer descobrir pautas usando dados (Google Trends, Answer the Public),
   (4) pergunta sobre o algoritmo do Instagram,
   (5) quer saber como crescer ou bombar o perfil com base em métricas,
-  (6) fala em "curtidas", "alcance", "salvamentos", "impressões", "shadowban",
+  (6) fala em "Views", "engajamento", "alcance", "impressões", "shadowban",
   (7) quer criar um relatório de performance ou análise mensal.
   Acione sempre que houver dados de performance, métricas ou análise de crescimento.
 license: MIT
 ---
 
-# Social Analytics — Métricas e Dados para Redes Sociais
+# Social Analytics — Métricas e Dados para Redes Sociais (2025-2026)
+
+> **Atenção:** Em abril de 2025, a Meta unificou todas as métricas de alcance e visualização em uma única métrica chamada **"Views"**, substituindo Impressões, Plays e Views de vídeo separados. Toda análise a partir de agora usa essa nova nomenclatura, aplicável a todos os formatos (Reels, fotos, carrosséis, Stories, Lives) via API e Instagram Insights nativo.
 
 Dados são o mapa. Sem eles, você navega no escuro. Com eles, você replica o que funciona, abandona o que não funciona e cresce com intenção.
 
-## O Algoritmo do Instagram — Como Funciona
+---
 
-O algoritmo distribui conteúdo em camadas, baseado no comportamento humano:
+## O Algoritmo do Instagram em 2025-2026 — Como Realmente Funciona
 
-**Fatores de ranqueamento:**
-- Tempo de tela (retenção) — mais importante
-- Compartilhamentos
-- Salvamentos
-- Comentários
-- Curtidas
+O Instagram **não usa um único algoritmo**. Ele opera com **múltiplos sistemas de IA** — um para cada surface — e cada surface tem sinais de ranking distintos:
 
-**Camadas de distribuição:**
-1. **Turma A:** seus seguidores mais engajados (recebem o conteúdo primeiro)
-2. **Turma B:** seguidores que engajam ocasionalmente
-3. **Turma C:** seguidores desengajados
-4. **Não Seguidores:** quando aparece no Explorar e sugestões
+| Surface | O que determina o ranking |
+|---|---|
+| **Feed** | Histórico de interação com o criador, relevância do conteúdo, popularidade relativa |
+| **Stories** | Proximidade de relacionamento, engajamento anterior com o perfil |
+| **Reels** | Retenção de visualização, compartilhamentos, alcance fora da base de seguidores |
+| **Explorar** | Popularidade do conteúdo com públicos similares ao usuário |
 
-Se o engajamento em cada camada for alto, o alcance expande progressivamente até o Explorar e sugestões em perfis similares.
+Confirmado por Adam Mosseri (janeiro de 2025): *"We use a variety of algorithms, classifiers, and processes, each with its own purpose."*
 
-**Shadowban:** acontece quando uma conta viola regras (hashtag proibida, automações, conteúdo impróprio). Causa queda brusca no alcance. Solução: parar de usar o elemento problemático e produzir conteúdo de qualidade consistentemente.
+### O que a pesquisa verificou (fatos confirmados 3-0)
+- Instagram usa múltiplos sistemas de IA por surface, não um algoritmo único
+- A taxa de engajamento média caiu 24% ano a ano, chegando a **0,48%** em 2025
+- Carrosséis têm maior engajamento por seguidores (0,55%) vs Reels (0,52%) vs imagens (0,37%)
+- Reels têm alcance muito maior (30,81%) vs carrosséis (14,45%)
+- Reels se tornaram "table stakes" — o formato cresceu 33% em volume mas não garante mais ganhos incrementais
+
+### O que foi refutado (NÃO são fatos verificados)
+- ~~"DM shares valem 3-5x mais que likes no algoritmo"~~ — refutado (0-3)
+- ~~"Saves pesam mais que likes"~~ — refutado (0-3)
+- ~~"Reels abaixo de 15 segundos têm mais alcance"~~ — refutado (0-3)
+- ~~"Shares são o sinal #1 do algoritmo"~~ — refutado (0-3)
+
+**Conclusão prática:** os sinais internos exatos do algoritmo são opacos e não verificáveis externamente. Foque em criar conteúdo que gere engajamento genuíno, sem perseguir táticas específicas de "hacking algorítmico".
 
 ---
 
-## Métricas Primárias — As 4 que mais importam
+## A Nova Métrica: Views (desde abril 2025)
 
-Disponíveis em "Informações da publicação" no Instagram.
+Em 21 de abril de 2025, a Meta deprecou oficialmente:
+- Impressões
+- Plays (vídeo)
+- Views de vídeo separados
 
-### 1. Curtidas — Alcance Interno Topo de Funil
-Indica que o conteúdo agradou os seguidores. Mais curtidas → Instagram mostra para seguidores desengajados → depois para quem não vê há muito tempo.
+**Substituídos por uma única métrica: Views**, que conta toda visualização de qualquer conteúdo (foto, carrossel, vídeo, Stories, Live).
 
-**Conteúdos que geram curtidas:** esteticamente atraentes, caprichados, com boa identidade visual.
-
-### 2. Comentários — Engajamento Profundo Topo de Funil
-Revela nível mais aprofundado de comunicação. Público torna-se co-criador do conteúdo.
-
-**Como conseguir mais comentários:**
-1. Levantar temas que gerem debate e reflexão
-2. Chamar à ação: pedir sugestões, opiniões, fazer perguntas específicas
-3. Responder comentários nos primeiros **10 minutos** após publicação (sinaliza ao algoritmo que o post está gerando conversa)
-
-### 3. Compartilhamentos — Alcance Externo Topo de Funil
-A métrica mais poderosa para crescimento. Cada compartilhamento traz no mínimo 1 nova pessoa. De 5% a 10% das pessoas que recebem o compartilhamento tendem a virar novos seguidores.
-
-**Como conseguir mais compartilhamentos:**
-- Conteúdo útil (conselhos práticos, ensinamentos aplicáveis)
-- Conteúdo que reafirma a identidade — falar sobre o público, não sobre si mesmo
-- Frases que as pessoas querem mandar para alguém
-
-### 4. Salvamentos — Autoridade Meio de Funil
-Conteúdos úteis, aplicáveis na prática, que revelam autoridade. Posts salvos são revisitados — fixam a marca na memória do público.
-
-**Estratégia:** antes e durante lançamentos, produzir conteúdo útil maximiza salvamentos e mantém o perfil na memória do público no momento da compra.
+Isso significa:
+- Comparações de performance anteriores a abril/2025 precisam ser feitas com cautela
+- Ferramentas de terceiros (Socialinsider, Sprout Social, Later, etc.) já migraram para o novo padrão
+- O foco agora é: Views totais + taxa de engajamento sobre Views
 
 ---
 
-## Métricas Secundárias — O Funil em Números
+## Benchmarks de Engajamento (2025)
 
-### Visitas ao Perfil
-Indica curiosidade gerada pelo post. Aumenta o tempo de sessão → algoritmo recomenda mais publicações.
+Dados baseados em análise de 35 milhões de posts de 447.613 perfis (Socialinsider, 2025):
 
-### Alcance vs. Impressões
-- **Alcance:** número de contas únicas que viram o conteúdo
-- **Impressões:** número total de visualizações (maior, pois pessoas veem mais de uma vez)
+| Formato | Taxa de Engajamento (por seguidores) | Reach Rate |
+|---|---|---|
+| **Carrossel** | 0,55% | 14,45% |
+| **Reels** | 0,52% (Q1 2026: 0,50%) | 30,81% |
+| **Imagem estática** | 0,37% | ~8-10% |
 
-**Subcategorias de Impressões:**
-- Da página inicial (seguidores ativos)
-- Do perfil (visitantes do perfil)
-- Do Explorar (descoberta externa)
-- De hashtags
-- De compartilhamentos em Stories ou direct
+**Leitura crítica:**
+- Engajamento alto + alcance baixo = carrossel → melhor para aprofundar relação com base existente
+- Engajamento menor + alcance alto = Reels → melhor para descoberta por novos públicos
+- A escolha do formato depende do **objetivo**, não de uma hierarquia absoluta
 
-### Toques no Site — Fundo de Funil
-A métrica mais fiel sobre leads realmente interessados. Indica pessoas que entraram no perfil, viram a oferta na bio e clicaram.
-
-Requer: publicações de fundo de funil + chamada para ação direcionando para o link.
-
-### Percentual de Conversão de Seguidores
-Cálculo: novos seguidores ÷ pessoas alcançadas fora da base × 100
-
-Monitore este percentual para entender a qualidade do conteúdo de topo de funil.
+**Benchmarks por tamanho de conta (AgencyAnalytics, 2026):**
+- Taxa de engajamento saudável: **1% a 5%** (dependendo do setor e tamanho da conta)
+- Média geral do Instagram: **0,6%** (2º lugar entre plataformas, atrás do TikTok com 4,25%)
+- Excelente: acima de 3%
+- Médio: 1-3%
+- Abaixo de 1%: sinal de atenção para revisar estratégia de conteúdo
 
 ---
 
-## Analytics por Formato
+## Métricas Chave por Objetivo
+
+### Para crescimento de novos seguidores
+- **Views** (alcance externo)
+- **Reach Rate** (% de não-seguidores alcançados)
+- Formatos: Reels e conteúdo de topo de funil
+
+### Para aprofundar autoridade com a base existente
+- **Taxa de Engajamento** (interações ÷ Views)
+- **Salvamentos** (indicam conteúdo de valor recorrente)
+- **Comentários** (indicam conexão e debate)
+- Formatos: Carrosséis educativos, textões
+
+### Para conversão e vendas
+- **Toques no link da bio** (agora: cliques no link)
+- **Mensagens recebidas** (DMs relacionados ao conteúdo)
+- **Sticker taps** (Stories com CTA)
+
+---
+
+## Analytics por Formato (2025-2026)
 
 ### Reels
-- Topo de funil externo — priorize alcance e novos seguidores
-- Analisar: alcance, curtidas, comentários, compartilhamentos
-- Performa bem: conteúdo dinâmico com transformação, humor, inspiração
+- Surface com maior alcance orgânico (reach rate de 30,81% vs 14,45% dos carrosséis)
+- Engajamento caindo levemente: 0,52% em 2025 → 0,50% no Q1/2026
+- Volume de criadores postando Reels cresceu 33% (de 6 para 8 posts/mês em média)
+- **Conclusão:** poste Reels para alcançar novos públicos, não para construir engajamento profundo
 
-### IGTV e Lives
-- Meio de funil — não desanime com retenção baixa (30% já é bom, similar ao YouTube)
-- Métricas: curtidas, comentários, compartilhamentos, salvamentos, visualizações
-- Lives: quantidade de pessoas online no pico e total que assistiu
+### Carrosséis
+- Formato de maior engajamento por seguidores (0,55% em 2025)
+- O Instagram redistribui o carrossel mostrando imagens diferentes a diferentes usuários — amplia o ciclo de vida natural do post
+- **Conclusão:** use carrosséis para educar, aprofundar autoridade e maximizar salvamentos
 
 ### Stories
-- Disponível apenas para últimos 7 ou 14 dias
-- Métricas chave: compartilhamentos, respostas, cliques no link, visitas ao perfil
-- Atenção em: "próximo Story" (passou para outra pessoa), "saída" (parou de ver)
-- A principal métrica dos Stories também é o **compartilhamento**
+- Não aparecem no Explorar — funcionam exclusivamente para quem já segue o perfil
+- Métricas relevantes: respostas, cliques no link/sticker, Views, saídas (swipe left)
+- Alta frequência é esperada: 5-10 Stories/dia é o padrão de contas ativas
+
+### Imagens estáticas
+- Engajamento caiu 17% ano a ano
+- Ainda têm espaço para lifestyle, autoridade visual e conteúdo estético
+- **Conclusão:** use com moderação, priorizando carrosséis e Reels
+
+---
+
+## SEO no Instagram — O Que Realmente Funciona em 2026
+
+O algoritmo de busca do Instagram prioriza principalmente:
+
+1. **Username** — coloque a palavra-chave do nicho no @
+2. **Name field** (campo nome na bio) — área de maior peso para SEO no perfil
+3. **Bio** — inclua termos descritivos do nicho, não apenas slogan
+4. **Captions** — use linguagem natural com palavras-chave; o Instagram indexa texto das legendas
+5. **Alt text** — preencha manualmente (configurações de acessibilidade do post)
+
+### Hashtags em 2026: mudança importante
+- O Instagram **oficialmente recomenda 3 a 5 hashtags** relevantes por post
+- Hashtags agora funcionam como **"etiquetas de arquivo"** — organizam o conteúdo por categoria — não mais como principal mecanismo de alcance
+- Posts com 20-30 hashtags não têm vantagem sobre posts com 3-5 hashtags relevantes
+- Evite hashtags genéricas e muito populares (#love, #instagood) — sem benefício mensurável
 
 ---
 
 ## Ferramentas de Pesquisa de Pauta
 
 ### Google Trends
-Reúne dados de pesquisa do Google e YouTube gratuitamente.
-
-**Como usar:**
-1. Acessar trends.google.com.br
-2. Escolher o país
-3. Digitar palavras-chave para buscar ou comparar
-4. Selecionar: busca na web, imagem, notícias ou Shopping
-5. Verificar sugestões de assuntos relacionados muito buscados
-6. Usar para conteúdos de **topo de funil** — o que as pessoas estão procurando agora
+Dados de pesquisa do Google e YouTube, gratuito.
+- Use para identificar tendências de busca do seu nicho
+- Aplique a conteúdo de **topo de funil** — o que as pessoas procuram agora
 
 ### Answer the Public
-Base de dados que mostra como as pessoas pesquisam uma palavra-chave (mapa mental de perguntas).
+Mapa mental de perguntas sobre uma palavra-chave.
+- Pesquise o nicho geral primeiro, depois refine por subtema
+- Plano gratuito: 2 buscas/dia
 
-**Estratégia:** pesquisar primeiro o nicho geral, anotar todas as perguntas, depois refinar por subtema.
+### Box de Perguntas do Instagram (Caixinha de Dores)
+A fonte mais direta de dados: revela dúvidas reais da audiência em primeira mão.
+- Não abra o box "frio" — antes, entregue valor, mostre autoridade, faça enquete
+- Use as perguntas recebidas como banco de pautas para as próximas semanas
 
-**Plano gratuito:** 2 buscas por dia — use com sabedoria.
-
-**Biblioteca de Pautas:** organize as ideias em tabela com a etapa do funil (topo, meio ou fundo).
-
-### Caixa de Dores (Box de Perguntas)
-O box de perguntas do Instagram é uma das melhores fontes de dados. Revela angústias e vontades em primeira mão.
-
-**Estratégia:** não abra o box frio. Antes, mostre conteúdo relevante, dê sua opinião, faça enquete — só então abra o box. Chances de interação são maiores quando há credibilidade demonstrada.
-
-**Complemento:** use enquetes para descobrir profissões, faixa etária e tipo de conteúdo mais útil.
-
-### Fóruns, Grupos e Comunidades
-- **Facebook:** pesquise palavra-chave do nicho, entre em grupos privados, observe comentários mais populares
-- **E-commerce:** avaliações de produtos revelam padrões, críticas e elogios reais
-- **Telegram:** grupos do nicho mostram como a audiência se comunica e quais dúvidas surgem
-- **CPL (Comentários de Pré-Lançamento):** comentários de vídeos de lançamento de concorrentes revelam dúvidas, curiosidades e objeções
-
-**Dica de ouro:** observe frases que as pessoas replicam em comentários de posts populares. Esses pensamentos têm grande alcance — podem ser parafraseados, adaptados ou contestados.
+### Comentários e DMs
+Monitor ativo de comentários nos seus posts e nos de concorrentes/referências.
+- Frases que se repetem em comentários populares revelam o que a audiência pensa e sente
+- Avaliações de produtos e serviços (e-commerce, Google Reviews) revelam dores reais do nicho
 
 ---
 
 ## Cadência de Análise Recomendada
 
-**Semanal:** verificar stories (7 dias) e posts individuais publicados na semana. Identificar o que gerou mais comentários e compartilhamentos.
+**Semanal:** posts individuais publicados na semana. O que gerou mais salvamentos e comentários?
 
-**Quinzenal:** análise de Stories (14 dias). Verificar cliques no site e conversão.
+**Quinzenal:** Stories (até 14 dias disponíveis no Insights). Verificar cliques no link e respostas.
 
-**Mensal:** análise completa do feed. Classificar posts em: acima da média, na média, abaixo da média. Foco em: alcance, compartilhamento, salvamento.
+**Mensal:** análise completa do feed. Classificar posts: acima da média, na média, abaixo da média. Foco em: Views, taxa de engajamento, salvamentos.
 
-**Trimestral:** revisão estratégica. Analisar crescimento de seguidores, melhores formatos, recalibragem de territórios e editorias.
+**Trimestral:** revisão estratégica. Analisar crescimento de seguidores, melhores formatos, recalibragem de territórios.
 
 ---
 
 ## O Hack do Algoritmo — Repetir o que Funciona
 
-O maior atalho para crescer:
+O maior atalho:
 
 | Objetivo | Repita conteúdos com mais... |
 |---|---|
-| Crescimento de seguidores | Compartilhamentos ou novos seguidores gerados |
-| Vendas | Toques no site / link na bio |
-| Antes de lançamentos | Salvamentos |
-| Autoridade | Comentários + Salvamentos |
+| Crescimento de seguidores | Reels com alto reach rate / Views externos |
+| Aprofundar autoridade | Carrosséis com alto engajamento e salvamentos |
+| Antes de lançamentos | Salvamentos (mantém o perfil na memória do público) |
+| Vendas | Cliques no link da bio / DMs originados do conteúdo |
 
-Não reinvente a roda — analise os 3 melhores posts de cada métrica e crie variações deles. O algoritmo já validou o que funciona com seu público.
+Analise os 3 melhores posts de cada métrica e crie variações deles. O algoritmo já validou o que funciona com o seu público — não reinvente a roda.

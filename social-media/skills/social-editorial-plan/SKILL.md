@@ -13,9 +13,9 @@ description: >
 license: MIT
 ---
 
-# Social Editorial Plan — Planejamento Editorial para Redes Sociais
+# Social Editorial Plan — Planejamento Editorial para Redes Sociais (2025-2026)
 
-Um bom planejamento editorial é o que separa quem posta aleatoriamente de quem cresce com intenção. O segredo está em limitar territórios, entender o funil e manter consistência.
+Um bom planejamento editorial separa quem posta aleatoriamente de quem cresce com intenção. O segredo está em limitar territórios, escolher formatos com base em dados, e manter consistência sustentável.
 
 ## Fase 1 — Limitação Criativa: Definindo Territórios
 
@@ -31,30 +31,30 @@ A limitação criativa é aliada: quanto mais específico o território, menos p
 2. Descreva quem é seu público (onde está, quem quer ser, por que precisa de você)
 3. Encontre os temas de ponte = seus territórios
 
-Para cada território, liste pelo menos 5 tópicos abordados e classifique a relevância para seus objetivos de negócio.
+Para cada território, liste pelo menos 5 tópicos e classifique a relevância para seus objetivos de negócio.
 
 ---
 
-## Fase 2 — Funil de Conteúdo
+## Fase 2 — Funil de Conteúdo (Proporcional ao Objetivo)
 
 Todo conteúdo deve ter uma intenção clara dentro do funil:
 
-### Topo — Atrair e Crescer (50% do volume)
-**Público:** inconscientes do problema ou começando a ficar conscientes  
+### Topo — Atrair e Crescer (40-50% do volume)
 **Objetivo:** alcance externo, novos seguidores  
-**Formatos:** fotos/artes compartilháveis no feed, Reels, frases, memes
+**Formatos:** Reels (maior reach rate: 30,81%), frases compartilháveis, conteúdo que o público manda para outras pessoas  
+**Público:** não conhece você ainda ou acabou de te descobrir
 
 ### Meio — Aprofundar e Engajar (40% do volume)
-**Público:** conscientes da solução e do produto  
 **Objetivo:** construir autoridade e confiança, aumentar salvamentos  
-**Formatos:** sequências de Stories, carrosséis com aprofundamento, Lives, IGTV
+**Formatos:** carrosséis educativos (maior engajamento: 0,55%), Stories com profundidade, textões  
+**Público:** já te segue, está considerando se você é a referência certa
 
-### Fundo — Conversão (10% do volume)
-**Público:** totalmente conscientes, esperando a oferta  
-**Objetivo:** venda, geração de leads  
-**Formatos:** puxar tela nos Stories com link, post de venda, CTA direto para bio
+### Fundo — Conversão (10-20% do volume)
+**Objetivo:** venda, geração de leads, agendamento  
+**Formatos:** Stories com link, post de venda, CTA direto, DM  
+**Público:** já confia, está pronto para a ação
 
-**Durante lançamentos:** inverta a proporção — aumente o meio de funil (conteúdo útil/salvável) e adicione mais CTAs de fundo.
+**Durante lançamentos:** aumente proporção de meio de funil (conteúdo útil/salvável que mantém a marca presente na memória do público) e adicione CTAs claros de fundo de funil.
 
 ---
 
@@ -64,117 +64,126 @@ Para cada conteúdo planejado, defina:
 
 | Campo | O que preencher |
 |---|---|
-| Palavras-chave | Termos para SEO/busca |
+| Palavras-chave | Termos para SEO interno do Instagram |
 | Tema | Assunto central do post |
 | Objetivo | O que quer que o público faça/sinta/aprenda |
 | Dia da semana | Quando publicar |
-| Público-alvo foco | Para quem este post é mais relevante |
-| Título/Gancho | Primeira linha que prende atenção |
-| Detalhes da pauta | O que abordar, em que ordem |
-| Links de referência | Fontes ou inspirações |
-| Formato | Carrossel, Reels, Stories, feed, Live... |
+| Formato | Reels, carrossel, Stories, imagem, textão... |
 | Etapa do funil | Topo / Meio / Fundo |
+| Gancho (1ª linha) | Frase que interrompe o scroll |
+| Detalhes da pauta | O que abordar, em que ordem |
 | CTA | Qual ação o post pede |
+| Hashtags (3-5) | Tags relevantes do nicho |
 | Prazo de entrega | Quando o conteúdo precisa estar pronto |
 
 ---
 
-## Fase 4 — Calendário Semanal
+## Fase 4 — Calendário Semanal (Mix Baseado em Dados)
 
-### Estrutura de Feed (mínimo ideal: 3-5 posts por semana)
+### Mix Recomendado por Semana (Sked Social / Socialinsider, 2026)
+- **3-4 Reels:** foco em alcance externo e novos seguidores
+- **2-3 Carrosséis:** foco em engajamento e autoridade com a base atual
+- **5-10 Stories por dia:** conexão diária, bastidores, CTAs, interação
 
-Distribua os 12 formatos ao longo da semana:
-- **Segunda:** Conteúdo de autoridade ou infográfico (meio de funil)
-- **Quarta:** Carrossel educativo ou textão (meio de funil)
-- **Sexta:** Conteúdo viral: frase, meme ou lifestyle (topo de funil)
+### Estrutura de Feed
+- **Segunda:** Carrossel educativo (meio de funil — autoridade)
+- **Quarta:** Reels (topo de funil — alcance)
+- **Sexta:** Carrossel ou Reels (topo a meio — o que gerou melhor resultado recentemente)
 
-### Estrutura de Stories (mínimo ideal: 10-20 por dia)
+*Adapte com base nos seus dados: poste no horário em que sua audiência está mais ativa (verificar em Insights > Público > Horários mais ativos).*
 
-A cada sequência de 8-10 Stories incluir 1 CTA ou oferta se estiver em período de venda.
+### Estrutura de Stories
+A cada bloco de 8-10 Stories, incluir:
+- 1-2 conteúdos de valor (dica, bastidor, opinião)
+- 1 interação (enquete, pergunta, quiz)
+- 1 CTA se estiver em período de venda
 
 **30 ideias de pauta para Stories:**
-1. Compartilhe um valor seu
-2. Conte sua história de criação
-3. Fale sobre disciplina ou rotina
-4. Comente polêmica da área
-5. Anuncie uma live
-6. Fale sobre assunto quente do nicho
-7. Indique um livro
-8. Mostre bastidores do trabalho
-9. Dica de app ou ferramenta
-10. Revele processo de criação
-11. Review de filme ou série
-12. Como começou a criar conteúdo
-13. Mudança ou transformação recente
-14. Desafio do negócio
-15. Peça ajuda da comunidade
-16. Revele uma vulnerabilidade
-17. Indique um perfil inspirador
-18. Marco da história da marca
-19. TOP 5 da área
-20. História engraçada
-21. Família, amigos ou pet
-22. Retorno de clientes (prova social)
-23. Novidade do trabalho
-24. O que faz no tempo livre
-25. Frase ou mentalidade do nicho
-26. Responda dúvidas da área
-27. Mostre equipamento de trabalho
-28. Quiz interativo
-29. Rotina de um dia
-30. Meme do nicho
+1. Compartilhe um valor ou crença sua
+2. Bastidores do processo de trabalho
+3. Dica prática do nicho em menos de 3 slides
+4. Enquete sobre preferências do público
+5. Caixinha de perguntas (box de dúvidas)
+6. Quiz sobre o tema do nicho
+7. Rotina de um dia (humanização)
+8. Indique um livro, podcast ou ferramenta
+9. Comente polêmica ou tendência da área
+10. Mostre o setup de trabalho
+11. Responda dúvida frequente que chegou no DM
+12. Review de produto ou serviço do nicho
+13. Mudança recente na área + sua opinião
+14. Como você começou (marcos da trajetória)
+15. Bastidores de uma entrega ou projeto
+16. O que aprendi errando (vulnerabilidade estratégica)
+17. Indique um perfil que admira no nicho
+18. Compartilhe resultado de cliente (com permissão)
+19. TOP 3 do tema da semana
+20. Situação engraçada do trabalho (humanização com humor)
+21. Família, amigos, pet (aproximação pessoal)
+22. Novidade do produto ou serviço
+23. O que você faz no tempo livre
+24. Frase ou mentalidade que te move
+25. Como surgiu a ideia de um conteúdo recente
+26. Bastidores de um collab ou parceria
+27. Enquete comparativa (isso ou aquilo)
+28. Desafio ou obstáculo que está enfrentando
+29. Celebração de marco (aniversário, meta batida)
+30. Tease de conteúdo que está por vir
 
 ---
 
 ## Fase 5 — Calendário de Datas
 
-Mapeie antecipadamente datas relevantes:
-- Datas comemorativas comerciais (Natal, Dia das Mães, Black Friday, etc.)
-- Datas específicas do nicho
-- Eventos do setor
-- Datas pessoais da marca (aniversário, lançamentos)
+Mapeie antecipadamente (mínimo 30 dias antes):
+- Datas comemorativas comerciais relevantes para o nicho
+- Eventos do setor e datas de lançamento
+- Datas pessoais da marca (aniversário, marcos)
+- Sazonalidades específicas do público
 
-Para cada data: avaliar se combina com o conteúdo (sim/não) → gerar ideias de posts → incluir no calendário com antecedência mínima de 30 dias.
+Para cada data: avaliar se combina com o conteúdo → gerar ideias → colocar no calendário com prazo de produção claro.
 
 ---
 
 ## Fase 6 — Avaliação e Recalibração
 
-O planejamento editorial não é estático — evolui com os dados.
+O planejamento não é estático — evolui com os dados.
 
 ### Ciclos de análise:
 
-**A cada 7 e 14 dias (Stories e Feed):**
-- Métricas primárias: Curtidas, Comentários, Compartilhamentos, Salvamentos
+**Semanal:** posts publicados na semana. O que gerou mais Views, salvamentos e comentários?
 
-**A cada 30 dias:**
-- Foco em: Alcance, Compartilhamento, Salvamento
-- Identificar os 3 melhores posts de cada métrica
-- Repetir e adaptar o que funcionou
+**Mensal (foco em:**
+- Views (novo padrão unificado desde abril/2025 — substitui Impressões)
+- Taxa de engajamento por formato
+- Salvamentos (indicador de conteúdo de valor)
+- Crescimento de seguidores por formato de conteúdo
 
-**A cada 3 meses:**
-- Análise geral de crescimento de seguidores
+**Trimestral:**
 - Revisão dos territórios e editorias
-- Ajuste na proporção do funil
+- Ajuste na proporção do funil (Reels vs Carrosséis vs Stories)
+- Análise de quais CTAs geraram mais ações concretas
 
-### O hack da recalibração:
-- Para crescer: replique conteúdos muito compartilhados ou que geraram mais seguidores
-- Para vender: replique conteúdos que geraram mais toques no site
-- Para lançamentos: replique conteúdos com mais salvamentos
+### O hack da recalibração (baseado em dados):
+- **Para crescer seguidores:** replique Reels com alto reach rate externo
+- **Para aprofundar autoridade:** replique carrosséis com alto número de salvamentos
+- **Para vender:** replique conteúdo que gerou mais cliques no link da bio ou DMs de venda
+- **Para lançamentos:** publique carrosséis de alto valor (salvamentos) nas semanas anteriores
 
 ---
 
-## Organização com Notion
+## Organização e Ferramentas
 
-O Notion é a ferramenta ideal para centralizar o planejamento. Estrutura sugerida:
+### Notion (planejamento centralizado)
+- Banco de dados de Editorias: Territórios → Tópicos → Relevância para o negócio
+- Banco de dados de Pautas: Tema → Formato → Etapa do funil → Status → Data
+- Banco de dados de Dores: perguntas coletadas → território relacionado → pauta gerada
 
-**Banco de dados de Editorias:**
-Territórios → Tópicos → Relevância para o negócio
+### Ferramentas de agendamento (opcional)
+- **Later:** agendamento + analytics + link in bio
+- **Buffer:** agendamento multi-plataforma
+- **Meta Business Suite (gratuito):** agendamento nativo do Instagram e Facebook
 
-**Banco de dados de Pautas:**
-Tema → Formato → Etapa do funil → Status → Data de publicação
-
-**Banco de dados de Dores:**
-Dores coletadas via caixinha de perguntas → Território relacionado → Tópico gerado
+### Regra de bolso para consistência
+Se você tem 4 horas/semana para produção de conteúdo: grave 2 Reels + monte 1 carrossel + separe 30 minutos para interagir com comentários. Consistência com esse volume supera inconsistência com volume maior.
 
 Cruzar Dores × Territórios × Tópicos = pauta que a comunidade quer consumir e que faz sentido para a marca.

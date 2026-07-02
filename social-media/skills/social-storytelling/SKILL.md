@@ -1,187 +1,179 @@
 ---
 name: social-storytelling
 description: >
-  Estrutura histórias de marca poderosas usando a Jornada do Herói, vulnerabilidade e liderança para criar conexão emocional com a audiência. Use quando:
-  (1) o usuário quer contar a história de criação da marca,
-  (2) precisa criar narrativa para um lançamento ou campanha,
-  (3) quer trabalhar vulnerabilidade e humanização nas redes,
-  (4) precisa estruturar um storytelling persuasivo,
-  (5) fala em "história da marca", "como contar minha história", "conexão com o público",
-  (6) quer construir liderança e autoridade através de narrativa,
-  (7) precisa criar conteúdo que gere identificação profunda.
-  Acione sempre que o objetivo for criar conexão emocional, não apenas informar.
+  Cria narrativas e histórias para redes sociais que constroem conexão emocional e posicionamento de marca. Use quando:
+  (1) o usuário precisa contar a história da marca ou do fundador,
+  (2) quer compartilhar uma transformação ou aprendizado pessoal,
+  (3) precisa de ajuda para ser mais vulnerável ou autêntico nas redes,
+  (4) quer criar conteúdo que emocione e gere identificação,
+  (5) fala em "minha história", "jornada", "por que comecei", "vulnerabilidade",
+  (6) quer criar conexão real com o público além de apenas informar,
+  (7) precisa de narrativa para vídeos, textões ou posts de posicionamento.
+  Acione sempre que o foco for construir conexão humana, contar histórias ou gerar identificação emocional com o público.
 license: MIT
 ---
 
-# Social Storytelling — Narrativa e Conexão Emocional para Redes Sociais
+# Social Storytelling — Narrativas que Constroem Conexão em 2025-2026
 
-"As pessoas não compram produtos — compram histórias. Compram conexão." A capacidade de contar uma história que move é o maior diferencial de uma marca nas redes sociais.
+Em um feed saturado de informação, o que interrompe o scroll não é o melhor conteúdo técnico — é a história mais humana. Em 2025-2026, com a proliferação de conteúdo gerado por IA, a demanda por autenticidade genuína aumentou: **55% dos consumidores confiam mais em conteúdo claramente humano do que em conteúdo de aparência artificial ou gerado por IA.**
 
-## Por que Storytelling Funciona
-
-Anúncios com conteúdo puramente emocional têm desempenho **2x melhor** que conteúdo apenas racional (31% vs. 16%) — Neuro Science Marketing. Clientes com relacionamento emocional com uma marca recomendam a empresa a uma taxa de **71%**.
-
-A conclusão: inspire antes de vender. Inspiração vende mais do que dor.
+Contar histórias não é uma habilidade inata — é uma estrutura. Quando você aprende a estrutura, qualquer experiência vira conteúdo.
 
 ---
 
-## A História de Criação — Primal Branding
+## Por Que Histórias Funcionam no Instagram
 
-A história de criação alimenta a necessidade humana de descobrir a origem das coisas. Gera sentimento de conexão, pertencimento e identidade.
+Histórias ativam partes do cérebro diferentes das que processam informação pura. Uma lista de dicas aciona memória declarativa. Uma história aciona também a área emocional — o leitor não processa a experiência, ele a vive.
 
-### Estrutura em 4 Atos
-
-1. **Vivendo uma vida normal** — o mundo comum antes da virada
-2. **Algo aconteceu e me transformou** — o evento que mudou tudo
-3. **Uma frustração** — o obstáculo ou dor que ainda existia
-4. **A solução — o caminho tomado** — como chegou onde está hoje
-
-### Os 3 Pontos Essenciais
-- Qual transformação quer causar?
-- Qual problema resolveu?
-- Qual desejo realiza?
-
-### Estrutura em 5 Parágrafos (versão narrativa completa)
-1. Como você via o mundo (consciência limitada)
-2. Algo aconteceu e mudou sua percepção
-3. A resistência que sentiu
-4. Quem ou o que te ajudou a superar
-5. O que você fez e a recompensa alcançada
+No Instagram especificamente:
+- Histórias geram mais comentários do que tutoriais (as pessoas respondem ao que sentem, não ao que aprendem)
+- Narrativas de transformação aumentam o tempo de leitura das legendas
+- Vulnerabilidade estratégica cria lealdade de audiência — o público não abandona quem os fez sentir algo
 
 ---
 
-## A Jornada do Herói — Joseph Campbell
+## A História de Criação da Marca
 
-Baseada em "O Herói de Mil Faces" de Joseph Campbell. A mesma estrutura que move grandes filmes, livros e campanhas publicitárias pode estruturar sua narrativa de marca e conteúdo.
+A história de criação é o conteúdo mais poderoso que você pode publicar — e a maioria das pessoas nunca conta de verdade. É o alicerce de toda a narrativa da marca.
 
-### As 12 Etapas Aplicadas ao Social Media
+**Elementos da história de criação:**
+1. **A consciência anterior** — como você via o mundo (ou a área) antes
+2. **O evento catalisador** — o que aconteceu e te fez mudar de direção
+3. **A desilusão** — o que não funcionou, o que doeu
+4. **A descoberta** — o que você aprendeu depois do erro ou da crise
+5. **A transformação** — quem você se tornou e o que isso habilitou
+6. **O convite** — a razão por que você agora ajuda outros na mesma jornada
 
-**Passo 1 — O Mundo Comum**  
-A vida do herói (seu seguidor) quando ainda não tem consciência do problema.  
-*Pergunta:* Qual é a vida comum da sua comunidade? O que sua galera ainda precisa tomar consciência?
-
-**Passo 2 — O Chamado**  
-O seguidor começa a sentir desconforto ou percebe algo diferente.  
-*Pergunta:* O que aconteceu ou deve acontecer para seu seguidor receber o chamado para a mudança?
-
-**Passo 3 — Recusa ao Chamado**  
-O herói ainda não está comprometido. Tem medo do desconhecido.  
-*Pergunta:* Qual resistência seu público cria? Quais as objeções que ele tem?
-
-**Passo 4 — Encontro com o Mentor**  
-O herói supera a relutância com auxílio de um mentor (você).  
-*Pergunta:* Como você resolve na prática os obstáculos do seu público? Que conselhos ou "armas mágicas" você oferece?
-
-**Passo 5 — Travessia do Primeiro Limiar**  
-O herói decide seguir a jornada. Primeira transformação real.  
-*Pergunta:* Qual é a primeira transformação que você pode gerar? (desafio, e-book, análise de perfil, semana temática)
-
-**Passo 6 — Provas, Aliados e Inimigos**  
-Desafios e obstáculos reais. A cada prova, aprende algo novo.  
-*Pergunta:* Quais provas, aliados e inimigos você está trabalhando com seu público?
-
-**Passo 7 — Aproximação da Caverna Secreta**  
-Ponto de clímax do conteúdo. O seguidor vai mais fundo.  
-*Pergunta:* Qual o ponto de clímax do seu conteúdo ou serviço?
-
-**Passo 8 — Aprovação**  
-Morte e renascimento simbólico. Momento de tensão máxima.  
-*Pergunta:* Quais são os momentos de "vida e morte" em quem você se propõe a ajudar?
-
-**Passo 9 — Recompensa**  
-O herói conquista a missão. Consciência plena da jornada trilhada.  
-*Pergunta:* Que recompensa as pessoas que te seguem ganham?
-
-**Passo 10 — Caminho de Volta**  
-Novas forças hostis surgem (concorrentes, haters, cópias).  
-*Pergunta:* Quais são os vilões que renascem e vão atrás de você ou da sua comunidade?
-
-**Passo 11 — Ressurreição**  
-Depois de morrer simbolicamente, renasce mais forte.  
-*Pergunta:* O que pode afetar sua comunidade e como prevenir ou solucionar? (ex: mudanças no algoritmo, shadowban)
-
-**Passo 12 — Retorno com o Elixir**  
-O herói volta com a cura — seu aprendizado vira valor para outros.  
-*Pergunta:* Quais são seus aprendizados e o que você transmite para quem te segue?
+**Por que funciona:** o público não se identifica com o sucesso — se identifica com a luta antes do sucesso. O que conecta é a humanidade no processo, não o resultado.
 
 ---
 
-## Vulnerabilidade — A Linguagem Primordial das Redes
+## A Jornada do Herói (Joseph Campbell)
 
-Vulnerabilidade não é chorar nas redes nem passar mensagem falsa de fragilidade.
+A Jornada do Herói é a estrutura narrativa mais antiga e universal da humanidade. Ela aparece em mitos, religiões, filmes e nos posts que mais engajam. Não é coincidência — é como o cérebro humano processa mudança e crescimento.
 
-**Definição:** é a disponibilidade de se expor — assumindo o risco de ser criticado. Isso é positivo: forma uma comunidade unida por uma paixão comum que você pode liderar.
+### As 12 Etapas
 
-### 3 Modelos de Liderança Vulnerável
-
-**Modelo 1 — Desafio Temático com Hashtag**
-- **Fase 1:** Anunciar desafio nos Stories/feed com hashtag própria e cronograma de etapas diárias
-- **Fase 2:** Gravar Stories comentando o andamento, lançar enquetes, abrir box de perguntas
-- **Fase 3:** Live para comentar resultados, responder dúvidas, causar transformação coletiva
-
-**Modelo 2 — Consultoria em Live**
-- **Fase 1:** Post no feed anunciando live de consultoria, pedir comentários (marcar amigos)
-- **Fase 2:** Premiar quem se destacou no desafio com consultoria ao vivo
-- **Fase 3:** Durante a live: interagir com comentários, levantar pontos negativos e positivos, apresentar soluções ao vivo
-
-**Modelo 3 — Perguntas e Respostas Diárias**
-Abrir o box de perguntas sempre que possível — fortalece autoridade e cria pontos de conexão. Liste as principais dúvidas para criar conteúdos futuros certeiros.
-
----
-
-## Framework "Construir Junto"
-
-Quatro maneiras de engajar a comunidade na construção do conteúdo e da marca:
-
-| Coluna | O que fazer | Desenvolvimento |
+| Etapa | Nome | Descrição no contexto de marca |
 |---|---|---|
-| **Eu Não Sei** | Assumir que não tem resposta definitiva | Contextualizar os motivos, instigar curiosidade, voltar com o aprendizado |
-| **Me Ajuda** | Pedir ajuda/solução ao público | Pesquisar e responder, agradecer quem ajudou, compartilhar o resultado |
-| **Vamos Construir Juntos** | Convidar para projeto coletivo | Definir regras, abrir votação, fazer o prometido, agradecer |
-| **Mudei de Ideia** | Assumir novo ponto de vista | Convidar quem pensa diferente, pesquisar, atualizar e comunicar |
+| 1 | **Mundo Comum** | A vida antes da descoberta ou transformação |
+| 2 | **Chamado à Aventura** | O convite, o problema, a oportunidade que surgiu |
+| 3 | **Recusa do Chamado** | A resistência inicial (medo, dúvida, procrastinação) |
+| 4 | **Encontro com o Mentor** | Quem ou o que deu o conhecimento ou a coragem |
+| 5 | **Travessia do Primeiro Portal** | O comprometimento — quando tudo mudou |
+| 6 | **Testes, Aliados e Inimigos** | As dificuldades, as pessoas que ajudaram e as que atrapalharam |
+| 7 | **Aproximação da Caverna** | A preparação para o maior desafio |
+| 8 | **Provação** | O momento mais difícil — crise, falha, recomeço |
+| 9 | **Recompensa** | O que foi ganho depois da provação |
+| 10 | **Caminho de Volta** | A integração da transformação na vida |
+| 11 | **Ressurreição** | A prova final — a mudança é real e consolidada |
+| 12 | **Retorno com o Elixir** | O que você traz de volta para compartilhar com outros |
+
+**Como usar:** você não precisa usar as 12 etapas em cada post. Identifique em qual etapa você está agora na sua trajetória. Conte essa etapa com honestidade. A audiência está em diferentes etapas — e vai se conectar com você porque está mais à frente (e pode mostrar o caminho).
 
 ---
 
-## Pedido de Desculpas Estratégico
+## Frameworks de Narrativa para Posts
 
-Um líder não pede desculpas o tempo todo — usa com sabedoria em momentos pontuais:
-- Falha na entrega de produto/serviço
-- Equívoco em informação compartilhada
-- Opinião que ofendeu alguém
-- Ideia que não corresponde mais ao que acredita
+### 1. Narrativa de Transformação
+**Estrutura:**
+- Consciência anterior → Desilusão → Transformação → Aprendizado → Convite
 
-**Após o pedido:** resolver o problema, não se vitimizar, seguir com segurança. Quanto mais conteúdo consistente você produziu, menos um deslize ganha destaque.
+**Quando usar:** apresentação da marca, marcos de trajetória, antes/depois de perspectiva
 
----
-
-## Fracasso como Humanização
-
-A exposição de fracasso, usada com comedimento, humaniza o conteúdo e cria conexão. Um fracasso bem narrado é:
-- Algo que deu errado **no passado**
-- Aprendizado claro que gerou crescimento
-- Convite para que o público também supere o mesmo obstáculo
-
-Nunca torne o fracasso a tônica da comunicação — use como tempero, não como prato principal.
+**Exemplo de abertura:** "Tem 3 anos eu achava que precisava postar todo dia para crescer no Instagram. Hoje tenho certeza que estava errado."
 
 ---
 
-## O Mentor e o Herói
+### 2. Narrativa de Vulnerabilidade (Estratégica)
+Vulnerabilidade não é expor tudo — é compartilhar dificuldades que o público também sente, mostrando que você é humano e superou ou está superando.
 
-Arquétipos são fluidos e complementares. O mentor um dia foi um herói. Ao criar conteúdo, você encarna ambas as funções:
+**Estrutura:**
+- Situação difícil → Como me senti → O que fiz → O que aprendi → Conexão com o público
 
-- **Como Herói:** compartilha sua jornada, erros, aprendizados, vulnerabilidades
-- **Como Mentor:** entrega ferramentas, mapas, conselhos e "equipamentos mágicos" para que seu público vença sua própria batalha
+**O que diferencia vulnerabilidade estratégica de oversharing:**
+- Estratégica: tem propósito claro de conexão e gera aprendizado
+- Oversharing: é desabafo sem filtro que expõe o público a algo pesado demais
 
-**A resiliência é o superpoder:** a capacidade de continuar apesar das adversidades. A teimosia é insistir no erro. A resiliência é a superação madura dos erros e a obstinação em abrir novos caminhos.
+**Exemplos de temas:**
+- Um erro profissional que você cometeu e o que aprendeu
+- Um momento em que quis desistir e por que não desistiu
+- Uma crença limitante que você descobriu e trabalhou para mudar
+- Uma comparação que fez mal e como saiu dela
 
 ---
 
-## Formatos × Focos Narrativos (25 Combinações)
+### 3. Construir Junto
+Uma das tendências mais fortes de 2025-2026: compartilhar o processo, não apenas o resultado.
 
-| Formato | Foco Narrativo | Resultado |
+**Estrutura:**
+- "Estou construindo X. Ainda não sei se vai funcionar. Aqui está o que estou fazendo e por quê."
+
+**Por que funciona:** a audiência acompanha porque não sabe o final. O engajamento é naturalmente maior porque as pessoas investem emocionalmente no processo.
+
+**Formatos ideais:** série de Reels, Stories sequenciais ao longo de semanas/meses, textão periódico de atualização
+
+---
+
+### 4. Pauta Quente + Narrativa Pessoal
+Conectar um assunto em alta à sua experiência pessoal.
+
+**Estrutura:**
+- [Assunto em trending] → "Isso me lembrou de quando eu..." → Aprendizado → Conexão com o público
+
+---
+
+## Narrativa por Formato
+
+| Formato | Tipo de Narrativa | Foco |
 |---|---|---|
-| Foto no Feed | Um Personagem | Post de bastidores humanizado |
-| Carrossel | Uma Dor | Série "Como superei X" |
-| Stories | Um Desejo | Série de transformação |
-| IGTV/Reels | Um Obstáculo | "O erro que quase me fez desistir" |
-| Live | Uma Solução | Consultoria/análise ao vivo |
+| **Textão** | Jornada do Herói completa ou transformação | Profundidade emocional |
+| **Carrossel** | Capítulos da jornada | Uma etapa por slide |
+| **Reels talking head** | Fragmento de história (1-2 etapas) | Gancho + resolução |
+| **Stories sequenciais** | Construir junto / bastidores | Processo em tempo real |
+| **Lives** | Diálogo sobre a jornada | Interação + profundidade |
+
+---
+
+## Camadas de Humanização
+
+Storytelling eficaz não é sobre um post épico por mês — é sobre revelar progressivamente mais camadas de quem você é.
+
+### As camadas (do mais seguro ao mais profundo):
+1. **Preferências e gostos:** "Sou fã de..." / "Não consigo viver sem..."
+2. **Rotina e hábitos:** como é o dia a dia fora do trabalho
+3. **Processo e bastidores:** como você faz o que faz
+4. **Desafios e aprendizados:** onde você errou e o que tirou disso
+5. **Crenças e valores:** o que você defende e por quê
+6. **Vida pessoal:** família, amizades, marcos de vida (na medida do confortável)
+
+**Regra de ouro:** nunca force uma camada que não está pronta para compartilhar. O público percebe desconforto. Compartilhe o que é genuíno — não o que você acha que deveria ser.
+
+---
+
+## Storytelling e a Era da IA (2025-2026)
+
+Com a explosão de conteúdo gerado por IA, o mercado valorizou ainda mais o que a IA não consegue replicar: a experiência vivida.
+
+**O que só você tem:**
+- Suas histórias de vida (a IA pode criar histórias, mas não tem as suas)
+- Sua perspectiva única e contextualizada no seu nicho
+- A sua voz — o jeito como você fala, as expressões que usa
+- Suas relações com clientes, alunos, comunidade
+- Suas opiniões baseadas em experiência real
+
+**Tendência confirmada:** conteúdo com defeitos humanos visíveis (pausas ao falar, cenário imperfeito, emoção real) supera conteúdo polido e artificialmente perfeito em engajamento. O público não quer mais a versão editada — quer a versão real.
+
+---
+
+## Checklist para Avaliar uma História
+
+Antes de publicar, verifique:
+- [ ] Tem um gancho nos primeiros 3 segundos (Reels) ou na primeira linha (texto)?
+- [ ] O problema ou conflito está claro?
+- [ ] Há uma transformação ou aprendizado concreto?
+- [ ] A história poderia ter sido escrita por qualquer um — ou claramente é minha?
+- [ ] Existe um convite (CTA) que conecta a história ao próximo passo do público?
+- [ ] O tom é consistente com o arquétipo da marca?
+
+Se o checklist passar, publique. Perfeito é inimigo do publicado — e no storytelling, a imperfeição autêntica supera a perfeição fabricada.

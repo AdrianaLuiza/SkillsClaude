@@ -1,184 +1,211 @@
 ---
 name: social-branding
 description: >
-  Constrói a identidade de marca completa para redes sociais — posicionamento, arquétipo, avatar, sistema visual e Primal Branding. Use quando:
-  (1) o usuário quer criar ou reformular a identidade de uma marca nas redes sociais,
-  (2) precisa descobrir o arquétipo da marca,
-  (3) quer definir nicho, posicionamento ou persona,
-  (4) precisa montar a bio do Instagram do zero,
-  (5) quer criar o sistema de crenças, rituais ou linguagem da marca,
-  (6) fala em "identidade visual", "voz da marca", "posicionamento", "tom de voz",
-  (7) quer entender quem é o público e como falar com ele.
-  Acione proativamente sempre que houver trabalho de marca antes de criar qualquer conteúdo.
+  Constrói e define a identidade de marca para redes sociais — posicionamento, proposta de valor, avatar do cliente, arquétipos e linguagem visual. Use quando:
+  (1) o usuário quer definir ou revisar a identidade da marca,
+  (2) precisa descobrir o posicionamento da marca no mercado,
+  (3) quer construir ou clarificar o avatar do cliente ideal,
+  (4) precisa de ajuda para definir a voz, tom ou personalidade da marca,
+  (5) fala em "branding", "identidade visual", "posicionamento", "persona",
+  (6) quer saber o que diferencia a marca dos concorrentes,
+  (7) está construindo uma marca do zero ou reposicionando uma existente.
+  Acione sempre que houver questões de identidade, posicionamento ou definição de marca antes de criar qualquer conteúdo.
 license: MIT
 ---
 
-# Social Branding — Identidade de Marca para Redes Sociais
+# Social Branding — Identidade e Posicionamento de Marca para Redes Sociais (2025-2026)
 
-Construir uma marca forte nas redes sociais exige muito mais do que uma paleta de cores bonita. Este processo une autoconhecimento, psicologia e estratégia para criar uma identidade que atrai, conecta e converte.
-
-## Fase 1 — IKIGAI: Razão de Viver e Nicho
-
-O IKIGAI é o ponto de partida. É a intersecção entre quatro perguntas:
-
-- O que você ama?
-- No que você é bom?
-- Pelo que você pode ser pago?
-- O que o mundo precisa?
-
-**Paixão** = O que você ama + No que você é bom  
-**Missão** = O que você ama + O que o mundo precisa  
-**Vocação** = O que o mundo precisa + Pelo que você pode ser pago  
-**Profissão** = No que você é bom + Pelo que você pode ser pago  
-**IKIGAI** = Junção de paixão + missão + profissão + vocação
-
-### Critérios obrigatórios para o nicho
-1. Ser específico
-2. Fazer uma promessa clara
-3. Contar uma história
+Marca não é logo. Marca é o conjunto de associações que uma pessoa faz quando pensa em você. No Instagram, você tem entre 3 e 7 segundos para gerar uma primeira impressão. O que fica na mente do visitante define se ele vai seguir ou não.
 
 ---
 
-## Fase 2 — Avatar: Quem é o Público
+## Fase 1 — IKIGAI: A Razão de Ser da Marca
 
-Não crie um personagem fictício — foque em clientes REAIS.
+IKIGAI é o ponto de intersecção entre quatro elementos:
 
-**4 passos para definir o avatar:**
+```
+O QUE VOCÊ AMA         O QUE O MUNDO PRECISA
+         \               /
+          \             /
+           [ IKIGAI ]
+          /             \
+         /               \
+O QUE VOCÊ FAZ BEM    PELO QUE PAGAM
+```
 
-**Passo 1 — Transformação:** Que transformação o público precisa? Deve nascer de um desejo e/ou de uma dor.
+**Exercício:**
+1. Liste 5 coisas que você faz com prazer no trabalho (O que você ama)
+2. Liste 5 problemas que você resolve para as pessoas (O que o mundo precisa)
+3. Liste 5 habilidades em que você é reconhecidamente bom (O que você faz bem)
+4. Liste 5 serviços ou produtos pelos quais as pessoas pagam (Pelo que pagam)
 
-**Passo 2 — Grau de consciência** (escolha o nível predominante):
-- Grau 1: Não sabe que tem problema
-- Grau 2: Reconhece o problema, não sabe como resolver
-- Grau 3: Sabe da dor e da solução
-- Grau 4: Sabe do produto/serviço
-- Grau 5: Sabe exatamente o que precisa e compara opções
-
-**Passo 3 — Motivação principal** (escolha uma):
-- Competição — quer superar outros
-- Benefício — quer ganho prático
-- Inspiração — quer se sentir motivado
-- Contato — quer conexão e comunidade
-
-**Passo 4 — Briefing do Avatar:**
-- Idade predominante
-- Gênero predominante
-- Profissão predominante
-- Hábitos e comportamentos
-- Principais dores e desejos
+O IKIGAI da marca está na intersecção desses quatro círculos. Quando ele está claro, conteúdo e posicionamento fluem com muito menos esforço.
 
 ---
 
-## Fase 3 — Primal Branding: Os 7 Elementos
+## Fase 2 — Avatar: Definindo o Cliente Ideal
 
-Sistema desenvolvido por Patrick Hanlon para criar comunidades engajadas. Cada elemento é um pilar da identidade de marca.
+Um avatar bem definido permite criar conteúdo que pareça escrito especificamente para uma pessoa — porque foi. Isso gera identificação imediata.
 
-### 1. História de Criação
-Alimenta a necessidade humana de descobrir a origem das coisas. Gera conexão, pertencimento e identidade.
+**Os 4 passos:**
 
-**Estrutura em 4 atos:**
-1. Vivendo uma vida normal
-2. Algo aconteceu e me transformou
-3. Uma frustração
-4. A solução — o caminho tomado
+**Passo 1 — Dados demográficos e contextuais**
+- Idade, gênero, localização, profissão, renda
+- Com quem mora, qual é sua rotina
 
-Três pontos essenciais: (1) transformação que quer causar, (2) problema que resolveu, (3) desejo que realiza.
+**Passo 2 — O que essa pessoa consome**
+- Quais perfis segue no Instagram
+- Quais podcasts, livros, séries consome
+- Qual é a sua opinião sobre temas relevantes do nicho
 
-### 2. Credos
-Sistema de crenças que define quem você é, afirma identidade, gera conexão e cria pertencimento.
+**Passo 3 — Dores e desejos**
+- O que a mantém acordada à noite
+- O que ela mais quer realizar nos próximos 12 meses
+- O que ela já tentou e não funcionou
+- Qual é o custo emocional do problema não resolvido
 
-Exercício: Liste 5 crenças mais fortes + 5 credos dos quais você discorda. Muitas vezes é mais fácil começar pelo que você NÃO acredita.
+**Passo 4 — Relação com você**
+- Como ela te descobre
+- Por que te segue
+- O que a faz comprar de você
+- O que poderia fazê-la parar de te seguir
 
-### 3. Rituais
-Interação com significado, repetida e ritmada no tempo. O ritual deve:
-- Ter significado claro
-- Ser feito diariamente nos Stories
-- Estar alinhado aos credos
-- Ser divertido
-- Permitir interação da comunidade
-
-### 4. Ícones
-Representações visuais, sonoras e sensoriais da marca:
-- **Visuais:** logotipo, cores, roupas, elementos gráficos
-- **Sonoros:** assinatura sonora, músicas, tom de voz
-- **Olfativos:** para produtos físicos ou presenciais
-
-Observe o público: como se vestem, quais cores usam, linguagem formal/informal, gírias, emojis, memes.
-
-### 5. Palavras Sagradas (Léxico)
-Sistema de expressões e palavras criadas especificamente para a marca. Ligadas ao nicho, geram sentimento de pertencimento à comunidade.
-
-### 6. Descrentes
-Ter descrentes significa ter posicionamento forte e consistente. Eles delimitam quem você é e quem você não é.
-
-Exercício: Liste seus valores × os valores dos descrentes (opostos).
-
-### 7. Líder
-O líder não vende produto — vende transformação. Ele toma frente, lidera um movimento, mostra o caminho, assume riscos, é resiliente.
-
-Perguntas: Qual movimento lidera? Que tipo de líder você é? Está mostrando o caminho ou apenas falando sobre ele?
+**Nome e foto:** dê um nome e imagine uma foto para o avatar. Quanto mais vívido o personagem, mais fácil criar conteúdo para ele.
 
 ---
 
-## Fase 4 — Arquétipos de Marca
+## Fase 3 — Primal Branding: Os 7 Elementos da Marca
 
-Baseado na obra de Carol Pearson & Margaret Mark ("O Herói e o Fora da Lei"), adaptando os arquétipos de Carl Jung para marcas.
+Primal Branding (Patrick Hanlon) é a estrutura que cria marcas que geram comunidade e pertencimento. Toda marca forte tem os 7 elementos:
 
-**Regra:** Corporações usam 1 arquétipo primário. Marcas pessoais podem usar 1 primário + 1 secundário.
+| Elemento | O que define | Exemplo |
+|---|---|---|
+| **Criação** | A história de como surgiu | "Abri esse negócio porque..." |
+| **Crença** | A causa maior que você defende | "Acredito que todo mundo pode..." |
+| **Ritual** | Comportamentos repetidos que unem a comunidade | Palavras únicas, formatos recorrentes |
+| **Vocabulário** | Palavras e expressões próprias da marca | Termos que só o seu público usa |
+| **Anti-crença** | O que você rejeita | "Não acredito em X" |
+| **Líder** | Quem representa a marca | Você ou o fundador |
+| **Não-crentes** | Quem a marca não é para | Posicionamento por exclusão |
 
-**Como descobrir:** Não faça quiz. Não é pelo que você deseja ser — é pela sua essência e motivação real.
-
-### Os 12 Arquétipos
-
-| Arquétipo | Desejo | Meta | Medo | Dom |
-|---|---|---|---|---|
-| **Maga** | Conhecer as leis do universo | Tornar sonhos realidade | Que algo dê errado | Grandes resultados |
-| **Rebelde** | Revolução ou vingança | Desconstruir o que não funciona | Não ter poder | Liberdade radical |
-| **Inocente** | Felicidade acima de tudo | Ser feliz | Fazer algo errado | Otimismo |
-| **Soberana** | Família/empresa próspera | Construir prosperidade | Caos, perder poder | Responsabilidade |
-| **Sábia** | Descoberta da verdade | Compreender o mundo | Ser enganada | Sabedoria |
-| **Amante** | Intimidade e prazer | Relacionamentos profundos | Rejeição | Paixão e comprometimento |
-| **Performática** | Viver o agora com alegria | Divertir e alegrar | Tédio | Alegria |
-| **Cuidadora** | Proteger os outros | Ajudar a todos | Egoísmo | Compaixão |
-| **Exploradora** | Liberdade de descobertas | Vida autêntica e gratificante | Conformidade | Autonomia e ambição |
-| **Heroína** | Provar o próprio valor | Exercer maestria | Vulnerabilidade | Competência e coragem |
-| **Cidadã** | Conexão com todos | Pertencer e adequar-se | Destacar-se demais | Empatia e realismo |
-| **Criadora** | Criar algo durador | Dar forma à visão de futuro | Vida medíocre | Criatividade |
-
-**Cases reais:**
-- Harley-Davidson → Rebelde + Exploradora
-- Hering → Cidadã Criadora
-- Lupo → Cidadã (dominante) com secundários por submarca
-- Disney → Maga + Inocente
-
-### Aplicação pelos 4 Sentidos
-
-O arquétipo deve estar em TODOS os pontos de percepção do cliente:
-
-1. **Visão:** identidade visual, cores, fontes, layouts, imagens de apoio, personagens de referência
-2. **Audição:** branding sonoro, playlists dos Reels/Stories/eventos, trilhas de lançamento
-3. **Olfato:** aroma da marca (representado por imagens no digital)
-4. **Tato:** textura que o arquétipo evocaria (macio, áspero, arrepiado?)
+**Como usar no Instagram:**
+- A história de criação vira post de apresentação, highlight e lives
+- A crença guia o posicionamento e o tom
+- O vocabulário cria identidade nas legendas e Stories
+- A anti-crença diferencia dos concorrentes
+- O líder é a cara da marca — aparecer é construir autoridade
 
 ---
 
-## Fase 5 — Bio do Instagram
+## Fase 4 — Arquétipos de Marca (Jung + Carol Pearson)
 
-A bio é a primeira impressão. Estrutura de 4 linhas:
+Os 12 arquétipos de Jung são padrões universais de personalidade que o público reconhece instintivamente. Identificar o arquétipo da marca ajuda a manter consistência de tom mesmo quando o conteúdo varia.
 
-1. **Linha 1:** Transformação que você quer causar no público
-2. **Linha 2:** Feito extraordinário ou marco de autoridade
-3. **Linha 3:** Outro marco, conquista ou valor importante
-4. **Linha 4:** CTA — chamada para ação (inscrever, comprar, acessar)
+| Arquétipo | Desejo central | Marcas conhecidas | Tom de comunicação |
+|---|---|---|---|
+| **Inocente** | Ser feliz e bom | Dove, Mc Donald's | Otimista, simples, honesto |
+| **Explorador** | Liberdade, aventura | Jeep, The North Face | Ousado, independente |
+| **Sábio** | Conhecimento e verdade | Google, TED | Reflexivo, analítico |
+| **Herói** | Superar desafios | Nike, Adidas | Determinado, inspirador |
+| **Fora-da-lei** | Revolução | Harley-Davidson, Diesel | Provocativo, irreverente |
+| **Mago** | Realizar sonhos | Disney, Apple | Transformador, visionário |
+| **Cara Comum** | Pertencer | IKEA, Levi's | Amigável, acessível |
+| **Amante** | Conexão e prazer | Victoria's Secret, Häagen-Dazs | Sensual, íntimo |
+| **Bobo da Corte** | Diversão e leveza | Old Spice, Ben & Jerry's | Divertido, espontâneo |
+| **Prestativo** | Ajudar os outros | Pampers, Médicos Sem Fronteiras | Empático, solidário |
+| **Criador** | Criar algo duradouro | Lego, Canva | Criativo, expressivo |
+| **Governante** | Controle e excelência | Mercedes, American Express | Sofisticado, autoritativo |
 
-**Foto de perfil:** rosto próximo (rosto!) ou logo nítido, alto contraste  
-**Username (@):** o mais limpo possível, sem pontos/underlines desnecessários
+**Como escolher:** identifique o arquétipo primário (o dominante) e, opcionalmente, o secundário (que complementa o primário). Evite misturar mais de dois — dilui a identidade.
+
+**No Instagram (2025-2026):** o arquétipo deve estar presente em cada decisão de conteúdo: o Herói posta sobre superação; o Sábio posta educação e dados; o Bobo da Corte usa humor e memes. Consistência de arquétipo = reconhecimento instantâneo de marca.
 
 ---
 
-## Psicologia das Cores
+## Fase 5 — Bio e Perfil Otimizados para SEO e Conversão
 
-Cores são construções sociais com significados positivos e negativos (Eva Heller). Ao definir a paleta:
-- Liste quais emoções positivas cada cor transmite
-- Liste quais associações negativas podem surgir
-- Verifique alinhamento com o arquétipo escolhido
+Em 2025-2026, a bio do Instagram tem dois papéis simultâneos: **SEO** (ser encontrada nas buscas) e **conversão** (convencer o visitante a seguir e agir).
+
+### SEO no Perfil: Onde Colocar Keywords
+
+O algoritmo de busca do Instagram indexa principalmente:
+
+1. **Username (@)** — peso alto para busca. Inclua palavra-chave do nicho quando possível
+   - Ex: @maria.nutricionista, @joao.fotografo.sp
+2. **Nome do perfil (campo "nome")** — o campo de **maior peso** para SEO
+   - Formato recomendado: Nome + Especialidade/Nicho
+   - Ex: "Maria | Nutricionista Funcional", "João | Fotógrafo de Casamentos SP"
+3. **Bio** — use termos descritivos do nicho que seu público pesquisaria
+4. **Legendas dos posts** — o Instagram indexa texto das legendas para busca
+5. **Alt text das imagens** — preencha manualmente para acessibilidade + SEO
+
+### Estrutura da Bio para Conversão (4 linhas)
+
+```
+Linha 1: Quem você é (declaração de identidade + nicho)
+Linha 2: O que você faz e para quem (proposta de valor objetiva)
+Linha 3: Prova ou resultado (números, credencial ou promessa)
+Linha 4: CTA (o que o visitante deve fazer agora)
+```
+
+**Exemplo:**
+```
+Nutricionista Funcional | Emagrecimento sem sofrimento
+Ajudo mulheres 40+ a emagrecer com saúde hormonal
+✅ +500 mulheres transformadas | CRN 12345
+👇 Seu plano grátis no link
+```
+
+**Tendência 2025:** bios informativas superam bios criativas em conversão. O visitante quer saber imediatamente "isso é para mim?" — responda isso nas primeiras duas linhas.
+
+---
+
+## Fase 6 — Identidade Visual
+
+A identidade visual não precisa ser cara para ser eficaz. Precisa ser consistente.
+
+### Paleta de Cores
+- 1 cor principal (dominante)
+- 1-2 cores secundárias (complementam)
+- 1 cor de texto
+
+**Psicologia das Cores:**
+- Azul: confiança, profissionalismo, saúde
+- Verde: natureza, saúde, crescimento
+- Amarelo/laranja: energia, otimismo, acessibilidade
+- Vermelho: urgência, paixão, força
+- Roxo: criatividade, espiritualidade, luxo
+- Rosa: feminilidade, cuidado, amor
+- Preto: sofisticação, luxo, elegância
+- Branco: limpeza, minimalismo, clareza
+
+### Tipografia
+- 1-2 famílias tipográficas (mais que isso gera poluição visual)
+- Uma para títulos/destaques, uma para corpo/texto
+- Manter a mesma tipografia em todos os posts
+
+### Tom da Imagem
+Escolher e manter um tom visual:
+- Claro e limpo (minimalismo)
+- Cores vibrantes e saturadas (energia e vida)
+- Tons terrosos e naturais (orgânico, sustentável)
+- Escuro e sofisticado (luxo e maturidade)
+- Pastel (delicado, feminino, suave)
+
+### Regra de Consistência Visual
+O público deve reconhecer seu post no feed sem precisar ver seu nome. Se você trocar a foto por uma aleatória e parecer de outro perfil, a identidade visual precisa ser revisada.
+
+---
+
+## Posicionamento: A Pergunta que Define Tudo
+
+**"Por que você e não o concorrente?"**
+
+O posicionamento nasce na resposta a essa pergunta. Não basta ser bom — precisa ser o melhor para alguém específico.
+
+**3 posicionamentos possíveis:**
+1. **Nichamento:** você serve um público muito específico melhor do que qualquer generalista
+2. **Método:** você tem uma abordagem única que outros não têm
+3. **Resultado:** você entrega um resultado específico que outros não garantem
+
+Marcas fortes em 2025-2026 combinam autenticidade pessoal com especificidade de nicho. O algoritmo favorece conteúdo relevante para audiências específicas — ser "para todo mundo" significa chegar a ninguém com profundidade.
