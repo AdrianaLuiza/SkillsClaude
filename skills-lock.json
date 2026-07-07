@@ -37,6 +37,12 @@
       "skillPath": "skills/qa-browser/SKILL.md",
       "computedHash": "",
       "notes": "Adaptação em PT-BR da skill browse/qa do gstack. Melhorias: progressive disclosure com reference files, seção de segurança explícita, fluxos completos, comandos traduzidos."
+    },
+    "planejar": {
+      "source": "C:\\Users\\alusu\\Downloads\\planejar.skill",
+      "sourceType": "local",
+      "skillPath": "skills/planejar/SKILL.md",
+      "computedHash": ""
     }
   }
 }
