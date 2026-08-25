@@ -2,7 +2,7 @@
 
 ## Apresentação: análise, entrega e nova proposta
 
-`Pekar-Analise-Entrega-Proposta.pptx` — 18 slides editáveis, com notas do
+`Pekar-Analise-Entrega-Proposta.pptx` — 12 slides editáveis, com notas do
 apresentador em cada um. Cobre o período de 30/07/2026 a 25/08/2026.
 
 Estrutura em três partes:
@@ -10,10 +10,14 @@ Estrutura em três partes:
 | Parte | Slides | Conteúdo |
 |---|---|---|
 | Capa e roteiro | 1–2 | Abertura e índice |
-| 01 · A entrega | 3–9 | Linha do tempo, resultados, pontos em aberto, destaques pendentes, Google Meu Negócio, bônus no Drive, encerramento |
-| 02 · A análise | 10–15 | Tendências 2026, pilares de conteúdo, formatos, horários, roteiro de produção |
-| 03 · A proposta | 16–17 | Google Meu Negócio + QR codes; social media |
-| Fechamento | 18 | Assinatura |
+| 01 · A entrega | 3–6 | Linha do tempo + encerramento; resultados; em aberto + destaques pendentes; Google Meu Negócio + bônus no Drive |
+| 02 · A análise | 7–9 | Tendências 2026; pilares + formatos; horários + roteiro de produção |
+| 03 · A proposta | 10–11 | Google Meu Negócio + QR codes; social media |
+| Fechamento | 12 | Assinatura |
+
+O conteúdo é o mesmo da versão de 18 slides aprovada pela Adriana — apenas
+redistribuído. Nos slides de proposta os valores são apresentados no mesmo
+corpo do texto, sem destaque tipográfico, de propósito.
 
 ### Como regerar / editar
 
