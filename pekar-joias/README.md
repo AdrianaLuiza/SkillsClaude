@@ -2,6 +2,24 @@
 
 ## Apresentação: análise, entrega e nova proposta
 
+**Versão final aprovada:** `Pekar-Analise-Entrega-Proposta-APROVADA.pptx` — 10
+slides, editado à mão pela Adriana a partir da versão de 12. É a fonte da
+verdade. O PDF (`Pekar-Analise-Entrega-Proposta.pdf`) é gerado dele.
+
+Para gerar o PDF com a tipografia correta é preciso ter as substitutas métricas
+de Cambria e Calibri instaladas, senão o LibreOffice usa DejaVu e o texto sai
+mais largo do que no PowerPoint:
+
+```bash
+apt-get install -y fonts-crosextra-caladea fonts-crosextra-carlito
+soffice --headless --convert-to pdf Pekar-Analise-Entrega-Proposta-APROVADA.pptx
+```
+
+O `build.js` abaixo gera a versão de 12 slides, anterior à edição manual — serve
+de referência do sistema visual, mas não corresponde mais ao arquivo aprovado.
+
+### Versão gerada por código (12 slides)
+
 `Pekar-Analise-Entrega-Proposta.pptx` — 12 slides editáveis, com notas do
 apresentador em cada um. Cobre o período de 30/07/2026 a 25/08/2026.
 
@@ -88,19 +106,19 @@ No ar em <https://pekar-joias.web.app> (Firebase Hosting, projeto `pekar-joias`)
 Os fontes ficam fora deste repositório, na máquina local (`pekar-joias/arquivos-fonte`
 e `pekar-joias/hosting-firebase`).
 
-## Página web da apresentação
+## Página web da apresentação — RETIRADA DO AR
 
-Publicada como Artifact:
-<https://claude.ai/code/artifact/51c226f3-77c8-4c60-940b-da965b101650>
+Foi publicada e depois retirada a pedido da Adriana. O conteúdo do endereço
+foi substituído por um aviso de página retirada.
 
-Mesmo conteúdo do PPTX de 10 slides aprovado, redesenhado como página única de
-rolagem, para enviar por link ao cliente.
+**Atenção:** o compartilhamento do Artifact continua ligado e fixado numa versão
+anterior, então substituir o conteúdo NÃO basta. Para remover de fato é preciso
+desligar o compartilhamento (ou excluir o Artifact) na galeria em
+<https://claude.ai/code/artifacts>.
 
-| Arquivo | O que é |
-|---|---|
-| `pagina.tpl.html` | Fonte editável, com `__LOGO__`, `__LOGOC__` e `__ASSIN__` como marcadores |
-| `pekar-apresentacao.html` | Página final, com as imagens embutidas em base64 (auto-suficiente) |
-| `web-logo.png`, `web-logo-claro.png`, `web-assinatura.png` | Versões reduzidas dos assets, usadas na página |
+A fonte da página (`pagina.tpl.html`) segue no repositório caso se queira retomar.
+Ela contém a senha do e-mail e o PIX — reveja isso antes de republicar.
+
 
 ### Como atualizar
 
