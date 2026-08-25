@@ -1,11 +1,19 @@
 # Pekar Arte em Jóias — materiais do projeto
 
-## Apresentação de encerramento da Etapa 1
+## Apresentação: análise, entrega e nova proposta
 
-`Pekar-Encerramento-Etapa-1.pptx` — 14 slides, linguagem para leigos em rede social,
-com notas do apresentador em cada slide.
+`Pekar-Analise-Entrega-Proposta.pptx` — 18 slides editáveis, com notas do
+apresentador em cada um. Cobre o período de 30/07/2026 a 25/08/2026.
 
-Período coberto: 30/07/2026 a 24/08/2026.
+Estrutura em três partes:
+
+| Parte | Slides | Conteúdo |
+|---|---|---|
+| Capa e roteiro | 1–2 | Abertura e índice |
+| 01 · A entrega | 3–9 | Linha do tempo, resultados, pontos em aberto, destaques pendentes, Google Meu Negócio, bônus no Drive, encerramento |
+| 02 · A análise | 10–15 | Tendências 2026, pilares de conteúdo, formatos, horários, roteiro de produção |
+| 03 · A proposta | 16–17 | Google Meu Negócio + QR codes; social media |
+| Fechamento | 18 | Assinatura |
 
 ### Como regerar / editar
 
@@ -16,46 +24,59 @@ npm install pptxgenjs
 node build.js
 ```
 
-Isso reescreve `Pekar-Encerramento-Etapa-1.pptx` na mesma pasta.
+Isso reescreve `Pekar-Analise-Entrega-Proposta.pptx` na mesma pasta. Os quatro
+PNGs precisam estar ao lado do `build.js` — ele os referencia por caminho relativo.
 
 Para conferir o resultado visualmente:
 
 ```bash
-soffice --headless --convert-to pdf Pekar-Encerramento-Etapa-1.pptx
-pdftoppm -jpeg -r 110 Pekar-Encerramento-Etapa-1.pdf slide
+soffice --headless --convert-to pdf Pekar-Analise-Entrega-Proposta.pptx
+pdftoppm -jpeg -r 110 Pekar-Analise-Entrega-Proposta.pdf slide
 ```
 
-### Paleta e tipografia usadas
+## Assets de marca
 
-| Papel | Valor |
+Todos com fundo transparente, extraídos do PDF vetorial da logo (CorelDRAW,
+`etiqueta 2,5x2,5 redonda karen.cdr`) e do PPTX original.
+
+| Arquivo | Uso |
 |---|---|
-| Fundo escuro (dominante) | `#2E2622` |
-| Acento dourado | `#B08D57` |
-| Areia (apoio) | `#EFE7DE` |
-| Card claro | `#F7F2EC` |
-| Títulos | Cambria |
-| Corpo | Calibri |
+| `pekar-logo.png` | Logo completa, lettering marrom. Para fundos claros. |
+| `pekar-logo-claro.png` | Mesma logo com o lettering em areia. Para fundos escuros. |
+| `pekar-selo.png` | Selo redondo com o padrão de fundo (página 1 do PDF). |
+| `assinatura-alusulina.png` | Assinatura da Adriana, com o fundo marrom removido. |
 
-As cores são uma aproximação da identidade Pekar. Se a identidade oficial
-(`identidade-pekar.docx`) tiver valores diferentes, trocar as constantes no topo
-de `build.js` — todo o deck se ajusta.
+Como foram gerados, caso precise refazer em outra resolução:
 
-### Estrutura dos slides
+```bash
+pdftocairo -png -transp -r 2000 -f 2 -l 2 logovetor.pdf logo   # logo
+pdftocairo -png -transp -r 2000 -f 1 -l 1 logovetor.pdf selo   # selo redondo
+```
 
-1. Capa
-2. Visão geral — as 5 frentes da etapa
-3. Linha do tempo (30/07 a 24/08)
-4. Identidade visual
-5. Instagram: bio, destaques e link
-6. A página no link da bio (`pekar-joias.web.app`)
-7. Guia de Instagram e início das postagens
-8. Resultados no Instagram (2.826 → 2.836 seguidores)
-9. Google Meu Negócio — o problema encontrado
-10. Google Meu Negócio — a solução
-11. Bônus: pasta no Drive
-12. Pendências com a Pekar (2 destaques prontos, sem conteúdo)
-13. Balanço — o que a Pekar leva da etapa
-14. Encerramento, parcela final e próximos passos
+## Paleta e tipografia
+
+| Papel | Hex | Nome na identidade |
+|---|---|---|
+| Fundo escuro (dominante) | `#332821` | Marrom profundo |
+| Acento principal | `#C9A455` | Dourado |
+| Acento secundário | `#BF5340` | Terracota |
+| Acento terciário | `#87AF9F` | Verde-água |
+| Card claro / faixas | `#E9DDCA` | Areia |
+| Títulos | Cambria | |
+| Corpo | Calibri | |
+
+**Atenção:** os hex foram estimados a partir do print da paleta, não de um
+arquivo de origem. A logo vetorial usa `#BB9A4C` (dourado), `#B36C44`
+(terracota) e `#6B2F18` (marrom do lettering). Se a identidade oficial tiver
+valores exatos diferentes, trocar as constantes no topo do `build.js` — todo o
+deck se reajusta.
+
+## Convenção de grafia
+
+- **"Jóias"** com acento apenas no nome da marca (*Pekar Arte em Jóias*), para
+  bater com a logo.
+- **"joia"/"joias"** sem acento no texto corrido, que é a grafia correta pelo
+  Acordo Ortográfico.
 
 ## Site link-in-bio
 

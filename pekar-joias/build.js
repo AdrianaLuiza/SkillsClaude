@@ -1,714 +1,402 @@
 const pptxgen = require("pptxgenjs");
+const path = require("path");
 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.33 x 7.5
-pres.author = "Adriana";
+pres.author = "AluSulina";
 pres.company = "Pekar Arte em Jóias";
-pres.title = "Pekar Arte em Jóias — Encerramento da Etapa 1";
+pres.title = "Pekar Arte em Jóias — Análise, entrega e nova proposta";
 
-// ---------- paleta ----------
-const DARK = "2E2622";  // marrom espresso (dominante nos slides escuros)
-const GOLD = "B08D57";  // dourado / bronze (acento)
-const SAND = "EFE7DE";  // areia quente (apoio)
-const CARD = "F7F2EC";  // fundo de card
-const CARD_D = "3D332C"; // card sobre fundo escuro
-const WHITE = "FFFFFF";
-const INK = "3A322D";   // texto corpo
-const MUTED = "857870"; // texto secundário
+// ---------------------------------------------------------------- paleta
+// Cores da identidade Pekar (print da paleta + logo vetorial).
+const OURO = "C9A455"; // dourado
+const TERRA = "BF5340"; // terracota
+const AREIA = "E9DDCA"; // areia
+const AGUA = "87AF9F"; // verde-água
+const MARROM = "332821"; // marrom profundo
 
-const HEAD = "Cambria";
-const BODY = "Calibri";
+const BRANCO = "FFFFFF";
+const CARD_CLARO = "F7F1E7"; // areia diluída, fundo de card em slide claro
+const CARD_ESCURO = "43362C"; // marrom clareado, card em slide escuro
+const TINTA = "3A2F26"; // texto corpo em fundo claro
+const SUAVE = "8A7A6B"; // texto secundário em fundo claro
+const SUAVE_D = "D9CDBB"; // texto secundário em fundo escuro
 
-const M = 0.65;              // margem lateral
-const W = 13.33 - M * 2;     // 12.03 largura útil
+const TIT = "Cambria";
+const TXT = "Calibri";
 
-// ---------- helpers ----------
-const shadow = () => ({ type: "outer", color: "000000", blur: 14, offset: 2, angle: 90, opacity: 0.09 });
+const M = 0.62;
+const W = 13.33 - M * 2; // 12.09
 
-function heading(s, kicker, title, dark) {
+const LOGO = path.join(__dirname, "pekar-logo.png");
+const LOGO_CLARO = path.join(__dirname, "pekar-logo-claro.png");
+const ASSINATURA = path.join(__dirname, "assinatura-alusulina.png");
+
+// ------------------------------------------------------------- utilitários
+const sombra = () => ({ type: "outer", color: "000000", blur: 14, offset: 2, angle: 90, opacity: 0.10 });
+
+function slideClaro() {
+  const s = pres.addSlide();
+  s.background = { color: BRANCO };
+  s.addImage({ path: LOGO, x: 12.28, y: 0.34, w: 0.5, h: 0.65 });
+  return s;
+}
+
+function slideEscuro() {
+  const s = pres.addSlide();
+  s.background = { color: MARROM };
+  s.addImage({ path: LOGO_CLARO, x: 12.28, y: 0.34, w: 0.5, h: 0.65 });
+  return s;
+}
+
+function titulo(s, kicker, texto, escuro) {
   s.addText(kicker.toUpperCase(), {
-    x: M, y: 0.42, w: W, h: 0.28,
-    fontFace: BODY, fontSize: 11, bold: true, charSpacing: 2.4,
-    color: GOLD, margin: 0, valign: "middle",
+    x: M, y: 0.4, w: W - 1.0, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.4,
+    color: OURO, margin: 0, valign: "middle",
   });
-  s.addText(title, {
-    x: M, y: 0.72, w: W, h: 0.72,
-    fontFace: HEAD, fontSize: 34, bold: true,
-    color: dark ? WHITE : DARK, margin: 0, valign: "middle",
+  s.addText(texto, {
+    x: M, y: 0.7, w: W - 1.0, h: 0.72,
+    fontFace: TIT, fontSize: 33, bold: true,
+    color: escuro ? BRANCO : MARROM, margin: 0, valign: "middle",
   });
 }
 
-function card(s, x, y, w, h, fill) {
+function card(s, x, y, w, h, cor) {
   s.addShape(pres.ShapeType.roundRect, {
     x, y, w, h, rectRadius: 0.06,
-    fill: { color: fill || CARD }, line: { type: "none" }, shadow: shadow(),
+    fill: { color: cor || CARD_CLARO }, line: { type: "none" }, shadow: sombra(),
   });
 }
 
-function goldCircle(s, x, y, d, label, fontSize) {
+function bolinha(s, x, y, d, texto, corpo, tam) {
   s.addShape(pres.ShapeType.ellipse, {
-    x, y, w: d, h: d, fill: { color: GOLD }, line: { type: "none" },
+    x, y, w: d, h: d, fill: { color: corpo || OURO }, line: { type: "none" },
   });
-  s.addText(label, {
+  s.addText(texto, {
     x, y, w: d, h: d,
-    fontFace: BODY, fontSize: fontSize || 14, bold: true, color: WHITE,
+    fontFace: TXT, fontSize: tam || 13, bold: true, color: BRANCO,
     align: "center", valign: "middle", margin: 0,
   });
 }
 
+// Tabela com a cara da marca (editável no PowerPoint).
+function tabela(s, cabecalho, linhas, opts) {
+  const head = cabecalho.map((t) => ({
+    text: t,
+    options: {
+      fill: { color: MARROM }, color: AREIA, bold: true, fontSize: 11,
+      fontFace: TXT, charSpacing: 1.4, valign: "middle", margin: [6, 10, 6, 10],
+    },
+  }));
+  const corpo = linhas.map((linha, i) =>
+    linha.map((t, j) => ({
+      text: t,
+      options: {
+        fill: { color: i % 2 === 0 ? CARD_CLARO : BRANCO },
+        color: j === 0 ? MARROM : TINTA,
+        bold: j === 0,
+        fontSize: j === 0 ? 12 : 11.5,
+        fontFace: TXT, valign: "middle", margin: [7, 10, 7, 10],
+      },
+    }))
+  );
+  s.addTable([head, ...corpo], {
+    x: opts.x, y: opts.y, w: opts.w, colW: opts.colW, rowH: opts.rowH,
+    border: { type: "solid", color: BRANCO, pt: 1.5 },
+    autoPage: false,
+  });
+}
+
 // =====================================================================
-// 1. CAPA
+// 1 · CAPA
 // =====================================================================
 {
   const s = pres.addSlide();
-  s.background = { color: DARK };
+  s.background = { color: MARROM };
 
   s.addShape(pres.ShapeType.ellipse, {
-    x: 10.1, y: -1.05, w: 4.6, h: 4.6,
-    fill: { color: GOLD, transparency: 82 }, line: { type: "none" },
+    x: 9.15, y: -1.5, w: 5.6, h: 5.6,
+    fill: { type: "none" }, line: { color: OURO, width: 1, transparency: 55 },
   });
   s.addShape(pres.ShapeType.ellipse, {
-    x: 11.3, y: 4.35, w: 2.7, h: 2.7,
-    fill: { color: GOLD, transparency: 88 }, line: { type: "none" },
+    x: 9.95, y: -0.55, w: 4.6, h: 4.6,
+    fill: { type: "none" }, line: { color: OURO, width: 1.75 },
   });
+  s.addShape(pres.ShapeType.ellipse, {
+    x: 10.2, y: 4.7, w: 3.4, h: 3.4,
+    fill: { color: OURO, transparency: 90 }, line: { type: "none" },
+  });
+
+  s.addImage({ path: LOGO_CLARO, x: 10.9, y: 0.62, w: 1.72, h: 2.23 });
 
   s.addText("PEKAR ARTE EM JÓIAS", {
-    x: M, y: 1.75, w: 9.2, h: 0.34,
-    fontFace: BODY, fontSize: 13, bold: true, charSpacing: 3.2,
-    color: GOLD, margin: 0, valign: "middle",
+    x: M, y: 2.28, w: 9.0, h: 0.32,
+    fontFace: TXT, fontSize: 13, bold: true, charSpacing: 3.4,
+    color: OURO, margin: 0, valign: "middle",
   });
-  s.addText("Encerramento da Etapa 1", {
-    x: M, y: 2.2, w: 9.6, h: 1.0,
-    fontFace: HEAD, fontSize: 46, bold: true, color: WHITE, margin: 0, valign: "middle",
-  });
-  s.addText("Identidade, Instagram, site e Google:\no que foi feito, o que mudou e o que vem agora.", {
-    x: M, y: 3.3, w: 8.6, h: 0.95,
-    fontFace: BODY, fontSize: 17, color: SAND, lineSpacing: 26, margin: 0, valign: "top",
+  s.addText("Análise, entrega\ne nova proposta", {
+    x: M, y: 2.68, w: 9.2, h: 1.7,
+    fontFace: TIT, fontSize: 44, bold: true, color: BRANCO,
+    lineSpacing: 50, margin: 0, valign: "top",
   });
 
   s.addShape(pres.ShapeType.roundRect, {
-    x: M, y: 5.55, w: 4.15, h: 0.62, rectRadius: 0.3,
-    fill: { color: GOLD }, line: { type: "none" },
+    x: M, y: 4.6, w: 4.05, h: 0.6, rectRadius: 0.3,
+    fill: { color: OURO }, line: { type: "none" },
   });
-  s.addText("30/07/2026  a  24/08/2026", {
-    x: M, y: 5.55, w: 4.15, h: 0.62,
-    fontFace: BODY, fontSize: 13, bold: true, color: WHITE,
+  s.addText("30/07/2026  a  25/08/2026", {
+    x: M, y: 4.6, w: 4.05, h: 0.6,
+    fontFace: TXT, fontSize: 13, bold: true, color: BRANCO,
     align: "center", valign: "middle", margin: 0,
   });
 
-  s.addText("Consultoria de presença digital  ·  Adriana", {
-    x: M, y: 6.4, w: 8, h: 0.3,
-    fontFace: BODY, fontSize: 12, color: MUTED, margin: 0, valign: "middle",
+  s.addShape(pres.ShapeType.line, {
+    x: M, y: 5.62, w: 3.1, h: 0,
+    line: { color: OURO, width: 0.75, transparency: 45 },
   });
+  s.addImage({ path: ASSINATURA, x: M, y: 5.78, w: 2.4, h: 0.8 });
 
   s.addNotes(
-    "Abertura. Diga em uma frase: “Karen, essa etapa foi para arrumar a base da presença digital da Pekar. " +
-    "Vou te mostrar em 10 minutos tudo o que foi feito, o que já está no ar e o que ainda depende de vocês.”"
+    "Abertura. Uma frase: “Karen, essa apresentação tem três partes — o que foi entregue, " +
+    "o que eu analisei do mercado e do perfil, e a proposta para continuarmos.”"
   );
 }
 
 // =====================================================================
-// 2. RESUMO EM 1 MINUTO
+// 2 · ROTEIRO
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Visão geral", "O que foi feito, em 1 minuto");
+  const s = slideClaro();
+  titulo(s, "Roteiro", "O que você vai ver aqui");
 
-  const top = [
-    ["1", "Identidade visual", "A cara da marca definida: logo tratada, cores e letras para usar em tudo."],
-    ["2", "Instagram organizado", "Bio, destaques e link arrumados para quem chega entender e comprar."],
-    ["3", "Site com link na bio", "Uma página só da Pekar, com WhatsApp, garantia, entrega e ouvidoria."],
-  ];
-  const bottom = [
-    ["4", "Google Meu Negócio", "Descoberto o motivo de não conseguirem editar as lojas e feita a reivindicação dos acessos."],
-    ["5", "Bônus: arquivos no Drive", "Uma pasta da Pekar com todos os arquivos criados no projeto, para uso a qualquer momento."],
+  const partes = [
+    ["01", "A entrega", "Tudo o que foi feito entre 30 de julho e 25 de agosto: identidade, Instagram, Google e os arquivos que ficam com a Pekar.", OURO],
+    ["02", "A análise", "O que o mercado de joalheria pede em 2026 e como isso vira conteúdo, formato, horário e roteiro de gravação.", TERRA],
+    ["03", "A proposta", "O que sugiro para a próxima fase, com escopo e valores separados por frente de trabalho.", AGUA],
   ];
 
-  const cw = 3.83, gap = 0.27;
-  top.forEach((it, i) => {
+  const cw = 3.83, gap = 0.3;
+  partes.forEach((p, i) => {
     const x = M + i * (cw + gap);
-    card(s, x, 1.72, cw, 2.15);
-    goldCircle(s, x + 0.32, 1.98, 0.44, it[0]);
-    s.addText(it[1], {
-      x: x + 0.32, y: 2.56, w: cw - 0.64, h: 0.34,
-      fontFace: HEAD, fontSize: 17, bold: true, color: DARK, margin: 0, valign: "middle",
+    card(s, x, 1.85, cw, 3.5);
+    s.addText(p[0], {
+      x: x + 0.4, y: 2.15, w: 1.4, h: 0.75,
+      fontFace: TIT, fontSize: 42, bold: true, color: p[3], margin: 0, valign: "middle",
     });
-    s.addText(it[2], {
-      x: x + 0.32, y: 2.95, w: cw - 0.64, h: 0.8,
-      fontFace: BODY, fontSize: 13, color: INK, lineSpacing: 18, margin: 0, valign: "top",
+    s.addText(p[1], {
+      x: x + 0.4, y: 3.0, w: cw - 0.8, h: 0.42,
+      fontFace: TIT, fontSize: 21, bold: true, color: MARROM, margin: 0, valign: "middle",
     });
-  });
-
-  const bw = 5.88;
-  bottom.forEach((it, i) => {
-    const x = M + i * (bw + gap);
-    card(s, x, 4.08, bw, 1.95);
-    goldCircle(s, x + 0.32, 4.34, 0.44, it[0]);
-    s.addText(it[1], {
-      x: x + 0.95, y: 4.34, w: bw - 1.3, h: 0.44,
-      fontFace: HEAD, fontSize: 17, bold: true, color: DARK, margin: 0, valign: "middle",
-    });
-    s.addText(it[2], {
-      x: x + 0.32, y: 4.95, w: bw - 0.64, h: 0.85,
-      fontFace: BODY, fontSize: 13, color: INK, lineSpacing: 18, margin: 0, valign: "top",
+    s.addText(p[2], {
+      x: x + 0.4, y: 3.52, w: cw - 0.8, h: 1.55,
+      fontFace: TXT, fontSize: 13.5, color: TINTA, lineSpacing: 20, margin: 0, valign: "top",
     });
   });
 
-  s.addText("Cada uma dessas frentes está detalhada nos próximos slides.", {
-    x: M, y: 6.3, w: W, h: 0.3,
-    fontFace: BODY, fontSize: 12, italic: true, color: MUTED, margin: 0, valign: "middle",
-  });
+  s.addText(
+    "Se em algum ponto eu usar um termo que não faça sentido, me interrompe — a ideia é que tudo aqui seja claro.",
+    {
+      x: M, y: 5.7, w: W, h: 0.4,
+      fontFace: TXT, fontSize: 13.5, italic: true, color: SUAVE, margin: 0, valign: "middle",
+    }
+  );
 
-  s.addNotes("Panorama. Se a Karen tiver pouco tempo, esse slide sozinho conta a história da etapa.");
+  s.addNotes("Serve para a Karen saber quanto tempo falta e onde estamos.");
 }
 
 // =====================================================================
-// 3. LINHA DO TEMPO
+// 3 · LINHA DO TEMPO
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Linha do tempo", "Como foi o caminho, dia a dia");
+  const s = slideClaro();
+  titulo(s, "A entrega  ·  Parte 01", "Como foi feito, dia a dia");
 
-  const rows = [
+  const linhas = [
     ["30/07", "Proposta aprovada e briefing enviado", "O combinado fechado e o questionário de entendimento da marca enviado para a Karen."],
     ["31/07", "Acesso ao Instagram e arquivos da logo", "A Pekar liberou o perfil e enviou os arquivos originais da logo."],
     ["01/08", "Briefing respondido", "As respostas da Karen chegaram e viraram a base da identidade."],
     ["02/08", "Identidade e guia de Instagram entregues", "Também foi criado o grupo de WhatsApp do projeto, para agilizar o dia a dia."],
     ["03/08", "Instagram atualizado", "Bio reescrita, capas de destaque no padrão da marca e link de compra na bio."],
     ["10/08", "Primeiras postagens no ar", "Começo da publicação de conteúdo seguindo o guia entregue."],
-    ["24/08", "Encerramento da Etapa 1", "Esta apresentação: balanço do que foi feito e do que vem a seguir."],
+    ["25/08", "Encerramento da primeira etapa", "Esta apresentação: balanço do que foi feito e proposta do que vem a seguir."],
   ];
 
-  const rowH = 0.71, startY = 1.74;
-  rows.forEach((r, i) => {
-    const y = startY + i * rowH;
-    const last = i === rows.length - 1;
+  const alturaLinha = 0.7, y0 = 1.78;
+  linhas.forEach((r, i) => {
+    const y = y0 + i * alturaLinha;
+    const ultima = i === linhas.length - 1;
     s.addShape(pres.ShapeType.roundRect, {
       x: M, y: y + 0.04, w: 1.05, h: 0.42, rectRadius: 0.2,
-      fill: { color: last ? GOLD : SAND }, line: { type: "none" },
+      fill: { color: ultima ? OURO : AREIA }, line: { type: "none" },
     });
     s.addText(r[0], {
       x: M, y: y + 0.04, w: 1.05, h: 0.42,
-      fontFace: BODY, fontSize: 12, bold: true, color: last ? WHITE : DARK,
+      fontFace: TXT, fontSize: 12, bold: true, color: ultima ? BRANCO : MARROM,
       align: "center", valign: "middle", margin: 0,
     });
     s.addText(r[1], {
-      x: M + 1.3, y: y - 0.02, w: 5.15, h: 0.55,
-      fontFace: HEAD, fontSize: 15, bold: true, color: DARK, lineSpacing: 20, margin: 0, valign: "middle",
+      x: M + 1.28, y: y - 0.02, w: 5.05, h: 0.55,
+      fontFace: TIT, fontSize: 15, bold: true, color: MARROM,
+      lineSpacing: 20, margin: 0, valign: "middle",
     });
     s.addText(r[2], {
-      x: M + 6.6, y: y - 0.02, w: W - 6.6, h: 0.55,
-      fontFace: BODY, fontSize: 12, color: MUTED, lineSpacing: 16, margin: 0, valign: "middle",
+      x: M + 6.5, y: y - 0.02, w: W - 6.5, h: 0.55,
+      fontFace: TXT, fontSize: 12, color: SUAVE, lineSpacing: 16, margin: 0, valign: "middle",
     });
   });
 
-  s.addNotes("Serve para mostrar ritmo: da aprovação até o conteúdo no ar foram 11 dias.");
+  s.addNotes("Mostra ritmo: da aprovação ao conteúdo no ar foram 11 dias.");
 }
 
 // =====================================================================
-// 4. IDENTIDADE VISUAL
+// 4 · RESULTADOS
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Entrega 1  ·  02/08", "Identidade visual: a cara da Pekar");
-
-  card(s, M, 1.72, 6.9, 4.3);
-  s.addText("O que é isso, na prática", {
-    x: M + 0.45, y: 2.0, w: 6.0, h: 0.36,
-    fontFace: HEAD, fontSize: 19, bold: true, color: DARK, margin: 0, valign: "middle",
-  });
-  s.addText(
-    "Identidade visual é o conjunto de regras que faz a Pekar ser reconhecida " +
-    "em qualquer lugar: no post, na etiqueta, na embalagem e na loja.\n\n" +
-    "Sem isso, cada peça de comunicação sai com uma cara diferente e a marca " +
-    "demora muito mais para ficar na memória da cliente.",
-    {
-      x: M + 0.45, y: 2.45, w: 6.0, h: 2.05,
-      fontFace: BODY, fontSize: 13.5, color: INK, lineSpacing: 20, margin: 0, valign: "top",
-    }
-  );
-  s.addText("Entregue em dois arquivos:", {
-    x: M + 0.45, y: 4.58, w: 6.0, h: 0.3,
-    fontFace: BODY, fontSize: 13, bold: true, color: DARK, margin: 0, valign: "middle",
-  });
-  s.addText(
-    [
-      { text: "identidade-pekar (documento) — a explicação completa, para consulta", options: { bullet: true, breakLine: true } },
-      { text: "identidade-pekar (apresentação) — a versão visual, para mostrar rápido", options: { bullet: true } },
-    ],
-    {
-      x: M + 0.45, y: 4.92, w: 6.0, h: 1.05,
-      fontFace: BODY, fontSize: 12.5, color: INK, paraSpaceAfter: 6, margin: 0, valign: "top",
-    }
-  );
-
-  const rx = M + 7.2;
-  const rw = W - 7.2;
-  card(s, rx, 1.72, rw, 4.3, DARK);
-  s.addText("O QUE ESTÁ DEFINIDO", {
-    x: rx + 0.45, y: 2.05, w: rw - 0.9, h: 0.3,
-    fontFace: BODY, fontSize: 11, bold: true, charSpacing: 2.2, color: GOLD, margin: 0, valign: "middle",
-  });
-
-  const items = [
-    ["Logo tratada", "arquivos limpos e prontos para uso digital e impresso"],
-    ["Paleta de cores", "as cores oficiais da marca, sempre as mesmas"],
-    ["Tipografia", "as letras usadas em títulos e textos"],
-    ["Aplicações", "como usar cada elemento sem errar"],
-  ];
-  items.forEach((it, i) => {
-    const y = 2.55 + i * 0.85;
-    goldCircle(s, rx + 0.45, y + 0.02, 0.34, "✓", 12);
-    s.addText(it[0], {
-      x: rx + 0.95, y: y - 0.04, w: rw - 1.4, h: 0.32,
-      fontFace: HEAD, fontSize: 15, bold: true, color: WHITE, margin: 0, valign: "middle",
-    });
-    s.addText(it[1], {
-      x: rx + 0.95, y: y + 0.28, w: rw - 1.4, h: 0.48,
-      fontFace: BODY, fontSize: 12, color: SAND, lineSpacing: 15, margin: 0, valign: "top",
-    });
-  });
-
-  s.addNotes("Se a Karen perguntar “para que serve”, o argumento é: repetição gera reconhecimento, e marca reconhecida vende com menos esforço.");
-}
-
-// =====================================================================
-// 5. INSTAGRAM: BIO, DESTAQUES E LINK
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Entrega 2  ·  03/08", "Instagram: bio, destaques e link");
-
-  const cols = [
-    ["Bio", "O textinho embaixo do nome do perfil.", "Reescrita para dizer em poucas linhas quem é a Pekar, o que vende e onde encontrar as lojas."],
-    ["Destaques", "As bolinhas fixas logo abaixo da bio.", "Ganharam capas no padrão da marca, para o perfil abrir bonito e organizado."],
-    ["Link na bio", "O endereço clicável do perfil.", "Passou a levar para uma página própria da Pekar, com o caminho da compra pronto."],
-  ];
-
-  const cw = 3.83, gap = 0.27;
-  cols.forEach((c, i) => {
-    const x = M + i * (cw + gap);
-    card(s, x, 1.72, cw, 3.15);
-    s.addText(c[0], {
-      x: x + 0.35, y: 2.05, w: cw - 0.7, h: 0.4,
-      fontFace: HEAD, fontSize: 21, bold: true, color: DARK, margin: 0, valign: "middle",
-    });
-    s.addText(c[1], {
-      x: x + 0.35, y: 2.5, w: cw - 0.7, h: 0.55,
-      fontFace: BODY, fontSize: 12.5, italic: true, color: GOLD, lineSpacing: 17, margin: 0, valign: "top",
-    });
-    s.addText(c[2], {
-      x: x + 0.35, y: 3.1, w: cw - 0.7, h: 1.5,
-      fontFace: BODY, fontSize: 13.5, color: INK, lineSpacing: 19, margin: 0, valign: "top",
-    });
-  });
-
-  card(s, M, 5.15, W, 1.45, SAND);
-  s.addText("Por que os três juntos?", {
-    x: M + 0.45, y: 5.35, w: 3.4, h: 0.32,
-    fontFace: HEAD, fontSize: 16, bold: true, color: DARK, margin: 0, valign: "middle",
-  });
-  s.addText(
-    "São os três primeiros pontos que uma pessoa nova olha ao chegar no perfil. " +
-    "Se os três estão claros, ela entende a marca em segundos e sabe para onde ir para comprar.",
-    {
-      x: M + 0.45, y: 5.72, w: W - 0.9, h: 0.65,
-      fontFace: BODY, fontSize: 13.5, color: INK, lineSpacing: 19, margin: 0, valign: "top",
-    }
-  );
-
-  s.addNotes("Vale abrir o perfil no celular durante a apresentação e mostrar ao vivo.");
-}
-
-// =====================================================================
-// 6. O SITE / LINK NA BIO
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: DARK };
-  heading(s, "Entrega 3", "A página da Pekar no link da bio", true);
-
-  s.addShape(pres.ShapeType.roundRect, {
-    x: M, y: 1.75, w: W, h: 0.95, rectRadius: 0.08,
-    fill: { color: GOLD }, line: { type: "none" },
-  });
-  s.addText("pekar-joias.web.app", {
-    x: M, y: 1.75, w: W, h: 0.95,
-    fontFace: HEAD, fontSize: 30, bold: true, color: WHITE,
-    align: "center", valign: "middle", margin: 0,
-  });
-  s.addText("Este é o endereço oficial. Use sempre ele na bio do Instagram e nas conversas com clientes.", {
-    x: M, y: 2.78, w: W, h: 0.3,
-    fontFace: BODY, fontSize: 12.5, italic: true, color: SAND,
-    align: "center", valign: "middle", margin: 0,
-  });
-
-  const blocks = [
-    ["Compre pelo WhatsApp", "Abre a conversa direto no número da loja: (12) 97401-1503."],
-    ["Garantia", "Explica a garantia das peças antes mesmo da cliente perguntar."],
-    ["Formato de entrega", "Deixa claro como a joia chega até a cliente."],
-    ["Ouvidoria", "Um canal para elogio, dúvida ou reclamação, no mesmo WhatsApp."],
-  ];
-  const bw = 2.86, gap = 0.29;
-  blocks.forEach((b, i) => {
-    const x = M + i * (bw + gap);
-    s.addShape(pres.ShapeType.roundRect, {
-      x, y: 3.4, w: bw, h: 2.2, rectRadius: 0.07,
-      fill: { color: CARD_D }, line: { type: "none" },
-    });
-    goldCircle(s, x + 0.3, 3.66, 0.34, String(i + 1), 12);
-    s.addText(b[0], {
-      x: x + 0.3, y: 4.08, w: bw - 0.6, h: 0.62,
-      fontFace: HEAD, fontSize: 14.5, bold: true, color: WHITE, lineSpacing: 19, margin: 0, valign: "top",
-    });
-    s.addText(b[1], {
-      x: x + 0.3, y: 4.72, w: bw - 0.6, h: 0.78,
-      fontFace: BODY, fontSize: 12, color: SAND, lineSpacing: 16, margin: 0, valign: "top",
-    });
-  });
-
-  s.addText(
-    "Em linguagem simples: o Instagram não deixa colocar vários links no perfil. " +
-    "Essa página resolve isso — um único link que abre todos os caminhos da Pekar de uma vez.",
-    {
-      x: M, y: 5.85, w: W, h: 0.7,
-      fontFace: BODY, fontSize: 14, color: SAND, lineSpacing: 21, margin: 0, valign: "top",
-    }
-  );
-
-  s.addNotes("Alerta importante: o link antigo (tinyurl) foi descontinuado porque exigia login. Se alguém ainda usa, trocar por pekar-joias.web.app.");
-}
-
-// =====================================================================
-// 7. CONTEÚDO: GUIA + POSTAGENS
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Entrega 4  ·  02/08 e 10/08", "Guia de Instagram e início das postagens");
-
-  const col = (x, num, titulo, data, texto) => {
-    card(s, x, 1.72, 5.88, 4.3);
-    goldCircle(s, x + 0.45, 2.0, 0.46, num);
-    s.addText(titulo, {
-      x: x + 1.1, y: 2.0, w: 4.35, h: 0.46,
-      fontFace: HEAD, fontSize: 19, bold: true, color: DARK, margin: 0, valign: "middle",
-    });
-    s.addText(data, {
-      x: x + 0.45, y: 2.6, w: 4.98, h: 0.28,
-      fontFace: BODY, fontSize: 12, italic: true, color: GOLD, margin: 0, valign: "middle",
-    });
-    s.addText(texto, {
-      x: x + 0.45, y: 2.98, w: 4.98, h: 2.6,
-      fontFace: BODY, fontSize: 14, color: INK, lineSpacing: 21, margin: 0, valign: "top",
-    });
-  };
-
-  col(M, "1", "Guia básico de Instagram", "Entregue em 02/08",
-    "Um material escrito para a Karen e a equipe, explicando sem termo técnico como manter o perfil: " +
-    "o que postar, com que frequência, como escrever as legendas e o que evita que o post seja pouco visto.\n\n" +
-    "A ideia é que a Pekar consiga tocar o dia a dia sozinha, sem depender de ninguém.");
-
-  col(M + 6.15, "2", "Postagens no ar", "Desde 10/08",
-    "A partir do dia 10 de agosto o perfil passou a publicar seguindo o guia e a identidade da marca — " +
-    "mesma linguagem, mesmas cores, mesma lógica.\n\n" +
-    "São 15 dias de publicação até esta apresentação. É o começo de uma rotina, não uma ação pontual: " +
-    "o resultado aparece com constância.");
-
-  s.addText(
-    "O guia é material da Pekar: fica com a equipe para consultar sempre que precisar.",
-    {
-      x: M, y: 6.25, w: W, h: 0.35,
-      fontFace: BODY, fontSize: 13, italic: true, color: MUTED, margin: 0, valign: "middle",
-    }
-  );
-
-  s.addNotes("Ponto-chave para a próxima proposta: 15 dias é pouco tempo para medir resultado de conteúdo.");
-}
-
-// =====================================================================
-// 8. RESULTADOS NO INSTAGRAM
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: DARK };
-  heading(s, "Resultados", "O que os números mostram até aqui", true);
+  const s = slideEscuro();
+  titulo(s, "A entrega  ·  Parte 01", "O que os números mostram", true);
 
   const stats = [
-    ["2.826", "seguidores no início", "31 de julho"],
-    ["2.836", "seguidores hoje", "24 de agosto"],
-    ["+10", "novos seguidores", "no período"],
-    ["15", "dias de postagens", "de 10/08 a 24/08"],
+    ["2.826", "seguidores", "03/08/2026", CARD_ESCURO],
+    ["2.838", "seguidores", "24/08/2026", CARD_ESCURO],
+    ["+12", "novos seguidores", "no período", OURO],
+    ["14", "dias de postagens", "de 10/08 a 24/08", CARD_ESCURO],
   ];
-  const bw = 2.86, gap = 0.29;
+  const bw = 2.87, gap = 0.29;
   stats.forEach((st, i) => {
     const x = M + i * (bw + gap);
-    const hl = i === 2;
     s.addShape(pres.ShapeType.roundRect, {
       x, y: 1.8, w: bw, h: 1.9, rectRadius: 0.07,
-      fill: { color: hl ? GOLD : CARD_D }, line: { type: "none" },
+      fill: { color: st[3] }, line: { type: "none" },
     });
     s.addText(st[0], {
-      x: x + 0.15, y: 1.95, w: bw - 0.3, h: 0.85,
-      fontFace: HEAD, fontSize: 40, bold: true, color: WHITE,
+      x: x + 0.15, y: 1.96, w: bw - 0.3, h: 0.82,
+      fontFace: TIT, fontSize: 38, bold: true, color: BRANCO,
       align: "center", valign: "middle", margin: 0,
     });
     s.addText(st[1], {
-      x: x + 0.15, y: 2.8, w: bw - 0.3, h: 0.32,
-      fontFace: BODY, fontSize: 13.5, bold: true, color: WHITE,
+      x: x + 0.15, y: 2.79, w: bw - 0.3, h: 0.32,
+      fontFace: TXT, fontSize: 13.5, bold: true, color: BRANCO,
       align: "center", valign: "middle", margin: 0,
     });
     s.addText(st[2], {
-      x: x + 0.15, y: 3.12, w: bw - 0.3, h: 0.3,
-      fontFace: BODY, fontSize: 11.5, color: hl ? "F7EFE4" : SAND,
+      x: x + 0.15, y: 3.11, w: bw - 0.3, h: 0.3,
+      fontFace: TXT, fontSize: 11.5, color: st[3] === OURO ? "F7F0E4" : SUAVE_D,
       align: "center", valign: "middle", margin: 0,
     });
   });
 
   s.addShape(pres.ShapeType.roundRect, {
-    x: M, y: 3.92, w: W, h: 2.62, rectRadius: 0.08,
-    fill: { color: CARD_D }, line: { type: "none" },
+    x: M, y: 3.95, w: W, h: 2.5, rectRadius: 0.08,
+    fill: { color: CARD_ESCURO }, line: { type: "none" },
   });
   s.addText("Lendo esses números com honestidade", {
-    x: M + 0.5, y: 4.14, w: W - 1.0, h: 0.36,
-    fontFace: HEAD, fontSize: 19, bold: true, color: GOLD, margin: 0, valign: "middle",
+    x: M + 0.5, y: 4.18, w: W - 1.0, h: 0.36,
+    fontFace: TIT, fontSize: 19, bold: true, color: OURO, margin: 0, valign: "middle",
   });
   s.addText(
-    "O número de seguidores cresceu pouco — e isso era esperado. Esta primeira etapa não foi de crescimento, " +
-    "foi de arrumar a casa: definir a identidade, organizar o perfil, criar o caminho de compra e resolver o " +
-    "problema de acesso no Google.\n\n" +
-    "Seguidor novo vem depois, com constância de publicação e ações feitas para atrair gente de fora. " +
-    "Com apenas 15 dias de conteúdo no ar, ainda não dá para medir isso — o que existe hoje é uma base pronta " +
-    "para esse crescimento acontecer.",
+    "Em 14 dias de postagens o perfil ganhou 12 seguidores. Cresceu pouco, e isso era esperado: " +
+    "esta primeira etapa não foi de crescimento, foi de organização.\n\n" +
+    "Seguidor novo vem depois, com constância de publicação e ações feitas para atrair quem ainda não " +
+    "conhece a marca. Em duas semanas não há como medir isso — o que existe hoje é a base pronta para " +
+    "esse crescimento acontecer.",
     {
-      x: M + 0.5, y: 4.56, w: W - 1.0, h: 1.85,
-      fontFace: BODY, fontSize: 13, color: SAND, lineSpacing: 19, margin: 0, valign: "top",
+      x: M + 0.5, y: 4.6, w: W - 1.0, h: 1.72,
+      fontFace: TXT, fontSize: 13, color: SUAVE_D, lineSpacing: 19, margin: 0, valign: "top",
     }
   );
 
-  s.addNotes(
-    "Não esconder o número. A leitura correta: base construída na etapa 1, crescimento é objetivo da etapa 2. " +
-    "Se a Karen tiver alcance e visitas ao perfil no aplicativo, vale complementar esse slide depois."
-  );
+  s.addNotes("Não esconder o número. Base construída agora; crescimento é objetivo da próxima fase.");
 }
 
 // =====================================================================
-// 9. GOOGLE MEU NEGÓCIO — O PROBLEMA
+// 5 · EM ABERTO
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Google Meu Negócio", "O que estava acontecendo");
+  const s = slideClaro();
+  titulo(s, "A entrega  ·  Parte 01", "Em aberto: o que precisamos decidir");
 
-  card(s, M, 1.72, W, 0.95, SAND);
-  s.addText(
-    "O combinado era atualizar fotos e informações das lojas no Google. Ao entrar, descobrimos que a Pekar " +
-    "não tinha acesso para editar — então o trabalho virou investigação.",
-    {
-      x: M + 0.5, y: 1.72, w: W - 1.0, h: 0.95,
-      fontFace: BODY, fontSize: 14, color: INK, lineSpacing: 20, margin: 0, valign: "middle",
-    }
-  );
-
-  const found = [
-    ["Duas contas em Juquehy", "Existem dois cadastros da Pekar na mesma cidade. Um está como loja e o outro aparece como restaurante."],
-    ["Acesso em e-mail antigo", "O cadastro de Maresias e um dos de Juquehy estão ligados a um e-mail antigo (co....@gmail.com), fora do controle da Pekar."],
-    ["Efeito prático", "Sem o acesso, ninguém consegue corrigir foto, horário, endereço ou telefone — e a cliente vê informação errada."],
-  ];
-  const cw = 3.83, gap = 0.27;
-  found.forEach((f, i) => {
-    const x = M + i * (cw + gap);
-    card(s, x, 2.95, cw, 2.7);
-    goldCircle(s, x + 0.35, 3.22, 0.4, "!", 15);
-    s.addText(f[0], {
-      x: x + 0.35, y: 3.75, w: cw - 0.7, h: 0.62,
-      fontFace: HEAD, fontSize: 16.5, bold: true, color: DARK, lineSpacing: 21, margin: 0, valign: "top",
-    });
-    s.addText(f[1], {
-      x: x + 0.35, y: 4.4, w: cw - 0.7, h: 1.15,
-      fontFace: BODY, fontSize: 13, color: INK, lineSpacing: 18, margin: 0, valign: "top",
-    });
-  });
-
-  s.addText(
-    "Google Meu Negócio é o cadastro que faz a loja aparecer no Google e no Google Maps, com foto, horário e telefone.",
-    {
-      x: M, y: 5.9, w: W, h: 0.35,
-      fontFace: BODY, fontSize: 12.5, italic: true, color: MUTED, margin: 0, valign: "middle",
-    }
-  );
-
-  s.addNotes("Deixar claro que não foi trabalho a menos: foi um problema real que impedia a entrega combinada e precisou ser resolvido antes.");
-}
-
-// =====================================================================
-// 10. GOOGLE MEU NEGÓCIO — A SOLUÇÃO
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Google Meu Negócio", "O que foi feito no lugar");
-
-  const steps = [
-    ["Pesquisa e diagnóstico", "Levantamento de todos os cadastros da Pekar no Google, para entender por que o acesso estava bloqueado e quantas contas existiam."],
-    ["Criação de um e-mail oficial", "Criado o e-mail pekarjoias@gmail.com, no nome da marca, para ser o dono definitivo dos cadastros — e não mais um e-mail pessoal de terceiros."],
-    ["Reivindicação dos acessos", "Feito o pedido de recuperação das contas junto ao Google usando esse e-mail. Etapa concluída."],
+  const itens = [
+    ["Guia de medidas", "Filmado pela Karen em 24/08 no aplicativo All Silver. Aguardando o envio para entrar nos destaques."],
+    ["Deixar de seguir 2.000 contas", "Limpeza da lista de “seguindo”, para o perfil ficar coerente com a marca."],
+    ["Pagamento com cartão de crédito", "Mercado Pago. Assim que estiver funcionando, atualizamos a informação no Instagram."],
+    ["Cupom de 1ª compra", "Sugestão em estudo: pode virar um desconto de …% no PIX."],
+    ["Número novo para WhatsApp Business", "Separar o atendimento da loja do número pessoal."],
+    ["Quem responde as mensagens", "Hoje só a Karen responde. Na temporada, vai haver tempo de responder e atender?"],
+    ["Volume real de fotos e vídeos", "Quantas por semana a Pekar consegue produzir de verdade? Precisamos de arquivo para atravessar a temporada."],
   ];
 
-  steps.forEach((st, i) => {
-    const y = 1.75 + i * 1.42;
-    card(s, M, y, W, 1.24);
-    goldCircle(s, M + 0.42, y + 0.32, 0.6, String(i + 1), 20);
-    s.addText(st[0], {
-      x: M + 1.25, y: y + 0.16, w: 5.0, h: 0.38,
-      fontFace: HEAD, fontSize: 18, bold: true, color: DARK, margin: 0, valign: "middle",
+  const cw = 5.87, ch = 1.12, gap = 0.35, vgap = 0.15;
+  itens.forEach((it, i) => {
+    const col = i % 2, lin = Math.floor(i / 2);
+    const x = M + col * (cw + gap);
+    const y = 1.78 + lin * (ch + vgap);
+    card(s, x, y, cw, ch);
+    bolinha(s, x + 0.3, y + 0.33, 0.34, String(i + 1), OURO, 12);
+    s.addText(it[0], {
+      x: x + 0.78, y: y + 0.16, w: cw - 1.1, h: 0.32,
+      fontFace: TIT, fontSize: 14.5, bold: true, color: MARROM, margin: 0, valign: "middle",
     });
-    s.addText(st[1], {
-      x: M + 1.25, y: y + 0.56, w: W - 1.8, h: 0.55,
-      fontFace: BODY, fontSize: 13.5, color: INK, lineSpacing: 19, margin: 0, valign: "top",
+    s.addText(it[1], {
+      x: x + 0.78, y: y + 0.48, w: cw - 1.1, h: 0.55,
+      fontFace: TXT, fontSize: 11.5, color: TINTA, lineSpacing: 15, margin: 0, valign: "top",
     });
   });
 
-  s.addShape(pres.ShapeType.roundRect, {
-    x: M, y: 6.05, w: W, h: 0.85, rectRadius: 0.07,
-    fill: { color: DARK }, line: { type: "none" },
-  });
-  s.addText(
-    [
-      { text: "Resultado:  ", options: { bold: true, color: GOLD } },
-      { text: "a Pekar passa a ser dona dos próprios cadastros. Com o acesso liberado, fica possível corrigir as informações das lojas e resolver a conta duplicada de Juquehy.", options: { color: SAND } },
-    ],
-    {
-      x: M + 0.5, y: 6.05, w: W - 1.0, h: 0.85,
-      fontFace: BODY, fontSize: 13.5, lineSpacing: 19, margin: 0, valign: "middle",
-    }
-  );
-
-  s.addNotes("Esse é o item de maior valor escondido da etapa: recuperar a posse dos cadastros evita dor de cabeça permanente.");
+  s.addNotes("Passar item por item e sair da reunião com resposta para o máximo possível.");
 }
 
 // =====================================================================
-// 11. BÔNUS — DRIVE
+// 6 · DESTAQUES PENDENTES
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Bônus", "Todos os arquivos, em um lugar só");
-
-  card(s, M, 1.72, 6.5, 3.95, DARK);
-  s.addText("Uma pasta no Google Drive", {
-    x: M + 0.5, y: 2.05, w: 5.5, h: 0.4,
-    fontFace: HEAD, fontSize: 21, bold: true, color: WHITE, margin: 0, valign: "middle",
-  });
-  s.addText("dentro do e-mail pekarjoias@gmail.com", {
-    x: M + 0.5, y: 2.48, w: 5.5, h: 0.3,
-    fontFace: BODY, fontSize: 13, italic: true, color: GOLD, margin: 0, valign: "middle",
-  });
-  s.addText(
-    "Não estava na proposta, mas foi criada para que a Pekar nunca precise pedir arquivo para ninguém.\n\n" +
-    "Está tudo dentro do e-mail da própria marca. Se a equipe mudar, os arquivos continuam lá.",
-    {
-      x: M + 0.5, y: 2.95, w: 5.5, h: 2.4,
-      fontFace: BODY, fontSize: 14, color: SAND, lineSpacing: 21, margin: 0, valign: "top",
-    }
-  );
-
-  const rx = M + 6.8;
-  const rw = W - 6.8;
-  card(s, rx, 1.72, rw, 3.95);
-  s.addText("O QUE TEM DENTRO", {
-    x: rx + 0.45, y: 2.05, w: rw - 0.9, h: 0.3,
-    fontFace: BODY, fontSize: 11, bold: true, charSpacing: 2.2, color: GOLD, margin: 0, valign: "middle",
-  });
-
-  const files = [
-    ["Capas de destaque do Instagram", "as imagens das bolinhas do perfil"],
-    ["Imagens da logo", "versões tratadas, prontas para uso"],
-    ["Documentos do projeto", "identidade, guia de Instagram e demais materiais"],
-  ];
-  files.forEach((f, i) => {
-    const y = 2.55 + i * 1.0;
-    goldCircle(s, rx + 0.45, y + 0.02, 0.34, "✓", 12);
-    s.addText(f[0], {
-      x: rx + 0.98, y: y - 0.08, w: rw - 1.45, h: 0.42,
-      fontFace: HEAD, fontSize: 15, bold: true, color: DARK, lineSpacing: 19, margin: 0, valign: "middle",
-    });
-    s.addText(f[1], {
-      x: rx + 0.98, y: y + 0.36, w: rw - 1.45, h: 0.5,
-      fontFace: BODY, fontSize: 12.5, color: MUTED, lineSpacing: 17, margin: 0, valign: "top",
-    });
-  });
+  const s = slideClaro();
+  titulo(s, "A entrega  ·  Parte 01", "Dois destaques que dependem da Pekar");
 
   s.addText(
-    "Para acessar: entrar no Google Drive com o e-mail pekarjoias@gmail.com.",
+    "As duas capas já foram criadas e estão guardadas no Drive. Para entrarem no perfil, falta o conteúdo.",
     {
-      x: M, y: 5.9, w: W, h: 0.35,
-      fontFace: BODY, fontSize: 13, italic: true, color: MUTED, margin: 0, valign: "middle",
-    }
-  );
-
-  s.addNotes("Reforçar que é um bônus, fora do escopo contratado.");
-}
-
-// =====================================================================
-// 12. PENDÊNCIAS
-// =====================================================================
-{
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Prontos, mas ainda não no ar", "Duas coisas que dependem da Pekar");
-
-  s.addText(
-    "As duas capas abaixo já foram criadas e estão guardadas no Drive. " +
-    "Para entrarem no perfil, falta o conteúdo que só a loja consegue produzir.",
-    {
-      x: M, y: 1.66, w: W, h: 0.42,
-      fontFace: BODY, fontSize: 14, color: INK, lineSpacing: 20, margin: 0, valign: "middle",
+      x: M, y: 1.62, w: W, h: 0.4,
+      fontFace: TXT, fontSize: 14, color: TINTA, margin: 0, valign: "middle",
     }
   );
 
   const pend = [
-    [
-      "Destaque: Guia de medidas de anel",
-      "A capa está pronta.",
-      "O vídeo foi gravado pela Karen em 24/08 — falta enviar para a Adriana para o destaque entrar no perfil.",
-      "Com a Karen",
-    ],
-    [
-      "Destaque: Depoimentos de clientes",
-      "A capa está pronta.",
-      "Falta a Karen e as vendedoras colherem os depoimentos com as clientes das lojas.",
-      "Com a Karen e a equipe",
-    ],
+    ["Guia de medidas de anel", "A capa está pronta.", "O vídeo foi gravado pela Karen em 24/08 — falta enviar para publicarmos o destaque.", "Com a Karen", OURO],
+    ["Depoimentos de clientes", "A capa está pronta.", "Falta a Karen e as vendedoras colherem os depoimentos com as clientes das lojas.", "Com a Karen e a equipe", TERRA],
   ];
 
-  const cw = 5.88, gap = 0.27;
+  const cw = 5.87, gap = 0.35;
   pend.forEach((p, i) => {
     const x = M + i * (cw + gap);
-    card(s, x, 2.25, cw, 3.4);
+    card(s, x, 2.2, cw, 3.35);
+    s.addShape(pres.ShapeType.roundRect, {
+      x: x + 0.45, y: 2.5, w: 0.62, h: 0.62, rectRadius: 0.1,
+      fill: { color: p[4] }, line: { type: "none" },
+    });
+    s.addText("★", {
+      x: x + 0.45, y: 2.5, w: 0.62, h: 0.62,
+      fontFace: TXT, fontSize: 20, color: BRANCO, align: "center", valign: "middle", margin: 0,
+    });
     s.addText(p[0], {
-      x: x + 0.45, y: 2.52, w: cw - 0.9, h: 0.78,
-      fontFace: HEAD, fontSize: 19, bold: true, color: DARK, lineSpacing: 25, margin: 0, valign: "top",
+      x: x + 0.45, y: 3.28, w: cw - 0.9, h: 0.42,
+      fontFace: TIT, fontSize: 20, bold: true, color: MARROM, margin: 0, valign: "middle",
     });
     s.addText(p[1], {
-      x: x + 0.45, y: 3.3, w: cw - 0.9, h: 0.3,
-      fontFace: BODY, fontSize: 13, italic: true, color: GOLD, margin: 0, valign: "middle",
+      x: x + 0.45, y: 3.72, w: cw - 0.9, h: 0.3,
+      fontFace: TXT, fontSize: 13, italic: true, color: p[4], margin: 0, valign: "middle",
     });
     s.addText(p[2], {
-      x: x + 0.45, y: 3.7, w: cw - 0.9, h: 1.0,
-      fontFace: BODY, fontSize: 13.5, color: INK, lineSpacing: 19, margin: 0, valign: "top",
+      x: x + 0.45, y: 4.1, w: cw - 0.9, h: 0.8,
+      fontFace: TXT, fontSize: 13.5, color: TINTA, lineSpacing: 19, margin: 0, valign: "top",
     });
     s.addShape(pres.ShapeType.roundRect, {
-      x: x + 0.45, y: 4.85, w: 2.95, h: 0.46, rectRadius: 0.22,
-      fill: { color: DARK }, line: { type: "none" },
+      x: x + 0.45, y: 4.92, w: 2.95, h: 0.44, rectRadius: 0.22,
+      fill: { color: MARROM }, line: { type: "none" },
     });
     s.addText(p[3], {
-      x: x + 0.45, y: 4.85, w: 2.95, h: 0.46,
-      fontFace: BODY, fontSize: 12, bold: true, color: WHITE,
+      x: x + 0.45, y: 4.92, w: 2.95, h: 0.44,
+      fontFace: TXT, fontSize: 11.5, bold: true, color: BRANCO,
       align: "center", valign: "middle", margin: 0,
     });
   });
@@ -716,129 +404,681 @@ function goldCircle(s, x, y, d, label, fontSize) {
   s.addText(
     "Assim que os dois chegarem, os destaques entram no perfil e a vitrine do Instagram fica completa.",
     {
-      x: M, y: 5.88, w: W, h: 0.35,
-      fontFace: BODY, fontSize: 13, italic: true, color: MUTED, margin: 0, valign: "middle",
+      x: M, y: 5.78, w: W, h: 0.35,
+      fontFace: TXT, fontSize: 13, italic: true, color: SUAVE, margin: 0, valign: "middle",
     }
   );
 
-  s.addNotes("Combinar prazo aqui: pedir o vídeo do guia de medidas ainda nesta semana.");
+  s.addNotes("Combinar prazo: pedir o vídeo do guia de medidas ainda nesta semana.");
 }
 
 // =====================================================================
-// 13. O QUE FICA COM A PEKAR
+// 7 · GOOGLE MEU NEGÓCIO
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: WHITE };
-  heading(s, "Balanço", "O que a Pekar leva desta etapa");
+  const s = slideClaro();
+  titulo(s, "A entrega  ·  Parte 01", "Google Meu Negócio");
 
-  const assets = [
-    ["Identidade visual definida", "documento e apresentação com as regras da marca"],
-    ["Logo tratada", "arquivos prontos para qualquer uso"],
-    ["Perfil do Instagram organizado", "bio, capas de destaque e link de compra"],
-    ["Página própria no ar", "pekar-joias.web.app, com o caminho da compra"],
-    ["Guia básico de Instagram", "para tocar o perfil sem depender de terceiros"],
-    ["E-mail oficial da marca", "pekarjoias@gmail.com, dono dos cadastros"],
-    ["Acessos do Google reivindicados", "caminho aberto para corrigir as lojas"],
-    ["Pasta no Drive", "todos os arquivos do projeto, sempre à mão"],
+  card(s, M, 1.72, W, 0.82, AREIA);
+  s.addText(
+    "O combinado era atualizar fotos e informações das lojas no Google. Ao tentar o acesso, descobrimos " +
+    "que a Pekar não o tinha para editar — então o trabalho virou investigação.",
+    {
+      x: M + 0.45, y: 1.72, w: W - 0.9, h: 0.82,
+      fontFace: TXT, fontSize: 13.5, color: TINTA, lineSpacing: 19, margin: 0, valign: "middle",
+    }
+  );
+
+  card(s, M, 2.72, 5.87, 2.55);
+  s.addText("O QUE FOI DESCOBERTO", {
+    x: M + 0.45, y: 2.98, w: 5.0, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: TERRA, margin: 0, valign: "middle",
+  });
+  [
+    "Juquehy tem 2 contas: uma como joalheria e outra como restaurante.",
+    "Maresias tem 1 conta.",
+    "O acesso das três está com o e-mail co….@gmail.com, fora do controle da Pekar.",
+  ].forEach((t, i) => {
+    const y = 3.36 + i * 0.62;
+    bolinha(s, M + 0.45, y + 0.03, 0.28, "!", TERRA, 11);
+    s.addText(t, {
+      x: M + 0.87, y: y - 0.06, w: 4.6, h: 0.55,
+      fontFace: TXT, fontSize: 12.5, color: TINTA, lineSpacing: 17, margin: 0, valign: "middle",
+    });
+  });
+
+  const rx = M + 6.22;
+  card(s, rx, 2.72, 5.87, 2.55, MARROM);
+  s.addText("O QUE FOI FEITO", {
+    x: rx + 0.45, y: 2.98, w: 5.0, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText("Criado um e-mail oficial da marca", {
+    x: rx + 0.45, y: 3.32, w: 5.0, h: 0.34,
+    fontFace: TIT, fontSize: 16, bold: true, color: BRANCO, margin: 0, valign: "middle",
+  });
+  s.addText("pekarjoias@gmail.com", {
+    x: rx + 0.45, y: 3.7, w: 5.0, h: 0.36,
+    fontFace: TIT, fontSize: 19, bold: true, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText("senha: 080112Batismo", {
+    x: rx + 0.45, y: 4.08, w: 5.0, h: 0.3,
+    fontFace: TXT, fontSize: 12.5, color: SUAVE_D, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "Ele passa a ser o dono definitivo dos cadastros, no lugar de um e-mail pessoal de terceiros. " +
+    "Recomendo trocar a senha assim que o acesso for liberado.",
+    {
+      x: rx + 0.45, y: 4.45, w: 5.0, h: 0.72,
+      fontFace: TXT, fontSize: 12, color: SUAVE_D, lineSpacing: 16, margin: 0, valign: "top",
+    }
+  );
+
+  s.addShape(pres.ShapeType.roundRect, {
+    x: M, y: 5.5, w: W, h: 0.72, rectRadius: 0.07,
+    fill: { color: MARROM }, line: { type: "none" },
+  });
+  s.addText(
+    [
+      { text: "Ação necessária:  ", options: { bold: true, color: OURO } },
+      { text: "reivindicar as três contas e atualizar fotos e informações assim que o acesso for liberado.", options: { color: AREIA } },
+    ],
+    {
+      x: M + 0.45, y: 5.5, w: W - 0.9, h: 0.72,
+      fontFace: TXT, fontSize: 13.5, margin: 0, valign: "middle",
+    }
+  );
+
+  s.addNotes(
+    "Item de maior valor escondido da etapa: recuperar a posse dos cadastros evita dor de cabeça permanente. " +
+    "A disputa das contas está orçada na proposta, no fim da apresentação."
+  );
+}
+
+// =====================================================================
+// 8 · BÔNUS
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A entrega  ·  Parte 01", "Bônus: todos os arquivos em um lugar só");
+
+  card(s, M, 1.8, 5.5, 3.9, MARROM);
+  s.addText("Uma pasta no Google Drive", {
+    x: M + 0.45, y: 2.12, w: 4.6, h: 0.42,
+    fontFace: TIT, fontSize: 21, bold: true, color: BRANCO, margin: 0, valign: "middle",
+  });
+  s.addText("dentro do e-mail pekarjoias@gmail.com", {
+    x: M + 0.45, y: 2.56, w: 4.6, h: 0.3,
+    fontFace: TXT, fontSize: 13, italic: true, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "Não estava na proposta, mas foi criada para manter todos os arquivos do projeto reunidos " +
+    "e no nome da própria marca.\n\n" +
+    "Se a equipe mudar, os arquivos continuam lá.",
+    {
+      x: M + 0.45, y: 3.0, w: 4.6, h: 1.9,
+      fontFace: TXT, fontSize: 13.5, color: SUAVE_D, lineSpacing: 20, margin: 0, valign: "top",
+    }
+  );
+  s.addText("Para acessar: entrar no Google Drive com esse e-mail.", {
+    x: M + 0.45, y: 5.02, w: 4.6, h: 0.42,
+    fontFace: TXT, fontSize: 11.5, italic: true, color: SUAVE_D, lineSpacing: 15, margin: 0, valign: "middle",
+  });
+
+  const rx = M + 5.92;
+  const rw = W - 5.92;
+  card(s, rx, 1.8, rw, 3.9);
+  s.addText("O QUE TEM DENTRO", {
+    x: rx + 0.45, y: 2.08, w: rw - 0.9, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: TERRA, margin: 0, valign: "middle",
+  });
+
+  const arquivos = [
+    ["Capas de destaque do Instagram", "as imagens das bolinhas do perfil"],
+    ["Imagens da logo", "todas as versões, prontas para uso"],
+    ["Documentos do projeto", "identidade, guia de Instagram e demais materiais"],
+    ["Termos de autorização de imagem", "para funcionários e para clientes, liberando o uso de fotos, vídeos e depoimentos"],
   ];
-
-  const cw = 5.88, ch = 0.98, gap = 0.27, vgap = 0.16;
-  assets.forEach((a, i) => {
-    const c = i % 2, r = Math.floor(i / 2);
-    const x = M + c * (cw + gap);
-    const y = 1.72 + r * (ch + vgap);
-    card(s, x, y, cw, ch);
-    goldCircle(s, x + 0.32, y + 0.3, 0.38, "✓", 13);
-    s.addText(a[0], {
-      x: x + 0.85, y: y + 0.12, w: cw - 1.2, h: 0.38,
-      fontFace: HEAD, fontSize: 15, bold: true, color: DARK, margin: 0, valign: "middle",
+  arquivos.forEach((f, i) => {
+    const y = 2.48 + i * 0.82;
+    bolinha(s, rx + 0.45, y + 0.02, 0.3, "✓", OURO, 11);
+    s.addText(f[0], {
+      x: rx + 0.92, y: y - 0.06, w: rw - 1.4, h: 0.32,
+      fontFace: TIT, fontSize: 14.5, bold: true, color: MARROM, margin: 0, valign: "middle",
     });
-    s.addText(a[1], {
-      x: x + 0.85, y: y + 0.5, w: cw - 1.2, h: 0.36,
-      fontFace: BODY, fontSize: 12.5, color: MUTED, margin: 0, valign: "middle",
+    s.addText(f[1], {
+      x: rx + 0.92, y: y + 0.26, w: rw - 1.4, h: 0.5,
+      fontFace: TXT, fontSize: 11.5, color: SUAVE, lineSpacing: 15, margin: 0, valign: "top",
     });
   });
 
-  s.addNotes("Fecha a sensação de valor entregue: são ativos permanentes da marca, não serviço consumido.");
+  s.addNotes("Reforçar que é um bônus, fora do escopo contratado. O termo de imagem destrava depoimento e foto de cliente.");
 }
 
 // =====================================================================
-// 14. ENCERRAMENTO E PRÓXIMOS PASSOS
+// 9 · ENCERRAMENTO DA ETAPA
 // =====================================================================
 {
-  const s = pres.addSlide();
-  s.background = { color: DARK };
+  const s = slideEscuro();
+  titulo(s, "A entrega  ·  Parte 01", "Primeira etapa concluída", true);
 
-  s.addShape(pres.ShapeType.ellipse, {
-    x: 10.4, y: 4.6, w: 3.6, h: 3.6,
-    fill: { color: GOLD, transparency: 88 }, line: { type: "none" },
-  });
-
-  heading(s, "Encerramento", "Etapa 1 concluída", true);
-
-  card(s, M, 1.9, 5.88, 2.05, CARD_D);
+  card(s, M, 1.95, 5.87, 2.1, CARD_ESCURO);
   s.addText("STATUS DO PROJETO", {
-    x: M + 0.45, y: 2.13, w: 4.98, h: 0.28,
-    fontFace: BODY, fontSize: 11, bold: true, charSpacing: 2.2, color: GOLD, margin: 0, valign: "middle",
+    x: M + 0.45, y: 2.18, w: 4.97, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: OURO, margin: 0, valign: "middle",
   });
   s.addText("Concluída", {
-    x: M + 0.45, y: 2.46, w: 4.98, h: 0.6,
-    fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, margin: 0, valign: "middle",
+    x: M + 0.45, y: 2.52, w: 4.97, h: 0.6,
+    fontFace: TIT, fontSize: 32, bold: true, color: BRANCO, margin: 0, valign: "middle",
   });
   s.addText("Todas as frentes combinadas foram entregues ou resolvidas.", {
-    x: M + 0.45, y: 3.1, w: 4.98, h: 0.62,
-    fontFace: BODY, fontSize: 13, color: SAND, lineSpacing: 18, margin: 0, valign: "top",
+    x: M + 0.45, y: 3.16, w: 4.97, h: 0.62,
+    fontFace: TXT, fontSize: 13, color: SUAVE_D, lineSpacing: 18, margin: 0, valign: "top",
   });
 
-  const rx = M + 6.15;
-  card(s, rx, 1.9, 5.88, 2.05, CARD_D);
+  const rx = M + 6.22;
+  card(s, rx, 1.95, 5.87, 2.1, CARD_ESCURO);
   s.addText("PARCELA FINAL (50%)", {
-    x: rx + 0.45, y: 2.13, w: 4.98, h: 0.28,
-    fontFace: BODY, fontSize: 11, bold: true, charSpacing: 2.2, color: GOLD, margin: 0, valign: "middle",
+    x: rx + 0.45, y: 2.18, w: 4.97, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: OURO, margin: 0, valign: "middle",
   });
   s.addText("R$ 1.250,00", {
-    x: rx + 0.45, y: 2.46, w: 4.98, h: 0.6,
-    fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, margin: 0, valign: "middle",
+    x: rx + 0.45, y: 2.52, w: 4.97, h: 0.6,
+    fontFace: TIT, fontSize: 32, bold: true, color: BRANCO, margin: 0, valign: "middle",
   });
   s.addText("Vencimento em 01/09/2026, conforme a proposta aprovada em 30/07.", {
-    x: rx + 0.45, y: 3.1, w: 4.98, h: 0.62,
-    fontFace: BODY, fontSize: 13, color: SAND, lineSpacing: 18, margin: 0, valign: "top",
+    x: rx + 0.45, y: 3.16, w: 4.97, h: 0.62,
+    fontFace: TXT, fontSize: 13, color: SUAVE_D, lineSpacing: 18, margin: 0, valign: "top",
   });
 
-  s.addText("Próximos passos", {
-    x: M, y: 4.15, w: W, h: 0.42,
-    fontFace: HEAD, fontSize: 22, bold: true, color: GOLD, margin: 0, valign: "middle",
+  s.addText("O que fica com a Pekar", {
+    x: M, y: 4.3, w: W, h: 0.44,
+    fontFace: TIT, fontSize: 21, bold: true, color: OURO, margin: 0, valign: "middle",
   });
 
-  const next = [
-    ["Enviar o vídeo do guia de medidas", "para publicar o destaque que já está pronto"],
-    ["Colher depoimentos de clientes", "com a Karen e as vendedoras, nas duas lojas"],
-    ["Nova proposta para a Etapa 2", "com foco em crescimento e em concluir o Google"],
+  const ativos = [
+    "Identidade visual",
+    "Instagram organizado",
+    "Guia de Instagram",
+    "E-mail e Drive da marca",
   ];
-  const nw = 3.83, ngap = 0.27;
-  next.forEach((n, i) => {
-    const x = M + i * (nw + ngap);
+  const aw = 2.87, agap = 0.29;
+  ativos.forEach((a, i) => {
+    const x = M + i * (aw + agap);
     s.addShape(pres.ShapeType.roundRect, {
-      x, y: 4.68, w: nw, h: 1.38, rectRadius: 0.07,
-      fill: { color: CARD_D }, line: { type: "none" },
+      x, y: 4.85, w: aw, h: 1.1, rectRadius: 0.07,
+      fill: { color: CARD_ESCURO }, line: { type: "none" },
     });
-    s.addText(n[0], {
-      x: x + 0.32, y: 4.86, w: nw - 0.64, h: 0.62,
-      fontFace: HEAD, fontSize: 14.5, bold: true, color: WHITE, lineSpacing: 19, margin: 0, valign: "top",
-    });
-    s.addText(n[1], {
-      x: x + 0.32, y: 5.46, w: nw - 0.64, h: 0.52,
-      fontFace: BODY, fontSize: 12, color: SAND, lineSpacing: 16, margin: 0, valign: "top",
+    bolinha(s, x + 0.28, 5.25, 0.3, "✓", OURO, 11);
+    s.addText(a, {
+      x: x + 0.7, y: 4.98, w: aw - 1.0, h: 0.85,
+      fontFace: TIT, fontSize: 13.5, bold: true, color: BRANCO,
+      lineSpacing: 18, margin: 0, valign: "middle",
     });
   });
 
-  s.addText("Obrigada pela confiança, Karen.", {
-    x: M, y: 6.4, w: 8, h: 0.4,
-    fontFace: HEAD, fontSize: 17, italic: true, color: SAND, margin: 0, valign: "middle",
-  });
-
-  s.addNotes("Fechar combinando os dois pedidos pendentes e anunciar que a proposta da Etapa 2 chega em seguida.");
+  s.addNotes("Fecha a parte 1. São ativos permanentes da marca, não serviço consumido.");
 }
 
-pres.writeFile({ fileName: "Pekar-Encerramento-Etapa-1.pptx" }).then(f => console.log("OK:", f));
+// =====================================================================
+// 10 · TENDÊNCIAS — PRATA
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "Tendências de joalheria para 2026");
+
+  card(s, M, 1.7, W, 0.72, AREIA);
+  s.addText(
+    "São quatro movimentos do mercado. Três deles a Pekar já faz — o trabalho é nomear, não perseguir.",
+    {
+      x: M + 0.45, y: 1.7, w: W - 0.9, h: 0.72,
+      fontFace: TXT, fontSize: 14, color: TINTA, margin: 0, valign: "middle",
+    }
+  );
+
+  const t = [
+    ["01", "A prata voltou como tendência estética", "Depois de anos de dourado, a prata 925 e o banho de ródio voltam como aposta do ano, especialmente para clima quente.", OURO],
+    ["02", "Prata escultural", "Textura martelada imitando seixo de rio, bezel assimétrico, borda crua, acabamento fosco no lugar do polido espelhado. A Pekar não precisa perseguir essa tendência — precisa nomear que já a pratica.", TERRA],
+  ];
+  const cw = 5.87, gap = 0.35;
+  t.forEach((it, i) => {
+    const x = M + i * (cw + gap);
+    card(s, x, 2.65, cw, 3.15);
+    s.addText(it[0], {
+      x: x + 0.45, y: 2.9, w: 1.2, h: 0.6,
+      fontFace: TIT, fontSize: 34, bold: true, color: it[3], margin: 0, valign: "middle",
+    });
+    s.addText(it[1], {
+      x: x + 0.45, y: 3.58, w: cw - 0.9, h: 0.75,
+      fontFace: TIT, fontSize: 19, bold: true, color: MARROM, lineSpacing: 25, margin: 0, valign: "top",
+    });
+    s.addText(it[2], {
+      x: x + 0.45, y: 4.4, w: cw - 0.9, h: 1.25,
+      fontFace: TXT, fontSize: 13, color: TINTA, lineSpacing: 19, margin: 0, valign: "top",
+    });
+  });
+
+  s.addNotes("A Pekar já trabalha prata e peça autoral. A tendência confirma o caminho, não pede mudança.");
+}
+
+// =====================================================================
+// 11 · TENDÊNCIAS — PEDRAS
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "As pedras que o mercado quer");
+
+  const t = [
+    ["03", "Pedra colorida natural no centro", "O consumidor tem preferido a gema natural, irregular e única, à perfeição industrial repetida. Em alta: morganita, ametista lavanda, turmalina verde e tanzanita.", AGUA],
+    ["04", "Água-marinha, a pedra de 2026", "Historicamente o amuleto dos navegantes, hoje associada a calma e proteção. Para uma joalheria que nasceu num mostruário na areia, é um presente de posicionamento — não precisa ser inventado, precisa ser ocupado.", OURO],
+  ];
+  const cw = 5.87, gap = 0.35;
+  t.forEach((it, i) => {
+    const x = M + i * (cw + gap);
+    card(s, x, 1.72, cw, 3.25);
+    s.addText(it[0], {
+      x: x + 0.45, y: 1.98, w: 1.2, h: 0.6,
+      fontFace: TIT, fontSize: 34, bold: true, color: it[3], margin: 0, valign: "middle",
+    });
+    s.addText(it[1], {
+      x: x + 0.45, y: 2.66, w: cw - 0.9, h: 0.62,
+      fontFace: TIT, fontSize: 19, bold: true, color: MARROM, lineSpacing: 25, margin: 0, valign: "top",
+    });
+    s.addText(it[2], {
+      x: x + 0.45, y: 3.3, w: cw - 0.9, h: 1.5,
+      fontFace: TXT, fontSize: 13, color: TINTA, lineSpacing: 19, margin: 0, valign: "top",
+    });
+  });
+
+  card(s, M, 5.15, W, 1.35, MARROM);
+  s.addText("A leitura por trás das quatro", {
+    x: M + 0.45, y: 5.32, w: W - 0.9, h: 0.32,
+    fontFace: TIT, fontSize: 16, bold: true, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "A joia passou a ser vista como ferramenta de bem-estar e conexão com o natural, não como enfeite. " +
+    "A Pekar já trabalha pedra natural: falta verbalizar o significado em cada peça. É o que muda a legenda " +
+    "de descritiva para simbólica — e é o que faz a cliente salvar e compartilhar o post.",
+    {
+      x: M + 0.45, y: 5.66, w: W - 0.9, h: 0.72,
+      fontFace: TXT, fontSize: 13, color: SUAVE_D, lineSpacing: 18, margin: 0, valign: "top",
+    }
+  );
+
+  s.addNotes("Este é o argumento central da análise: significado vende mais que descrição.");
+}
+
+// =====================================================================
+// 12 · PILARES DE CONTEÚDO
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "Os cinco pilares de conteúdo");
+
+  s.addText(
+    "Todo post da Pekar deve caber em um destes cinco assuntos. É o que dá identidade ao perfil.",
+    {
+      x: M, y: 1.6, w: W, h: 0.4,
+      fontFace: TXT, fontSize: 14, color: TINTA, margin: 0, valign: "middle",
+    }
+  );
+
+  const pilares = [
+    ["A pedra e seu significado", "Água-marinha, morganita, ametista. O território que gera salvamento.", OURO],
+    ["O mar como referência", "As conchas, a areia, a origem da marca no litoral norte.", AGUA],
+    ["Prova social", "As frases que as clientes já dizem. Vale mais que qualquer anúncio.", TERRA],
+    ["História da marca", "O início, a evolução e o jeito de fazer — em doses pequenas.", OURO],
+    ["Educativo", "Cuidados com a prata, guia de medidas, como escolher uma pedra.", AGUA],
+  ];
+
+  const gap = 0.14;
+  const cw = (W - gap * 4) / 5;
+  pilares.forEach((p, i) => {
+    const x = M + i * (cw + gap);
+    card(s, x, 2.15, cw, 3.55);
+    s.addShape(pres.ShapeType.roundRect, {
+      x: x + 0.26, y: 2.45, w: 0.5, h: 0.5, rectRadius: 0.1,
+      fill: { color: p[2] }, line: { type: "none" },
+    });
+    s.addText(String(i + 1), {
+      x: x + 0.26, y: 2.45, w: 0.5, h: 0.5,
+      fontFace: TXT, fontSize: 15, bold: true, color: BRANCO,
+      align: "center", valign: "middle", margin: 0,
+    });
+    s.addText(p[0], {
+      x: x + 0.26, y: 3.1, w: cw - 0.52, h: 1.0,
+      fontFace: TIT, fontSize: 14.5, bold: true, color: MARROM, lineSpacing: 20, margin: 0, valign: "top",
+    });
+    s.addText(p[1], {
+      x: x + 0.26, y: 4.15, w: cw - 0.52, h: 1.35,
+      fontFace: TXT, fontSize: 12, color: TINTA, lineSpacing: 17, margin: 0, valign: "top",
+    });
+  });
+
+  s.addNotes("Se um post não cabe em nenhum dos cinco, provavelmente não deveria ser publicado.");
+}
+
+// =====================================================================
+// 13 · FORMATOS E FREQUÊNCIA
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "Formatos e frequência");
+
+  tabela(s,
+    ["FORMATO", "PARA QUE SERVE", "FREQUÊNCIA"],
+    [
+      ["Reels", "Alcance de quem ainda não segue. Brilho, textura e movimento da peça — o vídeo mostra o que a foto não mostra.", "2 por semana"],
+      ["Carrossel", "Salvamento e autoridade. Guias, significado da pedra, processo de produção.", "2 por semana"],
+      ["Estático", "Vitrine da marca. A peça bem fotografada, com o nome e o significado, para quem já acompanha.", "1 por semana"],
+      ["Stories", "Conversa e conversão. Cada resposta abre uma conversa no direct, e é ali que a venda consultiva acontece.", "diário"],
+    ],
+    { x: M, y: 1.78, w: W, colW: [2.0, 7.79, 2.3], rowH: [0.4, 0.86, 0.72, 0.86, 0.86] }
+  );
+
+  card(s, M, 5.55, W, 1.15, AREIA);
+  s.addText(
+    [
+      { text: "Por que essa divisão:  ", options: { bold: true, color: MARROM } },
+      { text: "cada formato tem um trabalho diferente. Reels traz gente nova, carrossel constrói confiança, " +
+              "estático mantém a vitrine bonita e stories fecha a venda. Publicar só um formato deixa uma dessas pontas descoberta.",
+        options: { color: TINTA } },
+    ],
+    {
+      x: M + 0.45, y: 5.55, w: W - 0.9, h: 1.15,
+      fontFace: TXT, fontSize: 13.5, lineSpacing: 19, margin: 0, valign: "middle",
+    }
+  );
+
+  s.addNotes("A linha do Estático estava em branco na versão anterior — preenchida aqui, confirmar se combina com o que a Karen pensou.");
+}
+
+// =====================================================================
+// 14 · HORÁRIOS
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "Horários sugeridos de postagem");
+
+  const dias = [
+    ["Terça a quinta", "Publicação no feed.", "Reels entre 9h e 11h\nCarrossel no almoço\nStories no fim da tarde"],
+    ["Sexta", "Fim de tarde e noite.", "17h – 20h"],
+    ["Sábado", "Manhã e fim de tarde.", "8h – 10h\n17h – 20h"],
+    ["Domingo", "Manhã e tarde.", "8h – 11h30\n12h – 16h"],
+  ];
+
+  const cw = 2.87, gap = 0.29;
+  dias.forEach((d, i) => {
+    const x = M + i * (cw + gap);
+    card(s, x, 1.75, cw, 2.85);
+    s.addText(d[0], {
+      x: x + 0.32, y: 2.0, w: cw - 0.64, h: 0.38,
+      fontFace: TIT, fontSize: 18, bold: true, color: MARROM, margin: 0, valign: "middle",
+    });
+    s.addText(d[1], {
+      x: x + 0.32, y: 2.4, w: cw - 0.64, h: 0.3,
+      fontFace: TXT, fontSize: 12, italic: true, color: SUAVE, margin: 0, valign: "middle",
+    });
+    s.addText(d[2], {
+      x: x + 0.32, y: 2.82, w: cw - 0.64, h: 1.5,
+      fontFace: TXT, fontSize: 13.5, color: TINTA, lineSpacing: 21, margin: 0, valign: "top",
+    });
+  });
+
+  card(s, M, 4.82, W, 1.75, MARROM);
+  s.addText("COMO VALIDAR", {
+    x: M + 0.5, y: 5.05, w: W - 1.0, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "Tudo acima é hipótese estruturada, não verdade estabelecida. Para virar certeza, precisa de quatro semanas " +
+    "de grade fixa, medindo alcance de não-seguidores, salvamentos e conversas geradas. E precisa ser cruzada " +
+    "com o dado que só a Karen tem: o horário real de pico das lojas.",
+    {
+      x: M + 0.5, y: 5.4, w: W - 1.0, h: 1.0,
+      fontFace: TXT, fontSize: 13.5, color: SUAVE_D, lineSpacing: 20, margin: 0, valign: "top",
+    }
+  );
+
+  s.addNotes("Importante dizer isso em voz alta: não estou vendendo certeza, estou propondo um teste com medição.");
+}
+
+// =====================================================================
+// 15 · ROTEIRO DE PRODUÇÃO
+// =====================================================================
+{
+  const s = slideClaro();
+  titulo(s, "A análise  ·  Parte 02", "Roteiro de produção");
+
+  tabela(s,
+    ["BLOCO", "O QUE GRAVAR / FOTOGRAFAR"],
+    [
+      ["Loja e ambiente", "Fachada, vitrine, interior, balcão e embalagem. Também as fotos com o celular deitado para o Google: 5 fotos horizontais e bem iluminadas. O Google privilegia horizontal e penaliza foto escura."],
+      ["Anéis", "Carro-chefe. 8 a 10 peças, com prioridade para as autorais com pedra natural."],
+      ["Brincos", "6 a 8 peças. O segundo que mais vende."],
+      ["Colares e pingentes", "5 a 6 peças."],
+      ["Pulseiras", "4 a 5 peças."],
+      ["Conjuntos", "2 a 3 combinações completas."],
+      ["Karen em cena", "Vídeo sobre a história da loja, cuidados com a prata e como as peças autorais são pensadas e produzidas."],
+      ["Detalhes", "A peça sendo colocada na sacolinha; as mãos da Karen ajustando uma peça no mostruário."],
+    ],
+    { x: M, y: 1.72, w: W, colW: [2.7, 9.39], rowH: [0.34, 0.62, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4] }
+  );
+
+  card(s, M, 5.72, W, 1.05, MARROM);
+  s.addText(
+    [
+      { text: "A regra deste bloco:  ", options: { bold: true, color: OURO } },
+      { text: "câmera ligada antes de começar. Três blocos de três a cinco minutos, sem roteiro decorado — " +
+              "depois a gente corta. O que não se recupera é a frase espontânea que saiu enquanto a câmera estava desligada.",
+        options: { color: AREIA } },
+    ],
+    {
+      x: M + 0.45, y: 5.72, w: W - 0.9, h: 1.05,
+      fontFace: TXT, fontSize: 13, lineSpacing: 18, margin: 0, valign: "middle",
+    }
+  );
+
+  s.addNotes("Esse roteiro resolve o problema de arquivo para a temporada: uma diária de gravação rende semanas de post.");
+}
+
+// =====================================================================
+// 16 · PROPOSTA — GOOGLE
+// =====================================================================
+{
+  const s = slideEscuro();
+  titulo(s, "A proposta  ·  Parte 03", "Google Meu Negócio e QR codes", true);
+
+  const itens = [
+    [
+      "Google Meu Negócio",
+      "Reivindicação e disputa de acesso das 3 contas junto ao Google. Após a aprovação, com o acesso " +
+      "transferido para o e-mail pekarjoias@gmail.com, atualização das fotos e das informações das lojas.",
+      "R$ 900,00",
+    ],
+    [
+      "QR codes para o balcão",
+      "QR codes direcionando para o Instagram e para o Google, com a arte do display pronta para as duas lojas.",
+      "R$ 50,00",
+    ],
+  ];
+
+  let y = 1.8;
+  itens.forEach((it, i) => {
+    const h = i === 0 ? 1.45 : 1.15;
+    card(s, M, y, W, h, CARD_ESCURO);
+    bolinha(s, M + 0.42, y + 0.3, 0.44, String(i + 1), OURO, 14);
+    s.addText(it[0], {
+      x: M + 1.05, y: y + 0.24, w: 6.4, h: 0.4,
+      fontFace: TIT, fontSize: 19, bold: true, color: BRANCO, margin: 0, valign: "middle",
+    });
+    s.addText(it[1], {
+      x: M + 1.05, y: y + 0.66, w: 8.1, h: h - 0.8,
+      fontFace: TXT, fontSize: 12.5, color: SUAVE_D, lineSpacing: 18, margin: 0, valign: "top",
+    });
+    s.addText(it[2], {
+      x: W - 2.0 + M, y: y + 0.24, w: 2.0, h: 0.5,
+      fontFace: TIT, fontSize: 23, bold: true, color: OURO,
+      align: "right", valign: "middle", margin: 0,
+    });
+    y += h + 0.2;
+  });
+
+  s.addShape(pres.ShapeType.roundRect, {
+    x: M, y: 4.7, w: W, h: 0.95, rectRadius: 0.07,
+    fill: { color: OURO }, line: { type: "none" },
+  });
+  s.addText("Total", {
+    x: M + 0.5, y: 4.7, w: 3.0, h: 0.95,
+    fontFace: TIT, fontSize: 21, bold: true, color: BRANCO, margin: 0, valign: "middle",
+  });
+  s.addText("R$ 475,00 para iniciar  ·  R$ 475,00 na entrega", {
+    x: M + 3.5, y: 4.7, w: 5.6, h: 0.95,
+    fontFace: TXT, fontSize: 13.5, color: "FBF6EE", margin: 0, valign: "middle",
+  });
+  s.addText("R$ 950,00", {
+    x: W - 3.0 + M, y: 4.7, w: 3.0 - 0.5, h: 0.95,
+    fontFace: TIT, fontSize: 28, bold: true, color: BRANCO,
+    align: "right", valign: "middle", margin: 0,
+  });
+
+  card(s, M, 5.9, W, 1.15, CARD_ESCURO);
+  s.addText("Frases para pedir avaliação no Google e seguidor no Instagram", {
+    x: M + 0.45, y: 6.02, w: W - 0.9, h: 0.3,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 1.6, color: OURO, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "“As peças novas eu mostro lá primeiro.”   ·   “Você é de onde? Então guarda o nosso contato — a gente " +
+    "envia para o Brasil todo, o frete é fixo.”   ·   “Avalia a gente no Google, ajuda muito outras pessoas a " +
+    "encontrarem a loja.”",
+    {
+      x: M + 0.45, y: 6.34, w: W - 0.9, h: 0.62,
+      fontFace: TXT, fontSize: 12, italic: true, color: SUAVE_D, lineSpacing: 17, margin: 0, valign: "top",
+    }
+  );
+
+  s.addNotes("As frases são para as vendedoras usarem no balcão. Custo zero e efeito direto na avaliação do Google.");
+}
+
+// =====================================================================
+// 17 · PROPOSTA — SOCIAL MEDIA
+// =====================================================================
+{
+  const s = slideEscuro();
+  titulo(s, "A proposta  ·  Parte 03", "Social media: o perfil tocado por mim", true);
+
+  const entregas = [
+    "Legendas e programação de todas as publicações",
+    "Postagens diversificadas entre Reels, carrossel e estático, conforme o material recebido",
+    "Stories diários, conforme o material disponível",
+    "Roteiro de produção de fotos e vídeos",
+    "Análise, sugestões de conteúdo e relatório de tendências",
+    "Reuniões quinzenais de alinhamento",
+    "Disponibilidade no WhatsApp em qualquer dia",
+  ];
+
+  card(s, M, 1.78, 7.6, 4.27, CARD_ESCURO);
+  s.addText("O QUE ESTÁ INCLUÍDO", {
+    x: M + 0.45, y: 2.02, w: 6.7, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: OURO, margin: 0, valign: "middle",
+  });
+  entregas.forEach((e, i) => {
+    const y = 2.48 + i * 0.5;
+    bolinha(s, M + 0.45, y + 0.04, 0.26, "✓", OURO, 10);
+    s.addText(e, {
+      x: M + 0.87, y: y - 0.04, w: 6.4, h: 0.42,
+      fontFace: TXT, fontSize: 13, color: AREIA, lineSpacing: 17, margin: 0, valign: "middle",
+    });
+  });
+
+  const rx = M + 7.95;
+  const rw = W - 7.95;
+  s.addShape(pres.ShapeType.roundRect, {
+    x: rx, y: 1.78, w: rw, h: 1.85, rectRadius: 0.07,
+    fill: { color: OURO }, line: { type: "none" },
+  });
+  s.addText("INVESTIMENTO", {
+    x: rx + 0.4, y: 2.0, w: rw - 0.8, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: "FBF6EE", margin: 0, valign: "middle",
+  });
+  s.addText("R$ 900,00", {
+    x: rx + 0.4, y: 2.36, w: rw - 0.8, h: 0.6,
+    fontFace: TIT, fontSize: 32, bold: true, color: BRANCO, margin: 0, valign: "middle",
+  });
+  s.addText("por mês  ·  podemos definir juntas o melhor dia de cobrança", {
+    x: rx + 0.4, y: 2.98, w: rw - 0.8, h: 0.5,
+    fontFace: TXT, fontSize: 12, color: "FBF6EE", lineSpacing: 16, margin: 0, valign: "top",
+  });
+
+  card(s, rx, 3.8, rw, 2.25, CARD_ESCURO);
+  s.addText("O QUE A PEKAR ENTREGA", {
+    x: rx + 0.4, y: 4.02, w: rw - 0.8, h: 0.28,
+    fontFace: TXT, fontSize: 11, bold: true, charSpacing: 2.0, color: TERRA, margin: 0, valign: "middle",
+  });
+  s.addText(
+    "O material de foto e vídeo já selecionado e tratado, com o nome da peça.\n\n" +
+    "Sem material, não há programação que se sustente.",
+    {
+      x: rx + 0.4, y: 4.36, w: rw - 0.8, h: 1.6,
+      fontFace: TXT, fontSize: 12, color: SUAVE_D, lineSpacing: 17, margin: 0, valign: "top",
+    }
+  );
+
+  s.addText(
+    "As duas propostas são independentes: dá para contratar só o Google, só o social media, ou as duas.",
+    {
+      x: M, y: 6.25, w: W, h: 0.4,
+      fontFace: TXT, fontSize: 13, italic: true, color: SUAVE_D, margin: 0, valign: "middle",
+    }
+  );
+
+  s.addNotes("Deixar claro que são contratações separadas, para a Karen não sentir que é pacote fechado.");
+}
+
+// =====================================================================
+// 18 · FECHAMENTO
+// =====================================================================
+{
+  const s = pres.addSlide();
+  s.background = { color: MARROM };
+
+  s.addShape(pres.ShapeType.ellipse, {
+    x: -1.6, y: 4.3, w: 4.4, h: 4.4,
+    fill: { type: "none" }, line: { color: OURO, width: 1, transparency: 60 },
+  });
+  s.addShape(pres.ShapeType.ellipse, {
+    x: 11.2, y: -1.3, w: 3.6, h: 3.6,
+    fill: { color: OURO, transparency: 90 }, line: { type: "none" },
+  });
+
+  s.addImage({ path: LOGO_CLARO, x: 6.03, y: 1.15, w: 1.28, h: 1.66 });
+
+  s.addText("Obrigada pela confiança.", {
+    x: M, y: 3.15, w: W, h: 0.8,
+    fontFace: TIT, fontSize: 38, bold: true, color: BRANCO,
+    align: "center", valign: "middle", margin: 0,
+  });
+  s.addText(
+    "Qualquer dúvida sobre esta apresentação, é só me chamar no WhatsApp do grupo do projeto.",
+    {
+      x: M, y: 3.98, w: W, h: 0.4,
+      fontFace: TXT, fontSize: 14.5, color: SUAVE_D,
+      align: "center", valign: "middle", margin: 0,
+    }
+  );
+
+  s.addShape(pres.ShapeType.line, {
+    x: 5.42, y: 4.72, w: 2.5, h: 0,
+    line: { color: OURO, width: 0.75, transparency: 40 },
+  });
+  s.addImage({ path: ASSINATURA, x: 5.37, y: 4.92, w: 2.6, h: 0.87 });
+  s.addText("Pekar Arte em Jóias  ·  25 de agosto de 2026", {
+    x: M, y: 6.1, w: W, h: 0.32,
+    fontFace: TXT, fontSize: 11.5, charSpacing: 1.2, color: SUAVE,
+    align: "center", valign: "middle", margin: 0,
+  });
+
+  s.addNotes("Fechar combinando os dois pedidos pendentes e o prazo de resposta da proposta.");
+}
+
+pres.writeFile({ fileName: "Pekar-Analise-Entrega-Proposta.pptx" }).then((f) => console.log("OK:", f));

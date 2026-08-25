@@ -13,3 +13,6 @@ frontend-design
 *.jpg
 *.jpeg
 *.gif
+
+# Exceção: assets de marca do projeto Pekar (build.js depende deles)
+!pekar-joias/*.png
