@@ -87,3 +87,46 @@ deck se reajusta.
 No ar em <https://pekar-joias.web.app> (Firebase Hosting, projeto `pekar-joias`).
 Os fontes ficam fora deste repositório, na máquina local (`pekar-joias/arquivos-fonte`
 e `pekar-joias/hosting-firebase`).
+
+## Página web da apresentação
+
+Publicada como Artifact:
+<https://claude.ai/code/artifact/51c226f3-77c8-4c60-940b-da965b101650>
+
+Mesmo conteúdo do PPTX de 10 slides aprovado, redesenhado como página única de
+rolagem, para enviar por link ao cliente.
+
+| Arquivo | O que é |
+|---|---|
+| `pagina.tpl.html` | Fonte editável, com `__LOGO__`, `__LOGOC__` e `__ASSIN__` como marcadores |
+| `pekar-apresentacao.html` | Página final, com as imagens embutidas em base64 (auto-suficiente) |
+| `web-logo.png`, `web-logo-claro.png`, `web-assinatura.png` | Versões reduzidas dos assets, usadas na página |
+
+### Como atualizar
+
+1. Editar `pagina.tpl.html`
+2. Regerar a página com as imagens embutidas:
+
+```bash
+python3 - <<'PY'
+import base64
+def uri(f): return "data:image/png;base64," + base64.b64encode(open(f,"rb").read()).decode()
+h = open("pagina.tpl.html", encoding="utf8").read()
+for marca, arq in [("__LOGO__","web-logo.png"),("__LOGOC__","web-logo-claro.png"),("__ASSIN__","web-assinatura.png")]:
+    h = h.replace(marca, uri(arq))
+open("pekar-apresentacao.html","w",encoding="utf8").write(h)
+PY
+```
+
+3. Republicar o mesmo arquivo para manter o link.
+
+### Decisões de design
+
+- **Tema único**, por escolha: é um documento de marca, com a paleta Pekar fixa
+  (areia clara de fundo, marrom profundo nas faixas de ênfase, dourado de acento).
+- **Tipografia**: Fraunces nos títulos (mesma família do site link-in-bio) e Karla
+  no texto, ambas do Google Fonts, com pilha de fallback declarada.
+- **Tabelas viraram grades CSS** que empilham no celular, em vez de `<table>` com
+  rolagem lateral — a leitura principal é no telefone.
+- Os badges usam os tons `-tinta` da paleta, e não o dourado cheio, para o texto
+  branco passar em contraste.

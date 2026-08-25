@@ -1,0 +1,846 @@
+<title>Análise e Proposta Pekar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap">
+
+<style>
+/* ------------------------------------------------------------------
+   Pekar Arte em Joias — análise, entrega e nova proposta
+   Identidade fechada: areia clara / marrom profundo / dourado.
+   Página de tema único, por decisão: é um documento de marca.
+   ------------------------------------------------------------------ */
+:root{
+  --areia-clara:#FAF5EC;
+  --areia:#EFE4D2;
+  --areia-forte:#E4D5BE;
+  --tinta:#2E241D;
+  --tinta-suave:#6B5B4C;
+  --escuro:#2E241D;
+  --escuro-card:#42352B;
+  --creme:#F3E9D9;
+  --creme-suave:#C9B99F;
+  --ouro:#C9A455;
+  --ouro-tinta:#8E6B1C;
+  --terra:#BF5340;
+  --terra-claro:#E28A73;
+  --terra-tinta:#A2412E;
+  --agua:#87AF9F;
+  --agua-tinta:#4E7C68;
+
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Karla","Helvetica Neue",Arial,sans-serif;
+
+  --col:64rem;
+  --r:10px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--areia-clara);
+  color:var(--tinta);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;text-wrap:balance;margin:0;line-height:1.18}
+p{margin:0}
+
+a{color:var(--ouro-tinta)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ouro-tinta);outline-offset:3px;border-radius:3px}
+
+.env{width:100%;max-width:var(--col);margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2rem)}
+
+/* ---------------------------------------------------------- navegação */
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(250,245,236,.93);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--areia-forte);
+}
+.nav-in{display:flex;align-items:center;gap:1.2rem;min-height:56px}
+.nav-marca{display:flex;align-items:center;gap:.6rem;margin-right:auto;min-width:0}
+.nav-marca img{width:22px;height:auto;flex:none}
+.nav-marca span{
+  font-family:var(--sans);font-size:.72rem;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-suave);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.nav-links{display:flex;gap:.35rem;flex:none}
+.nav-links a{
+  font-size:.76rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--tinta-suave);text-decoration:none;
+  padding:.34rem .6rem;border-radius:99px;transition:background .15s,color .15s;
+}
+.nav-links a:hover{background:var(--areia);color:var(--tinta)}
+.nav-links a.on{background:var(--tinta);color:var(--creme)}
+@media(max-width:640px){
+  .nav-marca span{display:none}
+  .nav-links a{padding:.34rem .5rem;font-size:.7rem}
+}
+
+/* --------------------------------------------------------------- capa */
+.capa{padding:clamp(2.6rem,7vw,4.6rem) 0 clamp(2rem,5vw,3rem)}
+.capa-grade{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+.capa-marca{
+  font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ouro-tinta);margin-bottom:.9rem;
+}
+.capa h1{font-size:clamp(2.3rem,6.4vw,3.9rem);letter-spacing:-.015em;font-weight:600}
+.capa-sub{
+  margin-top:1.1rem;max-width:34ch;font-size:clamp(1rem,2.4vw,1.12rem);
+  color:var(--tinta-suave);
+}
+.capa-logo{width:clamp(78px,13vw,116px)}
+@media(max-width:600px){
+  .capa-grade{grid-template-columns:1fr;gap:1.4rem}
+  .capa-logo{width:74px;order:-1}
+}
+.capa-pe{
+  display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem;
+  margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--areia-forte);
+}
+.periodo{
+  display:inline-block;background:var(--ouro);color:var(--escuro);
+  font-size:.82rem;font-weight:700;letter-spacing:.05em;
+  padding:.44rem 1.05rem;border-radius:99px;
+}
+.assinatura{width:150px;opacity:.95}
+
+/* ------------------------------------------------------------- seções */
+.parte{padding:clamp(2.4rem,6vw,3.8rem) 0;scroll-margin-top:60px}
+.olho{
+  display:flex;align-items:center;gap:.7rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--terra-tinta);margin-bottom:.7rem;
+}
+.olho::after{content:"";flex:1;height:1px;background:var(--areia-forte)}
+.parte > .env > h2{font-size:clamp(1.7rem,4.2vw,2.3rem);letter-spacing:-.01em}
+.intro{margin-top:.8rem;max-width:60ch;color:var(--tinta-suave)}
+
+h3.bloco{
+  font-size:clamp(1.15rem,2.8vw,1.35rem);margin-top:2.6rem;margin-bottom:1rem;
+}
+h3.bloco:first-of-type{margin-top:2rem}
+
+.rotulo{
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--terra-tinta);margin-bottom:.8rem;
+}
+.escuro .rotulo{color:var(--ouro)}
+
+/* ------------------------------------------------------------ roteiro */
+.roteiro{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
+@media(max-width:760px){.roteiro{grid-template-columns:1fr}}
+.rot{
+  background:var(--areia);border-radius:var(--r);padding:1.5rem 1.4rem;
+  display:flex;flex-direction:column;gap:.5rem;
+}
+.rot b{font-family:var(--serif);font-size:2rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.rot:nth-child(1) b{color:var(--ouro-tinta)}
+.rot:nth-child(2) b{color:var(--terra-tinta)}
+.rot:nth-child(3) b{color:var(--agua-tinta)}
+.rot h3{font-size:1.22rem}
+.rot p{font-size:.94rem;color:var(--tinta-suave)}
+
+/* ---------------------------------------------------------- linha do tempo */
+.tempo{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tempo li{
+  display:grid;grid-template-columns:5.2rem 1fr;gap:0 1.3rem;
+  padding:.95rem 0;border-top:1px solid var(--areia-forte);
+}
+.tempo li:last-child{border-bottom:1px solid var(--areia-forte)}
+.data{
+  font-size:.78rem;font-weight:700;letter-spacing:.03em;font-variant-numeric:tabular-nums;
+  color:var(--tinta-suave);padding-top:.16rem;
+}
+.tempo li.fim .data{color:var(--ouro-tinta)}
+.tempo strong{font-family:var(--serif);font-weight:600;font-size:1.04rem;display:block}
+.tempo span{display:block;color:var(--tinta-suave);font-size:.93rem;margin-top:.15rem}
+@media(max-width:560px){
+  .tempo li{grid-template-columns:1fr;gap:.25rem}
+  .data{padding-top:0}
+}
+
+/* --------------------------------------------------------------- pares */
+.par{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.4rem}
+@media(max-width:760px){.par{grid-template-columns:1fr}}
+
+.caixa{background:var(--areia);border-radius:var(--r);padding:1.4rem 1.4rem}
+.caixa .rotulo{margin-bottom:.55rem}
+.caixa .valor{font-family:var(--serif);font-size:1.72rem;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.caixa p{font-size:.94rem;color:var(--tinta-suave);margin-top:.5rem}
+.pix{
+  margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--areia-forte);
+  font-size:.9rem;font-weight:600;font-variant-numeric:tabular-nums;
+}
+.pix em{font-style:normal;color:var(--tinta-suave);font-weight:400}
+
+/* --------------------------------------------------------- faixa escura */
+.escuro{background:var(--escuro);color:var(--creme)}
+.escuro h2,.escuro h3,.escuro strong{color:#fff}
+.escuro .olho{color:var(--ouro)}
+.escuro .olho::after{background:rgba(233,221,202,.22)}
+.escuro .intro,.escuro p{color:var(--creme-suave)}
+
+.numeros{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.8rem}
+@media(max-width:760px){.numeros{grid-template-columns:repeat(2,1fr)}}
+.num{background:var(--escuro-card);border-radius:var(--r);padding:1.3rem 1rem;text-align:center}
+.num.destaque{background:var(--ouro)}
+.num b{
+  display:block;font-family:var(--serif);font-size:clamp(1.9rem,5vw,2.5rem);
+  font-weight:700;line-height:1;color:#fff;font-variant-numeric:tabular-nums;
+}
+.num i{display:block;font-style:normal;font-size:.86rem;font-weight:700;color:#fff;margin-top:.55rem}
+.num s{display:block;text-decoration:none;font-size:.78rem;color:var(--creme-suave);margin-top:.2rem}
+.num.destaque b,.num.destaque i{color:var(--escuro)}
+.num.destaque s{color:#5B4726}
+
+.leitura{background:var(--escuro-card);border-radius:var(--r);padding:1.6rem 1.5rem;margin-top:1rem}
+.leitura h3{font-size:1.2rem;color:var(--ouro);margin-bottom:.7rem}
+.leitura p + p{margin-top:.85rem}
+
+/* --------------------------------------------------------------- itens */
+.itens{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(max-width:760px){.itens{grid-template-columns:1fr}}
+.itens li{
+  background:var(--areia);border-radius:var(--r);padding:1.05rem 1.2rem;
+  display:grid;grid-template-columns:1.5rem 1fr;gap:0 .75rem;
+}
+.itens li b{
+  font-family:var(--sans);font-size:.78rem;font-weight:700;color:#fff;
+  background:var(--ouro-tinta);border-radius:99px;
+  width:1.5rem;height:1.5rem;display:grid;place-items:center;
+  grid-row:span 2;margin-top:.12rem;
+}
+.itens li strong{font-family:var(--serif);font-weight:600;font-size:1.02rem}
+.itens li span{color:var(--tinta-suave);font-size:.92rem}
+
+/* -------------------------------------------------------------- achados */
+.achados{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.6rem}
+.achados li{display:grid;grid-template-columns:1.35rem 1fr;gap:.7rem;align-items:start}
+.achados li::before{
+  content:"!";font-size:.75rem;font-weight:700;color:#fff;background:var(--terra-tinta);
+  width:1.35rem;height:1.35rem;border-radius:99px;display:grid;place-items:center;margin-top:.16rem;
+}
+.achados li span{font-size:.96rem}
+
+.check{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.85rem}
+.check li{display:grid;grid-template-columns:1.35rem 1fr;gap:.7rem;align-items:start}
+.check li::before{
+  content:"✓";font-size:.78rem;font-weight:700;color:#fff;background:var(--ouro-tinta);
+  width:1.35rem;height:1.35rem;border-radius:99px;display:grid;place-items:center;margin-top:.16rem;
+}
+/* sobre fundo escuro o dourado cheio lê melhor, com o texto em marrom */
+.escuro .check li::before{background:var(--ouro);color:var(--escuro)}
+.check strong{font-family:var(--serif);font-weight:600;font-size:1rem;display:block}
+.check span{display:block;font-size:.9rem;color:var(--tinta-suave)}
+.escuro .check span{color:var(--creme-suave)}
+
+.credencial{
+  background:var(--escuro);color:var(--creme);border-radius:var(--r);
+  padding:1rem 1.15rem;margin-top:1.1rem;
+}
+.credencial .rotulo{color:var(--ouro);margin-bottom:.45rem}
+.credencial code{
+  font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--ouro);
+  display:block;word-break:break-all;
+}
+.credencial small{display:block;font-size:.88rem;color:var(--creme-suave);margin-top:.2rem}
+
+.acao{
+  margin-top:1.1rem;padding:1rem 1.15rem;border-radius:var(--r);
+  background:var(--areia-forte);font-size:.96rem;
+}
+.acao b{color:var(--terra-tinta)}
+
+/* ---------------------------------------------------------- tendências */
+.tend{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.6rem}
+@media(max-width:900px){.tend{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tend{grid-template-columns:1fr}}
+.tend article{background:var(--areia);border-radius:var(--r);padding:1.4rem 1.3rem}
+.tend b{
+  font-family:var(--serif);font-size:1.65rem;font-weight:700;line-height:1;
+  display:block;margin-bottom:.7rem;font-variant-numeric:tabular-nums;
+}
+.tend article:nth-child(1) b,.tend article:nth-child(4) b{color:var(--ouro-tinta)}
+.tend article:nth-child(2) b{color:var(--terra-tinta)}
+.tend article:nth-child(3) b{color:var(--agua-tinta)}
+.tend h4{font-size:1.05rem;margin-bottom:.55rem}
+.tend p{font-size:.9rem;color:var(--tinta-suave)}
+
+.leitura-clara{
+  background:var(--escuro);color:var(--creme);border-radius:var(--r);
+  padding:1.5rem 1.4rem;margin-top:1rem;
+}
+.leitura-clara h4{color:var(--ouro);font-size:1.12rem;margin-bottom:.55rem}
+.leitura-clara p{color:var(--creme-suave);font-size:.98rem}
+
+/* -------------------------------------------------------------- pilares */
+.pilares{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.6rem}
+.pilares li{
+  display:grid;grid-template-columns:1.6rem 1fr;gap:0 .8rem;
+  background:var(--areia);border-radius:var(--r);padding:.95rem 1.2rem;
+}
+.pilares li b{
+  font-size:.78rem;font-weight:700;color:#fff;border-radius:99px;
+  width:1.6rem;height:1.6rem;display:grid;place-items:center;grid-row:span 2;margin-top:.1rem;
+}
+.pilares li:nth-child(1) b,.pilares li:nth-child(4) b{background:var(--ouro-tinta)}
+.pilares li:nth-child(2) b,.pilares li:nth-child(5) b{background:var(--agua-tinta)}
+.pilares li:nth-child(3) b{background:var(--terra-tinta)}
+.pilares strong{font-family:var(--serif);font-weight:600;font-size:1.02rem}
+.pilares span{color:var(--tinta-suave);font-size:.92rem}
+
+/* --------------------------------------------------- listas tipo tabela */
+.quadro{margin-top:1.1rem;border-top:1px solid var(--areia-forte)}
+.quadro .cab{
+  display:grid;gap:0 1.2rem;
+  font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tinta-suave);padding:.7rem 0;border-bottom:1px solid var(--areia-forte);
+}
+.quadro .lin{
+  display:grid;gap:.2rem 1.2rem;padding:.9rem 0;border-bottom:1px solid var(--areia-forte);
+}
+.quadro .lin strong{font-family:var(--serif);font-weight:600;font-size:1rem}
+.quadro .lin p{font-size:.94rem;color:var(--tinta-suave)}
+.quadro .lin em{
+  font-style:normal;font-size:.88rem;font-weight:600;color:var(--terra-tinta);
+  white-space:nowrap;
+}
+.quadro-3 .cab,.quadro-3 .lin{grid-template-columns:8rem 1fr 8rem}
+.quadro-2 .cab,.quadro-2 .lin{grid-template-columns:11rem 1fr}
+@media(max-width:720px){
+  .quadro .cab{display:none}
+  .quadro-3 .lin,.quadro-2 .lin{grid-template-columns:1fr}
+  .quadro .lin em{margin-top:.3rem}
+}
+
+/* -------------------------------------------------------------- horários */
+.horarios{list-style:none;margin:1.1rem 0 0;padding:0;display:grid;gap:.6rem}
+.horarios li{
+  background:var(--areia);border-radius:var(--r);padding:.95rem 1.2rem;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem 1rem;
+}
+.horarios strong{font-family:var(--serif);font-weight:600;font-size:1.04rem}
+.horarios em{font-style:italic;font-size:.86rem;color:var(--tinta-suave);margin-right:auto}
+.horarios span{font-size:.94rem;flex-basis:100%}
+
+.nota{
+  background:var(--escuro);color:var(--creme-suave);border-radius:var(--r);
+  padding:1.4rem 1.4rem;margin-top:1rem;font-size:.95rem;
+}
+.nota .rotulo{color:var(--ouro)}
+
+/* -------------------------------------------------------------- proposta */
+.oferta{display:grid;gap:.7rem;margin-top:1.5rem}
+.oferta article{
+  background:var(--escuro-card);border-radius:var(--r);padding:1.3rem 1.4rem;
+  display:grid;grid-template-columns:1.7rem 1fr auto;gap:.3rem .9rem;align-items:start;
+}
+/* posições explícitas: sem isso a auto-alocação embaralha preço e título */
+.oferta b{
+  font-size:.78rem;font-weight:700;color:var(--escuro);background:var(--ouro);border-radius:99px;
+  width:1.7rem;height:1.7rem;display:grid;place-items:center;margin-top:.1rem;
+  grid-column:1;grid-row:1 / span 2;
+}
+.oferta h4{grid-column:2;grid-row:1;font-size:1.08rem;color:#fff}
+.oferta .preco{
+  grid-column:3;grid-row:1;align-self:center;
+  font-size:1rem;font-weight:700;color:var(--ouro);white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+.oferta p{grid-column:2 / -1;grid-row:2;font-size:.93rem;color:var(--creme-suave)}
+@media(max-width:620px){
+  .oferta article{grid-template-columns:1.7rem 1fr}
+  .oferta h4{grid-column:2}
+  .oferta .preco{grid-column:2;grid-row:2;margin-top:.35rem;align-self:start}
+  .oferta p{grid-column:2;grid-row:3}
+}
+.total{
+  background:var(--escuro-card);border-radius:var(--r);padding:1.1rem 1.4rem;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.2rem;
+}
+.total strong{font-family:var(--serif);font-size:1.15rem;color:#fff}
+.total span{font-size:.93rem;color:var(--creme-suave);margin-right:auto}
+.total em{
+  font-style:normal;font-size:1rem;font-weight:700;color:var(--ouro);
+  font-variant-numeric:tabular-nums;
+}
+
+.frases{background:var(--escuro-card);border-radius:var(--r);padding:1.4rem;margin-top:1rem}
+.frases ul{list-style:none;margin:.2rem 0 0;padding:0;display:grid;gap:.55rem}
+.frases li{font-style:italic;font-size:.95rem;color:var(--creme-suave);padding-left:1rem;position:relative}
+.frases li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:99px;background:var(--ouro)}
+
+.plano{display:grid;grid-template-columns:1.5fr 1fr;gap:1rem;margin-top:1.5rem}
+@media(max-width:820px){.plano{grid-template-columns:1fr}}
+.plano > div{background:var(--escuro-card);border-radius:var(--r);padding:1.4rem}
+/* a coluna da direita não é um card: são dois cards empilhados */
+.plano .lado{background:none;padding:0;display:grid;gap:1rem;align-content:start}
+.plano .lado > div{background:var(--escuro-card);border-radius:var(--r);padding:1.4rem}
+.investimento .valor{
+  font-family:var(--serif);font-size:1.6rem;font-weight:600;color:#fff;
+  font-variant-numeric:tabular-nums;
+}
+.investimento .valor small{font-family:var(--sans);font-size:.95rem;font-weight:400;color:var(--creme-suave)}
+.investimento p{font-size:.9rem;margin-top:.35rem}
+.entrega-pekar .rotulo{color:var(--terra-claro)}
+
+.independente{
+  margin-top:1.2rem;font-size:.96rem;font-style:italic;color:var(--creme-suave);text-align:center;
+}
+
+/* ------------------------------------------------------------ fechamento */
+.fim{background:var(--escuro);color:var(--creme);text-align:center;padding:clamp(3rem,8vw,4.6rem) 0}
+.fim img.marca{width:clamp(64px,11vw,86px);margin:0 auto 1.6rem}
+.fim h2{font-size:clamp(1.7rem,4.6vw,2.4rem);color:#fff}
+.fim p{margin-top:.9rem;color:var(--creme-suave);max-width:46ch;margin-inline:auto;font-size:1rem}
+.fim .risco{width:130px;height:1px;background:rgba(201,164,85,.5);margin:2.2rem auto 1.2rem}
+.fim img.assin{width:170px;margin:0 auto}
+.fim .rodape{
+  margin-top:2rem;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;
+  color:#A2937F;
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  .nav{display:none}
+  body{background:#fff;font-size:11pt}
+  .escuro,.fim{background:#fff !important;color:#000 !important}
+  .escuro h2,.escuro h3,.fim h2,.oferta h4,.num b,.num i{color:#000 !important}
+  .escuro p,.escuro .intro,.fim p,.oferta p,.total span{color:#333 !important}
+  .escuro-card,.leitura,.num,.oferta article,.total,.frases,.plano > div,.nota,.credencial{
+    background:#F2ECE1 !important;color:#000 !important;
+  }
+  .parte{page-break-inside:avoid}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+html{scroll-behavior:smooth}
+</style>
+
+<nav class="nav">
+  <div class="env nav-in">
+    <span class="nav-marca">
+      <img src="__LOGO__" alt="">
+      <span>Pekar Arte em Joias</span>
+    </span>
+    <span class="nav-links">
+      <a href="#entrega">Entrega</a>
+      <a href="#analise">Análise</a>
+      <a href="#proposta">Proposta</a>
+    </span>
+  </div>
+</nav>
+
+<header class="capa">
+  <div class="env">
+    <div class="capa-grade">
+      <div>
+        <p class="capa-marca">Pekar Arte em Joias</p>
+        <h1>Análise, entrega<br>e nova proposta</h1>
+        <p class="capa-sub">
+          O que foi feito na primeira etapa, o que o mercado pede em 2026 e o que sugiro para continuarmos.
+        </p>
+      </div>
+      <img class="capa-logo" src="__LOGO__" alt="Logo Pekar Arte em Jóias">
+    </div>
+    <div class="capa-pe">
+      <span class="periodo">30/07/2026 a 25/08/2026</span>
+      <img class="assinatura" src="__ASSIN__" alt="AluSulina">
+    </div>
+  </div>
+</header>
+
+<section class="parte" id="roteiro">
+  <div class="env">
+    <p class="olho">Roteiro</p>
+    <h2>O que você vai ver aqui</h2>
+    <div class="roteiro">
+      <div class="rot">
+        <b>01</b>
+        <h3>A entrega</h3>
+        <p>Tudo o que foi feito entre 30 de julho e 25 de agosto: identidade, Instagram, Google e os arquivos que ficam com a Pekar.</p>
+      </div>
+      <div class="rot">
+        <b>02</b>
+        <h3>A análise</h3>
+        <p>O que o mercado de joalheria pede em 2026 e como isso vira conteúdo, formato, horário e roteiro de gravação.</p>
+      </div>
+      <div class="rot">
+        <b>03</b>
+        <h3>A proposta</h3>
+        <p>O que sugiro para a próxima fase, com escopo e valores separados por frente de trabalho.</p>
+      </div>
+    </div>
+    <p class="intro">Se em algum ponto eu usar um termo que não faça sentido, só avisar.</p>
+  </div>
+</section>
+
+<section class="parte" id="entrega">
+  <div class="env">
+    <p class="olho">A entrega · Parte 01</p>
+    <h2>Como foi feito, dia a dia</h2>
+
+    <ol class="tempo">
+      <li>
+        <span class="data">30/07</span>
+        <span><strong>Proposta aprovada e briefing enviado</strong>
+        <span>O combinado fechado e o questionário de entendimento da marca enviado para a Karen.</span></span>
+      </li>
+      <li>
+        <span class="data">31/07</span>
+        <span><strong>Acesso ao Instagram e arquivos da logo</strong>
+        <span>A Pekar liberou o perfil e enviou os arquivos originais da logo.</span></span>
+      </li>
+      <li>
+        <span class="data">01/08</span>
+        <span><strong>Briefing respondido</strong>
+        <span>As respostas da Karen chegaram e viraram a base da identidade.</span></span>
+      </li>
+      <li>
+        <span class="data">02/08</span>
+        <span><strong>Identidade e guia de Instagram entregues</strong>
+        <span>Também foi criado o grupo de WhatsApp do projeto, para agilizar o dia a dia.</span></span>
+      </li>
+      <li>
+        <span class="data">03/08</span>
+        <span><strong>Instagram atualizado</strong>
+        <span>Bio reescrita, capas de destaque e link na bio.</span></span>
+      </li>
+      <li>
+        <span class="data">10/08</span>
+        <span><strong>Primeiras postagens no ar</strong>
+        <span>Começo da publicação de conteúdo.</span></span>
+      </li>
+      <li class="fim">
+        <span class="data">25/08</span>
+        <span><strong>Encerramento da primeira etapa</strong>
+        <span>Esta apresentação: balanço do que foi feito e proposta do que vem a seguir.</span></span>
+      </li>
+    </ol>
+
+    <div class="par">
+      <div class="caixa">
+        <p class="rotulo">Status do projeto</p>
+        <p class="valor">Concluída</p>
+        <p>Todas as frentes combinadas foram entregues ou resolvidas.</p>
+      </div>
+      <div class="caixa">
+        <p class="rotulo">Parcela final (50%)</p>
+        <p class="valor">R$ 1.250,00</p>
+        <p>Vencimento em 01/09/2026, conforme a proposta aprovada em 30/07.</p>
+        <p class="pix"><em>PIX:</em> 230.935.948-39</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="parte escuro">
+  <div class="env">
+    <p class="olho">A entrega · Parte 01</p>
+    <h2>O que os números mostram</h2>
+
+    <div class="numeros">
+      <div class="num"><b>2.826</b><i>seguidores</i><s>03/08/2026</s></div>
+      <div class="num"><b>2.838</b><i>seguidores</i><s>25/08/2026</s></div>
+      <div class="num destaque"><b>+12</b><i>novos seguidores</i><s>no período</s></div>
+      <div class="num"><b>15</b><i>dias de postagens</i><s>de 10/08 a 25/08</s></div>
+    </div>
+
+    <div class="leitura">
+      <h3>Lendo os números</h3>
+      <p>Em 15 dias de postagens o perfil ganhou 12 seguidores. Cresceu pouco, e isso era esperado: esta primeira etapa não foi de crescimento, foi de organização.</p>
+      <p>Seguidor novo vem com constância de publicação e ações feitas para atrair quem ainda não conhece a marca. Em duas semanas não há como medir isso — o que existe hoje é a base pronta para esse crescimento acontecer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="parte">
+  <div class="env">
+    <p class="olho">A entrega · Parte 01</p>
+    <h2>Em aberto</h2>
+
+    <ol class="itens">
+      <li><b>1</b><strong>Deixar de seguir 2.000 contas</strong><span>Limpeza da lista de “seguindo”, para o perfil ficar coerente com a marca.</span></li>
+      <li><b>2</b><strong>Pagamento com cartão de crédito</strong><span>Mercado Pago. Assim que estiver funcionando, atualizamos a informação no Instagram.</span></li>
+      <li><b>3</b><strong>Cupom de 1ª compra</strong><span>Sugestão em estudo: pode virar um desconto de …% no PIX.</span></li>
+      <li><b>4</b><strong>Número novo para WhatsApp Business</strong><span>Separar o atendimento da loja do número pessoal.</span></li>
+      <li><b>5</b><strong>Quem responde as mensagens</strong><span>Hoje só a Karen responde. Na temporada, vai haver tempo de responder e atender?</span></li>
+      <li><b>6</b><strong>Volume real de fotos e vídeos</strong><span>Quantas por semana a Pekar consegue produzir de verdade? Precisamos de arquivo para atravessar a temporada.</span></li>
+    </ol>
+
+    <h3 class="bloco">A capa abaixo já está criada e salva no Drive. Para entrar no perfil, falta o conteúdo.</h3>
+    <div class="caixa">
+      <p class="rotulo">Destaque · Depoimentos de clientes</p>
+      <p>Falta colherem os depoimentos com as clientes das lojas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="parte">
+  <div class="env">
+    <p class="olho">A entrega · Parte 01</p>
+    <h2>Google Meu Negócio e os arquivos da marca</h2>
+
+    <div class="par">
+      <div>
+        <h3 class="bloco">Google Meu Negócio</h3>
+        <p class="intro">O combinado era atualizar fotos e informações das lojas no Google. Ao tentar o acesso, descobrimos que a Pekar não o tinha para editar — então o trabalho virou investigação.</p>
+
+        <p class="rotulo" style="margin-top:1.4rem">O que foi descoberto</p>
+        <ul class="achados">
+          <li><span>Juquehy tem 2 contas: uma como joalheria e outra como restaurante.</span></li>
+          <li><span>Maresias tem 1 conta.</span></li>
+          <li><span>O acesso das três está com o e-mail co….@gmail.com, fora do controle da Pekar.</span></li>
+        </ul>
+
+        <div class="credencial">
+          <p class="rotulo">O que foi feito</p>
+          <code>pekarjoias@gmail.com</code>
+          <small>senha: 080112Batismo</small>
+        </div>
+
+        <p class="acao"><b>Ação necessária:</b> reivindicar as três contas e atualizar fotos e informações assim que o acesso for liberado.</p>
+      </div>
+
+      <div>
+        <h3 class="bloco">Bônus: todos os arquivos em um lugar só</h3>
+        <p class="intro">Uma pasta no Google Drive, dentro do e-mail pekarjoias@gmail.com. Não estava na proposta, mas foi criada para manter todos os arquivos do projeto reunidos e salvos.</p>
+
+        <p class="rotulo" style="margin-top:1.4rem">O que tem dentro</p>
+        <ul class="check">
+          <li><span><strong>Capas de destaque do Instagram</strong><span>as imagens das bolinhas do perfil</span></span></li>
+          <li><span><strong>Imagens da logo</strong><span>todas as versões</span></span></li>
+          <li><span><strong>Documentos do projeto</strong><span>identidade, guia de Instagram e demais materiais</span></span></li>
+          <li><span><strong>Termos de autorização de imagem</strong><span>para funcionários e para clientes, liberando o uso de fotos, vídeos e depoimentos</span></span></li>
+        </ul>
+
+        <p class="acao">Para acessar: entrar no Google Drive com esse e-mail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="parte" id="analise">
+  <div class="env">
+    <p class="olho">A análise · Parte 02</p>
+    <h2>Tendências de joalheria para 2026</h2>
+
+    <div class="tend">
+      <article>
+        <b>01</b>
+        <h4>A prata voltou como tendência estética</h4>
+        <p>Depois de anos de dourado, a prata 925 e o banho de ródio voltam como aposta do ano, especialmente para clima quente.</p>
+      </article>
+      <article>
+        <b>02</b>
+        <h4>Prata escultural</h4>
+        <p>Textura martelada imitando seixo de rio, bezel assimétrico, borda crua, acabamento fosco no lugar do polido espelhado. A Pekar não precisa perseguir essa tendência — precisa nomear que já a pratica.</p>
+      </article>
+      <article>
+        <b>03</b>
+        <h4>Pedra colorida natural no centro</h4>
+        <p>O consumidor tem preferido a gema natural, irregular e única, à perfeição industrial repetida. Em alta: morganita, ametista lavanda, turmalina verde e tanzanita.</p>
+      </article>
+      <article>
+        <b>04</b>
+        <h4>Água-marinha, a pedra de 2026</h4>
+        <p>Historicamente o amuleto dos navegantes, hoje associada a calma e proteção. Para uma joalheria que nasceu num mostruário na areia, é um presente de posicionamento — não precisa ser inventado, precisa ser ocupado.</p>
+      </article>
+    </div>
+
+    <div class="leitura-clara">
+      <h4>A leitura por trás das quatro</h4>
+      <p>A joia passou a ser vista como ferramenta de bem-estar e conexão com o natural, não como enfeite. A Pekar já trabalha pedra natural: agora é só verbalizar o significado em cada peça.</p>
+    </div>
+  </div>
+</section>
+
+<section class="parte">
+  <div class="env">
+    <p class="olho">A análise · Parte 02</p>
+    <h2>Os pilares e os formatos</h2>
+    <p class="intro">Os posts da Pekar devem caber em um destes cinco assuntos.</p>
+
+    <ol class="pilares">
+      <li><b>1</b><strong>A pedra e seu significado</strong><span>Água-marinha, morganita, ametista. O território que gera salvamento.</span></li>
+      <li><b>2</b><strong>O mar como referência</strong><span>As conchas, a areia, a origem da marca no litoral norte.</span></li>
+      <li><b>3</b><strong>Prova social</strong><span>As frases que as clientes já dizem. Vale mais que qualquer anúncio.</span></li>
+      <li><b>4</b><strong>História da marca</strong><span>O início, a evolução e o jeito de fazer — em doses pequenas.</span></li>
+      <li><b>5</b><strong>Educativo</strong><span>Cuidados com a prata, guia de medidas, como escolher uma pedra.</span></li>
+    </ol>
+
+    <h3 class="bloco">Formatos e frequência</h3>
+    <div class="quadro quadro-3">
+      <div class="cab"><span>Formato</span><span>Para que serve</span><span>Frequência</span></div>
+      <div class="lin">
+        <strong>Reels</strong>
+        <p>Alcance de quem ainda não segue. Brilho, textura e movimento da peça — o vídeo mostra o que a foto não mostra.</p>
+        <em>2 por semana</em>
+      </div>
+      <div class="lin">
+        <strong>Carrossel</strong>
+        <p>Salvamento e autoridade. Guias, significado da pedra, processo de escolha de produção.</p>
+        <em>2 por semana</em>
+      </div>
+      <div class="lin">
+        <strong>Estático</strong>
+        <p>Vitrine da marca. A peça bem fotografada, com o nome e o significado, para quem já acompanha.</p>
+        <em>1 por semana</em>
+      </div>
+      <div class="lin">
+        <strong>Stories</strong>
+        <p>Conversa e conversão. Cada resposta abre uma conversa no direct, e é ali que a venda consultiva acontece.</p>
+        <em>diário</em>
+      </div>
+    </div>
+
+    <p class="acao"><b>Por que essa divisão:</b> cada formato tem um trabalho diferente. Reels traz gente nova, carrossel constrói confiança, estático mantém a vitrine bonita e stories fecha a venda. Publicar só um formato deixa uma dessas pontas descoberta.</p>
+  </div>
+</section>
+
+<section class="parte">
+  <div class="env">
+    <p class="olho">A análise · Parte 02</p>
+    <h2>Horários e roteiro de produção</h2>
+
+    <h3 class="bloco">Horários sugeridos de postagem</h3>
+    <ul class="horarios">
+      <li><strong>Terça a quinta</strong><em>Publicação no feed.</em><span>Reels entre 9h e 11h · Carrossel no almoço · Stories no fim da tarde</span></li>
+      <li><strong>Sexta</strong><em>Fim de tarde e noite.</em><span>17h – 20h</span></li>
+      <li><strong>Sábado</strong><em>Manhã e fim de tarde.</em><span>8h – 10h · 17h – 20h</span></li>
+      <li><strong>Domingo</strong><em>Manhã e tarde.</em><span>8h – 11h30 · 12h – 16h</span></li>
+    </ul>
+
+    <div class="nota">
+      <p class="rotulo">Como validar</p>
+      <p>Tudo acima é hipótese estruturada, não verdade estabelecida. Para virar certeza, precisa de quatro semanas de grade fixa, medindo alcance de não-seguidores, salvamentos e conversas geradas. E precisa ser cruzada com o dado que só a Karen tem: o horário real de pico das lojas.</p>
+    </div>
+
+    <h3 class="bloco">Roteiro de produção</h3>
+    <div class="quadro quadro-2">
+      <div class="cab"><span>Bloco</span><span>O que gravar / fotografar</span></div>
+      <div class="lin"><strong>Loja e ambiente</strong><p>Fachada, vitrine, interior, balcão e embalagem. Também as fotos com o celular deitado para o Google: 5 fotos horizontais e bem iluminadas. O Google privilegia horizontal e penaliza foto escura.</p></div>
+      <div class="lin"><strong>Anéis</strong><p>Carro-chefe. 8 a 10 peças, com prioridade para as autorais com pedra natural.</p></div>
+      <div class="lin"><strong>Brincos</strong><p>6 a 8 peças. O segundo que mais vende.</p></div>
+      <div class="lin"><strong>Colares e pingentes</strong><p>5 a 6 peças.</p></div>
+      <div class="lin"><strong>Pulseiras</strong><p>4 a 5 peças.</p></div>
+      <div class="lin"><strong>Conjuntos</strong><p>2 a 3 combinações completas.</p></div>
+      <div class="lin"><strong>Karen em cena</strong><p>Vídeo sobre a história da loja, cuidados com a prata e como as peças autorais são pensadas e produzidas.</p></div>
+      <div class="lin"><strong>Detalhes</strong><p>A peça sendo colocada na sacolinha; mãos ajustando uma peça no mostruário.</p></div>
+    </div>
+
+    <div class="nota">
+      <p class="rotulo">A regra deste bloco</p>
+      <p>Câmera ligada antes de começar. Três blocos de três a cinco minutos, sem roteiro decorado — depois a gente corta. O que não se recupera é a frase espontânea que saiu enquanto a câmera estava desligada.</p>
+    </div>
+  </div>
+</section>
+
+<section class="parte escuro" id="proposta">
+  <div class="env">
+    <p class="olho">A proposta · Parte 03</p>
+    <h2>Google Meu Negócio e QR codes</h2>
+
+    <div class="oferta">
+      <article>
+        <b>1</b>
+        <h4>Google Meu Negócio</h4>
+        <span class="preco">R$ 900,00</span>
+        <p>Reivindicação e disputa de acesso das 3 contas junto ao Google. Após a aprovação, com o acesso transferido para o e-mail pekarjoias@gmail.com, atualização das fotos e das informações das lojas.</p>
+      </article>
+      <article>
+        <b>2</b>
+        <h4>QR codes para o balcão</h4>
+        <span class="preco">R$ 50,00</span>
+        <p>QR codes direcionando para o Instagram e para o Google, com a arte pronta para as duas lojas.</p>
+      </article>
+      <div class="total">
+        <strong>Total</strong>
+        <span>R$ 475,00 para iniciar · R$ 475,00 na entrega</span>
+        <em>R$ 950,00</em>
+      </div>
+    </div>
+
+    <div class="frases">
+      <p class="rotulo">Sugestões de frases para pedir avaliação no Google e seguidor no Instagram</p>
+      <ul>
+        <li>“As peças novas eu mostro lá primeiro.”</li>
+        <li>“Você é de onde? Então guarda o nosso contato — a gente envia para o Brasil todo, o frete é fixo.”</li>
+        <li>“Avalia a gente no Google, ajuda muito outras pessoas a encontrarem a loja.”</li>
+      </ul>
+    </div>
+
+    <h3 class="bloco" style="color:#fff">Social media: o perfil tocado por mim</h3>
+    <div class="plano">
+      <div>
+        <p class="rotulo">O que está incluído</p>
+        <ul class="check">
+          <li><span><strong>Legendas e programação das publicações</strong></span></li>
+          <li><span><strong>Postagens diversificadas entre Reels, carrossel e estático</strong><span>conforme o material recebido</span></span></li>
+          <li><span><strong>Stories conforme o material disponível</strong></span></li>
+          <li><span><strong>Roteiro de produção de fotos e vídeos</strong></span></li>
+          <li><span><strong>Análise, sugestões de conteúdo e relatório de tendências</strong></span></li>
+          <li><span><strong>Reuniões quinzenais de alinhamento</strong></span></li>
+          <li><span><strong>Disponibilidade no WhatsApp em qualquer dia</strong></span></li>
+        </ul>
+      </div>
+      <div class="lado">
+        <div class="investimento">
+          <p class="rotulo">Investimento</p>
+          <p class="valor">R$ 900,00 <small>mês</small></p>
+          <p>· podemos definir juntas o melhor dia de cobrança</p>
+        </div>
+        <div class="entrega-pekar">
+          <p class="rotulo">O que a Pekar entrega</p>
+          <p>O material de foto e vídeo já selecionado e tratado, com o nome da peça.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="independente">As duas propostas são independentes.</p>
+  </div>
+</section>
+
+<footer class="fim">
+  <div class="env">
+    <img class="marca" src="__LOGOC__" alt="Pekar Arte em Jóias">
+    <h2>Obrigada pela confiança.</h2>
+    <p>Qualquer dúvida sobre esta apresentação, é só me chamar no WhatsApp do grupo do projeto.</p>
+    <div class="risco"></div>
+    <img class="assin" src="__ASSIN__" alt="AluSulina">
+    <p class="rodape">Pekar Arte em Joias · 25 de agosto de 2026</p>
+  </div>
+</footer>
+
+<script>
+// Marca no menu a parte que está na tela.
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var alvos = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if (alvos.some(function(el){ return !el; })) return;
+
+  function atual(){
+    var y = window.scrollY + 90;
+    var i = -1;
+    alvos.forEach(function(el, n){ if (el.offsetTop <= y) i = n; });
+    links.forEach(function(a, n){ a.classList.toggle('on', n === i); });
+  }
+  var pendente = false;
+  window.addEventListener('scroll', function(){
+    if (pendente) return;
+    pendente = true;
+    requestAnimationFrame(function(){ atual(); pendente = false; });
+  }, {passive:true});
+  atual();
+})();
+</script>
