@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Projeto Victorinox — Experiência Camburi</title>
+<style>
+  @font-face{font-family:'Inter';src:url('fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+  @font-face{font-family:'Inter';src:url('fonts/inter-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+  @font-face{font-family:'Inter';src:url('fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+  @font-face{font-family:'Inter';src:url('fonts/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:block}
+  @font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+  @font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+  @font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+  @font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:block}
+  @font-face{font-family:'Sacramento';src:url('fonts/sacramento-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+
+  :root{
+    --ink:#16222E;
+    --ink-2:#2E3A45;
+    --muted:#5A6672;
+    --faint:#8C959D;
+    --rule:#E2DFD9;
+    --ivory:#FAF8F5;
+    --red:#C1121C;
+    --navy:#16283C;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:297mm 210mm;margin:0}
+  html,body{background:#fff}
+  body{font-family:'Inter',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+  .page{
+    position:relative;width:297mm;height:210mm;overflow:hidden;background:#fff;
+    page-break-after:always;break-after:page;
+    display:flex;flex-direction:column;padding:13mm 20mm 10mm;
+  }
+  .page:last-child{page-break-after:auto;break-after:auto}
+
+  /* ---------- cabeçalho / rodapé ---------- */
+  .head{display:flex;align-items:flex-end;justify-content:space-between;gap:10mm;
+        padding-bottom:3.5mm;border-bottom:.4pt solid var(--rule)}
+  .head .pc{height:11.5mm}
+  .head .meta{display:flex;align-items:baseline;gap:7mm}
+  .head .meta .kicker{font-size:6.6pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+  .head .meta .num{font-size:9pt;font-weight:700;color:var(--red);letter-spacing:.06em}
+
+  .foot{margin-top:auto;padding-top:3.5mm;border-top:.4pt solid var(--rule);
+        display:flex;align-items:center;justify-content:space-between;gap:10mm}
+  .foot .cap{font-size:6.8pt;letter-spacing:.08em;color:var(--faint)}
+  .foot .vx{height:10mm}
+
+  /* ---------- estrutura da página ---------- */
+  .body{flex:1;display:grid;grid-template-columns:88mm 1fr;grid-template-rows:minmax(0,1fr);
+        gap:16mm;padding-top:9mm;min-height:0}
+  .rail{display:flex;flex-direction:column;min-height:0;overflow:hidden;
+        border-right:.4pt solid var(--rule);padding-right:14mm}
+  .rail .eyebrow{margin-bottom:4.5mm}
+  .main{display:flex;flex-direction:column;min-width:0;min-height:0}
+
+  .eyebrow{font-size:6.8pt;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+  h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.08;color:var(--ink)}
+  h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:21pt;line-height:1.22;color:var(--ink)}
+  .lead{font-size:13pt;line-height:1.62;color:var(--ink-2);font-weight:400}
+  p{font-size:11pt;line-height:1.8;color:var(--muted)}
+  .main p + p{margin-top:5.5mm}
+  .main .lead{margin-bottom:6.5mm}
+
+  .pull{margin-top:auto;padding-top:7mm;border-top:1.8pt solid var(--red)}
+  .pull p{font-family:'Playfair Display',Georgia,serif;font-size:12.5pt;line-height:1.45;color:var(--ink);font-weight:400}
+  .ghost{margin-top:auto;font-family:'Playfair Display',Georgia,serif;font-size:46pt;font-weight:600;
+         color:#EDEAE4;line-height:.9;letter-spacing:.02em}
+
+  /* faixa de blocos no rodapé da coluna principal */
+  .blocks{margin-top:auto;padding-top:8mm;border-top:.4pt solid var(--rule);
+          display:grid;gap:12mm}
+  .blocks.c3{grid-template-columns:repeat(3,1fr)}
+  .blocks.c4{grid-template-columns:repeat(4,1fr)}
+  .blocks .blk span{display:block;font-size:6.6pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:2.6mm}
+  .blocks .blk strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:13pt;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:2.2mm}
+  .blocks .blk small{display:block;font-size:9.2pt;line-height:1.62;color:var(--muted)}
+
+  /* ---------- capa ---------- */
+  .cover{padding:0}
+  .cover .band{position:absolute;left:0;top:0;width:6mm;height:100%;background:var(--navy)}
+  .cover .band i{position:absolute;left:0;top:0;width:100%;height:36%;background:var(--red);display:block}
+  .cover .inner{padding:17mm 22mm 13mm 32mm;height:100%;display:flex;flex-direction:column}
+  .cover .pc-logo{width:78mm}
+  .cover .grid{flex:1;display:grid;grid-template-columns:1.62fr 1fr;gap:18mm;padding-top:14mm;min-height:0}
+  .cover .kicker{font-size:7.2pt;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--faint);margin-bottom:6mm}
+  .cover h1{font-size:35pt;margin-bottom:7mm}
+  .cover h1 em{display:block;font-style:normal;font-weight:400;color:var(--ink-2)}
+  .cover .sub{font-size:12.4pt;line-height:1.6;color:var(--ink-2);font-weight:400;max-width:125mm}
+  .cover .date{margin-top:auto;display:flex;align-items:center;gap:5mm;
+        font-size:9.6pt;font-weight:600;letter-spacing:.04em;color:var(--ink)}
+  .cover .date .dot{width:8mm;height:1.4pt;background:var(--red);flex:none}
+
+  .cover .side{display:flex;flex-direction:column;border-left:.4pt solid var(--rule);padding-left:16mm}
+  .cover .resumo{background:var(--ivory);border-left:1.8pt solid var(--red);padding:7mm 8mm;border-radius:0 2mm 2mm 0}
+  .cover .resumo p{font-family:'Playfair Display',Georgia,serif;font-size:10.8pt;line-height:1.5;color:var(--ink);font-weight:400}
+  .cover .pillars{margin-top:auto;padding-top:9mm;display:flex;flex-direction:column;gap:7mm}
+  .cover .pillars div span{display:block;font-size:6.6pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:2.2mm}
+  .cover .pillars div small{font-size:8.8pt;line-height:1.55;color:var(--muted)}
+
+  .cover .close{margin-top:12mm;padding-top:6mm;border-top:.4pt solid var(--rule);
+                display:flex;align-items:flex-end;justify-content:space-between;gap:12mm}
+  .cover .close .vx{width:32mm}
+  .cover .close .note{font-size:7.4pt;letter-spacing:.06em;color:var(--faint);text-align:right;line-height:1.7}
+
+  /* ---------- cartões (pág. 03) ---------- */
+  .cards{flex:1;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:1fr 1fr;gap:8mm;min-height:0}
+  .card{border:.4pt solid var(--rule);border-radius:2.5mm;padding:7mm 7mm;background:#fff;
+        position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .card::before{content:'';position:absolute;left:0;top:0;width:100%;height:1.8pt;background:var(--red)}
+  .card .idx{font-family:'Playfair Display',Georgia,serif;font-size:11pt;font-weight:600;color:#D8D4CD;
+             position:absolute;right:6mm;top:6mm}
+  .card span.lbl{display:block;font-size:6.4pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:3mm}
+  .card h3{font-family:'Playfair Display',Georgia,serif;font-size:14pt;font-weight:600;line-height:1.22;color:var(--ink);margin-bottom:2mm}
+  .card .sig{font-size:7.8pt;font-weight:600;letter-spacing:.08em;color:var(--ink-2);margin-bottom:4.5mm}
+  .card p{font-size:9.5pt;line-height:1.66}
+  .card .ctx{margin-top:auto;padding-top:5mm;border-top:.4pt solid var(--rule);
+             font-size:6.8pt;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);line-height:1.5}
+
+  /* ---------- números (pág. 06) ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm}
+  .stat{background:var(--ivory);border-radius:2.5mm;padding:7mm 4mm;text-align:center}
+  .stat b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:26pt;font-weight:600;color:var(--red);line-height:1}
+  .stat span{display:block;margin-top:3mm;font-size:6.4pt;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+  table{width:100%;border-collapse:collapse;margin-top:9mm}
+  th{font-size:6.6pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+     text-align:left;padding:0 0 3.5mm;border-bottom:.8pt solid var(--ink)}
+  td{font-size:10.4pt;color:var(--muted);padding:4.4mm 0;border-bottom:.4pt solid var(--rule)}
+  td:first-child{font-weight:600;color:var(--ink)}
+  th:not(:first-child),td:not(:first-child){text-align:right}
+  th:nth-child(2),td:nth-child(2){text-align:center}
+  tr.total td{font-weight:600;color:var(--ink)}
+
+  /* ---------- listas ---------- */
+  .list{flex:1;display:flex;flex-direction:column;min-height:0}
+  .list li{list-style:none;display:grid;grid-template-columns:12mm 1fr;
+           border-bottom:.4pt solid var(--rule);align-items:center;flex:1;padding:3mm 0}
+  .list li:first-child{border-top:.4pt solid var(--rule)}
+  .list li b{font-family:'Playfair Display',Georgia,serif;font-size:12pt;font-weight:600;color:var(--red)}
+  .list li p{font-size:10.4pt;line-height:1.7}
+  .list li p strong{color:var(--ink);font-weight:600}
+
+  /* ---------- contato ---------- */
+  .contact{margin-top:auto;background:var(--navy);color:#fff;border-radius:3mm;padding:10mm 11mm;
+           display:grid;grid-template-columns:1fr auto;gap:10mm;align-items:center}
+  .contact .who span{display:block;font-size:6.6pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8FB2CC;margin-bottom:3mm}
+  .contact .who strong{display:block;white-space:nowrap;font-family:'Playfair Display',Georgia,serif;font-size:17pt;font-weight:600;line-height:1.2;margin-bottom:2mm}
+  .contact .who em{display:block;font-style:normal;font-size:8.8pt;color:#B9CBD9;letter-spacing:.03em}
+  .contact .ways{text-align:right;font-size:9pt;line-height:1.95;color:#E6EDF3}
+  .contact .ways i{font-style:normal;color:#8FB2CC}
+
+  /* ---------- anexo ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:3mm;margin-top:4.5mm}
+  .chip{border:.4pt solid var(--rule);border-radius:12mm;padding:2.6mm 6mm;
+        font-size:9pt;font-weight:500;color:var(--ink-2);background:var(--ivory)}
+  .grp + .grp{margin-top:8mm}
+  .srcs{margin-top:auto;padding-top:7mm;border-top:.4pt solid var(--rule)}
+  .srcs span{display:block;font-size:6.6pt;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:3mm}
+  .srcs p{font-size:8.6pt;line-height:1.7;color:var(--faint)}
+
+  .defs{position:absolute;width:0;height:0;overflow:hidden}
+</style>
+</head>
+<body>
+
+<!-- ================= DEFINIÇÃO DAS LOGOS ================= -->
+<svg class="defs" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="logo-pc" viewBox="0 0 720 200">
+    <text x="252" y="122" font-size="86" text-anchor="end" font-family="Sacramento" fill="#16283C">Pousada</text>
+    <g transform="translate(360,100) rotate(-14)" fill="none" stroke-linecap="round">
+      <path d="M -8 -62 A 62 62 0 0 1 46 -30"  stroke="#7CC8EA" stroke-width="7"/>
+      <path d="M -20 -48 A 50 50 0 0 1 40 -14" stroke="#3BA7DE" stroke-width="9"/>
+      <path d="M -26 -30 A 36 36 0 0 1 34 -2"  stroke="#1E7FB8" stroke-width="10"/>
+      <path d="M -22 -8  A 22 22 0 0 1 26 8"   stroke="#12496E" stroke-width="9"/>
+      <path d="M -34 22  A 44 44 0 0 0 32 26"  stroke="#123A56" stroke-width="9"/>
+      <path d="M -52 40  A 66 66 0 0 0 44 44"  stroke="#0E3550" stroke-width="7"/>
+      <path d="M 2 2 A 12 12 0 1 1 14 6" stroke="#1E7FB8" stroke-width="8"/>
+    </g>
+    <text x="470" y="122" font-size="86" font-family="Sacramento" fill="#16283C">Camburi</text>
+  </symbol>
+
+  <symbol id="logo-vx" viewBox="0 0 460 300">
+    <rect x="0" y="0" width="460" height="300" fill="#C1121C"/>
+    <g transform="translate(230,118)">
+      <path d="M -46 -60 L 46 -60 L 46 8 C 46 44 20 66 0 74 C -20 66 -46 44 -46 8 Z"
+            fill="none" stroke="#FFFFFF" stroke-width="7"/>
+      <path d="M -9 -34 L 9 -34 L 9 -12 L 31 -12 L 31 6 L 9 6 L 9 28 L -9 28 L -9 6 L -31 6 L -31 -12 L -9 -12 Z"
+            fill="#FFFFFF"/>
+    </g>
+    <text x="236" y="248" font-size="40" text-anchor="middle" font-family="Inter" font-weight="600"
+          letter-spacing="11" fill="#FFFFFF">VICTORINOX</text>
+  </symbol>
+</svg>
+
+
+<!-- ================= 01 — CAPA ================= -->
+<section class="page cover">
+  <div class="band"><i></i></div>
+  <div class="inner">
+    <svg class="pc-logo" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+
+    <div class="grid">
+      <div style="display:flex;flex-direction:column">
+        <div class="kicker">Pousada Camburi &nbsp;×&nbsp; Victorinox Brasil</div>
+        <h1>Projeto Victorinox<em>Experiência Camburi</em></h1>
+        <div class="sub">Hospitalidade, produto e relacionamento de marca em um final de semana dedicado aos convidados da Victorinox.</div>
+        <div class="date"><span class="dot"></span>04 a 06 de dezembro de 2026 &nbsp;·&nbsp; Camburi, São Sebastião — SP</div>
+      </div>
+
+      <div class="side">
+        <div class="resumo">
+          <p>Três dias no litoral norte de São Paulo, com a estrutura da pousada inteiramente dedicada a um único grupo de convidados da marca.</p>
+        </div>
+        <div class="pillars">
+          <div><span>Precisão</span><small>Operação dedicada e previsível, do check-in ao último atendimento.</small></div>
+          <div><span>Hospitalidade</span><small>Estrutura inteira à disposição de um único grupo.</small></div>
+          <div><span>Experiência</span><small>Produto vivido em contexto, não apenas exposto.</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="close">
+      <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+      <div class="note">Apresentação institucional &nbsp;·&nbsp; Revisão 04<br>Agosto de 2026</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= 02 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">02</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">O ponto de partida</div>
+      <h2>Uma experiência construída sobre afinidades reais</h2>
+      <div class="pull"><p>“Criar contexto para que o produto seja conhecido, demonstrado e lembrado.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">A Pousada Camburi reúne hospitalidade, gastronomia, praia, natureza e um público que valoriza qualidade, funcionalidade, design e experiências bem cuidadas.</p>
+      <p>É nesse ambiente que enxergamos uma oportunidade natural para a Victorinox: transformar um encontro de colecionadores e entusiastas em uma experiência de marca vivida.</p>
+      <p>A proposta não é uma ação publicitária convencional. É criar contexto para que o produto seja conhecido, demonstrado e lembrado — no lugar e no momento em que a sua função realmente faz sentido.</p>
+
+      <div class="blocks c3">
+        <div class="blk"><span>Formato</span><strong>Final de semana exclusivo</strong><small>Três dias, um único grupo, estrutura integralmente dedicada.</small></div>
+        <div class="blk"><span>Público</span><strong>Colecionadores e entusiastas</strong><small>Pessoas que já escolhem a marca e influenciam quem está ao redor.</small></div>
+        <div class="blk"><span>Entrega</span><strong>Relacionamento</strong><small>Vínculo construído no convívio, não em audiência comprada.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 03 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">03</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Universos da marca</div>
+      <h2>Quatro universos Victorinox encontram Camburi</h2>
+      <p style="margin-top:6mm">Cada linha da marca encontra, na rotina do final de semana, uma situação de uso coerente com a sua proposta.</p>
+      <div class="pull"><p>“Cada produto no contexto em que a sua função faz sentido.”</p></div>
+    </div>
+
+    <div class="main">
+      <div class="cards">
+        <article class="card">
+          <div class="idx">01</div>
+          <span class="lbl">Gastronomia</span>
+          <h3>Cutelaria</h3>
+          <div class="sig">Swiss Modern</div>
+          <p>A lâmina aparece em uso: corte, ergonomia e acabamento percebidos na prática, diante de quem cozinha e de quem observa.</p>
+          <div class="ctx">Cozinha, preparo e serviço</div>
+        </article>
+
+        <article class="card">
+          <div class="idx">02</div>
+          <span class="lbl">Viagem</span>
+          <h3>Travel Gear</h3>
+          <div class="sig">Spectra 3.0</div>
+          <p>Malas e acessórios ganham contexto real de uso ao longo dos três dias, da chegada ao retorno.</p>
+          <div class="ctx">Chegada, hospedagem e deslocamento</div>
+        </article>
+
+        <article class="card">
+          <div class="idx">03</div>
+          <span class="lbl">Outdoor</span>
+          <h3>Swiss Army Knife™ &amp; Tools</h3>
+          <div class="sig">Huntsman Wood</div>
+          <p>Ferramentas em situações que revelam versatilidade e preparação — a função se explica sozinha.</p>
+          <div class="ctx">Praia, trilhas e natureza</div>
+        </article>
+
+        <article class="card">
+          <div class="idx">04</div>
+          <span class="lbl">Lifestyle</span>
+          <h3>Relógios</h3>
+          <div class="sig">I.N.O.X.</div>
+          <p>Resistência e leitura demonstradas em um ambiente de mar, sol e movimento constante.</p>
+          <div class="ctx">Precisão, desempenho e estilo</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 04 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">04</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">O conceito</div>
+      <h2>O conceito do encontro</h2>
+      <div class="pull"><p>“Nada é apresentado como vitrine. Tudo é apresentado como uso.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">Um final de semana exclusivo para convidados da Victorinox, com a Pousada Camburi dedicada integralmente ao grupo.</p>
+      <p>A experiência poderá percorrer diferentes universos da marca, permitindo que os convidados conheçam produtos, histórias, características e aplicações.</p>
+      <p>O objetivo é que cada produto apareça no contexto em que a sua função realmente faz sentido — a cutelaria na cozinha, as malas no deslocamento, as ferramentas ao ar livre, os relógios no ritmo do dia.</p>
+
+      <div class="blocks c4">
+        <div class="blk"><span>Sexta · 04 dez</span><strong>Chegada</strong><small>Recepção, acomodação e abertura do encontro.</small></div>
+        <div class="blk"><span>Sábado · 05 dez</span><strong>Vivências</strong><small>Praia, natureza, cozinha e convívio: o corpo do programa.</small></div>
+        <div class="blk"><span>Domingo · 06 dez</span><strong>Encerramento</strong><small>Fechamento, despedida e desdobramentos de relacionamento.</small></div>
+        <div class="blk"><span>Observação</span><strong>Estrutura indicativa</strong><small>A programação definitiva será desenhada em conjunto com a Victorinox.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 05 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">05</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">A base</div>
+      <h2>Pousada Camburi como base exclusiva</h2>
+      <div class="pull"><p>“Privacidade, fluidez operacional e um ambiente controlado para as ativações.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">A estrutura será dedicada ao grupo Victorinox, proporcionando privacidade, fluidez operacional e um ambiente controlado para as ativações.</p>
+      <p>A pousada fica a aproximadamente 170 metros da praia, cerca de dois minutos de caminhada — perto o bastante para que o mar faça parte da programação sem exigir deslocamento.</p>
+      <p>A operação inclui hospedagem, café da manhã, gastronomia, piscina aquecida, serviço de praia, estacionamento com manobrista e serviço de camareira.</p>
+
+      <div class="blocks c3">
+        <div class="blk"><span>Distância</span><strong>170 metros</strong><small>Cerca de dois minutos de caminhada até a praia.</small></div>
+        <div class="blk"><span>Exclusividade</span><strong>100% da estrutura</strong><small>Sem outros hóspedes durante o período do encontro.</small></div>
+        <div class="blk"><span>Serviços</span><strong>Operação completa</strong><small>Café da manhã, gastronomia, piscina aquecida, serviço de praia, manobrista e camareira.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 06 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">06</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Estrutura</div>
+      <h2>Acomodações e capacidade</h2>
+      <p style="margin-top:6mm">18 apartamentos, 45 leitos principais e 9 leitos auxiliares — capacidade máxima de 54 pessoas.</p>
+      <div class="pull"><p>“A configuração é ajustável ao perfil do grupo: casais, duplas ou convidados individuais.”</p></div>
+    </div>
+
+    <div class="main">
+      <div class="stats">
+        <div class="stat"><b>18</b><span>Apartamentos</span></div>
+        <div class="stat"><b>45</b><span>Leitos principais</span></div>
+        <div class="stat"><b>+9</b><span>Leitos auxiliares</span></div>
+        <div class="stat"><b>54</b><span>Capacidade máxima</span></div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Tipo de apartamento</th><th>Unidades</th><th>Hóspedes principais</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Duplo</td><td>11</td><td>22</td></tr>
+          <tr><td>Triplo</td><td>5</td><td>15</td></tr>
+          <tr><td>Quádruplo</td><td>2</td><td>8</td></tr>
+          <tr class="total"><td>Total</td><td>18</td><td>45</td></tr>
+        </tbody>
+      </table>
+
+      <div class="blocks c2" style="grid-template-columns:repeat(2,1fr)">
+        <div class="blk"><span>Distribuição</span><strong>Definida em conjunto</strong><small>A alocação final dos apartamentos seguirá a lista de convidados da Victorinox.</small></div>
+        <div class="blk"><span>Leitos auxiliares</span><strong>Nove posições extras</strong><small>Permitem ajustes de configuração sem alterar a estrutura contratada.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 07 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">07</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Abordagem</div>
+      <h2>Produto em uso: mais experiência, menos exposição</h2>
+      <p style="margin-top:6mm">A lógica acompanha a abordagem oficial da Victorinox: funcionalidade, qualidade, precisão, versatilidade e preparação.</p>
+      <div class="pull"><p>“O produto não é exibido. Ele é usado — e é isso que fica.”</p></div>
+    </div>
+
+    <div class="main">
+      <ul class="list">
+        <li><b>01</b><p><strong>Na cozinha,</strong> a cutelaria aparece em uso — no preparo, no corte e no serviço, diante de quem cozinha e de quem observa.</p></li>
+        <li><b>02</b><p><strong>Na mesa,</strong> ergonomia e desempenho podem ser percebidos no gesto, sem necessidade de discurso.</p></li>
+        <li><b>03</b><p><strong>Na viagem,</strong> malas e acessórios ganham contexto: chegada, acomodação, deslocamento e retorno.</p></li>
+        <li><b>04</b><p><strong>Ao ar livre,</strong> ferramentas e relógios encontram situações coerentes com a sua proposta — praia, trilha, sol e água.</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 08 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">08</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Comunicação</div>
+      <h2>Exclusividade sem isolamento</h2>
+      <div class="pull"><p>“Nenhuma comunicação é publicada sem o aval da marca.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">O encontro permanece exclusivo aos convidados da Victorinox.</p>
+      <p>Com aprovação prévia da marca, a Pousada Camburi poderá comunicar a realização do evento em suas redes sociais e em canais institucionais locais, incluindo a Associação de Bairro.</p>
+      <p>Também poderá ser considerada a presença pontual de convidados institucionais e empresariais selecionados — autoridades municipais, representantes da segurança pública e empresários da região —, preservando o controle da lista e o caráter privado do encontro.</p>
+      <p>Eventuais convites externos e qualquer divulgação serão previamente alinhados com a Victorinox.</p>
+
+      <div class="blocks c3">
+        <div class="blk"><span>Regra geral</span><strong>Aprovação prévia</strong><small>Toda divulgação passa pelo crivo da Victorinox antes de existir.</small></div>
+        <div class="blk"><span>Canais possíveis</span><strong>Locais e institucionais</strong><small>Redes sociais da pousada e canais do bairro, quando autorizados.</small></div>
+        <div class="blk"><span>Lista de convidados</span><strong>Controlada</strong><small>Acessos pontuais avaliados caso a caso, sempre em conjunto.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 09 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">09</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Escala</div>
+      <h2>Capacidade com possibilidade de expansão</h2>
+      <div class="pull"><p>“Uma só base. A expansão resolve hospedagem, nunca a experiência.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">A Pousada Camburi será o núcleo central da experiência, com capacidade de até 54 pessoas conforme o projeto.</p>
+      <p>Se a procura superar essa capacidade, poderemos ampliar a hospedagem por meio de pousadas vizinhas previamente selecionadas e parceiras, mantendo o padrão de atendimento acordado.</p>
+      <p>A Pousada Camburi permanece como base de convivência, programação e experiência de marca — todos os momentos coletivos acontecem aqui.</p>
+
+      <div class="blocks c3">
+        <div class="blk"><span>Núcleo</span><strong>Até 54 pessoas</strong><small>Capacidade máxima da estrutura dedicada ao grupo.</small></div>
+        <div class="blk"><span>Expansão</span><strong>Pousadas parceiras</strong><small>Selecionadas previamente, próximas e alinhadas ao padrão do projeto.</small></div>
+        <div class="blk"><span>Invariante</span><strong>Programação centralizada</strong><small>Convívio e ativações permanecem integralmente na Pousada Camburi.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 10 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">10</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Desdobramento</div>
+      <h2>Um encontro que pode ir além do evento</h2>
+      <div class="pull"><p>“Construir relacionamento, não apenas audiência.”</p></div>
+    </div>
+
+    <div class="main">
+      <p class="lead">A presença da Victorinox em Camburi pode aproximar a marca de colecionadores, entusiastas, empresários e formadores de opinião de segmentos relacionados.</p>
+      <p>A proposta é construir relacionamento, não apenas audiência. O que se leva de um encontro assim não é alcance: é memória, confiança e proximidade.</p>
+      <p>A experiência local pode ser discreta, qualificada e coerente com a cultura de confiança, responsabilidade, modéstia e excelência da Victorinox.</p>
+
+      <div class="blocks c3">
+        <div class="blk"><span>Objetivo</span><strong>Relacionamento</strong><small>Vínculos duradouros com pessoas que já escolhem a marca.</small></div>
+        <div class="blk"><span>Tom</span><strong>Discrição</strong><small>Sem espetáculo e sem ruído, coerente com a cultura da marca.</small></div>
+        <div class="blk"><span>Legado</span><strong>Continuidade</strong><small>Uma base possível para futuras edições e ações no litoral norte.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 11 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">11</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Próximo passo</div>
+      <h2>Uma base para começarmos a conversa</h2>
+      <p style="margin-top:6mm">Esta apresentação é uma base institucional para iniciarmos o diálogo e construirmos, em conjunto, o formato definitivo do encontro.</p>
+      <div class="pull"><p>“Uma base para desenharmos o encontro juntos.”</p></div>
+    </div>
+
+    <div class="main">
+      <ul class="list" style="flex:0 0 auto">
+        <li><b>01</b><p><strong>Segunda etapa.</strong> Programação, ativações, presença da equipe Victorinox, materiais de demonstração e comunicação.</p></li>
+        <li><b>02</b><p><strong>Convidados.</strong> Definição da lista, de eventuais convidados institucionais e das contrapartidas envolvidas.</p></li>
+        <li><b>03</b><p><strong>Condições comerciais.</strong> Valores de hospedagem e demais condições serão apresentados separadamente.</p></li>
+      </ul>
+
+      <div class="contact">
+        <div class="who">
+          <span>Contato</span>
+          <strong>Rodrigo Roberto Sulina</strong>
+          <em>Gestão de Reservas e Comercial<br>Pousada Camburi</em>
+        </div>
+        <div class="ways">
+          <i>Tel.</i> (12) 99795-2066<br>
+          <i>Tel.</i> (12) 99769-8399<br>
+          camburi@pousadacamburi.com.br<br>
+          rrsulina@pousadacamburi.com.br
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+
+<!-- ================= 12 ================= -->
+<section class="page">
+  <header class="head">
+    <svg class="pc" viewBox="0 0 720 200"><use href="#logo-pc"/></svg>
+    <div class="meta"><span class="kicker">Pousada Camburi × Victorinox</span><span class="num">12</span></div>
+  </header>
+
+  <div class="body">
+    <div class="rail">
+      <div class="eyebrow">Anexo</div>
+      <h2>Base de alinhamento</h2>
+      <p style="margin-top:6mm">Os elementos ao lado orientaram a construção desta proposta e foram extraídos das comunicações oficiais da própria Victorinox.</p>
+      <div class="pull"><p>“Coerência com o que a marca já diz de si mesma.”</p></div>
+    </div>
+
+    <div class="main">
+      <div class="grp">
+        <div class="eyebrow">Categorias de produto</div>
+        <div class="chips">
+          <span class="chip">Swiss Army Knife™ &amp; Tools</span>
+          <span class="chip">Cutelaria</span>
+          <span class="chip">Relógios</span>
+          <span class="chip">Malas e acessórios</span>
+          <span class="chip">Fragrâncias</span>
+        </div>
+      </div>
+
+      <div class="grp">
+        <div class="eyebrow">Atributos de marca</div>
+        <div class="chips">
+          <span class="chip">Melhor preparado</span>
+          <span class="chip">Inteligente</span>
+          <span class="chip">Magistral</span>
+        </div>
+      </div>
+
+      <div class="grp">
+        <div class="eyebrow">Abordagem de design</div>
+        <p style="margin-top:4mm">Funcionalidade, qualidade, precisão e soluções em que a forma acompanha a função.</p>
+      </div>
+
+      <div class="grp">
+        <div class="eyebrow">Valores culturais</div>
+        <div class="chips">
+          <span class="chip">Respeito</span>
+          <span class="chip">Responsabilidade</span>
+          <span class="chip">Gratidão</span>
+          <span class="chip">Mentalidade aberta</span>
+          <span class="chip">Modéstia</span>
+          <span class="chip">Confiança</span>
+          <span class="chip">Coragem</span>
+        </div>
+      </div>
+
+      <div class="srcs">
+        <span>Fontes oficiais consultadas em agosto de 2026</span>
+        <p>Victorinox — Nossos princípios; Nossos valores e cultura; Nossa abordagem de design; Produtos; Qualidade e materiais; Tudo sobre a Victorinox.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="cap">Projeto Victorinox · Experiência Camburi &nbsp;|&nbsp; 04–06 de dezembro de 2026</div>
+    <svg class="vx" viewBox="0 0 460 300"><use href="#logo-vx"/></svg>
+  </footer>
+</section>
+
+</body>
+</html>

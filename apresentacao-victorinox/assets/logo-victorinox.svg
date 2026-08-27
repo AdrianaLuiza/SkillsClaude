@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" role="img" aria-label="Victorinox">
+  <defs>
+    <style>
+      .vx-word { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 600;
+                 fill: #FFFFFF; letter-spacing: 11px; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="460" height="300" fill="#C1121C"/>
+
+  <!-- shield -->
+  <g transform="translate(230,118)">
+    <path d="M -46 -60 L 46 -60 L 46 8 C 46 44 20 66 0 74 C -20 66 -46 44 -46 8 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="7"/>
+    <!-- swiss cross -->
+    <path d="M -9 -34 L 9 -34 L 9 -12 L 31 -12 L 31 6 L 9 6 L 9 28 L -9 28 L -9 6 L -31 6 L -31 -12 L -9 -12 Z"
+          fill="#FFFFFF"/>
+  </g>
+
+  <text class="vx-word" x="236" y="248" font-size="40" text-anchor="middle">VICTORINOX</text>
+</svg>
