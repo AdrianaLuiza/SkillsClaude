@@ -1,0 +1,33 @@
+/* Base compartilhada: fontes, cores e reset.
+   O layout de cada documento vem depois — estilo.css (proposta, A4
+   paisagem) e carta.css (carta, A4 retrato). */
+
+/* Jost — texto corrido, rótulos e microtipografia */
+@font-face{font-family:'Jost';src:url('fonts/jost-latin-300-normal.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block}
+@font-face{font-family:'Jost';src:url('fonts/jost-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Jost';src:url('fonts/jost-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Jost';src:url('fonts/jost-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+/* EB Garamond — títulos, números e citações */
+@font-face{font-family:'EB Garamond';src:url('fonts/eb-garamond-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'EB Garamond';src:url('fonts/eb-garamond-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'EB Garamond';src:url('fonts/eb-garamond-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'EB Garamond';src:url('fonts/eb-garamond-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block}
+
+:root{
+  --serif:'EB Garamond',Garamond,Georgia,serif;
+  --sans:'Jost','Futura','Century Gothic',Avenir,sans-serif;
+  --ink:#16222E;
+  --ink-2:#2E3A45;
+  --muted:#5A6672;
+  --faint:#8C959D;
+  --rule:#E2DFD9;
+  --ivory:#FAF8F5;
+  --red:#C1121C;
+  --navy:#16283C;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;
+     text-rendering:optimizeLegibility;font-kerning:normal}
+

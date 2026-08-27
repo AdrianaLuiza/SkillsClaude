@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Renderiza um deck HTML em PDF A4 paisagem usando o Chromium do Playwright.
+"""Renderiza um deck HTML em PDF usando o Chromium do Playwright.
 
     python3 build.py [origem.html] [saida.pdf]
 
@@ -26,16 +26,23 @@ def main(argv) -> int:
         page = browser.new_page()
         page.goto(src.as_uri(), wait_until="networkidle")
         page.wait_for_timeout(600)
+        # o tamanho da folha sai do próprio CSS: a proposta é paisagem e a
+        # carta é retrato, e cada uma define isso no seu .page
+        box = page.evaluate("""() => {
+            const r = document.querySelector('.page').getBoundingClientRect();
+            return { w: r.width / 96 * 25.4, h: r.height / 96 * 25.4 };
+        }""")
         page.pdf(
             path=str(out),
-            width="297mm",
-            height="210mm",
+            width=f"{box['w']:.2f}mm",
+            height=f"{box['h']:.2f}mm",
             print_background=True,
             margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
             prefer_css_page_size=True,
         )
         browser.close()
-    print(f"gerado: {out.name} ({out.stat().st_size/1024:.0f} KB)")
+    print(f"gerado: {out.name} ({out.stat().st_size/1024:.0f} KB, "
+          f"{box['w']:.0f}\u00d7{box['h']:.0f} mm)")
     return 0
 
 

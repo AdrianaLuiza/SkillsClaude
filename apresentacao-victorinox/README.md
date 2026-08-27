@@ -1,14 +1,15 @@
 # Pousada Camburi × Victorinox
 
 Dois documentos institucionais da Pousada Camburi para a Victorinox Brasil,
-sobre um mesmo sistema visual (`estilo.css`):
+sobre a mesma base visual (`base.css`: fontes, cores e logos):
 
-- **Proposta** — Projeto Victorinox, Experiência Camburi (12 páginas).
-  Revisão 04, refeita a partir da Revisão 03 em PDF.
-- **Carta de apresentação** — quem é a Pousada Camburi (10 páginas).
-  O texto da carta original, na íntegra, no formato da proposta.
+- **Proposta** — Projeto Victorinox, Experiência Camburi. A4 **paisagem**,
+  12 páginas, duas colunas. Revisão 04, refeita a partir da Revisão 03 em PDF.
+- **Carta de apresentação** — quem é a Pousada Camburi. A4 **retrato**,
+  10 páginas, coluna única. O texto da carta original, na íntegra.
 
-Cada um sai em PDF e em PowerPoint editável.
+Os formatos são diferentes de propósito: a proposta é uma apresentação, a
+carta é uma carta. Cada um sai em PDF e em PowerPoint editável.
 
 ## Arquivos
 
@@ -18,7 +19,9 @@ Cada um sai em PDF e em PowerPoint editável.
 | `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 10 páginas) |
 | `deck.html` | Fonte da proposta |
 | `carta.html` | Fonte da carta |
-| `estilo.css` | Sistema visual compartilhado pelos dois |
+| `base.css` | Fontes, cores e reset — comuns aos dois |
+| `estilo.css` | Layout da proposta (A4 paisagem) |
+| `carta.css` | Layout da carta (A4 retrato) |
 | `build.py` | Renderiza um HTML em PDF via Chromium/Playwright |
 | `extract_layout.py` | Extrai a geometria renderizada de um HTML em JSON |
 | `build_pptx.js` | Gera o `.pptx` a partir desse JSON |
@@ -102,16 +105,15 @@ precisa de nenhuma outra mudança.
 
 ## O que mudou na carta em relação ao original
 
-**O texto é o mesmo, na íntegra e na mesma ordem.** Só mudou a forma: de A4
-retrato corrido para A4 paisagem, no sistema visual da proposta.
+**O texto é o mesmo, na íntegra e na mesma ordem.** Só mudou a forma.
 
-São 10 páginas: capa, as 8 seções do original (uma por página) e o
-encerramento. A seção mais longa, "A experiência dos nossos hóspedes", cabe em
-uma página só porque as notas de avaliação ficam apenas no texto corrido, sem
-os números em destaque — com eles a coluna estourava a altura da página. As
-citações de fonte que apareciam soltas no meio das frases (`google.com.br`,
-`tripadvisor.com.br`, `restaurantguru.com.br`) foram reunidas em uma nota de
-rodapé.
+São 10 páginas em A4 retrato: capa, os 8 tópicos (um por página) e o
+encerramento. O layout é de coluna única, com medida de leitura mais curta que
+a largura da folha. Os trechos que a carta original destaca com recuo aparecem
+em bloco, com filete vermelho à esquerda; as enumerações ficam uma por linha,
+como no original. As citações de fonte que apareciam soltas no meio das frases
+(`google.com.br`, `tripadvisor.com.br`, `restaurantguru.com.br`) foram
+reunidas em uma nota de rodapé.
 
 As únicas alterações no texto são de grafia e concordância, cada uma
 assinalada por um comentário `grafia:` no ponto em que ocorre no `carta.html`:

@@ -1,0 +1,99 @@
+/* Layout da carta (carta.html): A4 retrato, coluna única.
+   Cores, fontes e reset vêm da base compartilhada com a proposta. */
+@import url('base.css');
+
+@page{size:210mm 297mm;margin:0}
+
+.page{
+  position:relative;width:210mm;height:297mm;overflow:hidden;background:#fff;
+  page-break-after:always;break-after:page;
+  display:flex;flex-direction:column;padding:17mm 22mm 13mm;
+}
+.page:last-child{page-break-after:auto;break-after:auto}
+
+/* ---------- cabeçalho / rodapé ---------- */
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:10mm;
+      padding-bottom:4mm;border-bottom:.4pt solid var(--rule)}
+.head .pc{height:12mm}
+.head .meta{display:flex;align-items:baseline;gap:6mm}
+.head .meta .kicker{font-size:6.2pt;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+.head .meta .num{font-family:var(--serif);font-size:13pt;font-weight:500;color:var(--red);letter-spacing:.04em}
+
+.foot{margin-top:auto;padding-top:4mm;border-top:.4pt solid var(--rule);
+      display:flex;align-items:center;justify-content:space-between;gap:10mm}
+.foot .cap{font-size:6.4pt;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.foot .vx{height:11mm}
+
+/* ---------- corpo da página ---------- */
+.corpo{flex:1;display:flex;flex-direction:column;min-height:0;padding-top:13mm}
+
+.eyebrow{font-size:6.4pt;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+/* filete que marca a abertura de cada tópico */
+.marca{width:14mm;height:1.6pt;background:var(--red)}
+h1{font-family:var(--serif);font-weight:400;line-height:1.05;color:var(--ink);letter-spacing:-.005em}
+h2{font-family:var(--serif);font-weight:500;font-size:25pt;line-height:1.16;color:var(--ink);
+   letter-spacing:-.004em;margin-top:4.5mm;max-width:150mm}
+
+/* medida de leitura mais curta que a largura da página, para o texto respirar */
+.texto{max-width:152mm;margin-top:10mm}
+.texto p{font-size:10.9pt;line-height:1.86;color:var(--muted);font-weight:400}
+.texto p + p{margin-top:5mm}
+.texto .abre{font-size:12.4pt;line-height:1.7;color:var(--ink-2);font-weight:300}
+
+/* saudação de abertura da carta */
+.saud{font-size:10.9pt;line-height:1.75;color:var(--ink);font-weight:500;margin-bottom:6mm}
+
+/* linhas que a carta original destaca com recuo */
+.destaque{margin:8mm 0 8mm 12mm;padding-left:9mm;border-left:1.4pt solid var(--red);max-width:140mm}
+.destaque p{font-family:var(--serif);font-size:15.5pt;line-height:1.4;color:var(--ink);font-weight:400}
+.destaque p + p{margin-top:2mm}
+
+/* enumerações da carta, uma por linha, como no original */
+.itens{list-style:none;margin:7mm 0 7mm 12mm}
+.itens li{font-family:var(--serif);font-size:14pt;line-height:1.45;color:var(--ink-2);
+          padding:1.7mm 0 1.7mm 9mm;position:relative}
+.itens li::before{content:'';position:absolute;left:0;top:4.6mm;width:4mm;height:.6pt;background:var(--red)}
+.itens.curto li{font-size:15pt}
+
+/* nota de fontes */
+.srcs{margin-top:auto;padding-top:6mm;border-top:.4pt solid var(--rule);max-width:152mm}
+.srcs span{display:block;font-size:6pt;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+           color:var(--faint);margin-bottom:2.5mm}
+.srcs p{font-size:8.2pt;line-height:1.7;color:var(--faint);font-weight:400}
+
+/* assinatura de encerramento */
+.assina{margin-top:20mm;padding-top:9mm;border-top:.4pt solid var(--rule)}
+.assina .ate{font-size:10.9pt;line-height:1.8;color:var(--muted);margin-bottom:5mm}
+.assina strong{display:block;font-family:var(--serif);font-size:24pt;font-weight:400;
+               color:var(--ink);line-height:1.2;margin-bottom:3mm}
+.assina small{display:block;font-size:7pt;font-weight:400;letter-spacing:.2em;
+              text-transform:uppercase;color:var(--faint);line-height:2}
+
+/* ---------- capa ---------- */
+.cover{padding:0}
+.cover .band{position:absolute;left:0;top:0;width:6mm;height:100%;background:var(--navy)}
+.cover .band i{position:absolute;left:0;top:0;width:100%;height:32%;background:var(--red);display:block}
+.cover .inner{padding:24mm 24mm 15mm 32mm;height:100%;display:flex;flex-direction:column}
+.cover .pc-logo{width:92mm}
+.cover .kicker{font-size:7pt;font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+               color:var(--faint);margin-bottom:6mm}
+.cover .tit{margin-top:26mm}
+.cover h1{font-size:40pt;margin-bottom:8mm}
+.cover h1 em{display:block;font-style:italic;font-weight:300;color:var(--ink-2)}
+.cover .sub{font-size:12.6pt;line-height:1.7;color:var(--ink-2);font-weight:300;max-width:118mm}
+
+.cover .resumo{margin-top:16mm;background:var(--ivory);border-left:1.8pt solid var(--red);
+               padding:8mm 9mm;border-radius:0 2mm 2mm 0;max-width:132mm}
+.cover .resumo p{font-family:var(--serif);font-size:14pt;line-height:1.45;color:var(--ink);font-weight:400}
+
+.cover .date{margin-top:auto;display:flex;align-items:center;gap:5mm;
+             font-size:8.4pt;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.cover .date .dot{width:8mm;height:1.4pt;background:var(--red);flex:none}
+
+.cover .close{margin-top:11mm;padding-top:7mm;border-top:.4pt solid var(--rule);
+              display:flex;align-items:flex-end;justify-content:space-between;gap:12mm}
+.cover .close .vx{width:34mm}
+.cover .close .note{font-size:6.8pt;font-weight:400;letter-spacing:.16em;text-transform:uppercase;
+                    color:var(--faint);text-align:right;line-height:1.9}
+
+.defs{position:absolute;width:0;height:0;overflow:hidden}
