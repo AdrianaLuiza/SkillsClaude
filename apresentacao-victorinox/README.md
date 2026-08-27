@@ -12,7 +12,18 @@ Revisão 04 — refeita a partir da Revisão 03 em PDF.
 | `build.py` | Renderiza `deck.html` em PDF via Chromium/Playwright |
 | `assets/logo-pousada-camburi.svg` | Logo da Pousada Camburi (vetor) |
 | `assets/logo-victorinox.svg` | Logo da Victorinox (vetor) |
-| `fonts/` | Playfair Display, Inter e Sacramento (subset latin, WOFF2) |
+| `fonts/` | EB Garamond, Jost e Sacramento (subset latin, WOFF2) |
+
+## Tipografia
+
+| Uso | Fonte |
+| --- | --- |
+| Títulos, citações, números e tabelas | **EB Garamond** (400/500/600 + itálico) |
+| Texto corrido, rótulos e microtipografia | **Jost** (300/400/500) |
+| Assinatura manuscrita da pousada | Sacramento |
+
+A Cormorant Garamond foi testada e descartada: o circunflexo dos seus glifos
+`ê`/`Ê` fica solto e alto demais, o que compromete qualquer texto em português.
 
 ## Como reconstruir o PDF
 
@@ -39,3 +50,4 @@ símbolos via `<use>`.
 - Formato alterado de A4 retrato para A4 paisagem, eliminando as áreas vazias.
 - Revisão ortográfica e de redação em todas as páginas.
 - Logo da Pousada Camburi no topo e logo da Victorinox no rodapé de cada página.
+- Tipografia refeita: EB Garamond + Jost no lugar de Playfair Display + Inter.
