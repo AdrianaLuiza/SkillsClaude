@@ -7,9 +7,13 @@ Revisão 04 — refeita a partir da Revisão 03 em PDF.
 
 | Arquivo | Descrição |
 | --- | --- |
-| `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` | Entregável final (A4 paisagem, 12 páginas) |
-| `deck.html` | Fonte da apresentação (HTML + CSS, autocontido) |
+| `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` | Entregável em PDF (A4 paisagem, 12 páginas) |
+| `Proposta_Victorinox_Experiencia_Camburi_V4.pptx` | Entregável editável em PowerPoint |
+| `deck.html` | Fonte da apresentação (HTML + CSS) |
 | `build.py` | Renderiza `deck.html` em PDF via Chromium/Playwright |
+| `extract_layout.py` | Extrai a geometria renderizada de `deck.html` em `layout.json` |
+| `build_pptx.js` | Gera o `.pptx` a partir de `layout.json` |
+| `fontes-para-instalar/` | As fontes em `.ttf`, para quem for editar o `.pptx` |
 | `assets/logo-pousada-camburi.png` | Logo oficial da Pousada Camburi (fundo removido) |
 | `assets/logo-victorinox.svg` | Logo da Victorinox — redesenho provisório |
 | `fonts/` | EB Garamond e Jost (subset latin, WOFF2) |
@@ -32,6 +36,28 @@ python3 build.py
 ```
 
 O caminho do Chromium está em `CHROMIUM` no topo de `build.py`.
+
+## Como reconstruir o PPTX
+
+```bash
+python3 extract_layout.py   # deck.html -> layout.json (+ logos rasterizadas)
+node build_pptx.js          # layout.json -> .pptx
+```
+
+O `.pptx` não é uma exportação do PDF: cada bloco de texto vira uma caixa de
+texto nativa, editável no PowerPoint. Para que as posições correspondam ao
+layout do CSS sem serem recalculadas à mão, `extract_layout.py` abre o
+`deck.html` no Chromium e lê a geometria de cada elemento já renderizado —
+retângulos, filetes, logos e trechos de texto com a formatação de cada um.
+
+Duas diferenças conhecidas em relação ao PDF, ambas por limitação do formato:
+
+- O PowerPoint reconhece apenas "normal" e "negrito" por família, então os
+  pesos intermediários viraram famílias próprias (`EB Garamond Medium`,
+  `Jost Light`, `Jost Medium`) — ver `fontes-para-instalar/LEIA-ME.md`.
+- A quebra de linha pode cair uma palavra antes ou depois, porque o
+  PowerPoint compõe o texto de forma um pouco diferente do navegador. As
+  caixas levam uma folga de 0,05 pol. para absorver isso.
 
 ## Logos
 

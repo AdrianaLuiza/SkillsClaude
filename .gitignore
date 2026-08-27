@@ -13,3 +13,9 @@ frontend-design
 *.jpg
 *.jpeg
 *.gif
+
+# derivados da apresentação
+apresentacao-victorinox/build/
+apresentacao-victorinox/layout.json
+apresentacao-victorinox/node_modules/
+apresentacao-victorinox/package*.json
