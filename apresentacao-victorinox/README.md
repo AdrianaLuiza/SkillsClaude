@@ -5,7 +5,7 @@ sobre um mesmo sistema visual (`estilo.css`):
 
 - **Proposta** — Projeto Victorinox, Experiência Camburi (12 páginas).
   Revisão 04, refeita a partir da Revisão 03 em PDF.
-- **Carta de apresentação** — quem é a Pousada Camburi (11 páginas).
+- **Carta de apresentação** — quem é a Pousada Camburi (10 páginas).
   O texto da carta original, na íntegra, no formato da proposta.
 
 Cada um sai em PDF e em PowerPoint editável.
@@ -15,7 +15,7 @@ Cada um sai em PDF e em PowerPoint editável.
 | Arquivo | Descrição |
 | --- | --- |
 | `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` / `.pptx` | A proposta (A4 paisagem, 12 páginas) |
-| `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 11 páginas) |
+| `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 10 páginas) |
 | `deck.html` | Fonte da proposta |
 | `carta.html` | Fonte da carta |
 | `estilo.css` | Sistema visual compartilhado pelos dois |
@@ -103,12 +103,15 @@ precisa de nenhuma outra mudança.
 ## O que mudou na carta em relação ao original
 
 **O texto é o mesmo, na íntegra e na mesma ordem.** Só mudou a forma: de A4
-retrato corrido para A4 paisagem, no sistema visual da proposta. As seções da
-carta viraram uma página cada, com a hierarquia do deck (título e citação à
-esquerda, desenvolvimento à direita). As notas de avaliação ganharam destaque
-como números, e as citações de fonte que apareciam soltas no meio das frases
-(`google.com.br`, `tripadvisor.com.br`, `restaurantguru.com.br`) foram
-reunidas em uma nota de rodapé.
+retrato corrido para A4 paisagem, no sistema visual da proposta.
+
+São 10 páginas: capa, as 8 seções do original (uma por página) e o
+encerramento. A seção mais longa, "A experiência dos nossos hóspedes", cabe em
+uma página só porque as notas de avaliação ficam apenas no texto corrido, sem
+os números em destaque — com eles a coluna estourava a altura da página. As
+citações de fonte que apareciam soltas no meio das frases (`google.com.br`,
+`tripadvisor.com.br`, `restaurantguru.com.br`) foram reunidas em uma nota de
+rodapé.
 
 As únicas alterações no texto são de grafia e concordância, cada uma
 assinalada por um comentário `grafia:` no ponto em que ocorre no `carta.html`:
