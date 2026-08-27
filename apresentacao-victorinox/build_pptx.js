@@ -1,11 +1,17 @@
-// Gera o .pptx a partir de layout.json (produzido por extract_layout.py).
+// Gera o .pptx a partir de um layout JSON (produzido por extract_layout.py).
 // Cada bloco de texto vira uma caixa de texto nativa, editável no PowerPoint.
+//
+//   node build_pptx.js [layout.json] [saida.pptx] ["Título do documento"]
 const fs = require('fs');
 const path = require('path');
 const pptxgen = require('pptxgenjs');
 
 const BASE = __dirname;
-const pages = JSON.parse(fs.readFileSync(path.join(BASE, 'layout.json'), 'utf8'));
+const argv = process.argv.slice(2);
+const layoutFile = path.resolve(BASE, argv[0] || 'build/deck.layout.json');
+const outFile = path.resolve(BASE, argv[1] || 'Proposta_Victorinox_Experiencia_Camburi_V4.pptx');
+const docTitle = argv[2] || 'Projeto Victorinox — Experiência Camburi';
+const pages = JSON.parse(fs.readFileSync(layoutFile, 'utf8'));
 const LOGOS = {
   'logo-pc': path.join(BASE, 'build', 'logos', 'logo-pc.png'),
   'logo-vx': path.join(BASE, 'build', 'logos', 'logo-vx.png'),
@@ -33,7 +39,7 @@ const pres = new pptxgen();
 pres.defineLayout({ name: 'A4L', width: pages[0].w, height: pages[0].h });
 pres.layout = 'A4L';
 pres.author = 'Pousada Camburi';
-pres.title = 'Projeto Victorinox — Experiência Camburi';
+pres.title = docTitle;
 
 const rank = { rect: 0, image: 1, text: 2 };
 
@@ -97,8 +103,7 @@ pages.forEach((pg) => {
   });
 });
 
-const out = path.join(BASE, 'Proposta_Victorinox_Experiencia_Camburi_V4.pptx');
-pres.writeFile({ fileName: out }).then(() => {
-  const kb = Math.round(fs.statSync(out).size / 1024);
-  console.log(`gerado: ${out} (${kb} KB, ${pages.length} slides)`);
+pres.writeFile({ fileName: outFile }).then(() => {
+  const kb = Math.round(fs.statSync(outFile).size / 1024);
+  console.log(`gerado: ${path.basename(outFile)} (${kb} KB, ${pages.length} slides)`);
 });

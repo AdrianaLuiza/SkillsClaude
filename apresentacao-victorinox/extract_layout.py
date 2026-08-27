@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Lê deck.html no Chromium e exporta a geometria de cada página em JSON.
+"""Lê um deck HTML no Chromium e exporta a geometria de cada página em JSON.
+
+    python3 extract_layout.py [origem.html] [saida.json]
 
 O PPTX é gerado a partir desse JSON (ver build_pptx.js), de modo que as
 posições saem da renderização real do CSS em vez de serem recalculadas à mão.
@@ -12,8 +14,6 @@ import sys
 from playwright.sync_api import sync_playwright
 
 BASE = pathlib.Path(__file__).resolve().parent
-SRC = BASE / "deck.html"
-OUT = BASE / "layout.json"
 LOGO_DIR = BASE / "build" / "logos"
 CHROMIUM = "/opt/pw-browsers/chromium"
 
@@ -198,13 +198,16 @@ WALK = r"""
 """
 
 
-def main() -> int:
+def main(argv) -> int:
+    src = BASE / (argv[0] if argv else "deck.html")
+    out = BASE / (argv[1] if len(argv) > 1 else f"build/{src.stem}.layout.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
     LOGO_DIR.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as pw:
         browser = pw.chromium.launch(executable_path=CHROMIUM, args=["--no-sandbox"])
         page = browser.new_page(viewport={"width": 1400, "height": 900},
                                 device_scale_factor=4)
-        page.goto(SRC.as_uri(), wait_until="networkidle")
+        page.goto(src.as_uri(), wait_until="networkidle")
         page.wait_for_timeout(700)
 
         # marca cada <svg> de logo para que o extrator saiba qual imagem usar
@@ -235,11 +238,11 @@ def main() -> int:
             if "radius" in it:
                 it["radius"] /= PX_IN
 
-    OUT.write_text(json.dumps(data))
+    out.write_text(json.dumps(data))
     n = sum(len(p["items"]) for p in data)
-    print(f"{len(data)} páginas, {n} elementos -> {OUT.name}")
+    print(f"{src.name}: {len(data)} páginas, {n} elementos -> {out.name}")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

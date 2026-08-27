@@ -1,19 +1,28 @@
-# Proposta Victorinox — Experiência Camburi
+# Pousada Camburi × Victorinox
 
-Apresentação institucional da Pousada Camburi para a Victorinox Brasil.
-Revisão 04 — refeita a partir da Revisão 03 em PDF.
+Dois documentos institucionais da Pousada Camburi para a Victorinox Brasil,
+sobre um mesmo sistema visual (`estilo.css`):
+
+- **Proposta** — Projeto Victorinox, Experiência Camburi (12 páginas).
+  Revisão 04, refeita a partir da Revisão 03 em PDF.
+- **Carta de apresentação** — quem é a Pousada Camburi (10 páginas).
+  Reescrita a partir da carta original em A4 retrato.
+
+Cada um sai em PDF e em PowerPoint editável.
 
 ## Arquivos
 
 | Arquivo | Descrição |
 | --- | --- |
-| `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` | Entregável em PDF (A4 paisagem, 12 páginas) |
-| `Proposta_Victorinox_Experiencia_Camburi_V4.pptx` | Entregável editável em PowerPoint |
-| `deck.html` | Fonte da apresentação (HTML + CSS) |
-| `build.py` | Renderiza `deck.html` em PDF via Chromium/Playwright |
-| `extract_layout.py` | Extrai a geometria renderizada de `deck.html` em `layout.json` |
-| `build_pptx.js` | Gera o `.pptx` a partir de `layout.json` |
-| `fontes-para-instalar/` | As fontes em `.ttf`, para quem for editar o `.pptx` |
+| `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` / `.pptx` | A proposta (A4 paisagem, 12 páginas) |
+| `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 10 páginas) |
+| `deck.html` | Fonte da proposta |
+| `carta.html` | Fonte da carta |
+| `estilo.css` | Sistema visual compartilhado pelos dois |
+| `build.py` | Renderiza um HTML em PDF via Chromium/Playwright |
+| `extract_layout.py` | Extrai a geometria renderizada de um HTML em JSON |
+| `build_pptx.js` | Gera o `.pptx` a partir desse JSON |
+| `fontes-para-instalar/` | As fontes em `.ttf`, para quem for editar os `.pptx` |
 | `assets/logo-pousada-camburi.png` | Logo oficial da Pousada Camburi (fundo removido) |
 | `assets/logo-victorinox.svg` | Logo da Victorinox — redesenho provisório |
 | `fonts/` | EB Garamond e Jost (subset latin, WOFF2) |
@@ -32,17 +41,22 @@ A Cormorant Garamond foi testada e descartada: o circunflexo dos seus glifos
 
 ```bash
 pip install playwright
-python3 build.py
+python3 build.py deck.html    # -> Proposta_..._V4.pdf
+python3 build.py carta.html   # -> Carta_Apresentacao_....pdf
 ```
 
 O caminho do Chromium está em `CHROMIUM` no topo de `build.py`.
 
-## Como reconstruir o PPTX
+## Como reconstruir os PPTX
 
 ```bash
-python3 extract_layout.py   # deck.html -> layout.json (+ logos rasterizadas)
-node build_pptx.js          # layout.json -> .pptx
+python3 extract_layout.py carta.html          # -> build/carta.layout.json
+node build_pptx.js build/carta.layout.json \
+     Carta_Apresentacao_Pousada_Camburi_Victorinox.pptx \
+     "Pousada Camburi — Carta de Apresentação à Victorinox"
 ```
+
+Sem argumentos, os dois scripts operam sobre `deck.html` e geram a proposta.
 
 O `.pptx` não é uma exportação do PDF: cada bloco de texto vira uma caixa de
 texto nativa, editável no PowerPoint. Para que as posições correspondam ao
@@ -84,3 +98,16 @@ precisa de nenhuma outra mudança.
 - Logo da Pousada Camburi no topo e logo da Victorinox no rodapé de cada página.
 - Tipografia refeita: EB Garamond + Jost no lugar de Playfair Display + Inter.
 - Logo oficial da Pousada Camburi no lugar do redesenho provisório.
+- Ordem das páginas ajustada: trocas 5↔7, 9↔10 e 11↔12.
+
+## O que mudou na carta em relação ao original
+
+- Formato alterado de A4 retrato corrido para A4 paisagem, no mesmo sistema
+  visual da proposta.
+- As nove seções da carta viraram uma página cada, com a hierarquia do deck
+  (coluna de título com citação à esquerda, desenvolvimento à direita).
+- As notas de avaliação viraram números em destaque, e as citações de fonte
+  que apareciam soltas no meio do texto (`google.com.br`, `tripadvisor.com.br`,
+  `restaurantguru.com.br`) foram reunidas em uma nota de rodapé.
+- O texto e a voz do original foram preservados, inclusive a enumeração de
+  "está nos detalhes", que virou lista numerada.

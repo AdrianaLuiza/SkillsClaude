@@ -1,24 +1,33 @@
 #!/usr/bin/env python3
-"""Renderiza deck.html em PDF A4 usando o Chromium do Playwright."""
+"""Renderiza um deck HTML em PDF A4 paisagem usando o Chromium do Playwright.
+
+    python3 build.py [origem.html] [saida.pdf]
+
+Sem argumentos, gera a proposta (deck.html).
+"""
 import pathlib
 import sys
 
 from playwright.sync_api import sync_playwright
 
 BASE = pathlib.Path(__file__).resolve().parent
-SRC = BASE / "deck.html"
-OUT = BASE / "Proposta_Victorinox_Experiencia_Camburi_V4.pdf"
 CHROMIUM = "/opt/pw-browsers/chromium"
+PADRAO = {
+    "deck.html": "Proposta_Victorinox_Experiencia_Camburi_V4.pdf",
+    "carta.html": "Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf",
+}
 
 
-def main() -> int:
+def main(argv) -> int:
+    src = BASE / (argv[0] if argv else "deck.html")
+    out = BASE / (argv[1] if len(argv) > 1 else PADRAO.get(src.name, src.stem + ".pdf"))
     with sync_playwright() as pw:
         browser = pw.chromium.launch(executable_path=CHROMIUM, args=["--no-sandbox"])
         page = browser.new_page()
-        page.goto(SRC.as_uri(), wait_until="networkidle")
+        page.goto(src.as_uri(), wait_until="networkidle")
         page.wait_for_timeout(600)
         page.pdf(
-            path=str(OUT),
+            path=str(out),
             width="297mm",
             height="210mm",
             print_background=True,
@@ -26,9 +35,9 @@ def main() -> int:
             prefer_css_page_size=True,
         )
         browser.close()
-    print(f"gerado: {OUT} ({OUT.stat().st_size/1024:.0f} KB)")
+    print(f"gerado: {out.name} ({out.stat().st_size/1024:.0f} KB)")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
