@@ -5,8 +5,8 @@ sobre um mesmo sistema visual (`estilo.css`):
 
 - **Proposta** — Projeto Victorinox, Experiência Camburi (12 páginas).
   Revisão 04, refeita a partir da Revisão 03 em PDF.
-- **Carta de apresentação** — quem é a Pousada Camburi (10 páginas).
-  Reescrita a partir da carta original em A4 retrato.
+- **Carta de apresentação** — quem é a Pousada Camburi (11 páginas).
+  O texto da carta original, na íntegra, no formato da proposta.
 
 Cada um sai em PDF e em PowerPoint editável.
 
@@ -15,7 +15,7 @@ Cada um sai em PDF e em PowerPoint editável.
 | Arquivo | Descrição |
 | --- | --- |
 | `Proposta_Victorinox_Experiencia_Camburi_V4.pdf` / `.pptx` | A proposta (A4 paisagem, 12 páginas) |
-| `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 10 páginas) |
+| `Carta_Apresentacao_Pousada_Camburi_Victorinox.pdf` / `.pptx` | A carta (A4 paisagem, 11 páginas) |
 | `deck.html` | Fonte da proposta |
 | `carta.html` | Fonte da carta |
 | `estilo.css` | Sistema visual compartilhado pelos dois |
@@ -102,12 +102,24 @@ precisa de nenhuma outra mudança.
 
 ## O que mudou na carta em relação ao original
 
-- Formato alterado de A4 retrato corrido para A4 paisagem, no mesmo sistema
-  visual da proposta.
-- As nove seções da carta viraram uma página cada, com a hierarquia do deck
-  (coluna de título com citação à esquerda, desenvolvimento à direita).
-- As notas de avaliação viraram números em destaque, e as citações de fonte
-  que apareciam soltas no meio do texto (`google.com.br`, `tripadvisor.com.br`,
-  `restaurantguru.com.br`) foram reunidas em uma nota de rodapé.
-- O texto e a voz do original foram preservados, inclusive a enumeração de
-  "está nos detalhes", que virou lista numerada.
+**O texto é o mesmo, na íntegra e na mesma ordem.** Só mudou a forma: de A4
+retrato corrido para A4 paisagem, no sistema visual da proposta. As seções da
+carta viraram uma página cada, com a hierarquia do deck (título e citação à
+esquerda, desenvolvimento à direita). As notas de avaliação ganharam destaque
+como números, e as citações de fonte que apareciam soltas no meio das frases
+(`google.com.br`, `tripadvisor.com.br`, `restaurantguru.com.br`) foram
+reunidas em uma nota de rodapé.
+
+As únicas alterações no texto são de grafia e concordância, cada uma
+assinalada por um comentário `grafia:` no ponto em que ocorre no `carta.html`:
+
+| Original | Corrigido | Motivo |
+| --- | --- | --- |
+| arquitetura e decoração ... integrada | integradas | concordância com o par |
+| aquilo que ele precisa | aquilo de que ele precisa | regência de *precisar* |
+| um dos pontos que mais nos aproxima | aproximam | concordância com *pontos* |
+| da Victorinox e acreditamos | da Victorinox, e acreditamos | vírgula entre orações |
+
+A cobertura foi verificada mecanicamente: cada frase do PDF original é
+procurada no HTML depois de normalizar acentos e pontuação, para garantir que
+nada se perdeu na remontagem.
