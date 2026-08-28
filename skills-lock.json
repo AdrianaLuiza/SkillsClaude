@@ -43,6 +43,12 @@
       "sourceType": "local",
       "skillPath": "skills/planejar/SKILL.md",
       "computedHash": ""
+    },
+    "site2skill": {
+      "source": "C:\\Users\\alusu\\Downloads\\site2skill.skill",
+      "sourceType": "local",
+      "skillPath": "skills/site2skill/SKILL.md",
+      "computedHash": ""
     }
   }
 }
