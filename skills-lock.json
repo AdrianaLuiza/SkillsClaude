@@ -1,11 +1,35 @@
 {
   "version": 1,
   "skills": {
+    "brand-guidelines": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "brand-guidelines/SKILL.md",
+      "computedHash": "c911ac641a1cef333edd77ac91688015b90fa6b58a524e6783c698ae40a972bf"
+    },
     "copywriting": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/copywriting/SKILL.md",
       "computedHash": "20663e361c3b6767e1318de69111b75edc1fb19ded6369cffca677b8bd0c8696"
+    },
+    "etl-audio": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "etl-audio/SKILL.md",
+      "computedHash": "237f9aeac2ad6ddcf078ad003adfc80b8d94899e9e2a3155bb3e17dd095c21a0"
+    },
+    "etl-ocr": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "etl-ocr/SKILL.md",
+      "computedHash": "9ce44c567158d16436e7912469c98ad40da180e3819526489f2a4abac0493efd"
+    },
+    "extrair-curso": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "extrair-curso/SKILL.md",
+      "computedHash": "07f22847aa43a954038f062a7e4236e1aa60cadf746e9bfed9d493d45f9da009"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -19,117 +43,93 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
     },
+    "humanizador": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "humanizador/SKILL.md",
+      "computedHash": "3586bb954a1baa28cc2ec6cfed7439bdb655efe34aa1ee4d03fa79205c960d92"
+    },
+    "mcp-creator": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "mcp-creator/SKILL.md",
+      "computedHash": "cec1c2f91d85e3b4fe49b914bf51bb4b534d5b863e49f4efa4d8a66e88dc5771"
+    },
+    "pesquisa": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "pesquisa/SKILL.md",
+      "computedHash": "0f746abd69d54e1499776d17db7d9582f1004f62329fa53f0eb3fc474bc339fc",
+      "notes": "Origem: C:\\Users\\alusu\\Downloads\\Apps\\pesquisa.skill (instalada a partir de arquivo .skill local)."
+    },
+    "planejar": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "planejar/SKILL.md",
+      "computedHash": "fc79ba9c7a41bebad636b96b52ee05685a8d61b67ccfd06be7b0fd41f79564b1",
+      "notes": "Origem: C:\\Users\\alusu\\Downloads\\planejar.skill (instalada a partir de arquivo .skill local)."
+    },
+    "qa-browser": {
+      "source": "AdrianaLuiza/SkillsClaude",
+      "sourceType": "github",
+      "skillPath": "qa-browser/SKILL.md",
+      "computedHash": "9570979b532a94bb04b91e72fe88aac648c5cd6be3f16d0f1a9ba5f7885924c6",
+      "notes": "Origem: garrytan/gstack. Adaptação em PT-BR da skill browse/qa do gstack. Melhorias: progressive disclosure com reference files, seção de segurança explícita, fluxos completos, comandos traduzidos."
+    },
     "remotion-best-practices": {
       "source": "remotion-dev/skills",
       "sourceType": "github",
       "skillPath": "skills/remotion/SKILL.md",
       "computedHash": "d9457a606202a23c28b4c17b2611c65ecc09311ce46a5d93ffe8493d2e8ea4f3"
     },
-    "pesquisa": {
+    "seo-geo-br": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
-      "skillPath": "pesquisa/SKILL.md",
-      "computedHash": "",
-      "notes": "Origem: C:\\Users\\alusu\\Downloads\\Apps\\pesquisa.skill (instalada a partir de arquivo .skill local)."
-    },
-    "qa-browser": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "qa-browser/SKILL.md",
-      "computedHash": "",
-      "notes": "Origem: garrytan/gstack. Adaptação em PT-BR da skill browse/qa do gstack. Melhorias: progressive disclosure com reference files, seção de segurança explícita, fluxos completos, comandos traduzidos."
-    },
-    "planejar": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "planejar/SKILL.md",
-      "computedHash": "",
-      "notes": "Origem: C:\\Users\\alusu\\Downloads\\planejar.skill (instalada a partir de arquivo .skill local)."
+      "skillPath": "seo-geo-br/SKILL.md",
+      "computedHash": "daed249efc3be50c7996ab99307ac5b15d94b41100d9afab4b7574a083508387"
     },
     "site2skill": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "site2skill/SKILL.md",
-      "computedHash": "",
+      "computedHash": "680ec47de1954885d492b1fef8c594bb8fdda3d8ed94691614c2ded1992a3b29",
       "notes": "Origem: C:\\Users\\alusu\\Downloads\\site2skill.skill (instalada a partir de arquivo .skill local)."
-    },
-    "brand-guidelines": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "brand-guidelines/SKILL.md",
-      "computedHash": ""
-    },
-    "etl-audio": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "etl-audio/SKILL.md",
-      "computedHash": ""
-    },
-    "etl-ocr": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "etl-ocr/SKILL.md",
-      "computedHash": ""
-    },
-    "extrair-curso": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "extrair-curso/SKILL.md",
-      "computedHash": ""
-    },
-    "humanizador": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "humanizador/SKILL.md",
-      "computedHash": ""
-    },
-    "mcp-creator": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "mcp-creator/SKILL.md",
-      "computedHash": ""
-    },
-    "seo-geo-br": {
-      "source": "AdrianaLuiza/SkillsClaude",
-      "sourceType": "github",
-      "skillPath": "seo-geo-br/SKILL.md",
-      "computedHash": ""
     },
     "social-analytics": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-analytics/SKILL.md",
-      "computedHash": ""
+      "computedHash": "7c6d6e333182e11dc3e287f22b63f7bf60263c18b4ada2ab5ed21e7ef7a6ddbd"
     },
     "social-branding": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-branding/SKILL.md",
-      "computedHash": ""
+      "computedHash": "6581446d16c903cc5123b9404542053188c055829843bb828a075c04c2757474"
     },
     "social-content-creation": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-content-creation/SKILL.md",
-      "computedHash": ""
+      "computedHash": "72870f88ef205d72e104aee85a0da0a8f5aff46cdaa9ec5a3120327e74bcc69d"
     },
     "social-editorial-plan": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-editorial-plan/SKILL.md",
-      "computedHash": ""
+      "computedHash": "e8fb62dbbf04bef53632ebe21b8f6329bdd69a82ecf9d4c70e19c4a7965444cc"
     },
     "social-growth": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-growth/SKILL.md",
-      "computedHash": ""
+      "computedHash": "f48e09a3fabda2728ea55a6941a29f103bfeedf5db5d38cf200524a40ca69e82"
     },
     "social-storytelling": {
       "source": "AdrianaLuiza/SkillsClaude",
       "sourceType": "github",
       "skillPath": "social-media/skills/social-storytelling/SKILL.md",
-      "computedHash": ""
+      "computedHash": "843bfd72b7adb42f201588e315b9a830ee9ca508f055b8f0af5d58cce3599237"
     }
   }
 }
