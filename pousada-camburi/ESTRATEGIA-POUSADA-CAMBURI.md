@@ -2,10 +2,11 @@
 
 ## Documento único de Marca, Operação e Conteúdo
 
-**Versão 2.2 — setembro/2026**
+**Versão 2.3 — setembro/2026**
 Substitui integralmente o documento "Estratégia, Operações — Pousada Camburi" (v1).
 *v2.1: distribuição das 18 suítes por categoria, linha do tempo (2002–2015–hoje) e confirmação de que o serviço de praia é incluso na diária.*
 *v2.2: decisão editorial 1.4.1 — a marca é institucional e as pessoas da casa não são nomeadas em conteúdo público.*
+*v2.3: "o bem-estar sem a palavra" incorporado ao conceito (1.1), com técnicas, vocabulário proibido e duas fórmulas de legenda novas. Território 5 posto em repouso: sem conteúdo retrospectivo até 2027.*
 
 ---
 
@@ -45,6 +46,70 @@ Esse é o eixo. Toda foto, legenda, story e resposta de DM deve, direta ou indir
 - Entrega literalmente a promessa da marca ("deixe que a gente cuida do resto").
 - Permite mostrar processo, mãos e bastidor sem violar a LGPD.
 - É intransferível: um concorrente pode copiar a piscina climatizada, não os 24 anos de rotina.
+
+### O outro lado do conceito — o bem-estar sem a palavra
+
+O conceito tem duas metades, e a segunda é a que mais vende:
+
+| | |
+|---|---|
+| **O que a casa faz** | Alguém acorda antes de você. O esforço desaparece. |
+| **O que acontece com quem chega** | O corpo desacelera porque não sobrou nada para resolver. |
+
+A segunda metade é o que o mercado chama de *wellness*. **Nós nunca chamamos.**
+
+**Por que a palavra é proibida:** "bem-estar", "relaxar", "recarregar as energias", "desconectar", "autocuidado", "renovar" — esse vocabulário está em todo hotel do litoral norte. Ele é abstrato, é intercambiável e, pior, é uma **promessa**: quando a marca diz "você vai relaxar", ela assume a responsabilidade por um sentimento que não controla. E o leitor não sente nada, porque ninguém sente uma abstração.
+
+**A regra:** a marca **descreve**; quem sente é o leitor.
+
+### As cinco técnicas
+
+**1. Escreva o corpo, não o sentimento.**
+Não descreva o estado emocional — descreva a evidência física dele.
+
+| Abstrato (proibido) | Corporal (certo) |
+|---|---|
+| Um lugar para relaxar | No terceiro dia, você acorda sem alarme e demora para saber que horas são |
+| Desconecte-se da rotina | O celular fica na mesa de cabeceira o dia inteiro, e ninguém procura |
+| Renove suas energias | Você volta da praia com a toalha pesada de sol |
+| Momentos de puro bem-estar | A água está em ___ graus. Em julho. *(preencher com a temperatura real — ver Anexo)* |
+
+**2. Escreva a ausência.**
+Aqui, o bem-estar é feito do que **não** acontece. E a lista do que não existe é mais forte que a lista do que existe:
+
+- Não tem horário do café. Tem café.
+- Não tem serviço de praia para contratar. Já está montado.
+- Não tem taxa de serviço na areia.
+- Não tem carro para tirar da garagem — o jantar fica a quatrocentos metros.
+- Não tem o que decidir de manhã.
+- Não tem apagão. Nem quando a rua inteira apaga.
+
+**3. Use temperatura, som e peso.**
+Sensação mensurável em vez de sensação genérica: a temperatura da piscina em número, o mar às seis da manhã, a sombra de dois metros e meio, a toalha quente, o vapor da água em junho, o silêncio das noites.
+
+**4. Deixe o verbo lento.**
+Frase curta. Sem advérbio. Sem exclamação. Sem "incrível", "maravilhoso", "imperdível". O ritmo do texto **é** a mensagem: um parágrafo apressado desmente qualquer texto sobre desacelerar.
+
+**5. Nunca prometa o efeito.**
+*"Você vai sair renovado"* é promessa. *"No terceiro dia, você acorda sem alarme"* é cena. A cena convence; a promessa soa como anúncio de spa.
+
+### As provas de bem-estar que já existem na casa
+
+Todas verdadeiras, todas operacionais, nenhuma precisa da palavra:
+
+| Prova | O que ela comunica sem dizer |
+|---|---|
+| Café, chá e fruta o dia todo | A ausência de horário — ninguém está controlando seu tempo |
+| Serviço de praia já montado e incluso | Nada para decidir, nada para contratar, nada para pagar depois |
+| Piscina climatizada | O corpo entra na água em julho sem hesitar |
+| 170 m da praia | Nenhum deslocamento. Dá para ir descalço |
+| 400 m do centrinho | O jantar não exige carro |
+| 18 suítes | Pouca gente. Pouco ruído. Ninguém disputando espreguiçadeira |
+| Ovo e tapioca feitos na hora | Alguém está cozinhando para você, agora, individualmente |
+| Gerador próprio | Nada interrompe |
+| O silêncio das noites | O sono não é negociado com barulho |
+
+> **Uma ressalva sobre "desacelerar":** a palavra já é do vocabulário da casa e pode ficar — mas é a mais próxima do clichê que temos. Use como fecho, raramente, e **nunca como abertura de legenda.** Abrir com "venha desacelerar" é abrir como todo mundo.
 
 ---
 
@@ -105,19 +170,11 @@ Aqui o tempo ganha outro ritmo, e a simplicidade se revela a mais pura forma de 
 | **2015** | **Luiz, tio do Rodrigo, torna-se sócio e compra o imóvel.** A pousada deixa de ser arrendada. |
 | **2026** | 24 anos. Aniversário em 22/08. Rodrigo e Adriana à frente da operação. |
 
-> Esta tabela é **registro interno**. Os nomes ficam aqui e não vão para conteúdo público — ver 1.4.1.
+### O capítulo de 2015 — o que ele significa
 
-### O capítulo de 2015 — a melhor história que a marca ainda não contou
+Por treze anos a pousada funcionou numa casa que não era nossa. Em 2015, a casa foi comprada.
 
-Durante treze anos, a Pousada Camburi funcionou numa casa que não era nossa. Cada geleia feita, cada temporada aberta, cada hóspede que voltou — tudo isso aconteceu em cima de um contrato que podia acabar. Em 2015, a casa foi comprada.
-
-Isso não é informação societária. É a prova de constância que a marca precisa: **treze anos cuidando de uma casa antes de ela ser nossa.** Ninguém investe assim em algo de passagem. É o momento em que a pousada decidiu ficar.
-
-E conversa diretamente com o conceito-âncora: o hóspede que chegou em 2010 nunca soube que a casa era alugada. Ele só viu o café pronto. Mais um esforço que desapareceu antes de ele acordar.
-
-> **Como contar:** sempre em primeira pessoa do plural — *"esta casa não era nossa"*. Nunca com nomes. Ver a decisão editorial em 1.4.1.
->
-> **Quando usar:** conteúdo de aniversário de 2027 em diante, e sempre que a pauta pedir profundidade. Não é post sazonal, é post de marca. Formato ideal: carrossel com foto antiga + foto de hoje, legenda na Fórmula 1 (O Bastidor).
+Isso não é pauta — é **fundamento**. É de onde vem o pilar da constância: ninguém cuida assim de algo de passagem. Sustenta o tom, não vira post.
 
 ### 1.4.1 DECISÃO EDITORIAL — as pessoas da casa não têm nome no conteúdo público
 
@@ -199,6 +256,12 @@ O tom é **elegante, acolhedor, inspirador e um tanto poético** — uma linguag
 | Últimos quartos / corre | Quando sentir vontade de desacelerar |
 | Venha nos visitar | Seu tempo merece esse cuidado |
 | Piscina aquecida | Em julho, a água não pergunta que mês é |
+| Bem-estar / wellness | *(nunca a palavra — descreva o corpo, ver 1.1)* |
+| Relaxar / descansar a mente | No terceiro dia você acorda sem alarme |
+| Recarregar as energias | Você volta da praia com a toalha pesada de sol |
+| Desconectar-se | O celular fica na mesa de cabeceira e ninguém procura |
+| Autocuidado / momento seu | Não tem o que decidir de manhã |
+| Paz e tranquilidade | Dezoito suítes. Pouca gente, pouco ruído |
 | Wi-Fi, TV, ar-condicionado | *(não é assunto de feed — é assunto de site e de DM)* |
 
 ---
@@ -490,7 +553,7 @@ Todo post nasce de um destes cinco. Se não couber em nenhum, não é nosso.
 | 2 | **A mesa** | Café da manhã, restaurante, bar, adega, porção na areia | 25% | Topo/Meio |
 | 3 | **O tempo** | Praia, piscina, suíte, silêncio, contemplação | 20% | Topo |
 | 4 | **Camburi** | Destino, curadoria de restaurantes, atividades, praias vizinhas | 20% | Topo |
-| 5 | **A casa** | 24 anos, a história do imóvel, quem volta, feedbacks | 10% | Fundo |
+| 5 | **A casa** | Permanência dita no presente, quem volta, feedbacks | 10% | Fundo |
 
 **Território 1 é o âncora.** Se em uma semana você só conseguir fazer um post, faça um do território 1.
 
@@ -630,7 +693,7 @@ Uma pasta por ambiente, subpasta por mês:
 
 ## 4.4 FÓRMULAS DE LEGENDA
 
-Seis estruturas. Cada uma tem função diferente. Rode as seis ao longo do mês.
+Oito estruturas. Cada uma tem função diferente. Rode-as ao longo do mês — e mantenha as duas últimas (7 e 8) em circulação constante: são elas que carregam o bem-estar sem a palavra.
 
 ---
 
@@ -697,6 +760,33 @@ Seis estruturas. Cada uma tem função diferente. Rode as seis ao longo do mês.
 
 ---
 
+### Fórmula 7 — A AUSÊNCIA *(o bem-estar sem a palavra)*
+
+**Estrutura:** liste o que **não** existe aqui → termine no que existe.
+É a fórmula mais eficiente para comunicar bem-estar sem nunca nomeá-lo.
+
+> Não tem horário do café.
+> Não tem serviço de praia para contratar — às oito ele já está montado.
+> Não tem taxa de serviço na areia.
+> Não tem carro para tirar da garagem: o jantar fica a quatrocentos metros.
+>
+> Tem café. Tem sombra. Tem o dia inteiro.
+
+---
+
+### Fórmula 8 — O TERCEIRO DIA *(a evidência física)*
+
+**Estrutura:** marque o tempo de estadia → descreva o que o corpo faz sozinho.
+Nunca prometa o efeito — descreva a cena e deixe o leitor concluir.
+
+> No primeiro dia, você ainda acorda no horário de sempre.
+> No segundo, acorda e fica.
+> No terceiro, acorda sem alarme e demora um pouco para saber que horas são.
+>
+> Não é que o tempo passe mais devagar aqui. É que ninguém te apressa.
+
+---
+
 ### Banco de aberturas — 18 primeiras linhas
 
 A primeira linha é o que decide se a legenda é lida. Nenhuma delas começa vendendo.
@@ -737,7 +827,7 @@ Nunca use urgência. Estes são os únicos encerramentos autorizados:
 
 ---
 
-## 4.5 TRINTA E TRÊS PAUTAS PRONTAS
+## 4.5 TRINTA E SETE PAUTAS PRONTAS
 
 *Numeradas por território. Marque a data ao usar; não repita a mesma pauta em menos de 90 dias.*
 
@@ -783,11 +873,20 @@ Nunca use urgência. Estes são os únicos encerramentos autorizados:
 
 **Território 5 — A casa**
 
-29. 22/08 — aniversário da pousada: 24 anos *(carrossel com a narrativa)*
-30. Quem volta todo ano: um feedback real, sem rosto *(card + legenda fórmula 1)*
-31. **2015: treze anos cuidando de uma casa antes de ela ser nossa** — foto antiga + foto de hoje *(carrossel, fórmula 1)*
-32. As três suítes com varanda — a categoria mais escassa da casa *(foto ou Reels)*
-33. "Nove embaixo, nove em cima" — como a casa é dividida *(carrossel de suítes por categoria)*
+> **Território em repouso até 2027.** Agosto/2026 foi um mês inteiro de conteúdo retrospectivo pelos 24 anos. Repetir agora — foto antiga, "o que era e o que é", linha do tempo — é reprisar o que a audiência acabou de ver. Até lá, este território vive só de feedback e de permanência dita no presente.
+
+29. Quem volta todo ano: um feedback real, sem rosto *(card + legenda fórmula 1)*
+30. "Faz vinte e quatro anos que a gente faz isso" — a constância dita no presente, sobre uma cena de hoje *(foto)*
+
+**Território 3 / hospedagem — o bem-estar sem a palavra**
+
+31. **A ausência:** o que não existe aqui *(carrossel, fórmula 7 — uma frase por slide)*
+32. **O terceiro dia:** como o corpo muda ao longo da estadia *(carrossel ou Reels, fórmula 8)*
+33. As três suítes com varanda — a categoria mais escassa da casa *(foto ou Reels)*
+34. "Nove embaixo, nove em cima" — como a casa é dividida *(carrossel de suítes por categoria)*
+35. O celular na mesa de cabeceira, o dia inteiro *(foto — bem-estar sem nomear)*
+36. A toalha pesada de sol, no fim da tarde *(foto)*
+37. "Não tem o que decidir de manhã" *(Reels da manhã: café pronto, praia montada, nada a fazer)*
 
 ---
 
@@ -940,11 +1039,10 @@ Itens que **ainda não estão neste documento** porque não foram informados. En
 
 **Marca**
 
-- Existe registro fotográfico de 2002 a 2015? É o que viabiliza a pauta 31.
 - Por que "Camburi"? Existe história de origem do nome ou do peixe do logo?
-- Alguma mudança física relevante na casa entre 2002 e hoje — a piscina, o restaurante, o salão? *(A casa é a protagonista da narrativa; o que mudou nela é pauta, o que mudou nas pessoas não.)*
+- Qual a temperatura real da piscina climatizada? *(O número é a melhor prova de bem-estar sem a palavra — hoje está escrito de forma genérica.)*
 
-> **Fora de escopo por decisão editorial:** biografia dos sócios, trajetória anterior a 2002 e apresentação nominal de quem trabalha na pousada. A marca é institucional — ver 1.4.1.
+> **Fora de escopo por decisão editorial:** biografia dos sócios, trajetória anterior a 2002 e apresentação nominal de quem trabalha na pousada (marca institucional, ver 1.4.1); conteúdo retrospectivo, comparações "antes e depois" e fotos antigas da pousada (ver Território 5).
 
 **Operação de conteúdo**
 
