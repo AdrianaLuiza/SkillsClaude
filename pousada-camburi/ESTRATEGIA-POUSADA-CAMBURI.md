@@ -2,9 +2,10 @@
 
 ## Documento único de Marca, Operação e Conteúdo
 
-**Versão 2.1 — setembro/2026**
+**Versão 2.2 — setembro/2026**
 Substitui integralmente o documento "Estratégia, Operações — Pousada Camburi" (v1).
-*v2.1: distribuição das 18 suítes por categoria, linha do tempo societária (2002–2015–hoje) e confirmação de que o serviço de praia é incluso na diária.*
+*v2.1: distribuição das 18 suítes por categoria, linha do tempo (2002–2015–hoje) e confirmação de que o serviço de praia é incluso na diária.*
+*v2.2: decisão editorial 1.4.1 — a marca é institucional e as pessoas da casa não são nomeadas em conteúdo público.*
 
 ---
 
@@ -102,19 +103,42 @@ Aqui o tempo ganha outro ritmo, e a simplicidade se revela a mais pura forma de 
 | **2002** | Rodrigo abre a Pousada Camburi. O imóvel é **arrendado**. |
 | **2002–2015** | Treze anos de operação numa casa que ainda não era da família. |
 | **2015** | **Luiz, tio do Rodrigo, torna-se sócio e compra o imóvel.** A pousada deixa de ser arrendada. |
-| **2026** | 24 anos. Aniversário em 22/08. |
+| **2026** | 24 anos. Aniversário em 22/08. Rodrigo e Adriana à frente da operação. |
+
+> Esta tabela é **registro interno**. Os nomes ficam aqui e não vão para conteúdo público — ver 1.4.1.
 
 ### O capítulo de 2015 — a melhor história que a marca ainda não contou
 
-Durante treze anos, a Pousada Camburi funcionou numa casa que não era da família. Cada geleia feita, cada temporada aberta, cada hóspede que voltou — tudo isso aconteceu em cima de um contrato que podia acabar.
+Durante treze anos, a Pousada Camburi funcionou numa casa que não era nossa. Cada geleia feita, cada temporada aberta, cada hóspede que voltou — tudo isso aconteceu em cima de um contrato que podia acabar. Em 2015, a casa foi comprada.
 
-Em 2015, Luiz, tio do Rodrigo, entrou como sócio e comprou o imóvel.
-
-Isso não é informação societária. É a prova de constância que a marca precisa: **treze anos cuidando de uma casa antes de ela ser sua.** Ninguém investe assim em algo de passagem. É o momento em que a pousada decidiu ficar.
+Isso não é informação societária. É a prova de constância que a marca precisa: **treze anos cuidando de uma casa antes de ela ser nossa.** Ninguém investe assim em algo de passagem. É o momento em que a pousada decidiu ficar.
 
 E conversa diretamente com o conceito-âncora: o hóspede que chegou em 2010 nunca soube que a casa era alugada. Ele só viu o café pronto. Mais um esforço que desapareceu antes de ele acordar.
 
-> **Sugestão de uso:** este é o conteúdo do aniversário — de 2027 em diante, e sempre que a pauta pedir profundidade. Não é post de agosto, é post de marca. Formato ideal: carrossel com foto antiga + foto de hoje, legenda na Fórmula 1 (O Bastidor).
+> **Como contar:** sempre em primeira pessoa do plural — *"esta casa não era nossa"*. Nunca com nomes. Ver a decisão editorial em 1.4.1.
+>
+> **Quando usar:** conteúdo de aniversário de 2027 em diante, e sempre que a pauta pedir profundidade. Não é post sazonal, é post de marca. Formato ideal: carrossel com foto antiga + foto de hoje, legenda na Fórmula 1 (O Bastidor).
+
+### 1.4.1 DECISÃO EDITORIAL — as pessoas da casa não têm nome no conteúdo público
+
+A Pousada Camburi é uma marca **institucional**, não uma marca pessoal. Em todo conteúdo público, quem cuida é **"a gente"** e **"alguém"** — nunca um nome.
+
+**Por quê:**
+
+1. **O conceito-âncora depende disso.** "Alguém acorda antes de você" funciona porque o *alguém* é anônimo — é a casa inteira agindo. Vire isso num nome próprio e a frase deixa de ser sobre a casa: passa a ser sobre uma pessoa, e o hóspede sai de dentro da cena.
+2. **O elogio vale mais na boca do hóspede.** As avaliações do TripAdvisor já citam nominalmente quem atende. Quando o cliente diz o nome e a marca não diz, o elogio é prova social. Quando a marca diz, vira autopromoção.
+3. **É o registro da referência que a marca admira.** Pousadas com narrativa institucional forte não apresentam quem arruma o quarto — e é justamente isso que dá o tom.
+4. **Resolve a LGPD por construção.** Sem nome e sem rosto, a regra deixa de ser uma restrição a contornar e vira o estilo da casa.
+
+**Na prática:**
+
+| Não escreva | Escreva |
+|---|---|
+| "O Rodrigo montou o serviço de praia" | "Às sete e meia, alguém montou o serviço de praia" |
+| "Nossa equipe preparou" | "Já estava pronto quando você desceu" |
+| "Conheça os donos da pousada" | "Faz vinte e quatro anos que a gente faz isso" |
+
+**A exceção:** resposta a avaliação e conversa no direct ou no WhatsApp. Ali é conversa entre pessoas — assinar com o próprio nome é o certo. A regra do anonimato vale para o **conteúdo publicado**, não para o atendimento.
 
 ### As três camadas da narrativa
 
@@ -186,6 +210,7 @@ O tom é **elegante, acolhedor, inspirador e um tanto poético** — uma linguag
 **Nunca:**
 
 - [ ] Mostrar rostos identificáveis de hóspedes ou funcionários sem consentimento escrito explícito (LGPD).
+- [ ] Citar pelo nome quem trabalha na pousada, sócios incluídos, em conteúdo publicado (ver 1.4.1). *Vale para o feed, não para o atendimento.*
 - [ ] Mencionar preços em qualquer conteúdo público.
 - [ ] Usar "promoção", "desconto", "corre", "últimos quartos", "reserve agora".
 - [ ] Fazer parceria com influenciadores digitais. Nossos embaixadores são os clientes fiéis.
@@ -465,7 +490,7 @@ Todo post nasce de um destes cinco. Se não couber em nenhum, não é nosso.
 | 2 | **A mesa** | Café da manhã, restaurante, bar, adega, porção na areia | 25% | Topo/Meio |
 | 3 | **O tempo** | Praia, piscina, suíte, silêncio, contemplação | 20% | Topo |
 | 4 | **Camburi** | Destino, curadoria de restaurantes, atividades, praias vizinhas | 20% | Topo |
-| 5 | **A casa** | 24 anos, história, quem volta, feedbacks, gente da casa | 10% | Fundo |
+| 5 | **A casa** | 24 anos, a história do imóvel, quem volta, feedbacks | 10% | Fundo |
 
 **Território 1 é o âncora.** Se em uma semana você só conseguir fazer um post, faça um do território 1.
 
@@ -915,10 +940,11 @@ Itens que **ainda não estão neste documento** porque não foram informados. En
 
 **Marca**
 
-- Rodrigo fundou a pousada sozinho em 2002? Qual o papel da Adriana, e desde quando? *(Rodrigo e Adriana são citados nominalmente nas avaliações do TripAdvisor — são ativos de marca ainda não usados.)*
-- O que Rodrigo fazia antes de 2002, e por que Camburi? *(É o "evento catalisador" da história de fundação — sem ele, a narrativa começa no meio.)*
 - Existe registro fotográfico de 2002 a 2015? É o que viabiliza a pauta 31.
 - Por que "Camburi"? Existe história de origem do nome ou do peixe do logo?
+- Alguma mudança física relevante na casa entre 2002 e hoje — a piscina, o restaurante, o salão? *(A casa é a protagonista da narrativa; o que mudou nela é pauta, o que mudou nas pessoas não.)*
+
+> **Fora de escopo por decisão editorial:** biografia dos sócios, trajetória anterior a 2002 e apresentação nominal de quem trabalha na pousada. A marca é institucional — ver 1.4.1.
 
 **Operação de conteúdo**
 
