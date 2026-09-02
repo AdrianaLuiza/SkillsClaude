@@ -2,8 +2,9 @@
 
 ## Documento único de Marca, Operação e Conteúdo
 
-**Versão 2.0 — setembro/2026**
+**Versão 2.1 — setembro/2026**
 Substitui integralmente o documento "Estratégia, Operações — Pousada Camburi" (v1).
+*v2.1: distribuição das 18 suítes por categoria, linha do tempo societária (2002–2015–hoje) e confirmação de que o serviço de praia é incluso na diária.*
 
 ---
 
@@ -93,6 +94,27 @@ A Pousada Camburi nasceu em 2002. São 24 anos — e 24 anos, numa praia que mud
 Em meio à Mata Atlântica de Camburi, a rusticidade da arquitetura se entrelaça com a sofisticação dos detalhes. Aqui, o luxo não está no excesso — está na harmonia entre natureza, conforto e cuidado. Está no ovo feito na hora, do jeito que cada um gosta. Na geleia e na coalhada artesanais. No serviço de praia montado todas as manhãs. Na piscina climatizada em pleno inverno. No silêncio das noites.
 
 Aqui o tempo ganha outro ritmo, e a simplicidade se revela a mais pura forma de luxo. Uma tradição de acolhimento que se aprimora a cada dia, transformando estadias em memórias e na sensação de estar exatamente onde se deveria estar.
+
+### Linha do tempo
+
+| Ano | O que aconteceu |
+|---|---|
+| **2002** | Rodrigo abre a Pousada Camburi. O imóvel é **arrendado**. |
+| **2002–2015** | Treze anos de operação numa casa que ainda não era da família. |
+| **2015** | **Luiz, tio do Rodrigo, torna-se sócio e compra o imóvel.** A pousada deixa de ser arrendada. |
+| **2026** | 24 anos. Aniversário em 22/08. |
+
+### O capítulo de 2015 — a melhor história que a marca ainda não contou
+
+Durante treze anos, a Pousada Camburi funcionou numa casa que não era da família. Cada geleia feita, cada temporada aberta, cada hóspede que voltou — tudo isso aconteceu em cima de um contrato que podia acabar.
+
+Em 2015, Luiz, tio do Rodrigo, entrou como sócio e comprou o imóvel.
+
+Isso não é informação societária. É a prova de constância que a marca precisa: **treze anos cuidando de uma casa antes de ela ser sua.** Ninguém investe assim em algo de passagem. É o momento em que a pousada decidiu ficar.
+
+E conversa diretamente com o conceito-âncora: o hóspede que chegou em 2010 nunca soube que a casa era alugada. Ele só viu o café pronto. Mais um esforço que desapareceu antes de ele acordar.
+
+> **Sugestão de uso:** este é o conteúdo do aniversário — de 2027 em diante, e sempre que a pauta pedir profundidade. Não é post de agosto, é post de marca. Formato ideal: carrossel com foto antiga + foto de hoje, legenda na Fórmula 1 (O Bastidor).
 
 ### As três camadas da narrativa
 
@@ -229,8 +251,25 @@ Versões: vertical (empilhada), horizontal (símbolo à esquerda, texto à direi
 
 ## 2.1 HOSPEDAGEM
 
-- **18 suítes**, nas categorias **duplo, triplo e quádruplo**.
-- A escala é argumento de marca: 18 suítes significam que dá para saber o nome de quem chega.
+**18 suítes**, distribuídas em seis categorias:
+
+| Categoria | Quantidade |
+|---|---|
+| Térreo duplo | 4 |
+| Térreo duplo com varanda | 3 |
+| Superior duplo | 4 |
+| Térreo triplo | 2 |
+| Superior triplo | 3 |
+| Superior quádruplo | 2 |
+| **Total** | **18** |
+
+**Leitura da distribuição** — útil na hora de escrever:
+
+- **11 duplos, 5 triplos, 2 quádruplos.** A casa é feita para casal, mas cabe a família inteira.
+- **9 no térreo, 9 no superior.** Metade e metade.
+- **Só 3 suítes têm varanda** (térreo duplo com varanda). É a categoria mais escassa da casa — e escassez, na nossa voz, não vira urgência: vira detalhe. *"Três das dezoito têm varanda."*
+
+A escala é argumento de marca: 18 suítes significam que dá para saber o nome de quem chega.
 
 ## 2.2 CAFÉ DA MANHÃ
 
@@ -256,6 +295,8 @@ Montado **todas as manhãs**, e composto por:
 - **Espreguiçadeira**
 - **Mesinha**
 - Atendimento de bebidas e porções na areia, **sem taxa de serviço**
+
+> **O serviço de praia é incluso na diária.** Não é extra, não é pacote, não é upgrade. Isso muda como ele se comunica: não é um serviço que a pousada *oferece* — é uma coisa que já está montada quando o hóspede desce. Escreva sempre no já-feito, nunca no disponível: *"às onze a sombra está onde precisava estar"*, não *"oferecemos serviço de praia"*.
 
 ## 2.5 ÁREAS COMUNS
 
@@ -289,6 +330,10 @@ Montado **todas as manhãs**, e composto por:
 | Fato operacional | Como se conta |
 |---|---|
 | 18 suítes | "Somos dezoito. Dá para lembrar o nome de todo mundo." |
+| 3 suítes com varanda | "Três das dezoito têm varanda. Quem já veio sabe qual pedir." |
+| 11 duplos, 5 triplos, 2 quádruplos | "Cabe o casal. Cabe a família inteira. Cabe a avó junto." |
+| Serviço de praia incluso | "Não tem serviço de praia para contratar. Tem serviço de praia montado." |
+| Compra do imóvel em 2015 | "Cuidamos desta casa por treze anos antes de ela ser nossa." |
 | Ovo e tapioca na hora | "Nada aqui é feito antes de você pedir. É por isso que demora dois minutos — e é por isso que vale." |
 | Coalhada e geleia artesanais | "A coalhada de amanhã já está pronta hoje. É assim há 24 anos." |
 | Ombrelone de 2,50m | "Dois metros e meio de sombra. Medimos — para a sombra cair certa às onze." |
@@ -329,7 +374,7 @@ Não trabalhamos com uma persona única: atendemos todos que se identificam com 
 **Primeira linha (repetir sempre, de formas diferentes):**
 
 1. Café da manhã com preparo na hora + artesanal (ovos, tapioca, coalhada, geleia)
-2. Serviço de praia montado todo dia — ombrelone 2,50m, cadeiras, espreguiçadeira, mesinha
+2. Serviço de praia montado todo dia e **incluso na diária** — ombrelone 2,50m, cadeiras, espreguiçadeira, mesinha
 3. Piscina climatizada
 4. Porções e bebidas na praia, sem taxa de serviço
 5. 170m da praia e 400m do centrinho
@@ -627,7 +672,7 @@ Seis estruturas. Cada uma tem função diferente. Rode as seis ao longo do mês.
 
 ---
 
-### Banco de aberturas — 15 primeiras linhas
+### Banco de aberturas — 18 primeiras linhas
 
 A primeira linha é o que decide se a legenda é lida. Nenhuma delas começa vendendo.
 
@@ -646,6 +691,9 @@ A primeira linha é o que decide se a legenda é lida. Nenhuma delas começa ven
 13. A gente mede a sombra. Sério.
 14. Quando a luz cai em Camburi, aqui ninguém percebe.
 15. Alguém acordou antes de você.
+16. Por treze anos, esta casa não era nossa.
+17. Três das dezoito têm varanda.
+18. Não tem serviço de praia para contratar. Tem serviço de praia montado.
 
 ---
 
@@ -664,7 +712,7 @@ Nunca use urgência. Estes são os únicos encerramentos autorizados:
 
 ---
 
-## 4.5 TRINTA PAUTAS PRONTAS
+## 4.5 TRINTA E TRÊS PAUTAS PRONTAS
 
 *Numeradas por território. Marque a data ao usar; não repita a mesma pauta em menos de 90 dias.*
 
@@ -712,6 +760,9 @@ Nunca use urgência. Estes são os únicos encerramentos autorizados:
 
 29. 22/08 — aniversário da pousada: 24 anos *(carrossel com a narrativa)*
 30. Quem volta todo ano: um feedback real, sem rosto *(card + legenda fórmula 1)*
+31. **2015: treze anos cuidando de uma casa antes de ela ser nossa** — foto antiga + foto de hoje *(carrossel, fórmula 1)*
+32. As três suítes com varanda — a categoria mais escassa da casa *(foto ou Reels)*
+33. "Nove embaixo, nove em cima" — como a casa é dividida *(carrossel de suítes por categoria)*
 
 ---
 
@@ -837,6 +888,9 @@ Um carrossel "Camburi + arredores" posiciona a pousada como **base de um roteiro
 - [ ] Protocolo de resposta a avaliações novas
 - [ ] Revisar a bio do Instagram à luz do conceito-âncora
 - [ ] Resolver os dois pontos de atenção do TripAdvisor: Wi-Fi e ruído da cozinha
+- [ ] **Analisar os posts de agosto/2026 (24 anos) e os perfis de referência** — pendente por bloqueio de rede, ver nota abaixo
+
+> **Nota sobre análise de perfis:** o ambiente onde este documento foi produzido tem acesso negado a `instagram.com` pela política de rede. Os posts de agosto/2026 do @pousadacamburioficial e os perfis de referência (@pousadaliteraria e @ocanto.br) **não foram analisados diretamente** — nenhuma afirmação sobre o conteúdo deles consta neste documento. Para incorporá-los, é preciso liberar o domínio na configuração de rede do ambiente ou fornecer o material (capturas de tela, legendas em texto).
 
 ---
 
@@ -846,31 +900,35 @@ Itens que **ainda não estão neste documento** porque não foram informados. En
 
 **Hospedagem**
 
-- Quantas suítes de cada categoria (duplo / triplo / quádruplo)?
-- As suítes têm ar-condicionado, varanda, vista? Alguma categoria tem hidromassagem ou vista para o mar?
-- Metragem média das suítes?
+- As suítes superiores têm vista? De quê — mar, mata, piscina?
+- O que mais diferencia térreo de superior, além do andar?
+- Metragem média por categoria?
 - Política de crianças, berço, cama extra?
 - Aceita pets?
 
 **Serviços**
 
 - Qual o horário do café da manhã?
-- O bar fica na pousada, na praia, ou ambos? O serviço na areia é atendido por quem?
+- O bar fica na pousada, na praia, ou ambos? Quem atende na areia?
 - O restaurante atende não-hóspedes?
-- O serviço de praia é incluso na diária ou cobrado à parte?
 - Há estacionamento próprio? Quantas vagas?
 
 **Marca**
 
-- Quem são as pessoas por trás da pousada, e qual o papel de cada um? (Rodrigo e Adriana aparecem nas avaliações — a história de fundação de 2002 ainda não está escrita.)
-- Há registro fotográfico antigo, de 2002 em diante? Isso é ouro para o território 5.
-- Por que "Camburi"? Existe uma história de origem do nome, do peixe do logo?
+- Rodrigo fundou a pousada sozinho em 2002? Qual o papel da Adriana, e desde quando? *(Rodrigo e Adriana são citados nominalmente nas avaliações do TripAdvisor — são ativos de marca ainda não usados.)*
+- O que Rodrigo fazia antes de 2002, e por que Camburi? *(É o "evento catalisador" da história de fundação — sem ele, a narrativa começa no meio.)*
+- Existe registro fotográfico de 2002 a 2015? É o que viabiliza a pauta 31.
+- Por que "Camburi"? Existe história de origem do nome ou do peixe do logo?
 
 **Operação de conteúdo**
 
 - Quem posta hoje? Com que frequência?
 - Existe banco de imagens organizado?
 - O WhatsApp de reservas é qual, e quem responde?
+
+**Pendente de leitura direta**
+
+- Os posts de agosto/2026 sobre os 24 anos, no @pousadacamburioficial, **não puderam ser analisados** — a política de rede deste ambiente bloqueia o acesso ao Instagram. Ver nota em 6.3.
 
 ---
 
