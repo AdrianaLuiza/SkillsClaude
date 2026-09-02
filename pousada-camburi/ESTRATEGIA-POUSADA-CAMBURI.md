@@ -1,133 +1,38 @@
-# POUSADA CAMBURI
+# POUSADA CAMBURI — Marca, Operação e Conteúdo
 
-## Documento único de Marca, Operação e Conteúdo
-
-**Versão 2.3 — setembro/2026**
-Substitui integralmente o documento "Estratégia, Operações — Pousada Camburi" (v1).
-*v2.1: distribuição das 18 suítes por categoria, linha do tempo (2002–2015–hoje) e confirmação de que o serviço de praia é incluso na diária.*
-*v2.2: decisão editorial 1.4.1 — a marca é institucional e as pessoas da casa não são nomeadas em conteúdo público.*
-*v2.3: "o bem-estar sem a palavra" incorporado ao conceito (1.1), com técnicas, vocabulário proibido e duas fórmulas de legenda novas. Território 5 posto em repouso: sem conteúdo retrospectivo até 2027.*
+**Versão 3.0 — setembro/2026** · substitui o documento de estratégia anterior.
 
 ---
 
-## COMO USAR ESTE DOCUMENTO
+## 1. O CONCEITO
 
-Este documento tem três funções e três leitores diferentes ao longo do dia:
+> ### Alguém acorda antes de você.
 
-| Se você precisa… | Vá para |
+A pousada não é definida pela piscina, pelos quartos ou pela localização. É definida pelo cuidado que acontece **antes** de o hóspede acordar: o ombrelone aberto às oito, a coalhada que descansou a noite, o ovo que só começa quando alguém pede, o gerador que ninguém percebe até faltar luz na rua.
+
+O conceito tem duas metades:
+
+| O que a casa faz | Alguém acorda antes de você. O esforço desaparece. |
 |---|---|
-| Entender o que a marca é e como ela fala | **Parte 1 — A Marca** |
-| Conferir um fato antes de escrever (medidas, serviços, número de suítes) | **Parte 2 — A Pousada: fonte da verdade** |
-| Saber para quem falamos e onde estamos hoje | **Parte 3 — Público e Posicionamento** |
-| Fotografar, escrever legenda, decidir o que postar | **Parte 4 — Playbook de Conteúdo** |
-| Falar de Camburi, restaurantes e passeios | **Parte 5 — Guia do Destino** |
-| Medir e revisar | **Parte 6 — Métricas e Rotina** |
+| **O que acontece com quem chega** | **O corpo desacelera porque não sobrou nada para resolver.** |
 
-**Regra de ouro:** nenhum conteúdo público sai sem passar pelas *Regras Inegociáveis* (item 1.7).
+A segunda metade é o que o mercado chama de *wellness*. **Nunca usamos a palavra** — nem ela, nem "bem-estar", "relaxar", "recarregar as energias", "desconectar", "autocuidado". A marca **descreve**; quem sente é o leitor.
+
+**A promessa:** *Você chegou. Agora deixe que a gente cuide do resto.*
+
+**O que queremos que pensem:** *"Não sei explicar o motivo… mas eu quero me hospedar aí."*
 
 ---
 
-# PARTE 1 — A MARCA
+## 2. MANIFESTO
 
-## 1.1 O CONCEITO-ÂNCORA
+*Texto-mãe. Referência de tom para qualquer peça.*
 
-> ### **Alguém acorda antes de você.**
-
-Toda marca forte tem uma ideia só, repetida de mil formas. A Pousada Camburi não é definida pela piscina, pelos quartos ou pela localização — ela é definida pelo **cuidado invisível**: o trabalho que acontece antes do hóspede abrir os olhos e que ele nunca vê.
-
-O ombrelone aberto na areia às oito. A coalhada que descansou a noite inteira. O ovo que só começa a ser feito quando alguém pede. O gerador que ninguém percebe até faltar luz em Camburi.
-
-Esse é o eixo. Toda foto, legenda, story e resposta de DM deve, direta ou indiretamente, provar que **aqui, o esforço desaparece antes do hóspede chegar**.
-
-**Por que este conceito e não outro:**
-
-- É verdadeiro — não precisa ser inventado, já acontece todos os dias.
-- Gera pauta infinita: todo dia há um preparo, e o preparo é sempre diferente.
-- Entrega literalmente a promessa da marca ("deixe que a gente cuida do resto").
-- Permite mostrar processo, mãos e bastidor sem violar a LGPD.
-- É intransferível: um concorrente pode copiar a piscina climatizada, não os 24 anos de rotina.
-
-### O outro lado do conceito — o bem-estar sem a palavra
-
-O conceito tem duas metades, e a segunda é a que mais vende:
-
-| | |
-|---|---|
-| **O que a casa faz** | Alguém acorda antes de você. O esforço desaparece. |
-| **O que acontece com quem chega** | O corpo desacelera porque não sobrou nada para resolver. |
-
-A segunda metade é o que o mercado chama de *wellness*. **Nós nunca chamamos.**
-
-**Por que a palavra é proibida:** "bem-estar", "relaxar", "recarregar as energias", "desconectar", "autocuidado", "renovar" — esse vocabulário está em todo hotel do litoral norte. Ele é abstrato, é intercambiável e, pior, é uma **promessa**: quando a marca diz "você vai relaxar", ela assume a responsabilidade por um sentimento que não controla. E o leitor não sente nada, porque ninguém sente uma abstração.
-
-**A regra:** a marca **descreve**; quem sente é o leitor.
-
-### As cinco técnicas
-
-**1. Escreva o corpo, não o sentimento.**
-Não descreva o estado emocional — descreva a evidência física dele.
-
-| Abstrato (proibido) | Corporal (certo) |
-|---|---|
-| Um lugar para relaxar | No terceiro dia, você acorda sem alarme e demora para saber que horas são |
-| Desconecte-se da rotina | O celular fica na mesa de cabeceira o dia inteiro, e ninguém procura |
-| Renove suas energias | Você volta da praia com a toalha pesada de sol |
-| Momentos de puro bem-estar | A água está em ___ graus. Em julho. *(preencher com a temperatura real — ver Anexo)* |
-
-**2. Escreva a ausência.**
-Aqui, o bem-estar é feito do que **não** acontece. E a lista do que não existe é mais forte que a lista do que existe:
-
-- Não tem horário do café. Tem café.
-- Não tem serviço de praia para contratar. Já está montado.
-- Não tem taxa de serviço na areia.
-- Não tem carro para tirar da garagem — o jantar fica a quatrocentos metros.
-- Não tem o que decidir de manhã.
-- Não tem apagão. Nem quando a rua inteira apaga.
-
-**3. Use temperatura, som e peso.**
-Sensação mensurável em vez de sensação genérica: a temperatura da piscina em número, o mar às seis da manhã, a sombra de dois metros e meio, a toalha quente, o vapor da água em junho, o silêncio das noites.
-
-**4. Deixe o verbo lento.**
-Frase curta. Sem advérbio. Sem exclamação. Sem "incrível", "maravilhoso", "imperdível". O ritmo do texto **é** a mensagem: um parágrafo apressado desmente qualquer texto sobre desacelerar.
-
-**5. Nunca prometa o efeito.**
-*"Você vai sair renovado"* é promessa. *"No terceiro dia, você acorda sem alarme"* é cena. A cena convence; a promessa soa como anúncio de spa.
-
-### As provas de bem-estar que já existem na casa
-
-Todas verdadeiras, todas operacionais, nenhuma precisa da palavra:
-
-| Prova | O que ela comunica sem dizer |
-|---|---|
-| Café, chá e fruta o dia todo | A ausência de horário — ninguém está controlando seu tempo |
-| Serviço de praia já montado e incluso | Nada para decidir, nada para contratar, nada para pagar depois |
-| Piscina climatizada | O corpo entra na água em julho sem hesitar |
-| 170 m da praia | Nenhum deslocamento. Dá para ir descalço |
-| 400 m do centrinho | O jantar não exige carro |
-| 18 suítes | Pouca gente. Pouco ruído. Ninguém disputando espreguiçadeira |
-| Ovo e tapioca feitos na hora | Alguém está cozinhando para você, agora, individualmente |
-| Gerador próprio | Nada interrompe |
-| O silêncio das noites | O sono não é negociado com barulho |
-
-> **Uma ressalva sobre "desacelerar":** a palavra já é do vocabulário da casa e pode ficar — mas é a mais próxima do clichê que temos. Use como fecho, raramente, e **nunca como abertura de legenda.** Abrir com "venha desacelerar" é abrir como todo mundo.
-
----
-
-## 1.2 MANIFESTO DA MARCA
-
-*(texto-mãe — use como referência de tom em qualquer peça; pode virar post de aniversário, vídeo institucional, texto do site e bio estendida)*
-
-> **ALGUÉM ACORDA ANTES DE VOCÊ**
->
 > Existe uma hora em Camburi que quase ninguém vê.
 >
-> É quando a coalhada sai do descanso da noite. Quando a geleia de ontem esfria no vidro. Quando alguém carrega o ombrelone de dois metros e meio até a areia e mede a distância entre a cadeira, a espreguiçadeira e a mesinha — porque a sombra precisa cair certa às onze.
+> É quando a coalhada sai do descanso da noite. Quando a geleia de ontem esfria no vidro. Quando alguém carrega o ombrelone de dois metros e meio até a areia e mede a distância entre a cadeira e a espreguiçadeira — porque a sombra precisa cair certa às onze.
 >
-> É quando o café expresso é ligado pela primeira vez no dia, sabendo que vai ficar ligado até a noite. Quando a piscina, mesmo em junho, já está na temperatura de quem vai entrar sem pensar duas vezes.
->
-> Quando você acorda, nada disso existe mais.
->
-> Existe só o café pronto, a fruta na mesa, a praia montada a cento e setenta metros.
+> Quando você acorda, nada disso existe mais. Existe só o café pronto, a fruta na mesa, a praia montada a cento e setenta metros.
 >
 > É esse o nosso trabalho: fazer o esforço desaparecer.
 >
@@ -137,211 +42,67 @@ Todas verdadeiras, todas operacionais, nenhuma precisa da palavra:
 
 ---
 
-## 1.3 A PROMESSA
+## 3. PERSONALIDADE E VOZ
 
-> **Você chegou. Agora deixe que a gente cuide do resto.**
+**Pilares:** hospitalidade · cuidado · tempo · acolhimento · constância
+**Personalidade:** acolhedora · discreta · exclusiva · inspiradora · autêntica
+**Voz:** intimista, contemplativa, concreta, discreta, sensorial. Elegante sem pompa, poética sem vagueza, direta sem frieza.
+**Registro:** formal e elegante para produto e estrutura; acolhedor e caloroso para serviço e relacionamento.
 
-Toda publicação reforça essa promessa. A comunicação da Pousada Camburi não existe para divulgar quartos ou empurrar reservas — existe para construir uma marca memorável, capaz de despertar desejo antes mesmo da decisão de viajar.
+### Como escrever o bem-estar sem dizer a palavra
 
-**Não vendemos hospedagem. Vendemos a sensação de chegar a um lugar onde alguém já cuidou de tudo.**
+1. **Escreva o corpo, não o sentimento.** Não o estado emocional — a evidência física dele.
+2. **Escreva a ausência.** O que *não* existe aqui é mais forte que o que existe.
+3. **Use temperatura, som e peso.** Sensação mensurável, não genérica.
+4. **Verbo lento.** Frase curta, sem advérbio, sem exclamação. Texto apressado desmente texto sobre desacelerar.
+5. **Nunca prometa o efeito.** "Você vai sair renovado" é promessa. "No terceiro dia você acorda sem alarme" é cena.
 
-Queremos que a pessoa pense:
-
-> *"Não sei explicar o motivo… mas eu quero me hospedar aí."*
-
----
-
-## 1.4 A NARRATIVA
-
-### A história
-
-A Pousada Camburi nasceu em 2002. São 24 anos — e 24 anos, numa praia que muda de dono, de moda e até de rio de lugar, não é tempo: é constância.
-
-Em meio à Mata Atlântica de Camburi, a rusticidade da arquitetura se entrelaça com a sofisticação dos detalhes. Aqui, o luxo não está no excesso — está na harmonia entre natureza, conforto e cuidado. Está no ovo feito na hora, do jeito que cada um gosta. Na geleia e na coalhada artesanais. No serviço de praia montado todas as manhãs. Na piscina climatizada em pleno inverno. No silêncio das noites.
-
-Aqui o tempo ganha outro ritmo, e a simplicidade se revela a mais pura forma de luxo. Uma tradição de acolhimento que se aprimora a cada dia, transformando estadias em memórias e na sensação de estar exatamente onde se deveria estar.
-
-### Linha do tempo
-
-| Ano | O que aconteceu |
-|---|---|
-| **2002** | Rodrigo abre a Pousada Camburi. O imóvel é **arrendado**. |
-| **2002–2015** | Treze anos de operação numa casa que ainda não era da família. |
-| **2015** | **Luiz, tio do Rodrigo, torna-se sócio e compra o imóvel.** A pousada deixa de ser arrendada. |
-| **2026** | 24 anos. Aniversário em 22/08. Rodrigo e Adriana à frente da operação. |
-
-### O capítulo de 2015 — o que ele significa
-
-Por treze anos a pousada funcionou numa casa que não era nossa. Em 2015, a casa foi comprada.
-
-Isso não é pauta — é **fundamento**. É de onde vem o pilar da constância: ninguém cuida assim de algo de passagem. Sustenta o tom, não vira post.
-
-### 1.4.1 DECISÃO EDITORIAL — as pessoas da casa não têm nome no conteúdo público
-
-A Pousada Camburi é uma marca **institucional**, não uma marca pessoal. Em todo conteúdo público, quem cuida é **"a gente"** e **"alguém"** — nunca um nome.
-
-**Por quê:**
-
-1. **O conceito-âncora depende disso.** "Alguém acorda antes de você" funciona porque o *alguém* é anônimo — é a casa inteira agindo. Vire isso num nome próprio e a frase deixa de ser sobre a casa: passa a ser sobre uma pessoa, e o hóspede sai de dentro da cena.
-2. **O elogio vale mais na boca do hóspede.** As avaliações do TripAdvisor já citam nominalmente quem atende. Quando o cliente diz o nome e a marca não diz, o elogio é prova social. Quando a marca diz, vira autopromoção.
-3. **É o registro da referência que a marca admira.** Pousadas com narrativa institucional forte não apresentam quem arruma o quarto — e é justamente isso que dá o tom.
-4. **Resolve a LGPD por construção.** Sem nome e sem rosto, a regra deixa de ser uma restrição a contornar e vira o estilo da casa.
-
-**Na prática:**
-
-| Não escreva | Escreva |
-|---|---|
-| "O Rodrigo montou o serviço de praia" | "Às sete e meia, alguém montou o serviço de praia" |
-| "Nossa equipe preparou" | "Já estava pronto quando você desceu" |
-| "Conheça os donos da pousada" | "Faz vinte e quatro anos que a gente faz isso" |
-
-**A exceção:** resposta a avaliação e conversa no direct ou no WhatsApp. Ali é conversa entre pessoas — assinar com o próprio nome é o certo. A regra do anonimato vale para o **conteúdo publicado**, não para o atendimento.
-
-### As três camadas da narrativa
-
-Toda peça de conteúdo mora em uma destas camadas. Se não mora em nenhuma, não é conteúdo da Pousada Camburi.
-
-| Camada | O que é | Exemplo |
-|---|---|---|
-| **O que acontece antes** | O preparo, o bastidor, o cuidado invisível | A coalhada de ontem; o ombrelone às 8h |
-| **O que o hóspede encontra** | O resultado, a cena pronta, o convite sensorial | A mesa posta; a sombra certa às 11h |
-| **O que fica depois** | Memória, retorno, indicação, os 24 anos | Quem volta todo ano; a criança que cresceu vindo |
-
----
-
-## 1.5 PERSONALIDADE E PILARES
-
-**Cinco pilares** — orientam toda decisão editorial:
-**Hospitalidade · Cuidado · Tempo · Acolhimento · Constância**
-
-**Cinco traços de personalidade:**
-
-- **Acolhedora** — o hóspede se sente em casa, com o serviço de quem não está em casa.
-- **Discreta** — o luxo é sutil, percebido nos detalhes, nunca anunciado.
-- **Exclusiva** — 18 suítes. A escala é o argumento: aqui cabe personalização.
-- **Inspiradora** — convida à contemplação e à criação de memórias.
-- **Autêntica** — nada parece artificial ou forçado. Foi construído ao longo de 24 anos.
-
----
-
-## 1.6 VOZ E TOM
-
-O tom é **elegante, acolhedor, inspirador e um tanto poético** — uma linguagem que evoca sensações antes de informar. Nem excessivamente formal, nem informal demais: o equilíbrio entre sofisticação e proximidade.
-
-**Seis atributos da voz:**
-
-1. **Intimista** — falamos como quem conhece o hóspede, não como uma rede hoteleira.
-2. **Contemplativa** — criamos pausa; o olhar descansa antes do corpo.
-3. **Concreta** — detalhes reais: 2,50m de ombrelone, 170 metros, tapioca na hora.
-4. **Discreta** — nunca preço em conteúdo público, nunca promoção gritada.
-5. **Sensorial** — o leitor precisa sentir antes de pensar.
-6. **Elegante sem pompa. Poética sem vagueza. Direta sem frieza.**
-
-**Dois registros, um por assunto:**
-
-| Registro | Quando usar |
-|---|---|
-| **Formal / elegante** | Produto e estrutura: suítes, salão, adega, infraestrutura |
-| **Acolhedor / caloroso** | Relacionamento e serviço: café, praia, atendimento, DM |
-
-**Tabela de conversão de voz** *(a mais usada no dia a dia)*
+### Tabela de conversão
 
 | Nunca escreva | Escreva |
 |---|---|
 | Quartos confortáveis | Acorde com a brisa tocando as cortinas |
 | Café da manhã incluso | Manhãs que começam com o aroma do pão quente |
 | Ótima localização | A cento e setenta metros de onde a mata encontra o mar |
-| Reserve já! | Te esperamos · Seu refúgio espera |
-| Promoção / desconto | Uma oportunidade única de viver Camburi |
-| Últimos quartos / corre | Quando sentir vontade de desacelerar |
-| Venha nos visitar | Seu tempo merece esse cuidado |
 | Piscina aquecida | Em julho, a água não pergunta que mês é |
-| Bem-estar / wellness | *(nunca a palavra — descreva o corpo, ver 1.1)* |
-| Relaxar / descansar a mente | No terceiro dia você acorda sem alarme |
+| Reserve já! / Últimos quartos / Corre | Te esperamos · Seu refúgio espera |
+| Promoção / desconto | Uma oportunidade única de viver Camburi |
+| Venha nos visitar | Seu tempo merece esse cuidado |
+| Bem-estar / wellness | *(nunca — descreva o corpo)* |
+| Relaxar | No terceiro dia você acorda sem alarme |
 | Recarregar as energias | Você volta da praia com a toalha pesada de sol |
 | Desconectar-se | O celular fica na mesa de cabeceira e ninguém procura |
 | Autocuidado / momento seu | Não tem o que decidir de manhã |
 | Paz e tranquilidade | Dezoito suítes. Pouca gente, pouco ruído |
-| Wi-Fi, TV, ar-condicionado | *(não é assunto de feed — é assunto de site e de DM)* |
+| Wi-Fi, TV, ar-condicionado | *(assunto de site e de DM, não de feed)* |
+
+> **"Desacelerar"** é do vocabulário da casa e pode ficar — mas é o mais próximo do clichê. Use como fecho, raramente. Nunca como abertura.
+
+**As pessoas da casa não têm nome no conteúdo público.** Quem cuida é "a gente" e "alguém". O conceito depende disso: nomear tira o hóspede de dentro da cena, e o elogio vale mais quando é o cliente que diz o nome nas avaliações. **Exceção:** direct, WhatsApp e resposta a avaliação — ali é conversa entre pessoas, e assinar é o certo.
 
 ---
 
-## 1.7 REGRAS INEGOCIÁVEIS
+## 4. REGRAS INEGOCIÁVEIS
 
-*Checklist obrigatório antes de qualquer publicação pública.*
-
-**Nunca:**
-
-- [ ] Mostrar rostos identificáveis de hóspedes ou funcionários sem consentimento escrito explícito (LGPD).
-- [ ] Citar pelo nome quem trabalha na pousada, sócios incluídos, em conteúdo publicado (ver 1.4.1). *Vale para o feed, não para o atendimento.*
-- [ ] Mencionar preços em qualquer conteúdo público.
-- [ ] Usar "promoção", "desconto", "corre", "últimos quartos", "reserve agora".
-- [ ] Fazer parceria com influenciadores digitais. Nossos embaixadores são os clientes fiéis.
-- [ ] Citar operadores de atividades (escola de surf, guia de trilha, barqueiro) em post público — só por WhatsApp, de forma personalizada.
-- [ ] Confirmar reserva pelo direct do Instagram — sempre encaminhar para WhatsApp ou site.
-- [ ] Mostrar situação de limpeza, organização ou execução não finalizada.
-- [ ] Parecer desesperado para vender, apelativo ou promocional demais.
-- [ ] Manter blog — o foco é SEO/GEO e Instagram orgânico.
-
-**Exceções permitidas à regra de pessoas:** mãos finalizando um prato, montando o serviço de praia ou preparando um drink. Sem rosto, sem crachá, sem identificação.
-
-**Nunca pareceremos uma pousada comum.**
+- [ ] Nunca mostrar rostos identificáveis sem consentimento escrito (LGPD). *Exceção: mãos finalizando prato, montando o serviço de praia, preparando drink.*
+- [ ] Nunca citar pelo nome quem trabalha na pousada em conteúdo publicado.
+- [ ] Nunca mencionar preços em conteúdo público.
+- [ ] Nunca usar "promoção", "desconto", "corre", "últimos quartos", "reserve agora".
+- [ ] Nunca fazer parceria com influenciadores. Os embaixadores são os clientes fiéis.
+- [ ] Nunca citar operadores de atividades (surf, trilha, barco) em post público — só por WhatsApp, personalizado.
+- [ ] Nunca confirmar reserva pelo direct — encaminhar para WhatsApp ou site.
+- [ ] Nunca mostrar limpeza, organização ou execução não finalizada.
+- [ ] Sem blog. Foco em SEO/GEO e Instagram orgânico.
 
 ---
 
-## 1.8 IDENTIDADE VISUAL
+## 5. A POUSADA — FONTE DA VERDADE
 
-**Paleta oficial**
+*Confira aqui antes de escrever.*
 
-| Cor | Hex | Uso |
-|---|---|---|
-| Azul primário | `#049DD9` | Elemento principal, destaque |
-| Ciano secundário | `#04B2D9` | Apoio, gradiente |
-| Azul-petróleo | `#0E3740` | Âncora, texto sobre claro, fundo escuro |
-| Azul-céu claro | `#6AC4D9` | Acento, detalhes |
-| Off-white | `#F2F2F2` | Fundo, espaço negativo |
+**Hospedagem — 18 suítes**
 
-**Tipografia**
-
-- **Gotham Light** — corpo de texto, legendas, interface
-- **Gotham Medium** — subtítulos, destaques, labels
-- **Wokeh** — script decorativo, **uso exclusivo no logo**
-
-**Logo e símbolo**
-
-Logotipo em script (Wokeh): "Pousada" | cabeça de peixe em gradiente azul | "Camburí". O símbolo representa ondas do oceano em gradiente ciano → azul-petróleo.
-Versões: vertical (empilhada), horizontal (símbolo à esquerda, texto à direita) e limpa sobre off-white.
-
-**Aplicação no feed:** a paleta é âncora de arte gráfica (capas, cards, stories), não filtro de foto. Foto de comida e de praia não deve ser puxada para o azul — a luz natural de Camburi é o filtro.
-
----
-
-## 1.9 DADOS CADASTRAIS
-
-| Campo | Dado |
-|---|---|
-| Nome | Pousada Camburi |
-| Endereço | Rua do Telégrafo, 379 — Camburi, São Sebastião — SP |
-| Fundação | 2002 — aniversário em **22/08** (24 anos em 2026) |
-| Website | www.pousadacamburi.com.br |
-| E-mail | camburi@pousadacamburi.com.br |
-| Linktree | linktr.ee/pousadacamburi |
-| Instagram | @pousadacamburioficial |
-| Hashtag oficial | #pousadacamburi |
-| PMS | ADMH (admh.com.br) |
-| Site / Channel Manager / Book Engine | Foco Multimídia |
-
----
-
-# PARTE 2 — A POUSADA: FONTE DA VERDADE
-
-> Esta parte existe para uma coisa: **conferir o fato antes de escrever**. Nada aqui é aproximado ou "mais ou menos". Se um dado não estiver aqui, não vá para o feed sem confirmar.
-
-## 2.1 HOSPEDAGEM
-
-**18 suítes**, distribuídas em seis categorias:
-
-| Categoria | Quantidade |
+| Categoria | Qtd. |
 |---|---|
 | Térreo duplo | 4 |
 | Térreo duplo com varanda | 3 |
@@ -349,711 +110,210 @@ Versões: vertical (empilhada), horizontal (símbolo à esquerda, texto à direi
 | Térreo triplo | 2 |
 | Superior triplo | 3 |
 | Superior quádruplo | 2 |
-| **Total** | **18** |
 
-**Leitura da distribuição** — útil na hora de escrever:
+11 duplos · 5 triplos · 2 quádruplos · 9 no térreo e 9 no superior · **só 3 têm varanda.**
 
-- **11 duplos, 5 triplos, 2 quádruplos.** A casa é feita para casal, mas cabe a família inteira.
-- **9 no térreo, 9 no superior.** Metade e metade.
-- **Só 3 suítes têm varanda** (térreo duplo com varanda). É a categoria mais escassa da casa — e escassez, na nossa voz, não vira urgência: vira detalhe. *"Três das dezoito têm varanda."*
+**Café da manhã** — buffet continental, com **ovos e tapioca preparados na hora**, **geleia e coalhada artesanais**.
 
-A escala é argumento de marca: 18 suítes significam que dá para saber o nome de quem chega.
+**Restaurante, bar e adega** — restaurante próprio para almoço; **porções servidas na praia, sem taxa de serviço**; bar de bebidas e drinks; adega de vinhos **Luiz Argenta**.
 
-## 2.2 CAFÉ DA MANHÃ
+**Serviço de praia** — montado todas as manhãs, **incluso na diária**: ombrelone de **2,50m**, cadeiras, espreguiçadeira e mesinha.
 
-- **Buffet continental**, com dois preparos feitos na hora, sob pedido:
-  - **Ovos** — do jeito que cada um gosta
-  - **Tapioca**
-- **Geleia artesanal** e **coalhada artesanal** — produção própria.
-- É o serviço mais citado nas avaliações. É o principal ativo de conteúdo da pousada.
+**Áreas comuns** — **piscina climatizada** (funciona o ano inteiro; é o diferencial da baixa temporada) e **salão multifuncional com monitor de 82 polegadas**.
 
-## 2.3 RESTAURANTE, BAR E ADEGA
+**Infraestrutura** — **gerador que sustenta a pousada inteira** e **placas fotovoltaicas**.
 
-- **Restaurante próprio** para almoço.
-- **Porções servidas na praia** — **sem taxa de serviço**.
-- **Bar** para bebidas e drinks.
-- **Adega de vinhos Luiz Argenta**.
+**Localização** — **170 m da praia**, **≈400 m do centrinho**, ≈2h30 da capital.
 
-## 2.4 SERVIÇO DE PRAIA
+**Cortesias permanentes** — **café expresso, chá e fruta o dia todo**; kit amenities completo; check-in antecipado quando disponível; sugestões personalizadas de roteiro.
 
-Montado **todas as manhãs**, e composto por:
+**Cadastro** — Rua do Telégrafo, 379, Camburi, São Sebastião/SP · fundação 2002, aniversário **22/08** · pousadacamburi.com.br · camburi@pousadacamburi.com.br · @pousadacamburioficial · #pousadacamburi · linktr.ee/pousadacamburi · PMS ADMH · site e motor de reservas Foco Multimídia.
 
-- **Ombrelone de 2,50m**
-- **Cadeiras**
-- **Espreguiçadeira**
-- **Mesinha**
-- Atendimento de bebidas e porções na areia, **sem taxa de serviço**
+**Identidade visual** — `#049DD9` azul primário · `#04B2D9` ciano · `#0E3740` azul-petróleo · `#6AC4D9` azul-céu · `#F2F2F2` off-white. Gotham Light (texto), Gotham Medium (destaques), Wokeh (só no logo). A paleta é para arte gráfica, não para filtro de foto — a luz natural de Camburi é o filtro.
 
-> **O serviço de praia é incluso na diária.** Não é extra, não é pacote, não é upgrade. Isso muda como ele se comunica: não é um serviço que a pousada *oferece* — é uma coisa que já está montada quando o hóspede desce. Escreva sempre no já-feito, nunca no disponível: *"às onze a sombra está onde precisava estar"*, não *"oferecemos serviço de praia"*.
+### De fato a história
 
-## 2.5 ÁREAS COMUNS
-
-- **Piscina climatizada** — funciona o ano inteiro; é o diferencial de baixa temporada.
-- **Salão multifuncional** com **monitor de 82 polegadas** — reuniões, pequenos eventos, confraternizações, dia de chuva, retiros e famílias grandes.
-
-## 2.6 INFRAESTRUTURA INVISÍVEL
-
-- **Gerador próprio** que sustenta **a pousada inteira** — a operação não para em queda de energia.
-- **Placas fotovoltaicas** — parte da operação sustentável.
-
-> Este é o item mais subaproveitado da marca. Gerador e energia solar **são** o conceito-âncora em forma de equipamento: o hóspede só percebe quando a rua inteira apaga e aqui não acontece nada.
-
-## 2.7 LOCALIZAÇÃO
-
-- **170 metros da praia**
-- **≈ 400 metros do centrinho de Camburi**
-- ≈ 2h30 da capital paulista
-
-## 2.8 CORTESIAS PERMANENTES
-
-- **Café expresso, chá e fruta** — sempre disponíveis, o dia todo, sem cobrança.
-- **Kit amenities completo.**
-- **Check-in antecipado para todos**, quando houver disponibilidade.
-- **Sugestões personalizadas** de atividades, roteiros e restaurantes.
-
-## 2.9 DE FATO A HISTÓRIA — tabela de tradução
-
-*Como cada fato vira conteúdo sem virar folheto.*
-
-| Fato operacional | Como se conta |
+| Fato | Como se conta |
 |---|---|
 | 18 suítes | "Somos dezoito. Dá para lembrar o nome de todo mundo." |
-| 3 suítes com varanda | "Três das dezoito têm varanda. Quem já veio sabe qual pedir." |
-| 11 duplos, 5 triplos, 2 quádruplos | "Cabe o casal. Cabe a família inteira. Cabe a avó junto." |
+| 3 com varanda | "Três das dezoito têm varanda. Quem já veio sabe qual pedir." |
+| Ovo e tapioca na hora | "Nada é feito antes de você pedir. É por isso que demora dois minutos — e é por isso que vale." |
+| Coalhada e geleia artesanais | "A coalhada de amanhã já está pronta hoje." |
+| Ombrelone de 2,50m | "Dois metros e meio de sombra. Medimos — para cair certa às onze." |
 | Serviço de praia incluso | "Não tem serviço de praia para contratar. Tem serviço de praia montado." |
-| Compra do imóvel em 2015 | "Cuidamos desta casa por treze anos antes de ela ser nossa." |
-| Ovo e tapioca na hora | "Nada aqui é feito antes de você pedir. É por isso que demora dois minutos — e é por isso que vale." |
-| Coalhada e geleia artesanais | "A coalhada de amanhã já está pronta hoje. É assim há 24 anos." |
-| Ombrelone de 2,50m | "Dois metros e meio de sombra. Medimos — para a sombra cair certa às onze." |
 | Porção na praia sem taxa | "A comida vai até a areia. A conta não muda por causa disso." |
-| Adega Luiz Argenta | "Tem vinho para a noite que começa cedo." |
-| Piscina climatizada | "Em julho, a água não pergunta que mês é." |
-| Gerador próprio | "Quando a luz cai em Camburi, aqui ninguém percebe." |
-| Placas fotovoltaicas | "Parte do que aquece a sua água veio do sol de ontem." |
-| 170m da praia | "Cento e setenta metros. Dá para ir descalço." |
-| 400m do centrinho | "O jantar fica a uma caminhada. Não precisa tirar o carro." |
 | Café, chá e fruta o dia todo | "Não tem horário do café. Tem café." |
-| Salão com monitor de 82" | "Tem um lugar aqui para o dia em que chove — e para a reunião que ninguém queria fazer na cidade." |
-| Fundação em 2002 | "Vinte e quatro anos fazendo a mesma coisa. Melhor a cada ano." |
-| Check-in antecipado | "Se o quarto estiver pronto, ele é seu antes da hora." |
+| Piscina climatizada | "Em julho, a água não pergunta que mês é." |
+| Gerador | "Quando a luz cai em Camburi, aqui ninguém percebe." |
+| Fotovoltaica | "Parte do que aquece a sua água veio do sol de ontem." |
+| 170 m da praia | "Cento e setenta metros. Dá para ir descalço." |
+| 400 m do centrinho | "O jantar fica a uma caminhada. Não precisa tirar o carro." |
+| Salão com monitor de 82" | "Tem um lugar aqui para o dia em que chove." |
+| 2002 | "Vinte e quatro anos fazendo a mesma coisa. Melhor a cada ano." |
 
 ---
 
-# PARTE 3 — PÚBLICO E POSICIONAMENTO
+## 6. PÚBLICO, NÚMEROS E OBJETIVO
 
-## 3.1 PÚBLICO
+**Público:** famílias (principal), casais, casais com filhos, multigeracional. Padrão alto, exigente e seletivo. Origem São Paulo capital. ≈20% recorrentes; a maioria indica para amigos e família.
 
-Não trabalhamos com uma persona única: atendemos todos que se identificam com o conceito.
+**Diferenciais em ordem de força:** café da manhã com preparo na hora · serviço de praia incluso · piscina climatizada · porções e bebidas na areia sem taxa · 170 m da praia · restaurante, bar e adega · cortesias o dia todo · 24 anos · check-in antecipado · gerador e energia solar · salão multifuncional.
 
-- **Famílias** (principal)
-- Casais
-- Casais com filhos
-- Multigeracional (casal com os pais)
-- Padrão alto, exigente e seletivo
-- **Origem:** principalmente São Paulo capital (≈ 2h30)
-- **Fidelização:** ≈ 20% recorrentes, retornam espontaneamente
-- **Indicação:** a maioria dos clientes indica para amigos e família
-- **Embaixadores:** os próprios clientes fiéis — **zero parcerias com influenciadores**
+**Sazonalidade:** dez–fev com 100% de ocupação (resolvido). **Março a novembro é o foco de toda a estratégia.** Ocupação atual ≈40% ao ano; meta 80%. Mídia paga mínima, sazonal para feriados. Relatórios mensais.
 
-## 3.2 DIFERENCIAIS — EM ORDEM DE FORÇA
+**KPIs de 6 meses:** +2.000 seguidores · +50 avaliações no Google · +30 no Booking · resposta em DM <2h (dias úteis) e <4h (fins de semana).
 
-*Hierarquizados por capacidade de decidir uma reserva na baixa temporada.*
+**Situação em jun/2026** *(reconferir antes de citar)*
 
-**Primeira linha (repetir sempre, de formas diferentes):**
+| Canal | Nota | Avaliações |
+|---|---|---|
+| Booking.com | 9.6 | 210 |
+| Google | 4.8 | 288 |
+| TripAdvisor | 4.7 | 136 — #3 de 15 em Camburi |
 
-1. Café da manhã com preparo na hora + artesanal (ovos, tapioca, coalhada, geleia)
-2. Serviço de praia montado todo dia e **incluso na diária** — ombrelone 2,50m, cadeiras, espreguiçadeira, mesinha
-3. Piscina climatizada
-4. Porções e bebidas na praia, sem taxa de serviço
-5. 170m da praia e 400m do centrinho
+Instagram: 9.723 (fev/26) → 9.882 (jul/26), ≈40 seguidores/mês. A meta de +2.000 exige mudança de patamar, não ajuste fino.
+Elogios recorrentes: serviço, localização, limpeza, café da manhã, piscina aquecida.
+Atenção: **Wi-Fi** e **ruído da cozinha** — são operacionais. Enquanto não resolvidos, não puxe assunto de Wi-Fi nem de "silêncio absoluto" no feed.
 
-**Segunda linha (sustentam a decisão):**
+---
 
-6. Restaurante próprio + bar + adega Luiz Argenta
-7. Café, chá e fruta cortesia, o dia todo
-8. 24 anos de história (2002)
-9. Sugestões personalizadas de roteiro
-10. Check-in antecipado quando disponível
-11. Kit amenities completo
+## 7. PLAYBOOK DE CONTEÚDO
 
-**Terceira linha (provam seriedade, usar em bastidor):**
+### 7.1 Territórios e grade
 
-12. Gerador que sustenta toda a pousada
-13. Placas fotovoltaicas
-14. Salão multifuncional com monitor de 82"
-
-## 3.3 SAZONALIDADE E OBJETIVO
-
-| | |
-|---|---|
-| **Alta temporada** | Dezembro a fevereiro — 100% de ocupação (problema resolvido) |
-| **Baixa temporada** | **Março a novembro — foco prioritário de toda a estratégia** |
-| **Ocupação atual** | ≈ 40% ao ano |
-| **Meta de ocupação** | 80% |
-| **Mídia paga** | Mínimo possível — Meta Ads sazonal para feriados e eventos |
-| **Relatórios** | Mensais |
-
-**Meta de 12 meses:** aumentar receita via ocupação na baixa temporada.
-
-**KPIs de 6 meses:**
-
-- Instagram: de ≈ 9.871 para **+2.000 seguidores**
-- Google: **+50** avaliações novas
-- Booking.com: **+30** avaliações novas
-- Tempo de resposta em DM: **< 2h** em dias úteis, **< 4h** em fins de semana
-- Ocupação: elevar para **80%**
-
-## 3.4 DIAGNÓSTICO DIGITAL
-
-> Dados coletados na implantação (jun/2026) — **reconferir antes de citar em relatório**.
-
-**Instagram — @pousadacamburioficial**
-
-| Data | Seguidores |
-|---|---|
-| 21/02/2026 | 9.723 |
-| 13/03/2026 | 9.764 |
-| 24/05/2026 | 9.833 |
-| 03/07/2026 | 9.882 |
-
-*Crescimento observado: ≈ 160 seguidores em 4 meses (≈ 40/mês). A meta de +2.000 em 6 meses exige mudança de patamar, não ajuste fino.*
-
-Bio atual: *"Sua casa na praia. A gente cuida de tudo. Camburi - São Sebastião - SP / Fale com a gente / linktr.ee/pousadacamburi"*
-Destaques ativos: Café da manhã · Restaurante · Praia · Experiências · A Pousada · Eventos · Feedbacks
-
-**Reputação**
-
-| Canal | Nota | Avaliações | Observação |
+| # | Território | O que é | % |
 |---|---|---|---|
-| Booking.com | 9.6 | 210 | Uma das melhores notas de Camburi |
-| Google Meu Negócio | 4.8 | 288 | ⚠️ Login não está com o Rodrigo — recuperar é prioridade |
-| TripAdvisor | 4.7 / 5 | 136 | #3 de 15 pousadas em Camburi · 120 fotos |
+| 1 | **O cuidado invisível** | O preparo, o bastidor, as mãos, a hora que ninguém vê | 25% |
+| 2 | **A mesa** | Café, restaurante, bar, adega, porção na areia | 25% |
+| 3 | **O tempo** | Praia, piscina, suíte, silêncio | 20% |
+| 4 | **Camburi** | Destino, curadoria, atividades | 20% |
+| 5 | **A casa** | Quem volta, feedbacks, permanência no presente | 10% |
 
-**TripAdvisor — destaques:** Serviço (4.8), Localização (4.8), Limpeza (4.6), café da manhã, piscina aquecida, atendimento (Rodrigo/Adriana).
-**TripAdvisor — pontos de atenção:** Wi-Fi e ruído da cozinha.
+Se numa semana só der para fazer um post, faça do território 1.
 
-> Os dois pontos de atenção são operacionais, não de comunicação. Enquanto não forem resolvidos, **não puxe conversa sobre Wi-Fi nem sobre "silêncio absoluto"** no feed — a avaliação seguinte cobra.
+> **Território 5 em repouso até 2027.** Agosto/2026 foi um mês inteiro de conteúdo retrospectivo pelos 24 anos. Nada de foto antiga, linha do tempo ou "antes e depois" — é reprisar o que a audiência acabou de ver.
 
-**Site — www.pousadacamburi.com.br**
-Fornecedor Foco Multimídia, integrado a channel manager e book engine. Tour 360° e reserva online ativos.
+| Quando | O quê | Formato |
+|---|---|---|
+| Terça | Bastidor / preparo | Reels 8–15s |
+| Quinta | Mesa ou destino | Carrossel 4–7 imagens |
+| Sábado | Contemplação | Foto única 4:5 |
+| Todo dia | 3 a 5 stories, em 2 blocos | Story |
 
----
+**Um dia de captação por semana:** 40 minutos de manhã, com o celular, fotografando todos os territórios de uma vez. Postar ao longo da semana. Não tente fotografar no dia de postar.
 
-# PARTE 4 — PLAYBOOK DE CONTEÚDO
+Reels alcançam quem não segue; carrossel convence quem já segue; foto mantém a estética do perfil.
 
-> Esta é a parte que você abre no celular na hora de postar.
+### 7.2 Foto no celular
 
-## 4.1 OS CINCO TERRITÓRIOS EDITORIAIS
+**Nove regras:** limpe a lente · nunca use zoom digital, aproxime o corpo · trave foco e exposição e puxe o sol para baixo · flash sempre desligado · grade 3×3, horizonte reto e no terço · **regra dos três cliques**: o mesmo assunto de longe, de perto e em detalhe — três cliques, três posts · antes de fotografar, filme 3 segundos (é de onde saem os Reels) · fotografe em 4:3 e corte depois (4:5 feed, 9:16 story) · horários 7h–9h30 e 16h–18h; meio-dia só para piscina e mar.
 
-Todo post nasce de um destes cinco. Se não couber em nenhum, não é nosso.
-
-| # | Território | O que é | % do volume | Funil |
-|---|---|---|---|---|
-| 1 | **O cuidado invisível** | O preparo, o bastidor, as mãos, a hora que ninguém vê | 25% | Meio |
-| 2 | **A mesa** | Café da manhã, restaurante, bar, adega, porção na areia | 25% | Topo/Meio |
-| 3 | **O tempo** | Praia, piscina, suíte, silêncio, contemplação | 20% | Topo |
-| 4 | **Camburi** | Destino, curadoria de restaurantes, atividades, praias vizinhas | 20% | Topo |
-| 5 | **A casa** | Permanência dita no presente, quem volta, feedbacks | 10% | Fundo |
-
-**Território 1 é o âncora.** Se em uma semana você só conseguir fazer um post, faça um do território 1.
-
-## 4.2 GRADE SEMANAL SUSTENTÁVEL
-
-Pousada pequena, equipe pequena. **Consistência vale mais que volume:** 3 posts por semana todo mês supera 15 posts numa semana seguidos de silêncio.
-
-| Dia | O quê | Formato | Território |
+| Ambiente | Melhor hora | Em vez de | Faça |
 |---|---|---|---|
-| **Terça** | Bastidor / preparo | Reels de 8–15s | 1 — Cuidado invisível |
-| **Quinta** | Mesa ou destino | Carrossel (4–7 imagens) | 2 ou 4 |
-| **Sábado** | Contemplação | Foto única 4:5 | 3 — O tempo |
-| **Todo dia** | 3 a 5 stories, em 2 blocos (manhã e fim de tarde) | Story | Qualquer |
-| **1x por mês** | A casa: história, feedback, memória | Reels ou carrossel | 5 — A casa |
+| **Café da manhã** | 7h–10h30 | Mesa de cima, prato chapado, com a sua sombra em cima | Rasante encostado no tampo (o vapor aparece) · contraluz de janela · **mãos em ação** servindo a geleia ou virando a tapioca · detalhe a 15 cm do vidro · xícara nítida em primeiro plano com o buffet desfocado |
+| **Praia** | 7h30–8h30 e 16h–17h30 | Ombrelone de frente, de longe, ao meio-dia | De baixo, sentada na areia (os 2,50m aparecem) · **de dentro da sombra para o mar** · a cadeira vazia com a toalha dobrada · o caminho da pousada até a areia (é assim que 170 m vira imagem) · timelapse da montagem às 8h |
+| **Piscina** | manhã cedo e à noite | Piscina vazia vista de cima | Rasante a 20 cm da água com o reflexo da mata · **o vapor numa manhã fria de maio a agosto — é a prova visual da climatizada** · gente na água em julho, sem rosto · a luz dentro da água à noite |
+| **Suíte** | manhã | Quarto inteiro em grande angular | A cortina com a brisa · o canto da cama com a luz da manhã · a janela como quadro · sinal de vida sem pessoa (livro, óculos, xícara na varanda) · POV da porta abrindo. **Antes: cama 100% pronta, zero fio à mostra** |
+| **Restaurante e bar** | almoço e fim de tarde | Prato chapado | O drink em construção (mãos, gelo, fruta) · o fio de vinho sendo servido com luz atrás · o rótulo Luiz Argenta em foco · **a porção chegando na areia — é o quadro mais exclusivo da casa** |
+| **Salão 82"** | qualquer | O móvel vazio | O uso: mesa posta, tela ligada, cadeiras alinhadas |
+| **Gerador e placas** | meio-dia | — | Foto de prova, não de beleza: a placa contra o céu. 1× por trimestre, em carrossel de bastidor |
 
-**Um dia de captação por semana:** 40 minutos, de manhã, com o celular. Fotografe **todos** os territórios de uma vez e alimente o banco de imagens. Poste ao longo da semana. Não tente fotografar no dia de postar.
+**Banco de imagens:** uma pasta por ambiente, subpasta por mês. 10 minutos por dia para descarregar e apagar o que não serve.
 
-**Sobre formato** *(dados consolidados na skill `social-analytics` deste repositório, fonte Socialinsider, 35M de posts, 2025 — reconfirmar antes de usar em relatório):* carrossel lidera engajamento (0,55%), Reels lideram alcance fora da base (30,81% contra 14,45% do carrossel), imagem única tem o menor engajamento (0,37%) e está em queda. Traduzindo: **Reels para ser descoberto, carrossel para convencer, foto para manter a estética do perfil.**
+### 7.3 Legendas — oito fórmulas
 
-## 4.3 GUIA DE IMAGEM NO CELULAR
+**1. O bastidor** *(a mais usada)* — o que aconteceu antes → o que você vê agora → convite discreto.
+> Às sete e meia, alguém carrega dois metros e meio de sombra até a areia. Mede a distância da cadeira até a espreguiçadeira. Às onze, quando você chega, a sombra está exatamente onde precisava estar. É o tipo de coisa que só se percebe quando falta.
 
-### As nove regras que valem para tudo
+**2. O detalhe concreto** — comece por um número → abra para a sensação.
+> Cento e setenta metros. É a distância entre a nossa porta e a areia. Dá para ir descalço, dá para voltar molhado, dá para esquecer alguma coisa no quarto e não se importar.
 
-1. **Limpe a lente.** Metade das fotos ruins de pousada é dedo na lente.
-2. **Nunca use zoom digital.** Aproxime o corpo, não os dedos.
-3. **Trave foco e exposição** (segure o dedo na tela) e **puxe o sol para baixo** — foto de praia sempre nasce estourada.
-4. **Flash sempre desligado.** Luz amarela de teto, nunca. Se está escuro, não é hora de fotografar — exceto a piscina à noite.
-5. **Grade 3×3 ligada.** O horizonte do mar tem que estar reto e apoiado num terço, nunca no meio.
-6. **A regra dos três cliques:** fotografe o mesmo assunto em três distâncias — **longe** (contexto), **meio** (o objeto), **perto** (a textura). Uma vira feed, outra vira story, outra vira capa de carrossel. Três cliques, três posts.
-7. **Toda foto rende um vídeo de 3 segundos.** Antes de fotografar, filme. É de onde saem os Reels sem esforço.
-8. **Fotografe em 4:3** (sensor cheio) e corte depois: 4:5 para feed, 9:16 para story e Reels.
-9. **Horários:** 7h–9h30 e 16h–18h. Meio-dia só serve para piscina e mar.
+**3. A hora do dia** — marque a hora → descreva a cena → deixe respirar.
+> São 7h40 em Camburi. A coalhada saiu do descanso. O café está ligado — e vai ficar ligado até a noite. Ninguém desceu ainda.
 
-### Por ambiente — o ângulo que todo mundo faz e o que fazer no lugar
+**4. A pergunta lenta** — cena curta → pergunta contemplativa, sem pedir marcação.
+> Tem gente que acorda cedo para pegar a primeira onda. Tem gente que acorda cedo para pegar o primeiro café, ainda em silêncio. Você é de qual time?
 
----
+**5. A curadoria** — posicione-se como quem conhece → entregue → não venda.
+> Camburi virou polo gastronômico do litoral norte, e a gente acompanhou de perto desde 2002. Se for uma noite só: OGAN. Com criança: Candeeiro. Para ver o mar enquanto come: Porto da Praia. A quatrocentos metros daqui.
 
-#### ☕ CAFÉ DA MANHÃ — 7h às 10h30
+**6. O convite discreto** — reconheça o cansaço → ofereça o contraste → convide sem urgência.
+> Março é o mês em que a praia volta a ser da praia. Sem fila no centrinho, sem disputa por sombra. Seu tempo merece esse cuidado. Te esperamos.
 
-**O ângulo batido:** mesa vista de cima, prato inteiro, chapado, com a sombra do próprio corpo em cima da comida.
-
-**Troque por:**
-
-- **Rasante:** celular quase encostado no tampo, na altura da mesa. O vapor do ovo aparece, o fundo desfoca sozinho.
-- **Contraluz de janela:** ponha o prato entre você e a janela. O vapor vira desenho. Depois puxe as sombras no edit.
-- **Mão em ação:** a mão servindo a geleia, virando a tapioca, quebrando o ovo. Sem rosto. É a exceção permitida pela LGPD — e é o coração do território 1.
-- **Detalhe extremo:** 15 cm do vidro da geleia, da textura da coalhada, da casca do pão.
-- **Plano composto:** xícara em primeiro plano nítido, buffet desfocado ao fundo. Vende fartura sem fotografar buffet — buffet fotografado de frente sempre parece refeitório.
-
-**Nunca:** buffet cheio de gente, bandeja pela metade, mesa não finalizada, prato sujo no fundo do quadro.
-
----
-
-#### 🏖️ PRAIA — montagem 7h30–8h30 · luz dourada 16h–17h30
-
-**O ângulo batido:** ombrelone de frente, de longe, ao meio-dia, com a praia cheia atrás.
-
-**Troque por:**
-
-- **De baixo:** sente-se na areia e aponte para cima. O ombrelone recorta o céu — e os 2,50m aparecem de verdade.
-- **De dentro da sombra para fora:** a moldura escura do ombrelone emoldurando o mar claro. É a foto que mais transmite "está tudo montado para você".
-- **A cadeira vazia:** com a toalha dobrada. Vazio comunica reserva, disponibilidade e silêncio.
-- **O caminho:** de trás, o trajeto da pousada até a areia. É assim que 170 metros vira imagem em vez de número.
-- **Duas linhas:** a haste do ombrelone contra a linha do horizonte. Enquadramento gráfico, ótimo para capa de carrossel.
-- **A montagem em timelapse:** 20 segundos do serviço sendo montado, às 8h. É o Reels mais "cuidado invisível" que existe.
-
-**Nunca:** praia lotada, isopor, lixo, rosto identificável, guarda-sol torto.
-
----
-
-#### 🏊 PISCINA CLIMATIZADA
-
-**O ângulo batido:** piscina vazia vista de cima, no meio do dia.
-
-**Troque por:**
-
-- **Rasante da água:** celular a 20 cm da lâmina. O reflexo da mata entra no quadro.
-- **O vapor:** em manhã fria de maio a agosto, a água climatizada solta vapor. **Esta é a prova visual do diferencial** — vale mais que qualquer legenda. Fotografe deliberadamente no inverno.
-- **Gente na água em julho** (sem rosto: ombros, braço, mão na borda). Contexto de estação é o argumento.
-- **Detalhe:** o pé entrando, a mão na borda, a toalha na espreguiçadeira.
-- **À noite:** a luz dentro da água contra o azul-petróleo do céu. Combina com a paleta da marca.
-
----
-
-#### 🛏️ SUÍTE
-
-**O ângulo batido:** quarto inteiro em grande angular, cama arrumada de frente. Parece anúncio de imobiliária.
-
-**Troque por:**
-
-- **A cortina com a brisa** — a marca já fala isso em texto; fotografe.
-- **O canto da cama** com a luz da manhã atravessando.
-- **A janela como quadro:** enquadre a janela, deixe o verde de fora ser o assunto.
-- **Sinal de vida sem pessoa:** o livro na mesa, os óculos, a mala aberta, o chinelo alinhado, a xícara na varanda.
-- **POV da porta abrindo** — 3 segundos, ótimo para story e para abrir Reels.
-
-**Antes de clicar:** cama 100% arrumada, zero fio à mostra, controle guardado, cortina alinhada. Nada não finalizado.
-
----
-
-#### 🍷 RESTAURANTE, BAR E ADEGA
-
-**Troque o prato chapado por:**
-
-- **O drink em construção:** mãos, gelo caindo, a fruta sendo espremida.
-- **O vinho sendo servido:** o fio de vinho é o momento; fotografe com a luz atrás.
-- **A garrafa contra a luz** — rótulo Luiz Argenta legível.
-- **A porção chegando na areia.** Este é o quadro mais exclusivo da pousada: comida na praia, sem taxa de serviço. Quase ninguém tem isso. Deve virar conteúdo recorrente.
-- **A prateleira da adega** em detalhe, com profundidade.
-
----
-
-#### 🖥️ SALÃO MULTIFUNCIONAL (82")
-
-Não fotografe o móvel — fotografe o uso. Mesa posta para reunião, tela ligada, cadeiras alinhadas, cortina meio fechada. Público-alvo desta imagem: pequenos eventos, retiros, confraternizações de fim de ano e famílias grandes em dia de chuva.
-
----
-
-#### ⚡ INFRAESTRUTURA INVISÍVEL
-
-Não é foto bonita, é **foto de prova** — e é a mais alinhada ao conceito-âncora.
-
-- Placa fotovoltaica contra o céu ao meio-dia; a sombra da placa no piso.
-- O gerador (limpo, organizado) em plano fechado.
-- Use 1× por trimestre, em carrossel de bastidor: *"O que a gente instala para você nunca precisar saber que existe."*
-
----
-
-### Organização do banco de imagens
-
-Uma pasta por ambiente, subpasta por mês:
-`/cafe`, `/praia`, `/piscina`, `/suites`, `/restaurante`, `/salao`, `/destino`, `/bastidor`
-
-**10 minutos por dia**: descarregar o celular e apagar o que não serve. Um banco alimentado é o que permite postar em semana cheia sem produzir nada.
-
----
-
-## 4.4 FÓRMULAS DE LEGENDA
-
-Oito estruturas. Cada uma tem função diferente. Rode-as ao longo do mês — e mantenha as duas últimas (7 e 8) em circulação constante: são elas que carregam o bem-estar sem a palavra.
-
----
-
-### Fórmula 1 — O BASTIDOR *(a fórmula da casa — use mais que todas)*
-
-**Estrutura:** o que aconteceu antes → o que você vê agora → convite discreto.
-
-> Às sete e meia, alguém carrega dois metros e meio de sombra até a areia.
-> Mede a distância da cadeira até a espreguiçadeira. Encaixa a mesinha.
-> Às onze, quando você chega, a sombra está exatamente onde precisava estar.
-> É o tipo de coisa que só se percebe quando falta.
-
----
-
-### Fórmula 2 — O DETALHE QUE NINGUÉM PEDIU
-
-**Estrutura:** comece por um número ou um fato concreto → abra para a sensação.
-
-> Cento e setenta metros.
-> É a distância entre a nossa porta e a areia. Dá para ir descalço, dá para voltar molhado, dá para esquecer alguma coisa no quarto e não se importar.
-> Camburi tem novecentos metros de praia. A gente resolveu ficar bem no meio deles.
-
----
-
-### Fórmula 3 — A HORA DO DIA
-
-**Estrutura:** marque a hora → descreva a cena → deixe respirar.
-
-> São 7h40 em Camburi.
-> A coalhada saiu do descanso. O café está ligado — e vai ficar ligado até a noite.
-> Ninguém desceu ainda.
-> É a parte do dia que quase ninguém vê. É a parte de que a gente mais gosta.
-
----
-
-### Fórmula 4 — A PERGUNTA LENTA *(gera comentário sem pedir marcação)*
-
-**Estrutura:** cena curta → pergunta genuína, contemplativa.
-
-> Tem gente que acorda cedo na praia para pegar a primeira onda. Tem gente que acorda cedo para pegar o primeiro café, ainda em silêncio.
-> Você é de qual time?
-
----
-
-### Fórmula 5 — A CURADORIA *(autoridade sobre o destino)*
-
-**Estrutura:** posicione-se como quem conhece → entregue a informação → não venda.
-
-> Camburi virou polo gastronômico do litoral norte, e a gente acompanhou isso de perto — desde 2002.
-> Se for uma noite só: OGAN.
-> Se for com criança: pizza no Candeeiro.
-> Se for para ver o mar enquanto come: Porto da Praia.
-> A quatrocentos metros daqui. Nenhum deles precisa de carro.
-
----
-
-### Fórmula 6 — O CONVITE DISCRETO *(fundo de funil, sem "reserve já")*
-
-**Estrutura:** reconheça o cansaço → ofereça o contraste → convide sem urgência.
-
-> Março é o mês em que a praia volta a ser da praia.
-> Sem fila no centrinho, sem disputa por sombra, com a água ainda quente de fevereiro. E a piscina climatizada, para quando não estiver.
-> Seu tempo merece esse cuidado. Te esperamos.
-
----
-
-### Fórmula 7 — A AUSÊNCIA *(o bem-estar sem a palavra)*
-
-**Estrutura:** liste o que **não** existe aqui → termine no que existe.
-É a fórmula mais eficiente para comunicar bem-estar sem nunca nomeá-lo.
-
-> Não tem horário do café.
-> Não tem serviço de praia para contratar — às oito ele já está montado.
-> Não tem taxa de serviço na areia.
-> Não tem carro para tirar da garagem: o jantar fica a quatrocentos metros.
->
+**7. A ausência** *(bem-estar sem a palavra)* — liste o que não existe → termine no que existe.
+> Não tem horário do café. Não tem serviço de praia para contratar — às oito ele já está montado. Não tem taxa de serviço na areia. Não tem carro para tirar da garagem: o jantar fica a quatrocentos metros.
 > Tem café. Tem sombra. Tem o dia inteiro.
 
----
+**8. O terceiro dia** *(a evidência física)* — marque o tempo → o que o corpo faz sozinho.
+> No primeiro dia, você ainda acorda no horário de sempre. No segundo, acorda e fica. No terceiro, acorda sem alarme e demora um pouco para saber que horas são. Não é que o tempo passe mais devagar aqui. É que ninguém te apressa.
 
-### Fórmula 8 — O TERCEIRO DIA *(a evidência física)*
+**Aberturas prontas:** Existe uma hora em Camburi que quase ninguém vê. · São 7h40, e ninguém desceu ainda. · Isso levou a noite inteira para ficar pronto. · Cento e setenta metros. · Dois metros e meio de sombra. · Em julho, a água não pergunta que mês é. · A parte mais difícil do dia acontece antes das oito. · Não tem horário do café. Tem café. · Quando a luz cai em Camburi, aqui ninguém percebe. · Alguém acordou antes de você.
 
-**Estrutura:** marque o tempo de estadia → descreva o que o corpo faz sozinho.
-Nunca prometa o efeito — descreva a cena e deixe o leitor concluir.
+**CTAs permitidos:** Te esperamos · Seu refúgio espera · Quando sentir vontade de desacelerar · Seu tempo merece esse cuidado · Uma oportunidade única de viver Camburi · Chame no direct que a gente conta o resto · Link na bio · Salve para quando for planejar.
 
-> No primeiro dia, você ainda acorda no horário de sempre.
-> No segundo, acorda e fica.
-> No terceiro, acorda sem alarme e demora um pouco para saber que horas são.
->
-> Não é que o tempo passe mais devagar aqui. É que ninguém te apressa.
-
----
-
-### Banco de aberturas — 18 primeiras linhas
-
-A primeira linha é o que decide se a legenda é lida. Nenhuma delas começa vendendo.
-
-1. Existe uma hora em Camburi que quase ninguém vê.
-2. São 7h40, e ninguém desceu ainda.
-3. Isso aqui levou a noite inteira para ficar pronto.
-4. Cento e setenta metros.
-5. Dois metros e meio de sombra.
-6. Em julho, a água não pergunta que mês é.
-7. Faz vinte e quatro anos que a gente faz isso.
-8. A parte mais difícil do dia acontece antes das oito.
-9. Ninguém vem para cá por causa disso — mas todo mundo repara.
-10. Tem uma coisa que só quem volta percebe.
-11. O rio de Camburi muda de lugar sozinho, de tempos em tempos.
-12. Não tem horário do café. Tem café.
-13. A gente mede a sombra. Sério.
-14. Quando a luz cai em Camburi, aqui ninguém percebe.
-15. Alguém acordou antes de você.
-16. Por treze anos, esta casa não era nossa.
-17. Três das dezoito têm varanda.
-18. Não tem serviço de praia para contratar. Tem serviço de praia montado.
-
----
-
-### CTAs permitidos
-
-Nunca use urgência. Estes são os únicos encerramentos autorizados:
-
-- Te esperamos.
-- Seu refúgio espera.
-- Quando sentir vontade de desacelerar.
-- Seu tempo merece esse cuidado.
-- Uma oportunidade única de viver Camburi.
-- Chame no direct que a gente conta o resto. *(e encaminhe para WhatsApp)*
-- Link na bio para conhecer.
-- Salve para quando for planejar.
-
----
-
-## 4.5 TRINTA E SETE PAUTAS PRONTAS
-
-*Numeradas por território. Marque a data ao usar; não repita a mesma pauta em menos de 90 dias.*
-
-**Território 1 — O cuidado invisível**
+### 7.4 Quinze pautas
 
 1. Timelapse da montagem do serviço de praia às 8h *(Reels)*
-2. A coalhada saindo do descanso *(Reels curto)*
-3. Mãos fazendo a tapioca — som ambiente, sem trilha *(Reels)*
-4. O ovo do jeito que cada um gosta: 5 formas em 15 segundos *(Reels)*
-5. A geleia sendo envasada ainda quente *(foto + legenda fórmula 3)*
-6. "O que a gente instala para você nunca precisar saber que existe" — gerador + fotovoltaica *(carrossel)*
-7. O antes e depois de uma suíte sendo preparada — só o depois aparece *(Reels)*
-8. A primeira xícara do dia, 6h50 *(foto)*
+2. A coalhada saindo do descanso *(Reels)*
+3. Mãos fazendo a tapioca, som ambiente *(Reels)*
+4. O ovo do jeito que cada um gosta: cinco formas em 15s *(Reels)*
+5. Café da manhã em três distâncias: buffet, prato, textura *(carrossel)*
+6. A porção chegando na areia *(Reels)*
+7. O drink em construção *(Reels 8s)*
+8. "Não tem horário do café. Tem café." *(foto)*
+9. O vapor da piscina climatizada numa manhã de junho *(foto)*
+10. A cortina com a brisa *(Reels 5s)*
+11. O caminho de 170 metros até a areia, em POV *(Reels)*
+12. **A ausência** — o que não existe aqui, uma frase por slide *(carrossel)*
+13. **O terceiro dia** — como o corpo muda ao longo da estadia *(carrossel)*
+14. "Onde comer em Camburi — curadoria da Pousada Camburi" *(carrossel)*
+15. Chuva em Camburi: o som, a varanda, o salão *(Reels de baixa temporada)*
 
-**Território 2 — A mesa**
+### 7.5 Calendário
 
-9. Café da manhã em três distâncias: buffet, prato, textura *(carrossel)*
-10. A porção chegando na areia *(Reels — o quadro mais exclusivo da pousada)*
-11. O drink em construção *(Reels 8s)*
-12. Adega Luiz Argenta: o vinho para a noite que começa cedo *(foto)*
-13. O almoço do restaurante, prato do dia *(foto)*
-14. "Não tem horário do café. Tem café." — a cortesia permanente *(foto)*
-15. Um carrossel só de detalhes do café da manhã, sem plano geral *(carrossel)*
+**Feriados prioritários (baixa temporada):** Réveillon (mín. 5 noites, coquetel open bar em 31/12) · Carnaval · Sexta-feira Santa · Tiradentes · 1º de maio · Corpus Christi · 7 de setembro · 12 de outubro · Finados · 15 de novembro · 20 de novembro · Natal.
 
-**Território 3 — O tempo**
+**Datas comerciais e locais:** 25/01 aniversário de SP · Dia das Mães · 12/06 Namorados · 09/07 · férias de julho · **Arraial Gastronômico Buscapé, 24 a 26/07/2026** · Dia dos Pais · **22/08 aniversário da pousada**.
 
-16. O vapor da piscina climatizada numa manhã de junho *(foto — prova visual)*
-17. A cadeira vazia com a toalha dobrada *(foto)*
-18. A cortina com a brisa *(Reels 5s, som ambiente)*
-19. De dentro da sombra para o mar *(foto)*
-20. A piscina à noite *(foto)*
-21. O caminho de 170 metros até a areia, em POV *(Reels)*
-22. Chuva em Camburi: o som, a varanda, o salão *(Reels de baixa temporada)*
-
-**Território 4 — Camburi**
-
-23. "Onde comer em Camburi — curadoria da Pousada Camburi" *(carrossel)*
-24. Parceria OGAN: taça de vinho ou suco para hóspedes *(carrossel ou story)*
-25. "Camburi + arredores: praias para explorar no litoral norte" *(carrossel)*
-26. O que dá para fazer aqui além do mar — surf, canoa havaiana, trilha com cachoeira, mergulho *(carrossel, sem citar operadores)*
-27. O Rio Camburi que muda de lugar sozinho *(Reels — curiosidade, alto compartilhamento)*
-28. Camburi fora da temporada: 900 metros de praia quase vazios *(foto)*
-
-**Território 5 — A casa**
-
-> **Território em repouso até 2027.** Agosto/2026 foi um mês inteiro de conteúdo retrospectivo pelos 24 anos. Repetir agora — foto antiga, "o que era e o que é", linha do tempo — é reprisar o que a audiência acabou de ver. Até lá, este território vive só de feedback e de permanência dita no presente.
-
-29. Quem volta todo ano: um feedback real, sem rosto *(card + legenda fórmula 1)*
-30. "Faz vinte e quatro anos que a gente faz isso" — a constância dita no presente, sobre uma cena de hoje *(foto)*
-
-**Território 3 / hospedagem — o bem-estar sem a palavra**
-
-31. **A ausência:** o que não existe aqui *(carrossel, fórmula 7 — uma frase por slide)*
-32. **O terceiro dia:** como o corpo muda ao longo da estadia *(carrossel ou Reels, fórmula 8)*
-33. As três suítes com varanda — a categoria mais escassa da casa *(foto ou Reels)*
-34. "Nove embaixo, nove em cima" — como a casa é dividida *(carrossel de suítes por categoria)*
-35. O celular na mesa de cabeceira, o dia inteiro *(foto — bem-estar sem nomear)*
-36. A toalha pesada de sol, no fim da tarde *(foto)*
-37. "Não tem o que decidir de manhã" *(Reels da manhã: café pronto, praia montada, nada a fazer)*
+**Antecedência:** conteúdo de feriado começa 21 dias antes; mídia paga 14 dias antes.
 
 ---
 
-## 4.6 CALENDÁRIO DE DATAS ESTRATÉGICAS
+## 8. CAMBURI
 
-**Feriados — prioridade alta (baixa temporada + paulistano em casa)**
+**A praia:** ≈900 m de areia branca, fina e fofa, mais compacta perto do mar. Águas esverdeadas, geralmente agitadas — no outono e inverno o canto direito concentra as melhores ondas. O Rio Camburi corta a praia e muda de trajetória de tempos em tempos, ora desaguando em Camburi, ora em Camburizinho. Mata Atlântica preservada, trilhas e cachoeiras. Posto de salva-vidas permanente. A 37 km do centro histórico de São Sebastião e 13,5 km de Maresias.
 
-| Data | Observação |
-|---|---|
-| Réveillon / 1º de janeiro | Mínimo de 5 noites · coquetel open bar em 31/12 |
-| Carnaval | Sexta a terça |
-| Sexta-feira Santa (Paixão de Cristo) | |
-| Tiradentes — 21/04 | |
-| Dia do Trabalho — 1º/05 | |
-| Corpus Christi | |
-| Independência — 07/09 | |
-| N. Sra. Aparecida — 12/10 | |
-| Finados — 02/11 | |
-| Proclamação da República — 15/11 | |
-| Consciência Negra — 20/11 | |
-| Natal — 25/12 | |
+**Proteção:** está na **APA Marinha do Litoral Norte (Setor Ypautiba)** — uso sustentável. **NÃO está no Parque Estadual da Serra do Mar** — claim refutado, não use. Origem caiçara documentada, mas **pesquisa a aprofundar** antes de virar conteúdo.
 
-**Datas comerciais e locais**
+**Gastronomia — parceria exclusiva OGAN ⭐** (hóspedes ganham taça de vinho ou suco).
+ACQUA · YYE · MANACÁ · TAIOBA · ONDARA · NO.SAL PARRILLA · NICA'S · CANDEEIRO · IGGY PIZZA · OH MY BURGUER · MADÁ · SOU HOPPS · PITOMBAS · PORTO DA PRAIA · BARBARELLAS · CERES · SOSU · BURI SUSHI · FRUTOS DE GOIÁS · GELATIAMO · ROCHINHA · RECANTO NATURAL · POMONA · LANCHONETE DO TUBARÃO · CANTINETA · SEVÁ · ADEGA VILA DA PRAIA
 
-| Data | Evento |
-|---|---|
-| 25/01 | Aniversário de São Paulo |
-| 2º domingo de maio | Dia das Mães |
-| 12/06 | Dia dos Namorados |
-| 09/07 | Revolução Constitucionalista de 1932 |
-| Julho | Férias escolares |
-| 24 a 26/07/2026 | Arraial Gastronômico — Projeto Buscapé (último fim de semana de julho) |
-| 2º domingo de agosto | Dia dos Pais |
-| **22/08** | **Aniversário da Pousada Camburi** |
+Mencione restaurantes pelo nome, com tom de **curador, não de anunciante**. Sem preços.
 
-**Regra de antecedência:** conteúdo de feriado começa **21 dias antes**. Meta Ads sazonal entra 14 dias antes.
+**Atividades:** surf · canoa havaiana · SUP · caiaque · trilha e cachoeira no Sertão do Cacau · mergulho · passeio a cavalo · passeio de barco · massagem · yoga · ilhas (das Couves, dos Gatos, As Ilhas, Montão do Trigo).
+
+Mencionamos que as atividades existem — **sem citar operadores, contatos ou terceiros**. Indicação específica só por WhatsApp. Tom: *"Em Camburi, o mar é só o começo."* A pousada é curadora do destino, não vitrine de terceiros.
 
 ---
 
-# PARTE 5 — GUIA DO DESTINO
+## 9. MÉTRICAS, PENDÊNCIAS E LACUNAS
 
-## 5.1 A PRAIA E A GEOGRAFIA
+**A cada post:** DMs recebidas · saves · visitas ao perfil · cliques no link da bio · alcance de não-seguidores.
+**Semanal:** 15 min — quais 3 posts renderam mais save e DM.
+**Mensal:** seguidores, alcance de não-seguidores, DMs, avaliações novas, ocupação.
 
-Praia de aproximadamente **900 metros**, areia branca, fina e fofa — mais compacta perto do mar, o que permite vôlei, futevôlei, frescobol, caminhada e corrida na beira. Águas claras, esverdeadas, geralmente agitadas — especialmente no outono e no inverno, quando o **canto direito** concentra as melhores ondas para surf.
+**Pendências**
 
-O **Rio Camburi** corta a praia, separando-a de Camburizinho e desaguando junto a uma pequena ilha — o encontro de água doce e salgada. De tempos em tempos, o rio muda de trajetória naturalmente, ora desembocando em Camburi, ora em Camburizinho.
-
-- 37 km do Centro Histórico de São Sebastião
-- 13,5 km de Maresias (sentido sul)
-- Acesso pela Estrada do Camburi, depois de Camburizinho
-- Posto permanente de salva-vidas do Corpo de Bombeiros
-- Estacionamento nas ruas residenciais e nos comércios à beira-mar
-- Cercada por Mata Atlântica preservada — trilhas e cachoeiras
-
-## 5.2 NATUREZA E PROTEÇÃO — o que pode e o que não pode ser dito
-
-- ✅ **Está dentro da APA Marinha do Litoral Norte (Setor Ypautiba)** — proteção real, mas categoria de **uso sustentável**, não integral.
-- ❌ **NÃO está dentro do Núcleo São Sebastião do Parque Estadual da Serra do Mar** — este claim foi checado e **refutado**. Não use.
-- ⚠️ **Origem caiçara** (fusão indígena, portuguesa e africana): documentada historicamente, mas **a pesquisa ainda precisa ser aprofundada** antes de virar conteúdo. Não publique afirmação específica sem checar.
-
-## 5.3 GUIA GASTRONÔMICO — a curadoria da casa
-
-**Parceria exclusiva:** **OGAN** ⭐ — hóspedes ganham taça de vinho ou suco.
-
-ACQUA · YYE · MANACÁ · TAIOBA · ONDARA · NO.SAL PARRILLA · NICA'S · CANDEEIRO (pizzas, crepes) · IGGY PIZZA · OH MY BURGUER · MADÁ (hambúrguer) · SOU HOPPS · PITOMBAS · PORTO DA PRAIA · BARBARELLAS · CERES · SOSU · BURI SUSHI · FRUTOS DE GOIÁS · GELATIAMO · ROCHINHA / ROCHA · RECANTO NATURAL · POMONA · LANCHONETE DO TUBARÃO · CANTINETA · SEVÁ / SEIVA · ADEGA VILA DA PRAIA
-
-**Regras para post com restaurante:**
-
-- ✅ Mencionar pelo nome — são referências do destino
-- ✅ Destacar a parceria OGAN quando fizer sentido
-- ✅ Tom de **curador, nunca de anunciante**: a Pousada recomenda com autoridade de 24 anos
-- ❌ Nunca mencionar preços
-- ❌ Nunca citar operadores de atividades externas
-
-## 5.4 ATIVIDADES E LAZER
-
-**Esportes e natureza:** surf · canoa havaiana · stand-up paddle · caiaque · trilha e cachoeira no Sertão do Cacau · mergulho · passeio a cavalo · passeio de barco com alimentação
-**Bem-estar:** massagem · yoga
-**Ilhas:** Ilha das Couves · Ilha dos Gatos · As Ilhas · Montão do Trigo
-*(É possível alugar embarcações para mergulho e pesca na região.)*
-
-**Regra definitiva de conteúdo sobre atividades:**
-
-- **O que fazemos:** mencionamos que as atividades existem em Camburi — criamos desejo e curiosidade.
-- **O que não fazemos:** não citamos nome de operador, escola de surf ou guia de trilha em post público; não divulgamos contato de terceiros; não colaboramos com quem não nos divulga.
-- **Tom correto:** *"Em Camburi, o mar é só o começo. Tem surf, canoa havaiana, trilha com cachoeira, mergulho e muito mais."*
-- Indicações específicas: **só por WhatsApp, personalizadas.**
-
-A pousada se posiciona como **curadora do destino**, não como vitrine de terceiros.
-
-## 5.5 PRAIAS PRÓXIMAS
-
-Um carrossel "Camburi + arredores" posiciona a pousada como **base de um roteiro maior** — aumenta o tempo de estadia percebido e atrai quem busca diversidade em vez de uma praia só.
-
----
-
-# PARTE 6 — MÉTRICAS E ROTINA
-
-## 6.1 A CADA POST
-
-- **DMs recebidas** — conversão direta
-- **Saves** — intenção de compra
-- **Visitas ao perfil** — intenção de conhecer mais
-- **Cliques no link da bio** — intenção de reserva
-- **Alcance de não-seguidores** — crescimento real de audiência
-
-## 6.2 RITMO DE REVISÃO
-
-| Frequência | O quê |
-|---|---|
-| Semanal | 15 min: quais 3 posts renderam mais save e DM |
-| Mensal | Relatório: seguidores, alcance de não-seguidores, DMs, avaliações novas, ocupação |
-| Trimestral | Revisão de territórios: qual dos cinco está puxando reserva de verdade |
-
-## 6.3 PENDÊNCIAS ABERTAS
-
-- [ ] **Recuperar o login do Google Meu Negócio** — ação prioritária
-- [ ] Análise completa do perfil @pousadacamburioficial (engajamento, Linktree, bio)
-- [ ] Decisão sobre o site: atualizar no Foco Multimídia ou fazer um site customizado
-- [ ] Otimização do perfil no Booking.com (fotos e textos)
-- [ ] Atualização do Google Business Profile
+- [ ] **Recuperar o login do Google Meu Negócio** — prioridade
+- [ ] Decidir o site: atualizar no Foco Multimídia ou fazer customizado
+- [ ] Otimizar fotos e textos do Booking.com e do Google Business
 - [ ] Estratégia de SEO/GEO — aparecer em buscas e em respostas de IA sobre hospedagem em Camburi
-- [ ] Protocolo de resposta a avaliações novas
-- [ ] Revisar a bio do Instagram à luz do conceito-âncora
-- [ ] Resolver os dois pontos de atenção do TripAdvisor: Wi-Fi e ruído da cozinha
-- [ ] **Analisar os posts de agosto/2026 (24 anos) e os perfis de referência** — pendente por bloqueio de rede, ver nota abaixo
+- [ ] Protocolo de resposta a avaliações
+- [ ] Revisar a bio do Instagram à luz do conceito
+- [ ] Resolver Wi-Fi e ruído da cozinha
 
-> **Nota sobre análise de perfis:** o ambiente onde este documento foi produzido tem acesso negado a `instagram.com` pela política de rede. Os posts de agosto/2026 do @pousadacamburioficial e os perfis de referência (@pousadaliteraria e @ocanto.br) **não foram analisados diretamente** — nenhuma afirmação sobre o conteúdo deles consta neste documento. Para incorporá-los, é preciso liberar o domínio na configuração de rede do ambiente ou fornecer o material (capturas de tela, legendas em texto).
+**Lacunas — o que ainda não pode ser afirmado em conteúdo**
 
----
+Temperatura real da piscina climatizada (é a melhor prova de bem-estar sem a palavra) · horário do café da manhã · o que diferencia térreo de superior, além do andar · vista das suítes · política de crianças, berço e cama extra · aceita pets · estacionamento próprio · se o restaurante atende não-hóspedes · onde fica o bar e quem atende na areia.
 
-# ANEXO — LACUNAS DE INFORMAÇÃO
-
-Itens que **ainda não estão neste documento** porque não foram informados. Enquanto não forem preenchidos, não devem ser afirmados em conteúdo público:
-
-**Hospedagem**
-
-- As suítes superiores têm vista? De quê — mar, mata, piscina?
-- O que mais diferencia térreo de superior, além do andar?
-- Metragem média por categoria?
-- Política de crianças, berço, cama extra?
-- Aceita pets?
-
-**Serviços**
-
-- Qual o horário do café da manhã?
-- O bar fica na pousada, na praia, ou ambos? Quem atende na areia?
-- O restaurante atende não-hóspedes?
-- Há estacionamento próprio? Quantas vagas?
-
-**Marca**
-
-- Por que "Camburi"? Existe história de origem do nome ou do peixe do logo?
-- Qual a temperatura real da piscina climatizada? *(O número é a melhor prova de bem-estar sem a palavra — hoje está escrito de forma genérica.)*
-
-> **Fora de escopo por decisão editorial:** biografia dos sócios, trajetória anterior a 2002 e apresentação nominal de quem trabalha na pousada (marca institucional, ver 1.4.1); conteúdo retrospectivo, comparações "antes e depois" e fotos antigas da pousada (ver Território 5).
-
-**Operação de conteúdo**
-
-- Quem posta hoje? Com que frequência?
-- Existe banco de imagens organizado?
-- O WhatsApp de reservas é qual, e quem responde?
-
-**Pendente de leitura direta**
-
-- Os posts de agosto/2026 sobre os 24 anos, no @pousadacamburioficial, **não puderam ser analisados** — a política de rede deste ambiente bloqueia o acesso ao Instagram. Ver nota em 6.3.
-
----
-
-*Documento consolidado em setembro de 2026, a partir do documento de estratégia v1 e das informações operacionais complementares. Dados de reputação e seguidores referem-se às datas indicadas na Parte 3 e devem ser reconferidos antes de uso em relatório.*
+**Fora de escopo por decisão:** biografia dos sócios e apresentação nominal de quem trabalha na pousada; conteúdo retrospectivo, comparações "antes e depois" e fotos antigas.
