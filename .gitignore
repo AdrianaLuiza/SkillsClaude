@@ -13,3 +13,8 @@ frontend-design
 *.jpg
 *.jpeg
 *.gif
+
+# Entregáveis de cliente (gerados nas sessões, não fazem parte das skills)
+*.pptx
+*.docx
+*.pdf
