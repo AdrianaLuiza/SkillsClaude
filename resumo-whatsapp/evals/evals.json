@@ -1,0 +1,23 @@
+{
+  "skill_name": "resumo-whatsapp",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "me atualiza do grupo do conselho, últimas 24h. arquivo: C:\\Users\\alusu\\AppData\\Local\\Temp\\chat (1).txt",
+      "expected_output": "Resumo curto das últimas 24h: reunião 16/10 17h confirmada como decisão; pendências da usuária (andaimes, casas em reforma) primeiro; sem CPF.",
+      "files": ["C:\\Users\\alusu\\AppData\\Local\\Temp\\chat (1).txt"]
+    },
+    {
+      "id": 2,
+      "prompt": "resume o grupo inteiro do conselho pra mim, todo o período. C:\\Users\\alusu\\AppData\\Local\\Temp\\chat (1).md",
+      "expected_output": "Resumo do mês inteiro, sem tratar as 12+ enquetes de 07/10 como decididas (o resultado não está na exportação); nenhum CPF; cabe em ~1,5 tela.",
+      "files": ["C:\\Users\\alusu\\AppData\\Local\\Temp\\chat (1).md"]
+    },
+    {
+      "id": 3,
+      "prompt": "perdi a semana no grupo da equipe da pousada, o que decidiram? última semana. C:\\Users\\alusu\\.claude\\skills\\resumo-whatsapp-workspace\\files\\Conversa do WhatsApp com Equipe Pousada.zip",
+      "expected_output": "Preço final R$ 690 (com nota da reversão de R$ 640); Trio Maré confirmado 31/12; post do Réveillon como pendência da usuária; transfer gratuito em debate; CPF não aparece.",
+      "files": ["C:\\Users\\alusu\\.claude\\skills\\resumo-whatsapp-workspace\\files\\Conversa do WhatsApp com Equipe Pousada.zip"]
+    }
+  ]
+}
