@@ -9,6 +9,7 @@
 6. Module Assembly
 7. OpenAPI Adapter
 8. Postman Adapter
+9. Structured Output (`outputSchema`) — condicional
 
 ---
 
@@ -298,6 +299,53 @@ def openapi_to_internal(openapi_spec: dict) -> list[dict]:
 
 ---
 
+## 7b. OpenAPI 3.x moderno — o que quebra na prática
+
+Três armadilhas medidas em 11/08/2026 gerando contra uma spec OpenAPI **3.1** real. As três derrubaram
+o gerador escrito ao pé da letra pelas seções anteriores.
+
+### `type` pode ser uma LISTA (3.1), não uma string
+
+Em OpenAPI 3.1, campo anulável se escreve `{"type": ["string", "null"]}` — não existe mais `nullable`.
+Usar isso como chave do `TYPE_MAP` explode com `TypeError: unhashable type: 'list'`.
+
+```python
+def _tipo_py(schema: dict) -> str:
+    t = schema.get("type")
+    if isinstance(t, list):                       # 3.1: ["string","null"]
+        reais = [x for x in t if x != "null"]
+        base = TYPE_MAP.get(reais[0], "str") if reais else "str"
+        return f"Optional[{base}]" if "null" in t else base
+    return TYPE_MAP.get(t, "str")
+```
+
+### Nome da função: use `operationId`, não a heurística de caminho
+
+O adaptador da §7 faz `endpoint = parts[-1]`. Para `/produtos/{produto_id}` isso devolve `{produto_id}`
+e produz um nome de função **sintaticamente inválido** em Python. Toda spec séria traz `operationId`
+único por operação — é ele o nome, e vem no idioma da API (bônus: fica em português numa API brasileira).
+
+```python
+nome = op.get("operationId") or f"{metodo}_{_snake_case(rota.strip('/').replace('/','_'))}"
+nome = re.sub(r"[^0-9a-zA-Z_]", "_", _snake_case(nome)).strip("_")
+```
+
+### Agrupamento em módulos: use `tags`, não plural em inglês
+
+A §7 deriva a entidade com `parts[0].title().rstrip('s')` — heurística de plural inglês que erra em
+qualquer API em português (`vendas` → `Venda`? `relatorios` → `Relatorio`?) e ignora o agrupamento que
+a própria spec declara. Use `op["tags"][0]` quando existir; caia na heurística só sem tags.
+
+### Checklist antes de rodar o gerador numa spec OpenAPI
+
+- [ ] `type` tratado como string **e** como lista
+- [ ] Nome vindo de `operationId`, saneado para identificador Python válido
+- [ ] Módulos por `tags[0]`
+- [ ] Parâmetro que colide com palavra reservada recebe `_` no fim (`id` → `id_`), mantendo o nome original no envio
+- [ ] Enum lido de `parameter.schema.enum` **e** de `parameter.schema.items.enum` (array de enum)
+
+---
+
 ## 8. Postman Adapter
 
 Convert Postman Collection v2.1:
@@ -332,3 +380,50 @@ def postman_to_internal(collection: dict) -> list[dict]:
         })
     return list(entities.values())
 ```
+
+---
+
+## 9. Structured Output (`outputSchema`) — condicional
+
+**Regra:** emitir `outputSchema` **só quando a spec fornece o schema da resposta**. Onde não fornece, manter o retorno como `str` (JSON) — NÃO inventar um schema genérico (`dict`/`object` vazio não ajuda o agente e ainda infla a tool).
+
+### Por que condicional
+Com `outputSchema`, o FastMCP valida a saída e devolve `structuredContent`; e — via `get_schema` no Code Mode — o agente vê o **formato de retorno** antes de escrever o código do `execute()`, então acerta os campos de primeira. É best practice da spec MCP 2025-11-25. **Mas** isso só vale se o schema for real:
+
+| Fonte da spec | Tem response schema? | Retorno gerado |
+|---|---|---|
+| **OpenAPI 3.x** (endpoint com schema, não fields-driven) | sim | `TypedDict` → `outputSchema` automático |
+| **SDK codegen (Meta) / Postman** | normalmente não | `-> str` (JSON), sem outputSchema |
+| **GET com `fields`** (resposta muda conforme os campos pedidos) | shape dinâmico | `-> str` (pular, mesmo em OpenAPI) |
+
+### Detecção (só OpenAPI expõe isso)
+```python
+def _response_schema(operation: dict) -> dict | None:
+    """Schema JSON da resposta 2xx, ou None se a spec não define."""
+    for code, resp in (operation.get("responses") or {}).items():
+        if str(code).startswith("2"):
+            schema = (resp.get("content", {})
+                          .get("application/json", {})
+                          .get("schema"))
+            if schema:
+                return schema
+    return None
+```
+
+### Geração: FastMCP deriva o schema da ANOTAÇÃO de retorno
+O FastMCP gera o `outputSchema` sozinho a partir do tipo de retorno da função. Então, quando há schema (e o endpoint não é fields-driven), gere um `TypedDict` e devolva o dict — sem `json.dumps`:
+
+```python
+from typing import TypedDict
+
+class GetCampaignResult(TypedDict):
+    id: str
+    name: str
+    status: str
+
+async def get_campaign(campaign_id: str) -> GetCampaignResult:
+    """GET /#get on Campaign."""
+    return await _client.get(f"{campaign_id}")   # FastMCP valida + devolve structuredContent
+```
+
+Sem response schema (Meta SDK codegen, Postman, ou GET fields-driven) → **mantém o fallback atual** (Seção 3): `-> str` com `json.dumps(result, indent=2)`. A decisão é por-endpoint, igual à resolução de enums: pega o ganho onde a spec dá o schema, sem forçar onde não dá.

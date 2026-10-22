@@ -28,10 +28,10 @@ Specs completas → pronto para gerar
 
 Objetivo: encontrar specs machine-readable da API. Rodar TODAS as fontes em paralelo (não sequencial).
 
-### Busca paralela via Perplexity
+### Busca paralela via Exa
 
 ```
-perplexity_search: "{api-name} openapi spec" OR "{api-name} swagger.json" OR "{api-name} postman collection" OR "{api-name} sdk codegen"
+web_search_exa: "{api-name} openapi spec" OR "{api-name} swagger.json" OR "{api-name} postman collection" OR "{api-name} sdk codegen"
 ```
 
 ### Fontes (todas ao mesmo tempo)
@@ -87,6 +87,10 @@ Many APIs publish their spec directly:
 | `/swagger.json` | `https://api.example.com/swagger.json` |
 | `/v3/api-docs` | Spring Boot apps |
 | `/api/v2/openapi.yaml` | `https://api.example.com/api/v2/openapi.yaml` |
+| `/api-reference/openapi.json` | Mintlify (ex.: `developer.gptmaker.ai`) |
+| `/llms.txt`, `<pagina>.md` | Mintlify/GitBook: índice e markdown das páginas |
+
+Só conta se o conteúdo for JSON/YAML com `openapi`/`paths` — SPA devolve 200 com HTML para qualquer caminho.
 | GitHub repo | `github.com/{company}/openapi` or `{company}-api-specs` |
 
 **GitHub search strategies**:
@@ -123,20 +127,11 @@ curl -s "https://api.swaggerhub.com/apis/{owner}/{api}/{version}" \
 
 #### Scrape Documentation (se nenhuma spec machine-readable encontrada)
 
-```python
-# Using Firecrawl MCP
-result = firecrawl_scrape(url="https://docs.example.com/api/reference")
+Siga **`references/docs-only-extraction.md`**: diagnosticar a doc (llms.txt, sitemap, menu JS,
+toggles) → escolher a ferramenta pelo diagnóstico → extrair → provar cada endpoint (401 sem token,
+controle 404) → OpenAPI 3.1 com `x-origem` → validar com Redocly.
 
-# Or firecrawl_map to discover all doc pages
-sitemap = firecrawl_map(url="https://docs.example.com/api/")
-```
-
-After scraping, manually extract:
-- Base URL and versioning
-- Endpoints (path + method)
-- Parameters (name, type, required)
-- Auth mechanism
-- Response format
+Não comece por `firecrawl_map` às cegas: em doc com menu por JS ele acha só parte (Hotmart: 21/30).
 
 ### Entrega do Nível 1
 
@@ -166,14 +161,14 @@ Objetivo: entender a API profundamente antes de gerar código. Specs sozinhas n�
 
 ### Pesquisas paralelas
 
-Rodar em paralelo via Perplexity + Firecrawl:
+Rodar em paralelo via Exa + Firecrawl:
 
 #### 2A — Auth & Infraestrutura
 
 ```
-perplexity_search: "{api-name} authentication oauth2 API key bearer token"
-perplexity_search: "{api-name} rate limits throttling quotas"
-perplexity_search: "{api-name} API versioning changelog breaking changes 2025 2026"
+web_search_exa: "{api-name} authentication oauth2 API key bearer token"
+web_search_exa: "{api-name} rate limits throttling quotas"
+web_search_exa: "{api-name} API versioning changelog breaking changes 2025 2026"
 ```
 
 Extrair:
@@ -185,8 +180,8 @@ Extrair:
 #### 2B — SDKs & Tooling Existente
 
 ```
-perplexity_search: "{api-name} python SDK async client library"
-perplexity_search: "{api-name} MCP server existing"
+web_search_exa: "{api-name} python SDK async client library"
+web_search_exa: "{api-name} MCP server existing"
 ```
 
 Verificar:
@@ -197,7 +192,7 @@ Verificar:
 #### 2C — Enums & Tipos
 
 ```
-perplexity_search: "{api-name} API enum values status types"
+web_search_exa: "{api-name} API enum values status types"
 ```
 
 Se a spec não inclui enum values:
@@ -210,8 +205,8 @@ Sem enum values nos docstrings, o agente usando Code Mode não consegue descobri
 #### 2D — Pagination & Error Handling
 
 ```
-perplexity_search: "{api-name} API pagination cursor offset next page"
-perplexity_search: "{api-name} API error codes error handling"
+web_search_exa: "{api-name} API pagination cursor offset next page"
+web_search_exa: "{api-name} API error codes error handling"
 ```
 
 Extrair:
@@ -264,7 +259,7 @@ Após o generator produzir os módulos Python, revisar:
 Diferente dos níveis 1 e 2 (broad search), o nível 3 é cirúrgico — busca só nos pontos específicos:
 
 ```
-perplexity_search: "{api-name} {endpoint-name} parameters documentation"
+web_search_exa: "{api-name} {endpoint-name} parameters documentation"
 firecrawl_scrape: "https://docs.example.com/api/{endpoint-name}"
 ```
 

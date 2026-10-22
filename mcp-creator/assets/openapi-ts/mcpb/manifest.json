@@ -1,0 +1,27 @@
+{
+  "manifest_version": "0.3",
+  "name": "openapi-mcp",
+  "display_name": "OpenAPI MCP",
+  "version": "1.0.0",
+  "description": "MCP gerado a partir de um OpenAPI",
+  "author": { "name": "Operação AutonomIA" },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": { "API_TOKEN": "${user_config.api_token}" }
+    }
+  },
+  "user_config": {
+    "api_token": {
+      "type": "string",
+      "title": "Token da API",
+      "description": "Token de acesso da plataforma",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "compatibility": { "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=18.0.0" } }
+}
