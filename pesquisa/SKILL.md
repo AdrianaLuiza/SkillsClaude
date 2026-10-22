@@ -16,13 +16,13 @@ Evolução do `/pesquisa` (v2) com 3 técnicas roubadas de skills do marketplace
 ## O Funil v3
 
 ```
-Nível 1: Varredura (perplexity_search paralelo)
+Nível 1: Varredura (WebSearch paralelo)
     │ Apresentar → usuário aprova direção (HITL)
     ▼
-Nível 2: Análise (perplexity_reason) + identificar fatos-chave + sub-tópicos
+Nível 2: Análise (síntese própria do modelo + WebSearch de apoio) + fatos-chave + sub-tópicos
     │ Apresentar + listar sub-tópicos + fatos-chave → usuário escolhe (HITL)
     ▼
-Nível 3: Deep Dive PARALELO (N × perplexity_research + firecrawl)
+Nível 3: Deep Dive PARALELO (N × WebSearch por sub-tópico + scraping)
     │ Phase Gate v3: sub-perguntas respondidas? + fatos-chave em ≥2 fontes? + CRAAP?
     │ Se não → gap filling focado
     ▼
@@ -38,7 +38,7 @@ Esta skill foi auditada após dogfood que revelou `/pesquisa` rodando "intername
 - **Phase Gate via subagent independente** (Passo 5): não é mais `executar internamente`, é `Agent({subagent_type: Explore, ...})` produzindo `verification_report.json`
 - **CRAAP rubric calibrada** com 3 exemplos por Tier (Passo 4) — sem isso, scores convergem pra 88-95
 - **Definição programática de "fonte independente"**: domínios distintos + não-duplicação de paper primário
-- **PostToolUse hook validador** em `~/.claude/skills/pesquisa/scripts/validate-report.py` — bloqueia Write em `~/pesquisas/*.md` se relatório não tiver todas seções obrigatórias OU se >50% fatos têm <2 fontes
+- **PreToolUse hook validador** em `~/.claude/skills/pesquisa/scripts/validate-report.py` — registrado em `~/.claude/settings.json` (`hooks.PreToolUse`, matcher `Write`) — bloqueia Write em `~/pesquisas/*.md` ANTES de escrever se o relatório não tiver todas seções obrigatórias OU se >50% fatos têm <2 fontes (só PreToolUse consegue bloquear de fato; PostToolUse rodaria depois do arquivo já escrito)
 
 ### Bloco contrastive (good vs bad fluxo)
 
@@ -63,8 +63,16 @@ Esta skill foi auditada após dogfood que revelou `/pesquisa` rodando "intername
 8. Escrever relatório SEGUINDO o template literal — incluindo "Contradições Identificadas" mesmo quando vazia (escrever "Nenhuma contradição entre fontes — todas convergiram")
 9. CRAAP scores com EVIDÊNCIA POR CRITÉRIO (1 frase pra C, R, A, A, P de cada fonte)
 10. Confiança ALTA APENAS se ≥2 fontes Tier A/B independentes (definição programática) por fato-chave
-11. Save em ~/pesquisas/ → PostToolUse hook valida formato + bloqueia se inválido
+11. Save em ~/pesquisas/ → PreToolUse hook valida formato + bloqueia a escrita se inválido
 ```
+
+## ★ v3.2 — adaptação para conta Perplexity Free (2026-07-13)
+
+Diagnóstico ao vivo confirmou: com conta Perplexity **Free**, `perplexity_search`, `perplexity_reason` e `perplexity_research` retornam resposta vazia/nula (`answer: null`, `web_results: []`) na maior parte dos testes — mas não é bloqueio permanente de plano. Pesquisa externa (via `WebSearch`) mostrou que o Free inclui **5 "Pro Searches" por dia** (o que alimenta search/reason/research) + Quick Search ilimitado (o que alimenta `ask`). O padrão observado (1ª chamada do dia funcionou, todas as seguintes vieram vazias) bate exatamente com essa cota diária estourada — não com token inválido nem com bloqueio total de feature.
+
+**Mudança:** os Níveis 1, 2 e 3 passam a usar `WebSearch` (nativo do Claude Code, sem custo e sem cota) no lugar de `perplexity_search`/`perplexity_reason`/`perplexity_research` — porque o funil dispara várias chamadas em paralelo por nível, o que estoura os 5/dia do Free quase instantaneamente. `perplexity_ask` continua sendo usado no Phase Gate para gaps factuais pontuais (Passo 5) — usa Quick Search, que é ilimitado no Free.
+
+**Se sua conta virar Pro no futuro** (ou se quiser gastar a cota diária deliberadamente): pode voltar a usar `perplexity_search`/`perplexity_reason`/`perplexity_research` no lugar de `WebSearch` nos Níveis 1-3 — a estrutura do funil (HITL entre níveis, CRAAP, Phase Gate) não muda, só a ferramenta de busca/síntese. No Free, use essas 3 ferramentas com parcimônia fora da skill (elas ainda funcionam, só que limitadas a 5 usos/dia no total).
 
 ## Preparação — carregar `AskUserQuestion`
 
@@ -106,7 +114,7 @@ Ao detectar a flag, avisar logo no início (antes do Nível 1):
 
 ## Nível 1 — Varredura
 
-**Ferramenta:** `perplexity_search`
+**Ferramenta:** `WebSearch`
 **Velocidade:** ~5 segundos por query
 **Objetivo:** Mapear o terreno com 3-5 ângulos paralelos.
 
@@ -114,7 +122,7 @@ Ao detectar a flag, avisar logo no início (antes do Nível 1):
 
 1. Decompor o tema em 3-5 ângulos complementares
 2. Rodar TODAS em paralelo no mesmo turno
-3. Usar `sources` estrategicamente: `web`, `scholar`, `social`
+3. Usar `allowed_domains`/`blocked_domains` estrategicamente quando o tema tiver domínios de alta confiabilidade óbvios (ver tabela de domain hints no Nível 3) — em vez do antigo parâmetro `sources: web/scholar/social` do Perplexity, que não existe no `WebSearch`
 
 ### Entrega do Nível 1
 
@@ -156,14 +164,14 @@ AskUserQuestion({
 
 ## Nível 2 — Análise + Fatos-Chave ★ NOVO
 
-**Ferramenta:** `perplexity_reason`
+**Ferramenta:** síntese própria do modelo (Claude), usando os achados do Nível 1 como base + `WebSearch` extra para ângulos analíticos ainda não cobertos
 **Velocidade:** ~15 segundos
 
 **Diferença v3:** Além de comparar e identificar sub-tópicos, identificar explicitamente **3-5 fatos-chave** — afirmações factuais centrais para a conclusão que precisarão ser verificadas por ≥2 fontes independentes no Phase Gate.
 
 ### Como executar
 
-1. Construir query analítica com achados do Nível 1 + contexto do usuário
+1. Analisar os achados do Nível 1 + contexto do usuário — a comparação e a leitura de trade-offs são feitas pelo próprio modelo (não há mais um tool externo de "reason"; se faltar dado pra comparar, disparar `WebSearch` pontual antes de sintetizar)
 2. Pedir comparação direta e tabela de trade-offs
 3. Identificar 2-4 sub-tópicos independentes para o Nível 3
 4. **Novo:** Listar 3-5 fatos-chave verificáveis (números, datas, causalidades, claims técnicos)
@@ -214,12 +222,14 @@ AskUserQuestion({
 
 ## Nível 3 — Deep Dive Paralelo com Domain Filters
 
-**Ferramentas:** N × `perplexity_research` em paralelo + `firecrawl_scrape`
-**Velocidade:** ~60-90s (paralelo, não sequencial)
+**Ferramentas:** N × `WebSearch` em paralelo (um por sub-tópico) + scraping (Passo 3) + síntese própria do modelo
+**Velocidade:** ~30-60s (paralelo, não sequencial)
+
+**Atenção v3.2:** sem `perplexity_research` (Pro-only), o `WebSearch` devolve links + snippets, não uma síntese pronta com citações. Isso desloca mais trabalho pro Passo 3 (scraping) — normalmente vale raspar mais URLs por sub-tópico (3-5 em vez de 2-3) já que não existe mais uma pré-síntese vinda da ferramenta de busca.
 
 ### Passo 1 — Inferir domain filters (opcional)
 
-Antes de disparar as queries, avaliar se o tema tem domínios de alta confiabilidade óbvios. Se sim, incluir nas queries para priorizar resultados:
+Antes de disparar as queries, avaliar se o tema tem domínios de alta confiabilidade óbvios. Se sim, usar via `allowed_domains` do `WebSearch` para priorizar resultados:
 
 | Tipo de tema | Domain hints para queries |
 |--------------|--------------------------|
@@ -229,16 +239,16 @@ Antes de disparar as queries, avaliar se o tema tem domínios de alta confiabili
 | Regulação/legal | `site:gov.br OR site:legisweb.com.br` |
 | Geral | Não filtrar — deixar o Perplexity decidir |
 
-Incorporar domain hints nas queries do `perplexity_research` quando relevante.
+Incorporar os domínios como `allowed_domains` do `WebSearch` quando relevante (não force `allowed_domains` se o tema não tiver domínios óbvios — restringe demais e perde resultado bom fora da lista).
 
 ### Passo 2 — Disparar em paralelo
 
 Para cada sub-tópico aprovado, criar uma query específica. Disparar TODAS no mesmo turno:
 
 ```
-perplexity_research("[sub-tópico A] análise completa 2025 dados concretos [domain hints]")
-perplexity_research("[sub-tópico B] análise completa 2025 dados concretos [domain hints]")
-perplexity_research("[sub-tópico C] análise completa 2025 dados concretos [domain hints]")
+WebSearch({ query: "[sub-tópico A] análise completa 2026 dados concretos", allowed_domains: [domain hints, se houver] })
+WebSearch({ query: "[sub-tópico B] análise completa 2026 dados concretos", allowed_domains: [domain hints, se houver] })
+WebSearch({ query: "[sub-tópico C] análise completa 2026 dados concretos", allowed_domains: [domain hints, se houver] })
 ```
 
 ### Passo 3 — Scraping de URLs identificadas
@@ -322,6 +332,8 @@ Exemplos:
 
 **MUDANÇA crítica v3.1:** Phase Gate NÃO é mais executado "internamente" pelo modelo. É delegado a um **subagent verifier independente** (read-only, fresh context). Razão: dogfood 2026-04-29 provou que self-verification rubber-stamps; auditor independente não tem incentivo pra rebaixar.
 
+Esse Phase Gate por subagent é complementar ao hook automático: o subagent audita o CONTEÚDO/evidência antes de você escrever o relatório; o hook PreToolUse (Passo abaixo, "Salvar como arquivo") audita o FORMATO no exato momento do `Write` e bloqueia a gravação se algo essencial faltar.
+
 #### Como invocar o verifier
 
 Antes de escrever o relatório final no Nível 3:
@@ -373,10 +385,10 @@ Agent({
 
 - Se **≥ 4 checks**: prosseguir
 - Se **< 4 checks**: para cada gap:
-  - Gap **factual pontual** (fato-chave sem 2ª fonte, número específico) → `perplexity_ask`
-  - Gap **analítico/comparativo** (sub-pergunta não respondida, trade-off indefinido) → `perplexity_search`
+  - Gap **factual pontual** (fato-chave sem 2ª fonte, número específico) → `perplexity_ask` (funciona no plano Free)
+  - Gap **analítico/comparativo** (sub-pergunta não respondida, trade-off indefinido) → `WebSearch` adicional + síntese própria do modelo
 
-**Regra de ouro do `ask`:** só usar se a pergunta tem UMA resposta correta e factual. Se começa com "depende", usar `reason`.
+**Regra de ouro do `ask`:** só usar se a pergunta tem UMA resposta correta e factual. Se começa com "depende", não force no `ask` — trate como gap analítico (`WebSearch` + síntese).
 
 **Fatos-chave sem 2ª fonte:** Se um fato central do relatório tem apenas 1 fonte, verificar ativamente com `perplexity_ask` antes de reportar como confirmado. Se não encontrar 2ª fonte, reportar como "fonte única — não confirmado independentemente".
 
@@ -480,26 +492,31 @@ Se o usuário já está satisfeito no Nível 1 ou 2, não forçar o funil. Pergu
 
 ## Ferramentas
 
-| Ferramenta | Quando usar | Sources |
+| Ferramenta | Quando usar | Observação |
 |-----------|-------------|---------|
-| `perplexity_search` | Nível 1, gap filling analítico | web, scholar, social |
-| `perplexity_ask` | Phase Gate: gaps factuais pontuais com resposta única | web, scholar, social |
-| `perplexity_reason` | Nível 2, análise/comparação/trade-offs | web, scholar, social |
-| `perplexity_research` | Nível 3, por sub-tópico (paralelo) | web, scholar, social |
-| `firecrawl_scrape` | Nível 3, URLs específicas — 1ª opção (MCP pago) | qualquer URL |
+| `WebSearch` | Nível 1 (varredura), Nível 2 (gap analítico), Nível 3 (por sub-tópico, paralelo) | nativa do Claude Code, sem custo. Suporta `allowed_domains`/`blocked_domains` para domain hints |
+| `perplexity_ask` | Phase Gate: gaps factuais pontuais com resposta única | Quick Search — ilimitado no Free |
+| ~~`perplexity_search`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
+| ~~`perplexity_reason`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
+| ~~`perplexity_research`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
+| `firecrawl_scrape` | Nível 3, URLs específicas — 1ª opção (MCP pago, plugin desabilitado por padrão neste ambiente — conferir disponibilidade antes de tentar) | qualquer URL |
 | `npx -y @teng-lin/agent-fetch "<url>" --json` | 2º fallback — local, ~400ms, verbatim, grátis | qualquer URL |
 | `curl -s "https://r.jina.ai/<url>"` | 3º fallback — grátis, markdown limpo, ~10s | qualquer URL |
 | `WebFetch` | Último recurso — **resume, não extrai** | qualquer URL |
-| `firecrawl_map` | Descobrir URLs de um site | qualquer URL |
+| `firecrawl_map` | Descobrir URLs de um site (se plugin disponível) | qualquer URL |
 | `Write` | Salvar relatório final como .md | — |
 
-**Quando NÃO usar `ask`:** comparativos, trade-offs, análises qualitativas, qualquer pergunta cuja resposta comece com "depende". Nesses casos sempre `reason`.
+**Quando NÃO usar `ask`:** comparativos, trade-offs, análises qualitativas, qualquer pergunta cuja resposta comece com "depende". Nesses casos usar `WebSearch` + síntese própria (ver v3.2 — `reason` não está disponível no plano Free).
 
 ---
 
 ## Fallback: tokens expirados
 
-Se `perplexity_search` falhar com erro de autenticação ou o MCP desconectar:
+**Antes de mexer em token, diferenciar os dois sintomas:**
+- **Erro de autenticação / MCP desconecta** → token realmente expirado, seguir passos abaixo.
+- **`perplexity_ask` responde normal, mas resultado vazio/`null` só em `search`/`reason`/`research`** → NÃO é token, é a cota diária de 5 Pro Searches do Free estourada (ver v3.2). Renovar token não resolve; espera resetar no dia seguinte ou usa `WebSearch`, que é o que a skill já faz por padrão.
+
+Se `perplexity_ask` também falhar com erro de autenticação ou o MCP desconectar:
 
 ```
 ⚠️ Tokens do Perplexity expiraram. Para renovar:
