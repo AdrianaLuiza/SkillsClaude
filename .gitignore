@@ -4,10 +4,6 @@
 .playwright-mcp/
 .remember/
 
-# External skills (symlinks managed by skills-lock.json)
-copywriting
-frontend-design
-
 # Images and non-skill files
 *.png
 *.jpg
