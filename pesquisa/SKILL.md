@@ -499,11 +499,11 @@ Se o usuário já está satisfeito no Nível 1 ou 2, não forçar o funil. Pergu
 | ~~`perplexity_search`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
 | ~~`perplexity_reason`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
 | ~~`perplexity_research`~~ | — | usa cota de "Pro Search" — só 5/dia no Free (ver v3.2). Evitar dentro da skill, o funil estoura a cota em 1 nível |
-| `firecrawl_scrape` | Nível 3, URLs específicas — 1ª opção (MCP pago, plugin desabilitado por padrão neste ambiente — conferir disponibilidade antes de tentar) | qualquer URL |
+| `firecrawl_scrape` | Nível 3, URLs específicas — 1ª opção (MCP pago; plugin Firecrawl instalado e ligado, mas pode pedir login via `/mcp` — se falhar, seguir para o fallback) | qualquer URL |
 | `npx -y @teng-lin/agent-fetch "<url>" --json` | 2º fallback — local, ~400ms, verbatim, grátis | qualquer URL |
 | `curl -s "https://r.jina.ai/<url>"` | 3º fallback — grátis, markdown limpo, ~10s | qualquer URL |
 | `WebFetch` | Último recurso — **resume, não extrai** | qualquer URL |
-| `firecrawl_map` | Descobrir URLs de um site (se plugin disponível) | qualquer URL |
+| `firecrawl map <url>` (Bash) | Descobrir URLs de um site — pela CLI do Firecrawl (o MCP não tem `map`); detalhes na skill `firecrawl-map` | qualquer URL |
 | `Write` | Salvar relatório final como .md | — |
 
 **Quando NÃO usar `ask`:** comparativos, trade-offs, análises qualitativas, qualquer pergunta cuja resposta comece com "depende". Nesses casos usar `WebSearch` + síntese própria (ver v3.2 — `reason` não está disponível no plano Free).
